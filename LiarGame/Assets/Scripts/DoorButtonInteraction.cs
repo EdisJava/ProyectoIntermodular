@@ -25,22 +25,30 @@ public class DoorButtonInteraction : MonoBehaviour
     }
 
     void OpenCutscene()
+{
+    cutsceneImage.SetActive(true);
+    cutsceneActive = true;
+
+    GameManager.Instance.currentState = GameState.Interaction2D;
+
+    if (movementScript != null)
     {
-        cutsceneImage.SetActive(true);
-        cutsceneActive = true;
-
-        if (movementScript != null)
-            movementScript.enabled = false; 
-            movementScript.canLook = false;
+        movementScript.enabled = false;
+        movementScript.canLook = false;
     }
+}
 
-    void CloseCutscene()
+void CloseCutscene()
+{
+    cutsceneImage.SetActive(false);
+    cutsceneActive = false;
+
+    GameManager.Instance.currentState = GameState.Exploration3D;
+
+    if (movementScript != null)
     {
-        cutsceneImage.SetActive(false);
-        cutsceneActive = false;
-
-        if (movementScript != null)
-            movementScript.enabled = true; 
-            movementScript.canLook = true;
+        movementScript.enabled = true;
+        movementScript.canLook = true;
     }
+}
 }

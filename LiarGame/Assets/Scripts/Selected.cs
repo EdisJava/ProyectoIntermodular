@@ -23,28 +23,35 @@ public class Selected : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+void Update()
+{
+
+    if (GameManager.Instance.IsIn2D())
     {
-        RaycastHit hit;
-        isLookingAtDoor = false;
+        crosshair.SetActive(false);
+        interactText.SetActive(false);
+        return;
+    }
 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distancia, mask))
+    RaycastHit hit;
+    isLookingAtDoor = false;
+
+    if (Physics.Raycast(transform.position,
+        transform.TransformDirection(Vector3.forward),
+        out hit, distancia, mask))
+    {
+        if (hit.collider.CompareTag("PuertaInteractiva"))
         {
-            if(hit.collider.tag == "PuertaInteractiva")
+            isLookingAtDoor = true;
+
+            if (interactAction != null && interactAction.triggered)
             {
-                isLookingAtDoor = true;
-                Debug.Log("Objeto Seleccionado: " + hit.collider.name);
-
-
-                if (interactAction != null && interactAction.triggered)
-                {
-                    Debug.Log("Interacción con: " + hit.collider.name);
-                    hit.collider.GetComponent<DoorButtonInteraction>().Interact();
-                }
+                hit.collider.GetComponent<DoorButtonInteraction>().Interact();
             }
         }
-
-        crosshair.SetActive(isLookingAtDoor);
-        interactText.SetActive(isLookingAtDoor);
     }
+
+    crosshair.SetActive(isLookingAtDoor);
+    interactText.SetActive(isLookingAtDoor);
+}
 }
