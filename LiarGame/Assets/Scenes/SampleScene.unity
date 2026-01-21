@@ -2962,6 +2962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36dfd852df9a43743be773bc9a1ce46a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Selected
+  crosshairAnimator: {fileID: 2021365875}
   playerInput: {fileID: 2095150383}
   distancia: 1.5
   crosshair: {fileID: 2021365871}
@@ -96368,6 +96369,7 @@ GameObject:
   - component: {fileID: 2021365872}
   - component: {fileID: 2021365874}
   - component: {fileID: 2021365873}
+  - component: {fileID: 2021365875}
   m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
@@ -96392,7 +96394,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 10}
+  m_SizeDelta: {x: 12, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021365873
 MonoBehaviour:
@@ -96414,7 +96416,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5e0a193c500828441bd3fb9bb348fcd8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -96432,6 +96434,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021365871}
   m_CullTransparentMesh: 1
+--- !u!114 &2021365875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021365871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e314c7fd1b0acf44baba7be0439b1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CrosshairAnimator
+  rotationAmount: 90
+  duration: 0.25
 --- !u!1 &2054069558
 GameObject:
   m_ObjectHideFlags: 0

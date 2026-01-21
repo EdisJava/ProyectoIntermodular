@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
+
 public class Selected : MonoBehaviour
 {
+    public CrosshairAnimator crosshairAnimator;
     public PlayerInput playerInput;
     LayerMask mask;
     public float distancia  = 2f;
@@ -12,6 +15,7 @@ public class Selected : MonoBehaviour
     public GameObject crosshair;
     public GameObject interactText;
     private bool isLookingAtDoor;
+    private bool wasLookingAtDoorLastFrame;
 
     void Start()
     {
@@ -22,6 +26,8 @@ public class Selected : MonoBehaviour
         interactText.SetActive(false);
     }
 
+
+
     // Update is called once per frame
 void Update()
 {
@@ -30,6 +36,7 @@ void Update()
     {
         crosshair.SetActive(false);
         interactText.SetActive(false);
+        wasLookingAtDoorLastFrame = false;
         return;
     }
 
@@ -43,15 +50,30 @@ void Update()
         if (hit.collider.CompareTag("PuertaInteractiva"))
         {
             isLookingAtDoor = true;
+    
+            if (!wasLookingAtDoorLastFrame)
+            {
+                crosshair.SetActive(true);
+                interactText.SetActive(true);
+                if (crosshairAnimator != null)
+                {
+                    crosshairAnimator.PlayAppear();
+                    }
+                }
 
-            if (interactAction != null && interactAction.triggered)
+                if (interactAction != null && interactAction.triggered)
             {
                 hit.collider.GetComponent<DoorButtonInteraction>().Interact();
             }
         }
     }
 
-    crosshair.SetActive(isLookingAtDoor);
-    interactText.SetActive(isLookingAtDoor);
-}
+        if (!isLookingAtDoor)
+        {
+            crosshair.SetActive(false);
+            interactText.SetActive(false);
+        }
+
+        wasLookingAtDoorLastFrame = isLookingAtDoor;
+    }
 }
