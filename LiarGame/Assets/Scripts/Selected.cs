@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 
 
@@ -12,7 +13,10 @@ public class Selected : MonoBehaviour
 
     private InputAction interactAction;
 
+    public TextMeshProUGUI interactLabel;
+
     public GameObject crosshair;
+    public GameObject cuadroInteract;
     public GameObject interactText;
     private bool isLookingAtDoor;
     private bool wasLookingAtDoorLastFrame;
@@ -24,6 +28,8 @@ public class Selected : MonoBehaviour
             interactAction = playerInput.actions["Interact"];
         crosshair.SetActive(false);
         interactText.SetActive(false);
+        cuadroInteract.SetActive(false);
+        interactLabel.text = "E para interactuar";
     }
 
 
@@ -35,7 +41,11 @@ void Update()
     if (GameManager.Instance.IsIn2D())
     {
         crosshair.SetActive(false);
-        interactText.SetActive(false);
+        interactText.SetActive(true);
+        cuadroInteract.SetActive(true);
+        
+        interactLabel.text = "ESPACIO para salir";
+
         wasLookingAtDoorLastFrame = false;
         return;
     }
@@ -50,12 +60,15 @@ void Update()
         if (hit.collider.CompareTag("PuertaInteractiva"))
         {
             isLookingAtDoor = true;
-    
-            if (!wasLookingAtDoorLastFrame)
+
+            interactLabel.text = "E para interactuar";
+
+                if (!wasLookingAtDoorLastFrame)
             {
                 crosshair.SetActive(true);
                 interactText.SetActive(true);
-                if (crosshairAnimator != null)
+                cuadroInteract.SetActive(true);
+                    if (crosshairAnimator != null)
                 {
                     crosshairAnimator.PlayAppear();
                     }
@@ -72,6 +85,10 @@ void Update()
         {
             crosshair.SetActive(false);
             interactText.SetActive(false);
+            cuadroInteract.SetActive(false);
+
+            if (crosshairAnimator != null)
+                crosshairAnimator.StopIdle();
         }
 
         wasLookingAtDoorLastFrame = isLookingAtDoor;
