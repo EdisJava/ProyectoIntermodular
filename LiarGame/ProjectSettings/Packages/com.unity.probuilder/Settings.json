@@ -124,7 +124,11 @@
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ShapeBuilder.LastSize.Cube",
+<<<<<<< HEAD
                 "value": "{\"m_Value\":{\"x\":50.15769577026367,\"y\":-0.08591295778751373,\"z\":-50.10624694824219}}"
+=======
+                "value": "{\"m_Value\":{\"x\":-1.5417572259902955,\"y\":2.604923963546753,\"z\":-0.17164993286132813}}"
+>>>>>>> Aday
             },
             {
                 "type": "UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
