@@ -29,8 +29,10 @@ public class DoorButtonInteraction : MonoBehaviour
 
     void OpenCutscene()
 {
-    cutsceneImage.SetActive(true);
-    cutsceneActive = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        cutsceneImage.SetActive(true);
+        cutsceneActive = true;
         goran.SetActive(true);
         goranActive = true;
 
@@ -49,6 +51,8 @@ void CloseCutscene()
     cutsceneActive = false;
         goran.SetActive(false);
         goranActive = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
         GameManager.Instance.currentState = GameState.Exploration3D;
 
