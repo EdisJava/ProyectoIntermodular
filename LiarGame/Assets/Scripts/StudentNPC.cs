@@ -1,90 +1,77 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StudentNPC : MonoBehaviour
 {
-    public string studentName; // Ej: "Juan", "Maria"
+    public string studentName;
+    public DialogueData casualDialogue;
+    public DialogueData investigationDialogue;
 
-    // Variables privadas que se llenarán automáticamente
-    private string currentCasualText;
-    private string currentInvestigationText;
-    private bool isVictim;
+    [Header("Sprites")]
+    public Sprite idleSprite; // De espaldas / sentado
+    public Transform centerPoint;
 
-    // Referencia al Manager para avisar de clicks
-    private GameManager gameManager;
+    private Image myImage;
+    private Vector3 startPos;
+    private Vector3 startScale;
 
-    private void Start()
+    void Start()
     {
-        gameManager = GameManager.Instance;
-        SetupCharacterForToday();
+        myImage = GetComponent<Image>();
+        startPos = transform.position;
+        startScale = transform.localScale;
+        if (idleSprite) myImage.sprite = idleSprite;
     }
 
-    // Esta función configura al personaje según el día actual
-    public void SetupCharacterForToday()
-    {
-        // 1. Obtenemos los datos del día actual del GameManager (veremos esto en el paso 3)
-        DayScenario today = gameManager.GetCurrentDayScenario();
-
-        if (today == null) return;
-
-        // 2. Comprobar si soy la víctima
-        isVictim = (studentName == today.victimName);
-
-        // 3. Buscar mis diálogos para hoy
-        foreach (var dialogue in today.characterDialogues)
-        {
-            if (dialogue.characterName == studentName)
-            {
-                currentCasualText = dialogue.casualText;
-
-                // Si el personaje miente hoy, su texto de investigación será la mentira
-                if (dialogue.isLiarToday)
-                {
-                    currentInvestigationText = dialogue.lieText;
-                }
-                else
-                {
-                    currentInvestigationText = dialogue.truthText;
-                }
-                break;
-            }
-        }
-    }
-
-    // Detectar click (necesitas un Collider2D en el personaje)
-    private void OnMouseDown()
-    {
-        // Si el juego no está en modo 2D, ignorar
-        if (!gameManager.IsIn2D()) return;
-
-        Interact();
-    }
-
-    // Cambia el método Interact a public para que el botón lo vea
     public void Interact()
     {
-        // Si el juego no está en modo 2D, no hacer nada
         if (!GameManager.Instance.IsIn2D()) return;
 
-        // CASO 1: Fase de Charla Casual
+        // Si es fase casual: Habla gratis
         if (GameManager.Instance.currentDayPhase == DayPhase.CasualTalk)
         {
-            Debug.Log(studentName + ": " + currentCasualText);
-
-            if (isVictim)
-            {
-                GameManager.Instance.FoundVictim();
-            }
+            DialogueManager.Instance.StartDialogue(casualDialogue, this);
         }
-        // CASO 2: Fase de Investigación
+        // Si es investigación: ¡Gasta usos!
         else if (GameManager.Instance.currentDayPhase == DayPhase.Investigation)
         {
-            if (isVictim) return;
-
             if (GameManager.Instance.CanAskQuestion())
             {
                 GameManager.Instance.UseQuestion();
-                Debug.Log(studentName + " responde: " + currentInvestigationText);
+                DialogueManager.Instance.StartDialogue(investigationDialogue, this);
+            }
+            else
+            {
+                Debug.Log("No te quedan preguntas por hoy.");
             }
         }
+    }
+
+    public void EnterFocus()
+    {
+        // Se mueve al centro y se hace grande
+        transform.position = centerPoint.position;
+        transform.localScale = startScale * 1.3f;
+        // La imagen de la cara la gestiona el DialogueManager a través de las líneas
+        // 2. ¡CLAVE!: Desactivamos su imagen de "escena" (espaldas) 
+        // porque el DialogueManager ya va a mostrar la cara en el Portrait del Canvas
+        myImage.enabled = false;
+    }
+
+    public void ExitFocus()
+    {
+        // Vuelve a su sitio y a su imagen original
+        transform.position = startPos;
+        transform.localScale = startScale;
+        myImage.sprite = idleSprite;
+        // 3. Volvemos a activar su imagen normal al terminar
+        myImage.enabled = true;
+        myImage.sprite = idleSprite;
+    }
+
+    public void SetupCharacterForToday()
+    {
+        // Por ahora lo dejamos vacío para que RoomManager no de error
+        // Luego aquí pondremos la lógica de cargar los diálogos del día
     }
 }

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: Goran_Bano_Dia1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Goran
+    text: "\xA1HOLA! \xBFQU\xC9 TAL?"
+    expression: {fileID: 21300000, guid: 949a400195278da42be86e8225b8b939, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Goran
+    text: "\xBFC\xF3mo te fue el examen?"
+    expression: {fileID: 21300000, guid: 949a400195278da42be86e8225b8b939, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: "\xBFQue te pas\xF3?"
+      nextDialogue: {fileID: 11400000, guid: a8e522f36b47012429fb734b2e67e900, type: 2}
+    - optionText: "\xBFTe ca\xEDste?"
+      nextDialogue: {fileID: 11400000, guid: a8e522f36b47012429fb734b2e67e900, type: 2}
