@@ -42151,7 +42151,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852176243}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.9, y: 3.9, z: 3.9}
   m_ConstrainProportionsScale: 1
@@ -42160,7 +42160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400.36, y: -153.8}
+  m_AnchoredPosition: {x: 400.36, y: -153.80005}
   m_SizeDelta: {x: 83.6, y: 212.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852176245
@@ -91068,7 +91068,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 522956491}
-  goran: {fileID: 852176243}
   movementScript: {fileID: 2095150377}
 --- !u!65 &1556336283
 BoxCollider:
@@ -92845,7 +92844,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 1004453309}
-  goran: {fileID: 0}
   movementScript: {fileID: 2095150377}
 --- !u!1 &1741065932
 GameObject:
@@ -94239,6 +94237,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   currentState: 0
+  currentDayPhase: 0
+  currentDay: 1
+  maxDays: 7
+  maxQuestionsPerDay: 2
+  goodDecisions: 0
+  badDecisions: 0
 --- !u!4 &1938992848
 Transform:
   m_ObjectHideFlags: 0
@@ -116425,7 +116429,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 1004453309}
-  goran: {fileID: 0}
   movementScript: {fileID: 2095150377}
 --- !u!1 &2100984363
 GameObject:
@@ -118637,7 +118640,6 @@ SceneRoots:
   - {fileID: 949696384}
   - {fileID: 1856864153}
   - {fileID: 1771812650}
-  - {fileID: 1384981094}
   - {fileID: 413121910}
   - {fileID: 752951169}
   - {fileID: 376796477}
@@ -118648,3 +118650,4 @@ SceneRoots:
   - {fileID: 895582771}
   - {fileID: 1809622651}
   - {fileID: 2084243390}
+  - {fileID: 1384981094}

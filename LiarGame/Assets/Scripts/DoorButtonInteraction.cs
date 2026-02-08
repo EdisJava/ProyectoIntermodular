@@ -4,12 +4,10 @@ using UnityEngine.InputSystem;
 public class DoorButtonInteraction : MonoBehaviour
 {
     public GameObject cutsceneImage;
-    public GameObject goran;
     
     public FirstPlayerController movementScript;  
 
     private bool cutsceneActive = false;
-    private bool goranActive = false;
 
     void Update()
     {
@@ -33,8 +31,6 @@ public class DoorButtonInteraction : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         cutsceneImage.SetActive(true);
         cutsceneActive = true;
-        goran.SetActive(true);
-        goranActive = true;
 
         GameManager.Instance.currentState = GameState.Interaction2D;
 
@@ -49,8 +45,6 @@ void CloseCutscene()
 {
     cutsceneImage.SetActive(false);
     cutsceneActive = false;
-        goran.SetActive(false);
-        goranActive = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
