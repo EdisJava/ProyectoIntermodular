@@ -129,4 +129,19 @@ public class GameManager : MonoBehaviour
         else
             Debug.Log("FINAL BUENO");
     }
+
+    [Header("Configuración de la Historia")]
+    public DayScenario[] allDays; // Arrastra aquí tus 7 ScriptableObjects desde el editor
+
+    // Función auxiliar para que los alumnos sepan qué día es
+    public DayScenario GetCurrentDayScenario()
+    {
+        // Restamos 1 porque el array empieza en 0 pero tus días en 1
+        int index = currentDay - 1;
+
+        if (index < allDays.Length)
+            return allDays[index];
+
+        return null;
+    }
 }

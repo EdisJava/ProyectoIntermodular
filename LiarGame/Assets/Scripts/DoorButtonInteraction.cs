@@ -39,7 +39,19 @@ public class DoorButtonInteraction : MonoBehaviour
         movementScript.enabled = false;
         movementScript.canLook = false;
     }
-}
+        // 2. Buscamos el RoomManager en el objeto que acabamos de activar
+        RoomManager roomManager = cutsceneImage.GetComponent<RoomManager>();
+
+        if (roomManager != null)
+        {
+            // 3. Esta función es la que activará a Goran según el día
+            roomManager.RefreshRoom();
+        }
+        else
+        {
+            Debug.LogError("¡Ojo! El objeto cutsceneImage no tiene el script RoomManager.");
+        }
+    }
 
 void CloseCutscene()
 {
