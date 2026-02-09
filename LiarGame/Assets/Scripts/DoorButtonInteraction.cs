@@ -13,6 +13,12 @@ public class DoorButtonInteraction : MonoBehaviour
     {
         if (cutsceneActive)
         {
+            // Importante: Usar .Instance para acceder a la copia que está viva en la escena
+            if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive)
+            {
+                return; // Si hay diálogo, no hacemos nada más en este Update
+            }
+
             if (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame)
             {
                 CloseCutscene();

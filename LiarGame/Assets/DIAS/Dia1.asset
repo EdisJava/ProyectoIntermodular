@@ -13,20 +13,9 @@ MonoBehaviour:
   m_Name: Dia1
   m_EditorClassIdentifier: Assembly-CSharp::DayScenario
   victimName: Goran
-  bullyName: Luis
-  characterDialogues:
-  - characterName: Pedro
-    casualText: Hola
-    truthText: Vi a Ana cerca
-    lieText: Vi a Luis solo
-    isLiarToday: 0
-  - characterName: Ana
-    casualText: Jajaja que risa
-    truthText: Fui yo
-    lieText: Yo estaba estudiando
-    isLiarToday: 1
-  - characterName: Goran
-    casualText: ".... D\xE9jame en paz"
-    truthText: Fui yo
-    lieText: Yo estaba estudiando
+  characterConfigs:
+  - characterName: Jesus
+    casualDialogue: {fileID: 11400000, guid: 9f356d3411aa2764390b8fdd18d6687a, type: 2}
+    truthDialogue: {fileID: 11400000, guid: cf679a11dfcfe1c4bae76d31b270458d, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 203cc06dc2564e746b6eb03deb2959bf, type: 2}
     isLiarToday: 1

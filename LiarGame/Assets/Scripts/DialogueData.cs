@@ -22,4 +22,5 @@ public struct DialogueOption
 {
     public string optionText;
     public DialogueData nextDialogue; // Hacia dónde va la charla si eliges esto
+    public bool isInterrogation;
 }

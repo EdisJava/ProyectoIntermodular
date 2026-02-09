@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
     public int goodDecisions = 0;
     public int badDecisions = 0;
 
+    [Header("Configuración de la Historia")]
+    public DayScenario[] allDays;
+
     private void Awake()
     {
         if (Instance == null)
@@ -59,6 +62,8 @@ public class GameManager : MonoBehaviour
     {
         currentDayPhase = DayPhase.CasualTalk;
         questionsUsed = 0;
+
+        ResetAllNPCs(); 
 
         Debug.Log($"Día {currentDay} comienza");
     }
@@ -130,8 +135,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("FINAL BUENO");
     }
 
-    [Header("Configuración de la Historia")]
-    public DayScenario[] allDays; // Arrastra aquí tus 7 ScriptableObjects desde el editor
 
     // Función auxiliar para que los alumnos sepan qué día es
     public DayScenario GetCurrentDayScenario()
@@ -144,4 +147,15 @@ public class GameManager : MonoBehaviour
 
         return null;
     }
+
+    public void ResetAllNPCs()
+    {
+        StudentNPC[] allNPCs = FindObjectsOfType<StudentNPC>();
+        foreach (StudentNPC npc in allNPCs)
+        {
+            npc.ResetMemory();
+        }
+    }
+
+
 }

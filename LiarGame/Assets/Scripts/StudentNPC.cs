@@ -8,12 +8,22 @@ public class StudentNPC : MonoBehaviour
     public DialogueData investigationDialogue;
 
     [Header("Sprites")]
-    public Sprite idleSprite; // De espaldas / sentado
+    public Sprite idleSprite;
     public Transform centerPoint;
 
     private Image myImage;
     private Vector3 startPos;
     private Vector3 startScale;
+
+    [Header("Diálogos Especiales")]
+    public DialogueData alreadyInterrogatedDialogue;
+
+    [Header("Diálogos de Víctima")]
+    public DialogueData victimStateDialogue;
+
+    private bool victimFound = false;
+    private bool alreadyInterrogated = false; // Control de si ya soltó la pista
+    public bool isVictim;
 
     void Start()
     {
@@ -23,55 +33,113 @@ public class StudentNPC : MonoBehaviour
         if (idleSprite) myImage.sprite = idleSprite;
     }
 
+    private bool casualRead = false;
     public void Interact()
     {
+        if (DialogueManager.Instance.IsDialogueActive) return;
+
         if (!GameManager.Instance.IsIn2D()) return;
 
-        // Si es fase casual: Habla gratis
-        if (GameManager.Instance.currentDayPhase == DayPhase.CasualTalk)
+        // --- LÓGICA DE VÍCTIMA ---
+        if (isVictim)
         {
-            DialogueManager.Instance.StartDialogue(casualDialogue, this);
-        }
-        // Si es investigación: ¡Gasta usos!
-        else if (GameManager.Instance.currentDayPhase == DayPhase.Investigation)
-        {
-            if (GameManager.Instance.CanAskQuestion())
+            if (!victimFound)
             {
-                GameManager.Instance.UseQuestion();
-                DialogueManager.Instance.StartDialogue(investigationDialogue, this);
+                victimFound = true;
+                DialogueManager.Instance.StartDialogue(casualDialogue, this);
+                GameManager.Instance.FoundVictim();
             }
             else
             {
-                Debug.Log("No te quedan preguntas por hoy.");
+                DialogueData nextD = victimStateDialogue != null ? victimStateDialogue : casualDialogue;
+                DialogueManager.Instance.StartDialogue(nextD, this);
+            }
+            return;
+        }
+
+        // --- LÓGICA DE ALUMNOS ---
+
+        // CASO A: Aún no has leído su diálogo casual (Prioridad máxima)
+        // Saldrá este diálogo tanto en fase CasualTalk como en Investigation
+        if (!casualRead)
+        {
+            casualRead = true; // La próxima vez ya pasará a la siguiente lógica
+            DialogueManager.Instance.StartDialogue(casualDialogue, this);
+            return;
+        }
+
+        // CASO B: Ya leíste el casual, pero aún no estamos en investigación
+        if (GameManager.Instance.currentDayPhase == DayPhase.CasualTalk)
+        {
+            DialogueManager.Instance.StartDialogue(casualDialogue, this);
+            return;
+        }
+
+        // CASO C: Ya leíste el casual y estamos en investigación
+        if (GameManager.Instance.currentDayPhase == DayPhase.Investigation ||
+            GameManager.Instance.currentDayPhase == DayPhase.Decision)
+        {
+            if (alreadyInterrogated)
+            {
+                DialogueData nextD = alreadyInterrogatedDialogue != null ? alreadyInterrogatedDialogue : casualDialogue;
+                DialogueManager.Instance.StartDialogue(nextD, this);
+            }
+            else
+            {
+                // Ahora sí, después de haber leído el casual una vez, sale la investigación
+                DialogueManager.Instance.StartDialogue(investigationDialogue, this);
             }
         }
     }
 
+    // Esta función la llama el DialogueManager cuando eliges una opción con isInterrogation = true
+    public void MarkAsInterrogated()
+    {
+        alreadyInterrogated = true;
+    }
+
     public void EnterFocus()
     {
-        // Se mueve al centro y se hace grande
         transform.position = centerPoint.position;
         transform.localScale = startScale * 1.3f;
-        // La imagen de la cara la gestiona el DialogueManager a través de las líneas
-        // 2. ¡CLAVE!: Desactivamos su imagen de "escena" (espaldas) 
-        // porque el DialogueManager ya va a mostrar la cara en el Portrait del Canvas
         myImage.enabled = false;
     }
 
     public void ExitFocus()
     {
-        // Vuelve a su sitio y a su imagen original
         transform.position = startPos;
         transform.localScale = startScale;
-        myImage.sprite = idleSprite;
-        // 3. Volvemos a activar su imagen normal al terminar
         myImage.enabled = true;
-        myImage.sprite = idleSprite;
+    }
+
+    public void ResetMemory()
+    {
+        alreadyInterrogated = false;
+        victimFound = false;
+        casualRead = false;
     }
 
     public void SetupCharacterForToday()
     {
-        // Por ahora lo dejamos vacío para que RoomManager no de error
-        // Luego aquí pondremos la lógica de cargar los diálogos del día
+        
+
+        DayScenario today = GameManager.Instance.GetCurrentDayScenario();
+        if (today == null) return;
+
+        isVictim = (studentName == today.victimName);
+        if (isVictim) Debug.Log(studentName + " es la víctima hoy.");
+
+        foreach (var config in today.characterConfigs)
+        {
+            if (config.characterName == studentName)
+            {
+                this.casualDialogue = config.casualDialogue;
+                if (!isVictim)
+                {
+                    this.investigationDialogue = config.isLiarToday ? config.lieDialogue : config.truthDialogue;
+                }
+                break;
+            }
+        }
     }
 }

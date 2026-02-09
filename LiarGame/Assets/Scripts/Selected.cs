@@ -40,17 +40,33 @@ void Update()
 
     if (GameManager.Instance.IsIn2D())
     {
-        crosshair.SetActive(false);
-        interactText.SetActive(true);
-        cuadroInteract.SetActive(true);
-        
-        interactLabel.text = "ESPACIO para salir";
+            // 1. Verificamos si existe la instancia para evitar el error
+            bool talking = false;
+            if (DialogueManager.Instance != null)
+            {
+                talking = DialogueManager.Instance.IsDialogueActive;
+            }
 
-        wasLookingAtDoorLastFrame = false;
-        return;
-    }
+            // 2. Usamos esa variable para decidir qué mostrar
+            if (talking)
+            {
+                crosshair.SetActive(false);
+                interactText.SetActive(false);
+                cuadroInteract.SetActive(false);
+            }
+            else
+            {
+                crosshair.SetActive(false);
+                interactText.SetActive(true);
+                cuadroInteract.SetActive(true);
+                interactLabel.text = "ESPACIO para salir";
+            }
 
-    RaycastHit hit;
+            wasLookingAtDoorLastFrame = false;
+            return;
+        }
+
+        RaycastHit hit;
     isLookingAtDoor = false;
 
     if (Physics.Raycast(transform.position,

@@ -20,6 +20,9 @@ public class DialogueManager : MonoBehaviour
     private bool isTyping;
     private StudentNPC currentNPC;
 
+
+    public bool IsDialogueActive => dialoguePanel != null && dialoguePanel.activeSelf;
+
     void Awake() => Instance = this;
 
     public void StartDialogue(DialogueData data, StudentNPC npc)
@@ -65,6 +68,9 @@ public class DialogueManager : MonoBehaviour
 
     public void OnClickPanel() // Llamar desde un botón invisible en el panel
     {
+
+        if (optionsParent.activeSelf) return;
+
         if (isTyping)
         {
             StopAllCoroutines();
@@ -94,8 +100,19 @@ public class DialogueManager : MonoBehaviour
         {
             GameObject btn = Instantiate(optionButtonPrefab, optionsParent.transform);
             btn.GetComponentInChildren<TextMeshProUGUI>().text = opt.optionText;
+            DialogueOption currentOpt = opt;
+
             btn.GetComponent<Button>().onClick.AddListener(() => {
-                if (opt.nextDialogue != null) StartDialogue(opt.nextDialogue, currentNPC);
+                if (currentOpt.isInterrogation)
+                {
+                    GameManager.Instance.UseQuestion();
+                    if (currentNPC != null) currentNPC.MarkAsInterrogated();
+                }
+
+                optionsParent.SetActive(false);
+
+                // 2. Continuamos al siguiente diálogo o cerramos
+                if (currentOpt.nextDialogue != null) StartDialogue(currentOpt.nextDialogue, currentNPC);
                 else CloseDialogue();
             });
         }
