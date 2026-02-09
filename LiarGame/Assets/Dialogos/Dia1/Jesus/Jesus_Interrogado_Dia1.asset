@@ -15,6 +15,6 @@ MonoBehaviour:
   lines:
   - characterName: Jesus
     text: "Ya te he dicho todo lo que sab\xEDa. D\xE9jame en paz."
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: bdc179761ef4d734798f2ac440ae6ec4, type: 3}
     hasOptions: 0
     options: []
