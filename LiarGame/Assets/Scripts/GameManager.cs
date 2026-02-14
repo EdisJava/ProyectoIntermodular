@@ -29,6 +29,12 @@ public class GameManager : MonoBehaviour
     public int maxQuestionsPerDay = 2;
     private int questionsUsed;
 
+    public int GetRemainingQuestions()
+    {
+        return maxQuestionsPerDay - questionsUsed;
+    }
+
+
     [Header("Resultados")]
     public int goodDecisions = 0;
     public int badDecisions = 0;

@@ -19,3 +19,6 @@ MonoBehaviour:
     truthDialogue: {fileID: 11400000, guid: cf679a11dfcfe1c4bae76d31b270458d, type: 2}
     lieDialogue: {fileID: 11400000, guid: 203cc06dc2564e746b6eb03deb2959bf, type: 2}
     isLiarToday: 1
+  goalFindVictim: Encuentra a la persona acosada
+  goalInvestigate: "Interroga a los compa\xF1eros"
+  goalReport: Habla con el profesor
