@@ -105601,14 +105601,14 @@ RectTransform:
   m_GameObject: {fileID: 2028306382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 190036460}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -816.67, y: 403}
+  m_AnchoredPosition: {x: -838, y: 423}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2028306384
@@ -105623,7 +105623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7ebd68073d53445bea7aa7ba92c066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestionUI
-  iconPrefab: {fileID: 4243372485317523258, guid: 739e050bfc36fc04280683ac76da1406, type: 3}
+  iconPrefab: {fileID: 3245329898502514928, guid: 1581133f9ecc1d94886ad28b7212e824, type: 3}
 --- !u!114 &2028306385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105642,7 +105642,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 22.2
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
