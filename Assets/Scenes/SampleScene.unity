@@ -13092,7 +13092,6 @@ RectTransform:
   - {fileID: 852176244}
   - {fileID: 1990205725}
   - {fileID: 1983304952}
-  - {fileID: 1719450977}
   m_Father: {fileID: 1722659304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -227437,11 +227436,11 @@ RectTransform:
   m_Children:
   - {fileID: 1348757263}
   - {fileID: 684414670}
-  m_Father: {fileID: 197262169}
+  m_Father: {fileID: 1722659304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 50.000015, y: 49.999977}
+  m_AnchoredPosition: {x: 960.00006, y: 540.08435}
   m_SizeDelta: {x: 1920, y: 1078.899}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1719450978
@@ -227601,14 +227600,15 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 190036460}
-  - {fileID: 669577070}
   - {fileID: 1811485001}
   - {fileID: 1608650781}
   - {fileID: 1440961518}
   - {fileID: 1516074816}
   - {fileID: 1399573810}
   - {fileID: 197262169}
+  - {fileID: 1719450977}
+  - {fileID: 190036460}
+  - {fileID: 669577070}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -229130,14 +229130,14 @@ RectTransform:
   m_GameObject: {fileID: 1807136246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.52, y: 4.52, z: 4.52}
+  m_LocalScale: {x: 4.9, y: 7.52519, z: 7.52519}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1608650781}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 259.17, y: -158.56}
+  m_AnchoredPosition: {x: 414.57, y: -362.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1807136248
@@ -229159,7 +229159,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -229169,8 +229169,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 4d8931d157a52444e87b425d07d514c8, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 4d8931d157a52444e87b425d07d514c8, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -229211,7 +229211,7 @@ MonoBehaviour:
   studentName: Walter
   casualDialogue: {fileID: 11400000, guid: f250948c2cab31c478a4630bdaa0ffee, type: 2}
   investigationDialogue: {fileID: 11400000, guid: 7942769f63ec6694c98fd57db594e77d, type: 2}
-  idleSprite: {fileID: 21300000, guid: 0232eab78fdf1ba498e864f04274feb7, type: 3}
+  idleSprite: {fileID: 21300000, guid: 6ef8fe87a725dbd4a98f6ac52a8b0589, type: 3}
   centerPoint: {fileID: 1673134750}
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 7942769f63ec6694c98fd57db594e77d, type: 2}
   victimStateDialogue: {fileID: 0}
@@ -229229,14 +229229,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45349768, g: 0.5861274, b: 0.745283, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0232eab78fdf1ba498e864f04274feb7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ef8fe87a725dbd4a98f6ac52a8b0589, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -15,7 +15,7 @@ MonoBehaviour:
   lines:
   - characterName: Walter
     text: ...
-    expression: {fileID: 21300000, guid: 0232eab78fdf1ba498e864f04274feb7, type: 3}
+    expression: {fileID: 21300000, guid: 2c811e78089fa2b4b92565082bd97a1b, type: 3}
     hasOptions: 1
     options:
     - optionText: '*acariciar*'
