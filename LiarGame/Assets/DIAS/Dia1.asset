@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530b9f764835696469860bff74b39007, type: 3}
+  m_Name: Dia1
+  m_EditorClassIdentifier: Assembly-CSharp::DayScenario
+  victimName: Goran
+  characterConfigs:
+  - characterName: Jesus
+    casualDialogue: {fileID: 11400000, guid: 9f356d3411aa2764390b8fdd18d6687a, type: 2}
+    truthDialogue: {fileID: 11400000, guid: cf679a11dfcfe1c4bae76d31b270458d, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 203cc06dc2564e746b6eb03deb2959bf, type: 2}
+    isLiarToday: 1
+  goalFindVictim: Encuentra a la persona acosada
+  goalInvestigate: "Interroga a los compa\xF1eros"
+  goalReport: Habla con el profesor
