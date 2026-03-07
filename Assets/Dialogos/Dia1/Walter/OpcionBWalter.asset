@@ -15,6 +15,6 @@ MonoBehaviour:
   lines:
   - characterName: Walter
     text: ...
-    expression: {fileID: 21300000, guid: 2c811e78089fa2b4b92565082bd97a1b, type: 3}
+    expression: {fileID: 21300000, guid: eadccd684a732e8408e7724c33007072, type: 3}
     hasOptions: 0
     options: []

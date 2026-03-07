@@ -27,8 +27,8 @@ RectTransform:
   m_GameObject: {fileID: 3644754731511836171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.82, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1886511971560592815}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65,10 +65,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 856991a124c670a40b1cf2b61deafb2f, type: 2}
-  m_sharedMaterial: {fileID: -5313018134315807710, guid: 856991a124c670a40b1cf2b61deafb2f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 02c8de515bfceeb4da2d22a25d8614cc, type: 2}
+  m_sharedMaterial: {fileID: -7274244235333278102, guid: 02c8de515bfceeb4da2d22a25d8614cc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -20.609596, y: 0, z: -21.666847, w: 0}
+  m_margin: {x: 6.3996506, y: 0, z: 5.4561996, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -235,11 +235,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.087308645, g: 0.090807185, b: 0.16981131, a: 1}
-    m_HighlightedColor: {r: 0.11360803, g: 0.11853057, b: 0.21698111, a: 1}
-    m_PressedColor: {r: 0.11372549, g: 0.11764706, b: 0.21568628, a: 1}
-    m_SelectedColor: {r: 0.11372549, g: 0.11764706, b: 0.21568628, a: 1}
-    m_DisabledColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 0.5019608}
+    m_NormalColor: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
+    m_HighlightedColor: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
+    m_PressedColor: {r: 0.07450981, g: 0.07450981, b: 0.07450981, a: 1}
+    m_SelectedColor: {r: 0.101960786, g: 0.101960786, b: 0.101960786, a: 1}
+    m_DisabledColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
