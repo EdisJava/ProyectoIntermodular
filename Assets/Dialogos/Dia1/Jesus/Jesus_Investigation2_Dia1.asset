@@ -19,8 +19,17 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Jesus
-    text: "Espera... ahora que lo recuerdo, creo que vi a un chico alto con el pelo
-      corto hacerlo... Ten\xEDa gafas."
+    text: Espera... ahora que lo recuerdo, creo que vi a un chico muy raro hacerlo...
+    expression: {fileID: 21300000, guid: bdc179761ef4d734798f2ac440ae6ec4, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "Ofrece caramelos a ni\xF1as peque\xF1as en la R04..."
+    expression: {fileID: 21300000, guid: bdc179761ef4d734798f2ac440ae6ec4, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: Tiene un sombrero y gafas...
     expression: {fileID: 21300000, guid: bdc179761ef4d734798f2ac440ae6ec4, type: 3}
     hasOptions: 0
     options: []
