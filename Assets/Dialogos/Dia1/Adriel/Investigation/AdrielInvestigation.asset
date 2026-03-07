@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: Goran_Victima_Dia1
+  m_Name: AdrielInvestigation
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Goran
-    text: "\xBFMe quieres dejar en paz?"
-    expression: {fileID: 21300000, guid: 77d7ccbf56d620243b49886cc9cfdb61, type: 3}
-    hasOptions: 0
+  - characterName: Adriel
+    text: "\xBFQu\xE9 quieres?"
+    expression: {fileID: 21300000, guid: 012670589f48e5e46a6fc8707b37bbb0, type: 3}
+    hasOptions: 1
     options:
-    - optionText: ...
-      nextDialogue: {fileID: 0}
+    - optionText: "\xBFConoces a Goran?"
+      nextDialogue: {fileID: 11400000, guid: 42120e6bd8064a344a419b0eb2ef1928, type: 2}
       isInterrogation: 0

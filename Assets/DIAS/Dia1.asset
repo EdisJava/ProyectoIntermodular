@@ -24,6 +24,11 @@ MonoBehaviour:
     truthDialogue: {fileID: 11400000, guid: 7942769f63ec6694c98fd57db594e77d, type: 2}
     lieDialogue: {fileID: 11400000, guid: 7942769f63ec6694c98fd57db594e77d, type: 2}
     isLiarToday: 0
+  - characterName: Adriel
+    casualDialogue: {fileID: 11400000, guid: 6b158cd4ee5c34f429ca6f6eecd94147, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 8731f571e40347b45b4c692845778b91, type: 2}
+    lieDialogue: {fileID: 11400000, guid: b86e17e293cbd5047bd5b29c1e360eb6, type: 2}
+    isLiarToday: 0
   goalFindVictim: Encuentra a la persona acosada
   goalInvestigate: "Interroga a los compa\xF1eros"
   goalReport: Habla con el profesor

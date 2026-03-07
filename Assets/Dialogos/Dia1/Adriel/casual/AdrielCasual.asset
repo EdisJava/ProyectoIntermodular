@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: AdrielCasual
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Adriel
+    text: "\xBFQuieres caramelos?"
+    expression: {fileID: 21300000, guid: 012670589f48e5e46a6fc8707b37bbb0, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: No quiero, gracias.
+      nextDialogue: {fileID: 11400000, guid: 021b084cc93305f48960dd2ca60147f2, type: 2}
+      isInterrogation: 0
+    - optionText: "\xBFQui\xE9n eres?"
+      nextDialogue: {fileID: 11400000, guid: efb7e8be9c9ff1e429024a65999f3bac, type: 2}
+      isInterrogation: 0
