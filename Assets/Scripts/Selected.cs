@@ -77,7 +77,10 @@ void Update()
         {
             isLookingAtDoor = true;
 
-            interactLabel.text = "E para interactuar";
+                var interaction = hit.collider.GetComponent<DoorButtonInteraction>();
+
+                // Cambiamos el texto según el tipo de puerta
+                interactLabel.text = interaction.isExitDoor ? "E para ir a casa" : "E para interactuar";
 
                 if (!wasLookingAtDoorLastFrame)
             {
@@ -91,10 +94,10 @@ void Update()
                 }
 
                 if (interactAction != null && interactAction.triggered)
-            {
-                hit.collider.GetComponent<DoorButtonInteraction>().Interact();
+                {
+                    interaction.Interact(); 
+                }
             }
-        }
     }
 
         if (!isLookingAtDoor)

@@ -32,3 +32,5 @@ MonoBehaviour:
   goalFindVictim: Encuentra a la persona acosada
   goalInvestigate: "Interroga a los compa\xF1eros"
   goalReport: Habla con el profesor
+  teacherCasualDialogue: {fileID: 11400000, guid: e1565325ec9537144a54d40478c970cb, type: 2}
+  teacherDecisionDialogue: {fileID: 11400000, guid: db62ef96eb3ac764ca043458bdca956d, type: 2}

@@ -1,3 +1,5 @@
+using System.Collections;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +10,9 @@ public class DoorButtonInteraction : MonoBehaviour
     public FirstPlayerController movementScript;  
 
     private bool cutsceneActive = false;
+
+    public bool isExitDoor = false; 
+    public GameObject fadePanel;
 
     void Update()
     {
@@ -28,7 +33,37 @@ public class DoorButtonInteraction : MonoBehaviour
 
     public void Interact()
     {
-        OpenCutscene();
+        if (isExitDoor)
+        {
+            // Solo dejamos salir si ya acusó
+            if (GameManager.Instance.hasAccusedThisDay)
+            {
+                StartCoroutine(TransitionToNextDay());
+            }
+            else
+            {
+                Debug.Log("No puedo irme sin acusar a alguien.");
+            }
+        }
+        else
+        {
+            OpenCutscene();
+        }
+    }
+
+    IEnumerator TransitionToNextDay()
+    {
+        // 1. Pantalla en negro
+        fadePanel.SetActive(true);
+
+        // 2. Esperar 5 segundos
+        yield return new WaitForSeconds(5f);
+
+        // 3. Pasar de día
+        GameManager.Instance.NextDay();
+
+        // 4. Quitar pantalla en negro
+        fadePanel.SetActive(false);
     }
 
     void OpenCutscene()

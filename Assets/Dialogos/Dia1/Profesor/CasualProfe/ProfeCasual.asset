@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: ProfeCasual
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: ???
+    text: "Buenas... Me has decepcionado en el \xFAltimo examen..."
+    expression: {fileID: 21300000, guid: 9fd63e9c35ce60f41b7a78282fbf2839, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: ???
+    text: "\xBFC\xF3mo vas a sacar nota negativa? \xBFEres una persona real?"
+    expression: {fileID: 21300000, guid: 9fd63e9c35ce60f41b7a78282fbf2839, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: ???
+    text: O acaso eres un robot del Mossad?
+    expression: {fileID: 21300000, guid: 9fd63e9c35ce60f41b7a78282fbf2839, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: Cuanto dinero quieres.
+      nextDialogue: {fileID: 11400000, guid: a5081f36140141a44a7ccecd9bce219c, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: ...
+      nextDialogue: {fileID: 11400000, guid: c07c213ce68a43644a24096068f48e43, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

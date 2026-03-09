@@ -17,18 +17,21 @@ public class RoomManager : MonoBehaviour
         int currentDay = GameManager.Instance.currentDay;
         StudentsByDay todayConfig = schedule.Find(s => s.day == currentDay);
 
-        // Recorremos todos los hijos del Empty (BathHombre, Cocina, etc.)
         foreach (Transform child in transform)
         {
             StudentNPC student = child.GetComponent<StudentNPC>();
+            TeacherNPC teacher = child.GetComponent<TeacherNPC>(); // Añadimos esto
 
-            // SI NO ES UN ESTUDIANTE (es el fondo, un mueble, etc.)
-            if (student == null)
+            // --- SI ES EL PROFESOR ---
+            if (teacher != null)
             {
-                child.gameObject.SetActive(true); // Siempre visible
+                // El profesor siempre debe estar activo si el profesor tiene una configuración para hoy
+                // O puedes añadir una lista de profesores en el schedule si quieres que cambien
+                teacher.gameObject.SetActive(true);
+                teacher.SetupTeacherForToday();
             }
-            // SI ES UN ESTUDIANTE
-            else
+            // --- SI ES UN ESTUDIANTE ---
+            else if (student != null)
             {
                 bool shouldBeActive = todayConfig != null && todayConfig.activeStudentNames.Contains(student.studentName);
                 child.gameObject.SetActive(shouldBeActive);
@@ -37,6 +40,11 @@ public class RoomManager : MonoBehaviour
                 {
                     student.SetupCharacterForToday();
                 }
+            }
+            // --- SI ES MUEBLE / FONDO ---
+            else
+            {
+                child.gameObject.SetActive(true);
             }
         }
     }

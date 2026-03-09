@@ -64,13 +64,15 @@ public class GameManager : MonoBehaviour
 
     // ---------------- DÍAS ----------------
 
+    public bool hasAccusedThisDay = false; // Nueva variable
+
     void StartNewDay()
     {
         currentDayPhase = DayPhase.CasualTalk;
         questionsUsed = 0;
+        hasAccusedThisDay = false; // Resetear al empezar el día
 
-        ResetAllNPCs(); 
-
+        ResetAllNPCs();
         Debug.Log($"Día {currentDay} comienza");
     }
 
@@ -111,17 +113,15 @@ public class GameManager : MonoBehaviour
 
     public void RegisterDecision(bool correct)
     {
-        if (correct)
-            goodDecisions++;
-        else
-            badDecisions++;
+        if (correct) goodDecisions++;
+        else badDecisions++;
 
-        Debug.Log($"Buenas: {goodDecisions} | Malas: {badDecisions}");
-
-        NextDay();
+        hasAccusedThisDay = true; // <--- Marcamos que ya se hizo la acusación
+        Debug.Log("Decisión registrada. Ahora puedes irte.");
     }
 
-    void NextDay()
+
+    public void NextDay()
     {
         if (currentDay >= maxDays)
         {
@@ -160,6 +160,11 @@ public class GameManager : MonoBehaviour
         foreach (StudentNPC npc in allNPCs)
         {
             npc.ResetMemory();
+        }
+        TeacherNPC teacher = FindFirstObjectByType<TeacherNPC>();
+        if (teacher != null)
+        {
+            teacher.ResetMemory();
         }
     }
 

@@ -10,7 +10,13 @@ public class DayScenario : ScriptableObject
     [TextArea(2, 4)] public string goalFindVictim = "Encuentra al acosado";
     [TextArea(2, 4)] public string goalInvestigate = "Interroga a los alumnos";
     [TextArea(2, 4)] public string goalReport = "Habla con el profesor";
+
+    [Header("Profesor")]
+    public DialogueData teacherCasualDialogue;
+    public DialogueData teacherDecisionDialogue;
 }
+
+
 
 
 [System.Serializable]

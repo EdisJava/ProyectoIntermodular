@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     private int lineIndex;
     private bool isTyping;
     private StudentNPC currentNPC;
+    private TeacherNPC currentTeacher;
 
 
     public bool IsDialogueActive => dialoguePanel != null && dialoguePanel.activeSelf;
@@ -27,6 +28,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueData data, StudentNPC npc)
     {
+        CleanPreviousFocus(); // Limpiamos lo que hubiera antes
+
         currentData = data;
         currentNPC = npc;
         lineIndex = 0;
@@ -35,10 +38,36 @@ public class DialogueManager : MonoBehaviour
         portraitDisplay.gameObject.SetActive(true);
         optionsParent.SetActive(false);
 
-        // Efecto visual: el NPC se prepara para hablar
-        currentNPC.EnterFocus();
+        if (currentNPC != null) currentNPC.EnterFocus();
 
         DisplayLine();
+    }
+
+    public void StartDialogue(DialogueData data, TeacherNPC teacher)
+    {
+        CleanPreviousFocus();
+
+        currentData = data;
+        currentTeacher = teacher; // Guardamos al profe
+        lineIndex = 0;
+
+        dialoguePanel.SetActive(true);
+        portraitDisplay.gameObject.SetActive(true);
+        optionsParent.SetActive(false);
+
+        if (currentTeacher != null) currentTeacher.EnterFocus(); 
+
+        DisplayLine();
+    }
+
+   
+    private void CleanPreviousFocus()
+    {
+        if (currentNPC != null) currentNPC.ExitFocus();
+        if (currentTeacher != null) currentTeacher.ExitFocus();
+
+        currentNPC = null;
+        currentTeacher = null;
     }
 
     void DisplayLine()
@@ -103,6 +132,14 @@ public class DialogueManager : MonoBehaviour
             DialogueOption currentOpt = opt;
 
             btn.GetComponent<Button>().onClick.AddListener(() => {
+
+                if (currentOpt.isFinalDecision)
+                {
+                    GameManager.Instance.RegisterDecision(currentOpt.isCorrectAccusation);
+                    TeacherNPC teacher = Object.FindFirstObjectByType<TeacherNPC>();
+                    if (teacher != null) teacher.SetAccusedFlag();
+                }
+
                 if (currentOpt.isInterrogation)
                 {
                     GameManager.Instance.UseQuestion();
@@ -111,9 +148,23 @@ public class DialogueManager : MonoBehaviour
 
                 optionsParent.SetActive(false);
 
-                // 2. Continuamos al siguiente diálogo o cerramos
-                if (currentOpt.nextDialogue != null) StartDialogue(currentOpt.nextDialogue, currentNPC);
-                else CloseDialogue();
+                if (currentOpt.nextDialogue != null)
+                {
+                    // Si hay un profesor hablando, seguimos con el profesor
+                    if (currentTeacher != null)
+                    {
+                        StartDialogue(currentOpt.nextDialogue, currentTeacher);
+                    }
+                    // Si no, seguimos con el alumno
+                    else
+                    {
+                        StartDialogue(currentOpt.nextDialogue, currentNPC);
+                    }
+                }
+                else
+                {
+                    CloseDialogue();
+                }
             });
         }
     }
@@ -122,6 +173,11 @@ public class DialogueManager : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
         portraitDisplay.gameObject.SetActive(false);
-        currentNPC.ExitFocus();
+
+        if (currentNPC != null) currentNPC.ExitFocus();
+        if (currentTeacher != null) currentTeacher.ExitFocus(); // Apagamos al profe si estaba hablando
+
+        currentNPC = null;
+        currentTeacher = null;
     }
 }

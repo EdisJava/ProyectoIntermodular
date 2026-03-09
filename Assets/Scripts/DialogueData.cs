@@ -23,4 +23,7 @@ public struct DialogueOption
     public string optionText;
     public DialogueData nextDialogue; // Hacia dónde va la charla si eliges esto
     public bool isInterrogation;
+   
+    public bool isFinalDecision; // Marca esto en el Inspector para las opciones de "Chivarse"
+    public bool isCorrectAccusation; // Marca esto solo en la opción del culpable real
 }
