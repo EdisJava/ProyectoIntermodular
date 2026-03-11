@@ -5,15 +5,19 @@ using System.Collections.Generic;
 public class DayScenario : ScriptableObject
 {
     public string victimName;
+    public string teacherName; 
+
     public List<StudentDailyConfig> characterConfigs;
+
     [Header("Textos de Objetivo")]
     [TextArea(2, 4)] public string goalFindVictim = "Encuentra al acosado";
     [TextArea(2, 4)] public string goalInvestigate = "Interroga a los alumnos";
     [TextArea(2, 4)] public string goalReport = "Habla con el profesor";
 
-    [Header("Profesor")]
+    [Header("Diálogos del Profesor de Hoy")]
     public DialogueData teacherCasualDialogue;
     public DialogueData teacherDecisionDialogue;
+    public DialogueData postDecisionDialogue; // Diálogo para cuando ya has acusado
 }
 
 

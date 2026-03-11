@@ -13113,14 +13113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097c21638471da846b11b1d9610dd30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
-  schedule:
-  - day: 1
-    activeStudentNames:
-    - Goran
-    - Jesus
-  - day: 2
-    activeStudentNames:
-    - Goran
 --- !u!1 &199850011
 GameObject:
   m_ObjectHideFlags: 0
@@ -98300,7 +98292,10 @@ MonoBehaviour:
   badDecisions: 0
   allDays:
   - {fileID: 11400000, guid: bce19c2e9018971479469c5f52a6cb40, type: 2}
+  - {fileID: 11400000, guid: 787b296248561dd44aa676eae738c757, type: 2}
   hasAccusedThisDay: 0
+  playerSpawnPoint: {fileID: 0}
+  playerObject: {fileID: 0}
 --- !u!4 &861333548
 Transform:
   m_ObjectHideFlags: 0
@@ -171816,10 +171811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097c21638471da846b11b1d9610dd30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
-  schedule:
-  - day: 1
-    activeStudentNames:
-    - Adriel
 --- !u!1 &1400024930
 GameObject:
   m_ObjectHideFlags: 0
@@ -190805,9 +190796,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097c21638471da846b11b1d9610dd30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
-  schedule:
-  - day: 1
-    activeStudentNames: []
 --- !u!1 &1441389013
 GameObject:
   m_ObjectHideFlags: 0
@@ -202781,9 +202769,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097c21638471da846b11b1d9610dd30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
-  schedule:
-  - day: 1
-    activeStudentNames: []
 --- !u!1 &1525626916
 GameObject:
   m_ObjectHideFlags: 0
@@ -214628,10 +214613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097c21638471da846b11b1d9610dd30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
-  schedule:
-  - day: 1
-    activeStudentNames:
-    - Walter
 --- !u!1 &1616567949
 GameObject:
   m_ObjectHideFlags: 0
@@ -229904,9 +229885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097c21638471da846b11b1d9610dd30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
-  schedule:
-  - day: 1
-    activeStudentNames: []
 --- !u!1001 &1822508204
 PrefabInstance:
   m_ObjectHideFlags: 0

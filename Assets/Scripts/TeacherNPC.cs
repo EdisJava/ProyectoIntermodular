@@ -35,11 +35,11 @@ public class TeacherNPC : MonoBehaviour
     public void SetupTeacherForToday()
     {
         DayScenario today = GameManager.Instance.GetCurrentDayScenario();
-        if (today == null) return;
+        if (today == null || today.teacherName != this.teacherName) return;
 
-        // Estos campos los añadiremos ahora al DayScenario
         this.currentCasual = today.teacherCasualDialogue;
         this.currentDecision = today.teacherDecisionDialogue;
+        this.postDecisionDialogue = today.postDecisionDialogue;
     }
 
     public void Interact()

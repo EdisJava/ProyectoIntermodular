@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Dia1
   m_EditorClassIdentifier: Assembly-CSharp::DayScenario
   victimName: Goran
+  teacherName: ???
   characterConfigs:
   - characterName: Jesus
     casualDialogue: {fileID: 11400000, guid: 9f356d3411aa2764390b8fdd18d6687a, type: 2}
@@ -34,3 +35,4 @@ MonoBehaviour:
   goalReport: Habla con el profesor
   teacherCasualDialogue: {fileID: 11400000, guid: e1565325ec9537144a54d40478c970cb, type: 2}
   teacherDecisionDialogue: {fileID: 11400000, guid: db62ef96eb3ac764ca043458bdca956d, type: 2}
+  postDecisionDialogue: {fileID: 0}

@@ -66,14 +66,49 @@ public class GameManager : MonoBehaviour
 
     public bool hasAccusedThisDay = false; // Nueva variable
 
+    [Header("Posicion Inicial")]
+    public Transform playerSpawnPoint;
+    public GameObject playerObject;
     void StartNewDay()
     {
         currentDayPhase = DayPhase.CasualTalk;
         questionsUsed = 0;
-        hasAccusedThisDay = false; // Resetear al empezar el día
+        hasAccusedThisDay = false;
 
-        ResetAllNPCs();
-        Debug.Log($"Día {currentDay} comienza");
+        // 1. Obtenemos el escenario del nuevo día
+        DayScenario scenario = GetCurrentDayScenario();
+
+        if (scenario != null)
+        {
+            Debug.Log($"Configurando Día {currentDay}: {scenario.name}");
+
+            // 2. Buscamos a todos los NPCs y les damos su nueva "hoja de ruta"
+            StudentNPC[] allNPCs = FindObjectsOfType<StudentNPC>();
+            foreach (StudentNPC npc in allNPCs)
+            {
+                npc.ResetMemory();
+                npc.SetupCharacterForToday(); // Esta función ya la tienes en StudentNPC
+            }
+
+            TeacherNPC teacher = FindFirstObjectByType<TeacherNPC>();
+            if (teacher != null)
+            {
+                teacher.ResetMemory();
+                teacher.SetupTeacherForToday(); // Esta función ya la tienes en TeacherNPC
+            }
+        }
+        else
+        {
+            Debug.LogError("No hay un DayScenario configurado para el día " + currentDay);
+        }
+
+        Debug.Log($"Día {currentDay} comienza oficialmente");
+
+        if (playerSpawnPoint != null && playerObject != null)
+        {
+            playerObject.transform.position = playerSpawnPoint.position;
+            playerObject.transform.rotation = playerSpawnPoint.rotation;
+        }
     }
 
     // ---------------- ACOSADO ----------------

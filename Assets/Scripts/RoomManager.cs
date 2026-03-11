@@ -14,34 +14,42 @@ public class RoomManager : MonoBehaviour
 
     public void RefreshRoom()
     {
-        int currentDay = GameManager.Instance.currentDay;
-        StudentsByDay todayConfig = schedule.Find(s => s.day == currentDay);
+        DayScenario today = GameManager.Instance.GetCurrentDayScenario();
+        if (today == null) return;
+
+        // Lista de quién debe estar hoy
+        List<string> activeStudents = new List<string>();
+        activeStudents.Add(today.victimName);
+        foreach (var config in today.characterConfigs) activeStudents.Add(config.characterName);
 
         foreach (Transform child in transform)
         {
             StudentNPC student = child.GetComponent<StudentNPC>();
-            TeacherNPC teacher = child.GetComponent<TeacherNPC>(); // Añadimos esto
+            TeacherNPC teacher = child.GetComponent<TeacherNPC>();
 
-            // --- SI ES EL PROFESOR ---
             if (teacher != null)
             {
-                // El profesor siempre debe estar activo si el profesor tiene una configuración para hoy
-                // O puedes añadir una lista de profesores en el schedule si quieres que cambien
-                teacher.gameObject.SetActive(true);
-                teacher.SetupTeacherForToday();
+                // Solo activamos al profesor si su nombre coincide con el del día
+                bool isTodayTeacher = (teacher.teacherName == today.teacherName);
+                child.gameObject.SetActive(isTodayTeacher);
+
+                if (isTodayTeacher)
+                {
+                    teacher.ResetMemory();
+                    teacher.SetupTeacherForToday();
+                }
             }
-            // --- SI ES UN ESTUDIANTE ---
             else if (student != null)
             {
-                bool shouldBeActive = todayConfig != null && todayConfig.activeStudentNames.Contains(student.studentName);
+                bool shouldBeActive = activeStudents.Contains(student.studentName);
                 child.gameObject.SetActive(shouldBeActive);
 
                 if (shouldBeActive)
                 {
+                    student.ResetMemory();
                     student.SetupCharacterForToday();
                 }
             }
-            // --- SI ES MUEBLE / FONDO ---
             else
             {
                 child.gameObject.SetActive(true);
@@ -49,3 +57,5 @@ public class RoomManager : MonoBehaviour
         }
     }
 }
+
+         
