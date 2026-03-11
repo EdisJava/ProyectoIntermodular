@@ -13113,6 +13113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097c21638471da846b11b1d9610dd30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
+  schedule: []
 --- !u!1 &199850011
 GameObject:
   m_ObjectHideFlags: 0
@@ -98843,7 +98844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c719ecf59ef5b91489f7871f3dcc7504, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d55e38f02e742554f96eb5184844f1d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -113982,7 +113983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 16540653e2ebf2740814e7869a8b00d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf1464cfc2b61224d8ea855f6bf3c79b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -148626,7 +148627,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a9339a96579c754098b16137603a815, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6820190ff2b72774fa9783294f83efe4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -171811,6 +171812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097c21638471da846b11b1d9610dd30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
+  schedule: []
 --- !u!1 &1400024930
 GameObject:
   m_ObjectHideFlags: 0
@@ -190796,6 +190798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097c21638471da846b11b1d9610dd30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
+  schedule: []
 --- !u!1 &1441389013
 GameObject:
   m_ObjectHideFlags: 0
@@ -202769,6 +202772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097c21638471da846b11b1d9610dd30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
+  schedule: []
 --- !u!1 &1525626916
 GameObject:
   m_ObjectHideFlags: 0
@@ -214613,6 +214617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097c21638471da846b11b1d9610dd30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
+  schedule: []
 --- !u!1 &1616567949
 GameObject:
   m_ObjectHideFlags: 0
@@ -229885,6 +229890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097c21638471da846b11b1d9610dd30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
+  schedule: []
 --- !u!1001 &1822508204
 PrefabInstance:
   m_ObjectHideFlags: 0
