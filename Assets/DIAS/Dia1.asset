@@ -35,4 +35,4 @@ MonoBehaviour:
   goalReport: Habla con el profesor
   teacherCasualDialogue: {fileID: 11400000, guid: e1565325ec9537144a54d40478c970cb, type: 2}
   teacherDecisionDialogue: {fileID: 11400000, guid: db62ef96eb3ac764ca043458bdca956d, type: 2}
-  postDecisionDialogue: {fileID: 0}
+  postDecisionDialogue: {fileID: 11400000, guid: 81e13b2f99db43e4abb084ee5eba0bb9, type: 2}

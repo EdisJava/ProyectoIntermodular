@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Dia2
   m_EditorClassIdentifier: Assembly-CSharp::DayScenario
   victimName: 
+  teacherName: Ermis
   characterConfigs: []
   goalFindVictim: Encuentra al acosado
   goalInvestigate: Interroga a los alumnos
   goalReport: Habla con el profesor
-  teacherCasualDialogue: {fileID: 0}
-  teacherDecisionDialogue: {fileID: 0}
+  teacherCasualDialogue: {fileID: 11400000, guid: 0f28bb91c0589254d956645556c63360, type: 2}
+  teacherDecisionDialogue: {fileID: 11400000, guid: 0f28bb91c0589254d956645556c63360, type: 2}
+  postDecisionDialogue: {fileID: 11400000, guid: 0f28bb91c0589254d956645556c63360, type: 2}

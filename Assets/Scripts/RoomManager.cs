@@ -46,7 +46,7 @@ public class RoomManager : MonoBehaviour
 
                 if (shouldBeActive)
                 {
-                    student.ResetMemory();
+                    //student.ResetMemory();
                     student.SetupCharacterForToday();
                 }
             }
