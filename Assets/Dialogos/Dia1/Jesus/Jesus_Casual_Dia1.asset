@@ -15,11 +15,11 @@ MonoBehaviour:
   lines:
   - characterName: Jesus
     text: "\xA1Hola! Soy senderista, vengo de caminar un largo trayecto."
-    expression: {fileID: 21300000, guid: 64b3a7926f7da5349b66a98567fd1d25, type: 3}
+    expression: {fileID: 21300000, guid: c839f78a7fbe4094f9d6eb45d6359655, type: 3}
     hasOptions: 0
     options: []
   - characterName: Jesus
     text: Estoy muy cansado y he parado aqui un rato.
-    expression: {fileID: 21300000, guid: 64b3a7926f7da5349b66a98567fd1d25, type: 3}
+    expression: {fileID: 21300000, guid: f5dd10d162e8787448feb352ee8e7c43, type: 3}
     hasOptions: 0
     options: []

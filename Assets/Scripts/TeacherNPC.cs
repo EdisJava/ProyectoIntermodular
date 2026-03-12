@@ -47,27 +47,32 @@ public class TeacherNPC : MonoBehaviour
         if (DialogueManager.Instance.IsDialogueActive) return;
         if (!GameManager.Instance.IsIn2D()) return;
 
-        if (hasAccusedToday)
+        // 1. PRIORIDAD MÁXIMA: Preguntar al GameManager si YA se ha acusado hoy
+        // Usamos GameManager.Instance.hasAccusedThisDay en lugar de la variable local
+        if (GameManager.Instance.hasAccusedThisDay)
         {
-            // CAMBIA EL NULL POR "this"
+            Debug.Log("El profesor sabe que ya acusaste. Mostrando post-dialogue.");
             DialogueManager.Instance.StartDialogue(postDecisionDialogue, this);
             return;
         }
 
+        // 2. Si NO se ha acusado, miramos si es la primera vez que hablamos con él hoy
         if (!casualRead)
         {
             casualRead = true;
-            DialogueManager.Instance.StartDialogue(currentCasual, this); // CAMBIA EL NULL POR "this"
+            DialogueManager.Instance.StartDialogue(currentCasual, this);
             return;
         }
 
+        // 3. Si ya hablamos pero NO estamos en fase de decisión
         if (GameManager.Instance.currentDayPhase != DayPhase.Decision)
         {
-            DialogueManager.Instance.StartDialogue(currentCasual, this); // CAMBIA EL NULL POR "this"
+            DialogueManager.Instance.StartDialogue(currentCasual, this);
         }
+        // 4. Si estamos en fase de decisión (aquí es donde se abre el menú de acusar)
         else
         {
-            DialogueManager.Instance.StartDialogue(currentDecision, this); // CAMBIA EL NULL POR "this"
+            DialogueManager.Instance.StartDialogue(currentDecision, this);
         }
     }
 
