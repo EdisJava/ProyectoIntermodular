@@ -15,7 +15,7 @@ MonoBehaviour:
   victimName: Goran
   teacherName: ???
   characterConfigs:
-  - characterName: Jesus
+  - characterName: Ian
     casualDialogue: {fileID: 11400000, guid: 9f356d3411aa2764390b8fdd18d6687a, type: 2}
     truthDialogue: {fileID: 11400000, guid: cf679a11dfcfe1c4bae76d31b270458d, type: 2}
     lieDialogue: {fileID: 11400000, guid: 203cc06dc2564e746b6eb03deb2959bf, type: 2}
