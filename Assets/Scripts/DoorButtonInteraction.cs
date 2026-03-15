@@ -23,6 +23,20 @@ public class DoorButtonInteraction : MonoBehaviour
         {
             audioSource = GetComponent<AudioSource>();
         }
+
+        // Si la puerta no tiene el componente AudioSource, se lo añadimos por código
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        // Nos aseguramos de configurarlo para que se escuche siempre a volumen máximo
+        if (audioSource != null)
+        {
+            audioSource.playOnAwake = false;
+            audioSource.spatialBlend = 0f; // 0 = Sonido 2D (se escucha en toda la habitación igual)
+            audioSource.volume = 1f;       // Volumen al 100%
+        }
     }
 
     void Update()
@@ -71,6 +85,11 @@ public class DoorButtonInteraction : MonoBehaviour
         if (audioSource != null && DoorOpenAudio != null)
         {
             audioSource.PlayOneShot(DoorOpenAudio);
+            Debug.Log("🔊 Reproduciendo sonido de abrir puerta");
+        }
+        else if (DoorOpenAudio == null)
+        {
+            Debug.LogWarning("⚠️ Falta asignar el clip 'Door Open Audio' en el Inspector del botón de la puerta.");
         }
     }
 
@@ -142,6 +161,11 @@ public class DoorButtonInteraction : MonoBehaviour
         if (audioSource != null && DoorCloseAudio != null)
         {
             audioSource.PlayOneShot(DoorCloseAudio);
+            Debug.Log("🔊 Reproduciendo sonido de cerrar puerta");
+        }
+        else if (DoorCloseAudio == null)
+        {
+            Debug.LogWarning("⚠️ Falta asignar el clip 'Door Close Audio' en el Inspector del botón de la puerta.");
         }
     }
 }
