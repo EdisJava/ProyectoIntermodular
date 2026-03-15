@@ -86004,8 +86004,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 116.19987}
-  m_SizeDelta: {x: 160, y: 38.5131}
+  m_AnchoredPosition: {x: 1.6381, y: 116.19987}
+  m_SizeDelta: {x: 231.687, y: 38.5131}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &572883938
 MonoBehaviour:
@@ -97442,7 +97442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 164.7, y: -79.6}
+  m_AnchoredPosition: {x: -158, y: -79.6}
   m_SizeDelta: {x: 35.0249, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &645457841
@@ -97706,7 +97706,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &669577070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -114483,6 +114483,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   pauseMenuUI: {fileID: 669577069}
   movementScript: {fileID: 2095150377}
+  resumeButton: {fileID: 0}
+  saveAndExitButton: {fileID: 0}
+  exitWithoutSaveButton: {fileID: 0}
+  confirmationTextObject: {fileID: 0}
+  confirmationTextLabel: {fileID: 0}
+  confirmYesButton: {fileID: 0}
+  confirmNoButton: {fileID: 0}
 --- !u!1 &1033608817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1802403335016090, guid: feb11bdd0b967f54eb0e5d88798fd7b2, type: 3}
@@ -235803,7 +235810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -160.7, y: -80}
+  m_AnchoredPosition: {x: 164, y: -80}
   m_SizeDelta: {x: 33.8118, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936985659
