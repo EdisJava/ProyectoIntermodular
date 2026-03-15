@@ -1,6 +1,6 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem; // ¡IMPORTANTE: Añade esta línea!
+using UnityEngine.InputSystem; // Â¡IMPORTANTE: AÃ±ade esta lÃ­nea!
 
 public class PauseMenu : MonoBehaviour
 {
@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f; 
         isPaused = false;
 
-        // Bloqueamos el cursor si volvemos a la exploración
+        // Bloqueamos el cursor si volvemos a la exploraciÃ³n
         if (GameManager.Instance.currentState == GameState.Exploration3D)
         {
             Cursor.visible = false;
@@ -42,7 +42,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f; 
         isPaused = true;
 
-        // Liberamos el ratón
+        // Liberamos el ratÃ³n
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         movementScript.enabled = false;
@@ -51,7 +51,15 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("Saliendo del juego...");
-        Application.Quit();
+        if (GameManager.Instance != null)
+        {
+            SaveSystem.SaveGame(GameManager.Instance.BuildSaveData());
+        }
+
+        Time.timeScale = 1f;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Debug.Log("Guardando partida y volviendo al menú principal...");
+        SceneManager.LoadScene("MainMenu");
     }
 }

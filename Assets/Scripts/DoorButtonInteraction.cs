@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,20 +8,30 @@ public class DoorButtonInteraction : MonoBehaviour
     public GameObject cutsceneImage;
     
     public FirstPlayerController movementScript;  
+    public AudioClip DoorOpenAudio;
+    public AudioSource audioSource;
 
     private bool cutsceneActive = false;
 
     public bool isExitDoor = false; 
     public GameObject fadePanel;
 
+    void Awake()
+    {
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+    }
+
     void Update()
     {
         if (cutsceneActive)
         {
-            // Importante: Usar .Instance para acceder a la copia que est· viva en la escena
+            // Importante: Usar .Instance para acceder a la copia que est√° viva en la escena
             if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive)
             {
-                return; // Si hay di·logo, no hacemos nada m·s en este Update
+                return; // Si hay di√°logo, no hacemos nada m√°s en este Update
             }
 
             if (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame)
@@ -33,9 +43,11 @@ public class DoorButtonInteraction : MonoBehaviour
 
     public void Interact()
     {
+        PlayDoorSound();
+
         if (isExitDoor)
         {
-            // Solo dejamos salir si ya acusÛ
+            // Solo dejamos salir si ya acus√≥
             if (GameManager.Instance.hasAccusedThisDay)
             {
                 StartCoroutine(TransitionToNextDay());
@@ -51,6 +63,14 @@ public class DoorButtonInteraction : MonoBehaviour
         }
     }
 
+    void PlayDoorSound()
+    {
+        if (audioSource != null && DoorOpenAudio != null)
+        {
+            audioSource.PlayOneShot(DoorOpenAudio);
+        }
+    }
+
     IEnumerator TransitionToNextDay()
     {
         // 1. Pantalla en negro
@@ -59,7 +79,7 @@ public class DoorButtonInteraction : MonoBehaviour
         // 2. Esperar 5 segundos
         yield return new WaitForSeconds(5f);
 
-        // 3. Pasar de dÌa
+        // 3. Pasar de d√≠a
         GameManager.Instance.NextDay();
 
         // 4. Quitar pantalla en negro
@@ -85,12 +105,12 @@ public class DoorButtonInteraction : MonoBehaviour
 
         if (roomManager != null)
         {
-            // 3. Esta funciÛn es la que activar· a Goran seg˙n el dÌa
+            // 3. Esta funci√≥n es la que activar√° a Goran seg√∫n el d√≠a
             roomManager.RefreshRoom();
         }
         else
         {
-            Debug.LogError("°Ojo! El objeto cutsceneImage no tiene el script RoomManager.");
+            Debug.LogError("¬°Ojo! El objeto cutsceneImage no tiene el script RoomManager.");
         }
     }
 
@@ -110,3 +130,4 @@ void CloseCutscene()
     }
 }
 }
+

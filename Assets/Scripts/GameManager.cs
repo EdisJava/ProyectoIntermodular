@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 
 public enum GameState
 {
@@ -21,11 +21,11 @@ public class GameManager : MonoBehaviour
     public GameState currentState = GameState.Exploration3D;
     public DayPhase currentDayPhase = DayPhase.CasualTalk;
 
-    [Header("DÌas")]
+    [Header("D√≠as")]
     public int currentDay = 1;
     public int maxDays = 7;
 
-    [Header("InvestigaciÛn")]
+    [Header("Investigaci√≥n")]
     public int maxQuestionsPerDay = 2;
     private int questionsUsed;
 
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     public int goodDecisions = 0;
     public int badDecisions = 0;
 
-    [Header("ConfiguraciÛn de la Historia")]
+    [Header("Configuraci√≥n de la Historia")]
     public DayScenario[] allDays;
 
     private void Awake()
@@ -52,7 +52,17 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        StartNewDay();
+        if (SaveSystem.HasSave())
+        {
+            SaveData saveData = SaveSystem.LoadGame();
+            if (saveData != null)
+            {
+                ApplyLoadedGameState(saveData);
+                return;
+            }
+        }
+
+        StartNewGameState();
     }
 
     // ---------------- ESTADOS ----------------
@@ -62,47 +72,72 @@ public class GameManager : MonoBehaviour
         return currentState == GameState.Interaction2D;
     }
 
-    // ---------------- DÕAS ----------------
+    // ---------------- D√çAS ----------------
 
     public bool hasAccusedThisDay = false; // Nueva variable
 
     [Header("Posicion Inicial")]
     public Transform playerSpawnPoint;
     public GameObject playerObject;
-    void StartNewDay()
+    void StartNewGameState()
+    {
+        currentDay = 1;
+        currentState = GameState.Exploration3D;
+        goodDecisions = 0;
+        badDecisions = 0;
+        ResetDailyState();
+        RefreshCurrentDay(true);
+    }
+
+    void ApplyLoadedGameState(SaveData data)
+    {
+        ApplySaveData(data);
+        RefreshCurrentDay(false);
+    }
+
+    void ResetDailyState()
     {
         currentDayPhase = DayPhase.CasualTalk;
         questionsUsed = 0;
         hasAccusedThisDay = false;
+    }
 
-        // 1. Obtenemos el escenario del nuevo dÌa
+    void RefreshCurrentDay(bool resetDailyMemory)
+    {
         DayScenario scenario = GetCurrentDayScenario();
 
         if (scenario != null)
         {
-            Debug.Log($"Configurando DÌa {currentDay}: {scenario.name}");
+            Debug.Log($"Configurando D√≠a {currentDay}: {scenario.name}");
 
-            // 2. Buscamos a todos los NPCs y les damos su nueva "hoja de ruta"
             StudentNPC[] allNPCs = FindObjectsOfType<StudentNPC>();
             foreach (StudentNPC npc in allNPCs)
             {
-                npc.ResetMemory();
-                npc.SetupCharacterForToday(); // Esta funciÛn ya la tienes en StudentNPC
+                if (resetDailyMemory)
+                {
+                    npc.ResetMemory();
+                }
+
+                npc.SetupCharacterForToday();
             }
 
             TeacherNPC teacher = FindFirstObjectByType<TeacherNPC>();
             if (teacher != null)
             {
-                teacher.ResetMemory();
-                teacher.SetupTeacherForToday(); // Esta funciÛn ya la tienes en TeacherNPC
+                if (resetDailyMemory)
+                {
+                    teacher.ResetMemory();
+                }
+
+                teacher.SetupTeacherForToday();
             }
         }
         else
         {
-            Debug.LogError("No hay un DayScenario configurado para el dÌa " + currentDay);
+            Debug.LogError("No hay un DayScenario configurado para el d√≠a " + currentDay);
         }
 
-        Debug.Log($"DÌa {currentDay} comienza oficialmente");
+        Debug.Log($"D√≠a {currentDay} comienza oficialmente");
 
         if (playerSpawnPoint != null && playerObject != null)
         {
@@ -121,7 +156,7 @@ public class GameManager : MonoBehaviour
         currentDayPhase = DayPhase.Investigation;
         questionsUsed = 0;
 
-        Debug.Log("Has encontrado al acosado. InvestigaciÛn desbloqueada.");
+        Debug.Log("Has encontrado al acosado. Investigaci√≥n desbloqueada.");
     }
 
     // ---------------- PREGUNTAS ----------------
@@ -151,21 +186,22 @@ public class GameManager : MonoBehaviour
         if (correct) goodDecisions++;
         else badDecisions++;
 
-        hasAccusedThisDay = true; // <--- Marcamos que ya se hizo la acusaciÛn
-        Debug.Log("DecisiÛn registrada. Ahora puedes irte.");
+        hasAccusedThisDay = true; // <--- Marcamos que ya se hizo la acusaci√≥n
+        Debug.Log("Decisi√≥n registrada. Ahora puedes irte.");
     }
 
 
     public void NextDay()
     {
-        if (currentDay >= maxDays)
+        if (currentDay >= GetPlayableDayCount())
         {
             EndGame();
             return;
         }
 
         currentDay++;
-        StartNewDay();
+        ResetDailyState();
+        RefreshCurrentDay(true);
     }
 
     void EndGame()
@@ -177,10 +213,10 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // FunciÛn auxiliar para que los alumnos sepan quÈ dÌa es
+    // Funci√≥n auxiliar para que los alumnos sepan qu√© d√≠a es
     public DayScenario GetCurrentDayScenario()
     {
-        // Restamos 1 porque el array empieza en 0 pero tus dÌas en 1
+        // Restamos 1 porque el array empieza en 0 pero tus d√≠as en 1
         int index = currentDay - 1;
 
         if (index < allDays.Length)
@@ -203,5 +239,61 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void SetRemainingQuestions(int remaining)
+    {
+        int clampedRemaining = Mathf.Clamp(remaining, 0, maxQuestionsPerDay);
+        questionsUsed = maxQuestionsPerDay - clampedRemaining;
+    }
+
+    public SaveData BuildSaveData()
+    {
+        return new SaveData
+        {
+            currentDay = currentDay,
+            currentDayPhase = (int)currentDayPhase,
+            remainingQuestions = GetRemainingQuestions(),
+            goodDecisions = goodDecisions,
+            badDecisions = badDecisions,
+            hasAccusedThisDay = hasAccusedThisDay
+        };
+    }
+
+    public void ApplySaveData(SaveData data)
+    {
+        if (data == null)
+        {
+            Debug.LogWarning("No se pudo aplicar la partida guardada porque los datos son nulos.");
+            StartNewGameState();
+            return;
+        }
+
+        currentDay = Mathf.Clamp(data.currentDay, 1, GetPlayableDayCount());
+        currentState = GameState.Exploration3D;
+        goodDecisions = Mathf.Max(0, data.goodDecisions);
+        badDecisions = Mathf.Max(0, data.badDecisions);
+        hasAccusedThisDay = data.hasAccusedThisDay;
+        SetRemainingQuestions(data.remainingQuestions);
+
+        if (System.Enum.IsDefined(typeof(DayPhase), data.currentDayPhase))
+        {
+            currentDayPhase = (DayPhase)data.currentDayPhase;
+        }
+        else
+        {
+            currentDayPhase = DayPhase.CasualTalk;
+        }
+    }
+
+    int GetPlayableDayCount()
+    {
+        if (allDays == null || allDays.Length == 0)
+        {
+            return 1;
+        }
+
+        return Mathf.Min(maxDays, allDays.Length);
+    }
+
 
 }
+
