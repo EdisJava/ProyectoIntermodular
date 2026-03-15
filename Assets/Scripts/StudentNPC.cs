@@ -1,4 +1,4 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 using UnityEngine.UI;
 
 public class StudentNPC : MonoBehaviour
@@ -15,14 +15,14 @@ public class StudentNPC : MonoBehaviour
     private Vector3 startPos;
     private Vector3 startScale;
 
-    [Header("Di·logos Especiales")]
+    [Header("Di√°logos Especiales")]
     public DialogueData alreadyInterrogatedDialogue;
 
-    [Header("Di·logos de VÌctima")]
+    [Header("Di√°logos de V√≠ctima")]
     public DialogueData victimStateDialogue;
 
     private bool victimFound = false;
-    private bool alreadyInterrogated = false; // Control de si ya soltÛ la pista
+    private bool alreadyInterrogated = false; // Control de si ya solt√≥ la pista
     public bool isVictim;
 
     void Start()
@@ -40,7 +40,7 @@ public class StudentNPC : MonoBehaviour
 
         if (!GameManager.Instance.IsIn2D()) return;
 
-        // --- L”GICA DE VÕCTIMA ---
+        // --- L√ìGICA DE V√çCTIMA ---
         if (isVictim)
         {
             if (!victimFound)
@@ -57,25 +57,25 @@ public class StudentNPC : MonoBehaviour
             return;
         }
 
-        // --- L”GICA DE ALUMNOS ---
+        // --- L√ìGICA DE ALUMNOS ---
 
-        // CASO A: A˙n no has leÌdo su di·logo casual (Prioridad m·xima)
-        // Saldr· este di·logo tanto en fase CasualTalk como en Investigation
+        // CASO A: A√∫n no has le√≠do su di√°logo casual (Prioridad m√°xima)
+        // Saldr√° este di√°logo tanto en fase CasualTalk como en Investigation
         if (!casualRead)
         {
-            casualRead = true; // La prÛxima vez ya pasar· a la siguiente lÛgica
+            casualRead = true; // La pr√≥xima vez ya pasar√° a la siguiente l√≥gica
             DialogueManager.Instance.StartDialogue(casualDialogue, this);
             return;
         }
 
-        // CASO B: Ya leÌste el casual, pero a˙n no estamos en investigaciÛn
+        // CASO B: Ya le√≠ste el casual, pero a√∫n no estamos en investigaci√≥n
         if (GameManager.Instance.currentDayPhase == DayPhase.CasualTalk)
         {
             DialogueManager.Instance.StartDialogue(casualDialogue, this);
             return;
         }
 
-        // CASO C: Ya leÌste el casual y estamos en investigaciÛn
+        // CASO C: Ya le√≠ste el casual y estamos en investigaci√≥n
         if (GameManager.Instance.currentDayPhase == DayPhase.Investigation ||
             GameManager.Instance.currentDayPhase == DayPhase.Decision)
         {
@@ -86,16 +86,39 @@ public class StudentNPC : MonoBehaviour
             }
             else
             {
-                // Ahora sÌ, despuÈs de haber leÌdo el casual una vez, sale la investigaciÛn
+                // Ahora s√≠, despu√©s de haber le√≠do el casual una vez, sale la investigaci√≥n
                 DialogueManager.Instance.StartDialogue(investigationDialogue, this);
             }
         }
     }
 
-    // Esta funciÛn la llama el DialogueManager cuando eliges una opciÛn con isInterrogation = true
+    // Esta funci√≥n la llama el DialogueManager cuando eliges una opci√≥n con isInterrogation = true
     public void MarkAsInterrogated()
     {
         alreadyInterrogated = true;
+    }
+
+    public StudentDialogueProgressData BuildProgressData()
+    {
+        return new StudentDialogueProgressData
+        {
+            studentName = studentName,
+            casualRead = casualRead,
+            alreadyInterrogated = alreadyInterrogated,
+            victimFound = victimFound
+        };
+    }
+
+    public void ApplyProgressData(StudentDialogueProgressData data)
+    {
+        if (data == null || data.studentName != studentName)
+        {
+            return;
+        }
+
+        casualRead = data.casualRead;
+        alreadyInterrogated = data.alreadyInterrogated;
+        victimFound = data.victimFound;
     }
 
     public void EnterFocus()
@@ -127,7 +150,7 @@ public class StudentNPC : MonoBehaviour
         if (today == null) return;
 
         isVictim = (studentName == today.victimName);
-        if (isVictim) Debug.Log(studentName + " es la vÌctima hoy.");
+        if (isVictim) Debug.Log(studentName + " es la v√≠ctima hoy.");
 
         foreach (var config in today.characterConfigs)
         {

@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
     {
         ApplySaveData(data);
         RefreshCurrentDay(false);
+        ApplyDialogueProgress(data);
     }
 
     void ResetDailyState()
@@ -247,7 +248,7 @@ public class GameManager : MonoBehaviour
 
     public SaveData BuildSaveData()
     {
-        return new SaveData
+        SaveData saveData = new SaveData
         {
             currentDay = currentDay,
             currentDayPhase = (int)currentDayPhase,
@@ -256,6 +257,44 @@ public class GameManager : MonoBehaviour
             badDecisions = badDecisions,
             hasAccusedThisDay = hasAccusedThisDay
         };
+
+        StudentNPC[] allStudents = FindObjectsByType<StudentNPC>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (StudentNPC student in allStudents)
+        {
+            saveData.studentProgress.Add(student.BuildProgressData());
+        }
+
+        TeacherNPC teacher = FindFirstObjectByType<TeacherNPC>(FindObjectsInactive.Include);
+        if (teacher != null)
+        {
+            saveData.teacherProgress = teacher.BuildProgressData();
+        }
+
+        return saveData;
+    }
+
+    void ApplyDialogueProgress(SaveData data)
+    {
+        if (data == null || data.studentProgress == null)
+        {
+            return;
+        }
+
+        StudentNPC[] allStudents = FindObjectsByType<StudentNPC>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (StudentNPC student in allStudents)
+        {
+            StudentDialogueProgressData savedStudent = data.studentProgress.Find(progress => progress.studentName == student.studentName);
+            if (savedStudent != null)
+            {
+                student.ApplyProgressData(savedStudent);
+            }
+        }
+
+        TeacherNPC teacher = FindFirstObjectByType<TeacherNPC>(FindObjectsInactive.Include);
+        if (teacher != null && data.teacherProgress != null)
+        {
+            teacher.ApplyProgressData(data.teacherProgress);
+        }
     }
 
     public void ApplySaveData(SaveData data)

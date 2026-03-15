@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class TeacherNPC : MonoBehaviour
@@ -12,7 +12,7 @@ public class TeacherNPC : MonoBehaviour
     private Vector3 startPos;
     private Vector3 startScale;
 
-    // Diálogos que se cargarán dinámicamente
+    // DiÃ¡logos que se cargarÃ¡n dinÃ¡micamente
     private DialogueData currentCasual;
     private DialogueData currentDecision;
     private bool casualRead = false;
@@ -47,7 +47,7 @@ public class TeacherNPC : MonoBehaviour
         if (DialogueManager.Instance.IsDialogueActive) return;
         if (!GameManager.Instance.IsIn2D()) return;
 
-        // 1. PRIORIDAD MÁXIMA: Preguntar al GameManager si YA se ha acusado hoy
+        // 1. PRIORIDAD MÃXIMA: Preguntar al GameManager si YA se ha acusado hoy
         // Usamos GameManager.Instance.hasAccusedThisDay en lugar de la variable local
         if (GameManager.Instance.hasAccusedThisDay)
         {
@@ -56,7 +56,7 @@ public class TeacherNPC : MonoBehaviour
             return;
         }
 
-        // 2. Si NO se ha acusado, miramos si es la primera vez que hablamos con él hoy
+        // 2. Si NO se ha acusado, miramos si es la primera vez que hablamos con Ã©l hoy
         if (!casualRead)
         {
             casualRead = true;
@@ -64,12 +64,12 @@ public class TeacherNPC : MonoBehaviour
             return;
         }
 
-        // 3. Si ya hablamos pero NO estamos en fase de decisión
+        // 3. Si ya hablamos pero NO estamos en fase de decisiÃ³n
         if (GameManager.Instance.currentDayPhase != DayPhase.Decision)
         {
             DialogueManager.Instance.StartDialogue(currentCasual, this);
         }
-        // 4. Si estamos en fase de decisión (aquí es donde se abre el menú de acusar)
+        // 4. Si estamos en fase de decisiÃ³n (aquÃ­ es donde se abre el menÃº de acusar)
         else
         {
             DialogueManager.Instance.StartDialogue(currentDecision, this);
@@ -81,13 +81,34 @@ public class TeacherNPC : MonoBehaviour
         hasAccusedToday = true;
     }
 
+    public TeacherDialogueProgressData BuildProgressData()
+    {
+        return new TeacherDialogueProgressData
+        {
+            teacherName = teacherName,
+            casualRead = casualRead,
+            hasAccusedToday = hasAccusedToday
+        };
+    }
+
+    public void ApplyProgressData(TeacherDialogueProgressData data)
+    {
+        if (data == null || data.teacherName != teacherName)
+        {
+            return;
+        }
+
+        casualRead = data.casualRead;
+        hasAccusedToday = data.hasAccusedToday;
+    }
+
     public void ResetMemory()
     {
         casualRead = false;
-        hasAccusedToday = false; // Importante resetear esto también al cambiar de día
+        hasAccusedToday = false; // Importante resetear esto tambiÃ©n al cambiar de dÃ­a
     }
 
-    // Usamos la misma lógica de foco que tus alumnos para que no de error
+    // Usamos la misma lÃ³gica de foco que tus alumnos para que no de error
     public void EnterFocus()
     {
         transform.position = centerPoint.position;
