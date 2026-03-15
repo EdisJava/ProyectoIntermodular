@@ -13772,8 +13772,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 1399573809}
   movementScript: {fileID: 2095150377}
-  DoorOpenAudio: {fileID: 0}
-  DoorCloseAudio: {fileID: 0}
+  DoorOpenAudio: {fileID: 8300000, guid: 6e1f3312551cd094b996414506fa04f2, type: 3}
+  DoorCloseAudio: {fileID: 8300000, guid: d379e1d4748c9854191a5d5246619537, type: 3}
   audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
@@ -37311,8 +37311,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 1516074815}
   movementScript: {fileID: 2095150377}
-  DoorOpenAudio: {fileID: 0}
-  DoorCloseAudio: {fileID: 0}
+  DoorOpenAudio: {fileID: 8300000, guid: 6e1f3312551cd094b996414506fa04f2, type: 3}
+  DoorCloseAudio: {fileID: 8300000, guid: d379e1d4748c9854191a5d5246619537, type: 3}
   audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
@@ -128714,8 +128714,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 1811485000}
   movementScript: {fileID: 2095150377}
-  DoorOpenAudio: {fileID: 0}
-  DoorCloseAudio: {fileID: 0}
+  DoorOpenAudio: {fileID: 8300000, guid: 6e1f3312551cd094b996414506fa04f2, type: 3}
+  DoorCloseAudio: {fileID: 8300000, guid: d379e1d4748c9854191a5d5246619537, type: 3}
   audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
@@ -207414,8 +207414,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 197262168}
   movementScript: {fileID: 2095150377}
-  DoorOpenAudio: {fileID: 0}
-  DoorCloseAudio: {fileID: 0}
+  DoorOpenAudio: {fileID: 8300000, guid: 6e1f3312551cd094b996414506fa04f2, type: 3}
+  DoorCloseAudio: {fileID: 8300000, guid: d379e1d4748c9854191a5d5246619537, type: 3}
   audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
@@ -258022,8 +258022,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 1608650780}
   movementScript: {fileID: 2095150377}
-  DoorOpenAudio: {fileID: 0}
-  DoorCloseAudio: {fileID: 0}
+  DoorOpenAudio: {fileID: 8300000, guid: 6e1f3312551cd094b996414506fa04f2, type: 3}
+  DoorCloseAudio: {fileID: 8300000, guid: d379e1d4748c9854191a5d5246619537, type: 3}
   audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
@@ -280955,6 +280955,7 @@ GameObject:
   - component: {fileID: 2095150378}
   - component: {fileID: 2095150377}
   - component: {fileID: 2095150383}
+  - component: {fileID: 2095150384}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -281131,6 +281132,14 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!81 &2095150384
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095150376}
+  m_Enabled: 1
 --- !u!1 &2100826608
 GameObject:
   m_ObjectHideFlags: 0
@@ -281257,8 +281266,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 1440961517}
   movementScript: {fileID: 2095150377}
-  DoorOpenAudio: {fileID: 0}
-  DoorCloseAudio: {fileID: 0}
+  DoorOpenAudio: {fileID: 8300000, guid: 6e1f3312551cd094b996414506fa04f2, type: 3}
+  DoorCloseAudio: {fileID: 8300000, guid: d379e1d4748c9854191a5d5246619537, type: 3}
   audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
