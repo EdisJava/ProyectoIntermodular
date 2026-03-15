@@ -9,6 +9,7 @@ public class DoorButtonInteraction : MonoBehaviour
     
     public FirstPlayerController movementScript;  
     public AudioClip DoorOpenAudio;
+    public AudioClip DoorCloseAudio;
     public AudioSource audioSource;
 
     private bool cutsceneActive = false;
@@ -34,7 +35,9 @@ public class DoorButtonInteraction : MonoBehaviour
                 return; // Si hay diálogo, no hacemos nada más en este Update
             }
 
-            if (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame)
+            if (Keyboard.current.spaceKey.wasPressedThisFrame ||
+                Keyboard.current.enterKey.wasPressedThisFrame ||
+                Keyboard.current.escapeKey.wasPressedThisFrame)
             {
                 CloseCutscene();
             }
@@ -116,6 +119,7 @@ public class DoorButtonInteraction : MonoBehaviour
 
 void CloseCutscene()
 {
+    PlayDoorCloseSound();
     cutsceneImage.SetActive(false);
     cutsceneActive = false;
         Cursor.visible = false;
@@ -129,5 +133,13 @@ void CloseCutscene()
         movementScript.canLook = true;
     }
 }
+
+    void PlayDoorCloseSound()
+    {
+        if (audioSource != null && DoorCloseAudio != null)
+        {
+            audioSource.PlayOneShot(DoorCloseAudio);
+        }
+    }
 }
 
