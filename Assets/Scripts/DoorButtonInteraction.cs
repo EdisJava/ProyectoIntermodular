@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,6 +9,7 @@ public class DoorButtonInteraction : MonoBehaviour
     
     public FirstPlayerController movementScript;  
     public AudioClip DoorOpenAudio;
+    public AudioClip DoorCloseAudio;
     public AudioSource audioSource;
 
     private bool cutsceneActive = false;
@@ -34,7 +35,9 @@ public class DoorButtonInteraction : MonoBehaviour
                 return; // Si hay diálogo, no hacemos nada más en este Update
             }
 
-            if (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame)
+            if (Keyboard.current.spaceKey.wasPressedThisFrame ||
+                Keyboard.current.enterKey.wasPressedThisFrame ||
+                Keyboard.current.escapeKey.wasPressedThisFrame)
             {
                 CloseCutscene();
             }
@@ -76,6 +79,9 @@ public class DoorButtonInteraction : MonoBehaviour
         // 1. Pantalla en negro
         fadePanel.SetActive(true);
 
+        // Reproducimos el sonido de cerrar al salir
+        PlayDoorCloseSound();
+
         // 2. Esperar 5 segundos
         yield return new WaitForSeconds(5f);
 
@@ -87,7 +93,7 @@ public class DoorButtonInteraction : MonoBehaviour
     }
 
     void OpenCutscene()
-{
+    {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         cutsceneImage.SetActive(true);
@@ -95,11 +101,11 @@ public class DoorButtonInteraction : MonoBehaviour
 
         GameManager.Instance.currentState = GameState.Interaction2D;
 
-    if (movementScript != null)
-    {
-        movementScript.enabled = false;
-        movementScript.canLook = false;
-    }
+        if (movementScript != null)
+        {
+            movementScript.enabled = false;
+            movementScript.canLook = false;
+        }
         // 2. Buscamos el RoomManager en el objeto que acabamos de activar
         RoomManager roomManager = cutsceneImage.GetComponent<RoomManager>();
 
@@ -114,20 +120,28 @@ public class DoorButtonInteraction : MonoBehaviour
         }
     }
 
-void CloseCutscene()
-{
-    cutsceneImage.SetActive(false);
-    cutsceneActive = false;
+    void CloseCutscene()
+    {
+        PlayDoorCloseSound();
+        cutsceneImage.SetActive(false);
+        cutsceneActive = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
         GameManager.Instance.currentState = GameState.Exploration3D;
 
-    if (movementScript != null)
+        if (movementScript != null)
+        {
+            movementScript.enabled = true;
+            movementScript.canLook = true;
+        }
+    }
+
+    void PlayDoorCloseSound()
     {
-        movementScript.enabled = true;
-        movementScript.canLook = true;
+        if (audioSource != null && DoorCloseAudio != null)
+        {
+            audioSource.PlayOneShot(DoorCloseAudio);
+        }
     }
 }
-}
-
