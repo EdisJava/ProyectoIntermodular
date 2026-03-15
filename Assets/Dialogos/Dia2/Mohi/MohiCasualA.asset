@@ -10,21 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: MohiCasual
+  m_Name: MohiCasualA
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Mohi
-    text: '*Te mira con intriga*'
+    text: "*Haces el truco de taparte la cara pero el ni\xF1o te mira con la misma
+      cara*"
     expression: {fileID: 21300000, guid: 5c4fae2e1d1a97e42b7760c627123627, type: 3}
-    hasOptions: 1
-    options:
-    - optionText: '*Hacerle un truco*'
-      nextDialogue: {fileID: 11400000, guid: d58b2a8c954847441915b18bdebe9974, type: 2}
-      isInterrogation: 0
-      isFinalDecision: 0
-      isCorrectAccusation: 0
-    - optionText: '*Darle un caramelo que se le quedo a Adriel*'
-      nextDialogue: {fileID: 11400000, guid: 527b103f046e43240a51bf711fe974f9, type: 2}
-      isInterrogation: 0
-      isFinalDecision: 0
-      isCorrectAccusation: 0
+    hasOptions: 0
+    options: []
