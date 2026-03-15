@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DayScenario
   victimName: 
   teacherName: Ermis
-  characterConfigs: []
+  characterConfigs:
+  - characterName: Liam
+    casualDialogue: {fileID: 11400000, guid: 855e7c365ac172a4d876b753c1c23da9, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 6d3efc9176511b846b53a5109dcc3e93, type: 2}
+    lieDialogue: {fileID: 11400000, guid: f21db2ed3b877df48a92a1ad3a43a776, type: 2}
+    isLiarToday: 0
   goalFindVictim: Encuentra al acosado
   goalInvestigate: Interroga a los alumnos
   goalReport: Habla con el profesor
