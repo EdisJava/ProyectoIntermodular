@@ -13633,6 +13633,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 1399573809}
   movementScript: {fileID: 2095150377}
+  DoorOpenAudio: {fileID: 0}
+  audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
 --- !u!1 &197262168
@@ -37032,6 +37034,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 1516074815}
   movementScript: {fileID: 2095150377}
+  DoorOpenAudio: {fileID: 0}
+  audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
 --- !u!1 &372084963
@@ -101025,6 +101029,32 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 957019087}
   m_SourcePrefab: {fileID: 100100000, guid: efd8147160aa6c64c8121a2ed788744e, type: 3}
+--- !u!1 &919276813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f567369409017542950fb64f611c283, type: 3}
+  m_PrefabInstance: {fileID: 2108880872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &919276817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919276813}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0999683, y: 2.2020106, z: 0.7354218}
+  m_Center: {x: -0.0000016391276, y: -0.00000008530168, z: 0.3657139}
 --- !u!1 &949241324
 GameObject:
   m_ObjectHideFlags: 0
@@ -115798,6 +115828,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144427632}
   m_CullTransparentMesh: 1
+--- !u!1 &1148626434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca36d41503db1a642b0e69cbff6e2c0f, type: 3}
+  m_PrefabInstance: {fileID: 1989420684}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1148626438
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148626434}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.50865626, y: 0.42977783, z: 0.9003714}
+  m_Center: {x: 0.06672789, y: -0.00002407963, z: 0.021921964}
 --- !u!43 &1153505788
 Mesh:
   m_ObjectHideFlags: 0
@@ -127680,6 +127736,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 1811485000}
   movementScript: {fileID: 2095150377}
+  DoorOpenAudio: {fileID: 0}
+  audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
 --- !u!1001 &1193539847
@@ -204740,6 +204798,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492635856}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1492708535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1492708536}
+  - component: {fileID: 1492708538}
+  - component: {fileID: 1492708537}
+  m_Layer: 5
+  m_Name: Aroy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1492708536
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492708535}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1516074816}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1492708537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492708535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1492708538
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492708535}
+  m_CullTransparentMesh: 1
 --- !u!1 &1508299396
 GameObject:
   m_ObjectHideFlags: 0
@@ -205364,6 +205497,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1323634125}
+  - {fileID: 1957737265}
+  - {fileID: 1492708536}
   m_Father: {fileID: 1722659304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -206085,6 +206220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 197262168}
   movementScript: {fileID: 2095150377}
+  DoorOpenAudio: {fileID: 0}
+  audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
 --- !u!65 &1556336283
@@ -231420,6 +231557,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 0}
   movementScript: {fileID: 2095150377}
+  DoorOpenAudio: {fileID: 0}
+  audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
 --- !u!1001 &1739718852
@@ -234068,6 +234207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 0}
   movementScript: {fileID: 0}
+  DoorOpenAudio: {fileID: 0}
+  audioSource: {fileID: 0}
   isExitDoor: 1
   fadePanel: {fileID: 1296515770}
 --- !u!65 &1917822282
@@ -244264,6 +244405,159 @@ Transform:
   - {fileID: 62025464}
   m_Father: {fileID: 2008639350}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1957737264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1957737265}
+  - component: {fileID: 1957737269}
+  - component: {fileID: 1957737268}
+  - component: {fileID: 1957737267}
+  - component: {fileID: 1957737266}
+  m_Layer: 5
+  m_Name: Liam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1957737265
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957737264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 7.75, y: 7.75, z: 7.75}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1516074816}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 604.34, y: -22.24}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1957737266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957737264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1957737268}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1957737267}
+        m_TargetAssemblyTypeName: StudentNPC, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1957737267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957737264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c366cccafad070e4ab477f8799bf6158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
+  studentName: Liam
+  casualDialogue: {fileID: 11400000, guid: 855e7c365ac172a4d876b753c1c23da9, type: 2}
+  investigationDialogue: {fileID: 11400000, guid: 6d3efc9176511b846b53a5109dcc3e93, type: 2}
+  idleSprite: {fileID: 21300000, guid: 8a598ca19616b994f9a1f38df6573893, type: 3}
+  centerPoint: {fileID: 1983304952}
+  alreadyInterrogatedDialogue: {fileID: 0}
+  victimStateDialogue: {fileID: 0}
+  isVictim: 0
+--- !u!114 &1957737268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957737264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 8a598ca19616b994f9a1f38df6573893, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1957737269
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957737264}
+  m_CullTransparentMesh: 1
 --- !u!1 &1960129954
 GameObject:
   m_ObjectHideFlags: 0
@@ -255680,7 +255974,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca36d41503db1a642b0e69cbff6e2c0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1148626438}
   m_SourcePrefab: {fileID: 100100000, guid: ca36d41503db1a642b0e69cbff6e2c0f, type: 3}
 --- !u!1 &1990205724
 GameObject:
@@ -256394,6 +256691,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 1608650780}
   movementScript: {fileID: 2095150377}
+  DoorOpenAudio: {fileID: 0}
+  audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
 --- !u!1 &2045841272
@@ -279463,7 +279762,7 @@ Transform:
   m_GameObject: {fileID: 2095150376}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 21.75, y: 1.16, z: 20.88}
+  m_LocalPosition: {x: 2.03, y: 3.63, z: 15.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -279626,6 +279925,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorButtonInteraction
   cutsceneImage: {fileID: 1440961517}
   movementScript: {fileID: 2095150377}
+  DoorOpenAudio: {fileID: 0}
+  audioSource: {fileID: 0}
   isExitDoor: 0
   fadePanel: {fileID: 0}
 --- !u!1 &2100984363
@@ -279985,7 +280286,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f567369409017542950fb64f611c283, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 919276817}
   m_SourcePrefab: {fileID: 100100000, guid: 3f567369409017542950fb64f611c283, type: 3}
 --- !u!1 &2113461861
 GameObject:

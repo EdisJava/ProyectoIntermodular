@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: LiamCasual
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Liam
+    text: Hola joven, hace una fresca noche en este turno.
+    expression: {fileID: 21300000, guid: 58c72e1670d198641a0c0c44e18dad30, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Liam
+    text: "\xBFMi estimado tienes idea de lo que sale en el examen de orientado a
+      objetos?"
+    expression: {fileID: 21300000, guid: 58c72e1670d198641a0c0c44e18dad30, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: Si pero no tengo tiempo ahora de explicartelo.
+      nextDialogue: {fileID: 11400000, guid: 520869e80cca8404c8c6695397fcd0f2, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: No, yo soy de DAW.
+      nextDialogue: {fileID: 11400000, guid: b5bb1471636ef6f429012c39032183c2, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
