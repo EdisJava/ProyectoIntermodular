@@ -49,17 +49,34 @@ public class PauseMenu : MonoBehaviour
         movementScript.canLook = false;
     }
 
-    public void QuitGame()
+    public void SaveAndExit()
     {
         if (GameManager.Instance != null)
         {
             SaveSystem.SaveGame(GameManager.Instance.BuildSaveData());
         }
 
+        ExitToMainMenu("Guardando partida y volviendo al menú principal...");
+    }
+
+    public void ExitWithoutSaving()
+    {
+        ExitToMainMenu("Volviendo al menú principal sin guardar...");
+    }
+
+    public void QuitGame()
+    {
+        ExitWithoutSaving();
+    }
+
+    void ExitToMainMenu(string logMessage)
+    {
         Time.timeScale = 1f;
+        isPaused = false;
+        pauseMenuUI.SetActive(false);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        Debug.Log("Guardando partida y volviendo al menú principal...");
+        Debug.Log(logMessage);
         SceneManager.LoadScene("MainMenu");
     }
 }
