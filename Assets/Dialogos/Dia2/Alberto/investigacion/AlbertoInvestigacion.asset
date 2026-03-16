@@ -24,7 +24,17 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Alberto
-    text: "Esta tuber\xEDa est\xE1 picada por este lado..."
+    text: Que bonito ese rollo de papel...
+    expression: {fileID: 21300000, guid: 18dcd9369b77b364cb03ee59523a2953, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Alberto
+    text: ' Y los azulejos...'
+    expression: {fileID: 21300000, guid: 18dcd9369b77b364cb03ee59523a2953, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Alberto
+    text: ...
     expression: {fileID: 21300000, guid: 18dcd9369b77b364cb03ee59523a2953, type: 3}
     hasOptions: 0
     options: []

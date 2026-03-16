@@ -24,12 +24,12 @@ MonoBehaviour:
     hasOptions: 1
     options:
     - optionText: "\xBFQu\xE9 te paso?"
-      nextDialogue: {fileID: 11400000, guid: 2dd3bf8185ef7d94c9ea0ef3c535f6ce, type: 2}
+      nextDialogue: {fileID: 11400000, guid: b34dbaeb79c08554dbf1a6f481a607b3, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0
     - optionText: "\xBFQui\xE9n es V\xEDctor?"
-      nextDialogue: {fileID: 11400000, guid: 404909b30b1a3c1418004028296f49d9, type: 2}
+      nextDialogue: {fileID: 11400000, guid: 516f15115a5e56b4288c4565d5056adf, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0

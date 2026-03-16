@@ -26,7 +26,7 @@ MonoBehaviour:
   - characterName: Aroy
     text: "Un profesor que se dice que lleva viviendo 200 a\xF1os."
     expression: {fileID: 21300000, guid: 17b58aa7b6037a04dac62b5721a7ac11, type: 3}
-    hasOptions: 0
+    hasOptions: 1
     options:
     - optionText: "\xBFQui\xE9n te peg\xF3?"
       nextDialogue: {fileID: 11400000, guid: 902abf164f70a024b90f06077681ecf9, type: 2}

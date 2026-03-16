@@ -21,11 +21,11 @@ MonoBehaviour:
   - characterName: Aroy
     text: "V\xEDctor no para de marcar tarea... Llevo sin dormir 2 meses, 12 dias
       y 3 horas."
-    expression: {fileID: 21300000, guid: 7de5b54c4a667254f995e5c58d9c0e04, type: 3}
+    expression: {fileID: 21300000, guid: 17b58aa7b6037a04dac62b5721a7ac11, type: 3}
     hasOptions: 0
     options: []
   - characterName: Aroy
-    text: "Lo bueno es que ya se d\xF3nde vive \xE9l, su mujer, y sus dos hijos."
+    text: "Lo bueno es que descubr\xED d\xF3nde vive \xE9l, la mujer, y sus dos hijos."
     expression: {fileID: 21300000, guid: 17b58aa7b6037a04dac62b5721a7ac11, type: 3}
     hasOptions: 1
     options:
