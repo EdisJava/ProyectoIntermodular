@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: AroyCasualA
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Aroy
+    text: "Pues que no puedo m\xE1s."
+    expression: {fileID: 21300000, guid: 7de5b54c4a667254f995e5c58d9c0e04, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Aroy
+    text: "V\xEDctor no para de marcar tarea... Llevo sin dormir 2 meses, 12 dias
+      y 3 horas."
+    expression: {fileID: 21300000, guid: 7de5b54c4a667254f995e5c58d9c0e04, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Aroy
+    text: "Lo bueno es que ya se d\xF3nde vive \xE9l, su mujer, y sus dos hijos."
+    expression: {fileID: 21300000, guid: 17b58aa7b6037a04dac62b5721a7ac11, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: "\xBFQui\xE9n te peg\xF3?"
+      nextDialogue: {fileID: 11400000, guid: 902abf164f70a024b90f06077681ecf9, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

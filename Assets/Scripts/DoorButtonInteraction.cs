@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,10 +13,14 @@ public class DoorButtonInteraction : MonoBehaviour
     public AudioClip DoorCloseAudio;
     public AudioSource audioSource;
 
+    public GameObject crosshair;
+    public GameObject cuadroInteract;
+    public GameObject interactText;
+
     private bool cutsceneActive = false;
 
     public bool isExitDoor = false; 
-    public GameObject fadePanel;
+    
 
     void Awake()
     {
@@ -68,6 +73,9 @@ public class DoorButtonInteraction : MonoBehaviour
             if (GameManager.Instance.hasAccusedThisDay)
             {
                 StartCoroutine(TransitionToNextDay());
+                crosshair.SetActive(false);
+                interactText.SetActive(false);
+                cuadroInteract.SetActive(false);
             }
             else
             {
@@ -93,6 +101,10 @@ public class DoorButtonInteraction : MonoBehaviour
         }
     }
 
+    [Header("UI de Transición")]
+    public GameObject fadePanel;
+    public TextMeshProUGUI dayText;
+
     IEnumerator TransitionToNextDay()
     {
         // 1. Pantalla en negro
@@ -101,11 +113,24 @@ public class DoorButtonInteraction : MonoBehaviour
         // Reproducimos el sonido de cerrar al salir
         PlayDoorCloseSound();
 
+        if (dayText != null)
+        {
+            // Sumamos 1 porque el cambio en el GameManager aún no ha ocurrido
+            int proximoDia = GameManager.Instance.currentDay + 1;
+            dayText.text = "DÍA " + proximoDia;
+            dayText.gameObject.SetActive(true);
+        }
+
         // 2. Esperar 5 segundos
         yield return new WaitForSeconds(5f);
 
         // 3. Pasar de día
         GameManager.Instance.NextDay();
+
+        if (dayText != null)
+        {
+            dayText.gameObject.SetActive(false);
+        }
 
         // 4. Quitar pantalla en negro
         fadePanel.SetActive(false);

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: ian_Casual_Dia1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Ian
+    text: "\xBFSabes lo que son las petunias?"
+    expression: {fileID: 21300000, guid: c839f78a7fbe4094f9d6eb45d6359655, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Ian
+    text: Son flores... Preciosas, si me preguntas...
+    expression: {fileID: 21300000, guid: f5dd10d162e8787448feb352ee8e7c43, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Ian
+    text: Florecen en Manhattan.
+    expression: {fileID: 21300000, guid: f5dd10d162e8787448feb352ee8e7c43, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: Muy bien...
+      nextDialogue: {fileID: 11400000, guid: ce57504dc03f12c47a7acf0671a89065, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: "\xBFD\xF3nde las puedo conseguir?"
+      nextDialogue: {fileID: 11400000, guid: f668dda0596fd794ebee7ed7fb935f82, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

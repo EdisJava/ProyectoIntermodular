@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: AroyCasual
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Aroy
+    text: Joder... Odio python
+    expression: {fileID: 21300000, guid: 17b58aa7b6037a04dac62b5721a7ac11, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Aroy
+    text: "V\xEDctor de nuevo me marc\xF3 m\xE1s tarea."
+    expression: {fileID: 21300000, guid: 17b58aa7b6037a04dac62b5721a7ac11, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: "\xBFQu\xE9 te paso?"
+      nextDialogue: {fileID: 11400000, guid: 2dd3bf8185ef7d94c9ea0ef3c535f6ce, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: "\xBFQui\xE9n es V\xEDctor?"
+      nextDialogue: {fileID: 11400000, guid: 404909b30b1a3c1418004028296f49d9, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
