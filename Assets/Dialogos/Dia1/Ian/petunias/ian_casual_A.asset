@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: ian_casual_A
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Ian
+    text: "\xBFNo te importan las petunias?"
+    expression: {fileID: 21300000, guid: 8ad2e8cafd562d94cb3e38f90f8c78a6, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Ian
+    text: "\xBFY si son de Alfonso?"
+    expression: {fileID: 21300000, guid: f5dd10d162e8787448feb352ee8e7c43, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Ian
+    text: ...
+    expression: {fileID: 21300000, guid: 8ad2e8cafd562d94cb3e38f90f8c78a6, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Ian
+    text: Respira el aire de las petunias... Siente todo lo que es tuyo... Manhattan
+    expression: {fileID: 21300000, guid: c047a51ff1fdef644b455d539982fbbe, type: 3}
+    hasOptions: 0
+    options: []

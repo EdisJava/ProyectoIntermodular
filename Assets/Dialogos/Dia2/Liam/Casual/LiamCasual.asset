@@ -19,8 +19,8 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Liam
-    text: "\xBFMi estimado tienes idea de lo que sale en el examen de orientado a
-      objetos?"
+    text: "Mi estimado... \xBFtienes idea de lo que sale en el examen de orientado
+      a objetos?"
     expression: {fileID: 21300000, guid: 58c72e1670d198641a0c0c44e18dad30, type: 3}
     hasOptions: 1
     options:

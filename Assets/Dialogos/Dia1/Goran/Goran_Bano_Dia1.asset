@@ -15,17 +15,21 @@ MonoBehaviour:
   lines:
   - characterName: Goran
     text: "\xA1HOLA! \xBFQU\xC9 TAL?"
-    expression: {fileID: 21300000, guid: 1db7104e500b8a44e941fd23dcb543ce, type: 3}
+    expression: {fileID: 21300000, guid: 15234bf764c7e06459fce2b441a61501, type: 3}
     hasOptions: 0
     options: []
   - characterName: Goran
     text: "\xBFC\xF3mo te fue el examen?"
-    expression: {fileID: 21300000, guid: 1db7104e500b8a44e941fd23dcb543ce, type: 3}
+    expression: {fileID: 21300000, guid: 15234bf764c7e06459fce2b441a61501, type: 3}
     hasOptions: 1
     options:
     - optionText: "\xBFQue te pas\xF3?"
       nextDialogue: {fileID: 11400000, guid: a8e522f36b47012429fb734b2e67e900, type: 2}
       isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
     - optionText: "\xBFTe ca\xEDste?"
       nextDialogue: {fileID: 11400000, guid: a8e522f36b47012429fb734b2e67e900, type: 2}
       isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

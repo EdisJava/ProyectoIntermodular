@@ -15,9 +15,11 @@ MonoBehaviour:
   lines:
   - characterName: Goran
     text: "\xBFMe quieres dejar en paz?"
-    expression: {fileID: 21300000, guid: 77d7ccbf56d620243b49886cc9cfdb61, type: 3}
+    expression: {fileID: 21300000, guid: c81192a76dcdc79499e3441eb06dcf0f, type: 3}
     hasOptions: 0
     options:
     - optionText: ...
       nextDialogue: {fileID: 0}
       isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

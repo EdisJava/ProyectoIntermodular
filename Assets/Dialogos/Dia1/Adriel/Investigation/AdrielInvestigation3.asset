@@ -29,3 +29,13 @@ MonoBehaviour:
     expression: {fileID: 21300000, guid: 012670589f48e5e46a6fc8707b37bbb0, type: 3}
     hasOptions: 0
     options: []
+  - characterName: Adriel
+    text: Seguramente haya sido el loco de las petunias.
+    expression: {fileID: 21300000, guid: 012670589f48e5e46a6fc8707b37bbb0, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Adriel
+    text: No para de gritar y pegarle a gente.
+    expression: {fileID: 21300000, guid: 012670589f48e5e46a6fc8707b37bbb0, type: 3}
+    hasOptions: 0
+    options: []
