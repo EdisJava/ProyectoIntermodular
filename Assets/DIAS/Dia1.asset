@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dia1
   m_EditorClassIdentifier: Assembly-CSharp::DayScenario
   victimName: Goran
-  teacherName: ???
+  teacherName: Jacinto
   characterConfigs:
   - characterName: Ian
     casualDialogue: {fileID: 11400000, guid: 9f356d3411aa2764390b8fdd18d6687a, type: 2}
