@@ -12,6 +12,15 @@ public class SaveData
     public bool hasAccusedThisDay;
     public List<StudentDialogueProgressData> studentProgress = new List<StudentDialogueProgressData>();
     public TeacherDialogueProgressData teacherProgress;
+    public bool hasPlayerPosition;
+    public float playerPosX;
+    public float playerPosY;
+    public float playerPosZ;
+    public bool hasPlayerRotation;
+    public float playerRotX;
+    public float playerRotY;
+    public float playerRotZ;
+    public float playerRotW;
 }
 
 [Serializable]

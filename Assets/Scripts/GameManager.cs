@@ -79,12 +79,18 @@ public class GameManager : MonoBehaviour
     [Header("Posicion Inicial")]
     public Transform playerSpawnPoint;
     public GameObject playerObject;
+    private bool hasLoadedPlayerPosition = false;
+    private Vector3 loadedPlayerPosition;
+    private bool hasLoadedPlayerRotation = false;
+    private Quaternion loadedPlayerRotation;
     void StartNewGameState()
     {
         currentDay = 1;
         currentState = GameState.Exploration3D;
         goodDecisions = 0;
         badDecisions = 0;
+        hasLoadedPlayerPosition = false;
+        hasLoadedPlayerRotation = false;
         ResetDailyState();
         RefreshCurrentDay(true);
     }
@@ -140,10 +146,23 @@ public class GameManager : MonoBehaviour
 
         Debug.Log($"Día {currentDay} comienza oficialmente");
 
-        if (playerSpawnPoint != null && playerObject != null)
+        if (playerObject != null)
         {
-            playerObject.transform.position = playerSpawnPoint.position;
-            playerObject.transform.rotation = playerSpawnPoint.rotation;
+            if (hasLoadedPlayerPosition)
+            {
+                playerObject.transform.position = loadedPlayerPosition;
+                if (hasLoadedPlayerRotation)
+                {
+                    playerObject.transform.rotation = loadedPlayerRotation;
+                }
+                hasLoadedPlayerPosition = false;
+                hasLoadedPlayerRotation = false;
+            }
+            else if (playerSpawnPoint != null)
+            {
+                playerObject.transform.position = playerSpawnPoint.position;
+                playerObject.transform.rotation = playerSpawnPoint.rotation;
+            }
         }
     }
 
@@ -258,6 +277,22 @@ public class GameManager : MonoBehaviour
             hasAccusedThisDay = hasAccusedThisDay
         };
 
+        if (playerObject != null)
+        {
+            Vector3 playerPosition = playerObject.transform.position;
+            saveData.hasPlayerPosition = true;
+            saveData.playerPosX = playerPosition.x;
+            saveData.playerPosY = playerPosition.y;
+            saveData.playerPosZ = playerPosition.z;
+
+            Quaternion playerRotation = playerObject.transform.rotation;
+            saveData.hasPlayerRotation = true;
+            saveData.playerRotX = playerRotation.x;
+            saveData.playerRotY = playerRotation.y;
+            saveData.playerRotZ = playerRotation.z;
+            saveData.playerRotW = playerRotation.w;
+        }
+
         StudentNPC[] allStudents = FindObjectsByType<StudentNPC>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         foreach (StudentNPC student in allStudents)
         {
@@ -312,6 +347,16 @@ public class GameManager : MonoBehaviour
         badDecisions = Mathf.Max(0, data.badDecisions);
         hasAccusedThisDay = data.hasAccusedThisDay;
         SetRemainingQuestions(data.remainingQuestions);
+        hasLoadedPlayerPosition = data.hasPlayerPosition;
+        if (hasLoadedPlayerPosition)
+        {
+            loadedPlayerPosition = new Vector3(data.playerPosX, data.playerPosY, data.playerPosZ);
+        }
+        hasLoadedPlayerRotation = data.hasPlayerRotation;
+        if (hasLoadedPlayerRotation)
+        {
+            loadedPlayerRotation = new Quaternion(data.playerRotX, data.playerRotY, data.playerRotZ, data.playerRotW);
+        }
 
         if (System.Enum.IsDefined(typeof(DayPhase), data.currentDayPhase))
         {
