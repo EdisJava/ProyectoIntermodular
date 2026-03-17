@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: ProfeCasual
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: ???
+  - characterName: Jacinto
     text: "Buenas... Me has decepcionado en el \xFAltimo examen..."
-    expression: {fileID: 21300000, guid: 9fd63e9c35ce60f41b7a78282fbf2839, type: 3}
+    expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
     hasOptions: 0
     options: []
-  - characterName: ???
+  - characterName: Jacinto
     text: "\xBFC\xF3mo vas a sacar nota negativa? \xBFEres una persona real?"
-    expression: {fileID: 21300000, guid: 9fd63e9c35ce60f41b7a78282fbf2839, type: 3}
+    expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
     hasOptions: 0
     options: []
-  - characterName: ???
+  - characterName: Jacinto
     text: O acaso eres un robot del Mossad?
-    expression: {fileID: 21300000, guid: 9fd63e9c35ce60f41b7a78282fbf2839, type: 3}
+    expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
     hasOptions: 1
     options:
     - optionText: Cuanto dinero quieres.

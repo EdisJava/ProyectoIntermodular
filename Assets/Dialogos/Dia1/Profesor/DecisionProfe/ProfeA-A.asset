@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ProfeA-A
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: ???
+  - characterName: Jacinto
     text: ". . . Yo sospech\xE9 lo mismo. \xBFEn qu\xE9 te basaste?"
-    expression: {fileID: 21300000, guid: 9fd63e9c35ce60f41b7a78282fbf2839, type: 3}
+    expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
     hasOptions: 1
     options:
     - optionText: "Dios me lo revel\xF3"

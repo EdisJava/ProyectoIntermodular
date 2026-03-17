@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: ProfeC
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: ???
+  - characterName: Jacinto
     text: "\xBFMe est\xE1s vacilando?"
-    expression: {fileID: 21300000, guid: 9fd63e9c35ce60f41b7a78282fbf2839, type: 3}
+    expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
     hasOptions: 0
     options: []
-  - characterName: ???
+  - characterName: Jacinto
     text: . . .
-    expression: {fileID: 21300000, guid: 9fd63e9c35ce60f41b7a78282fbf2839, type: 3}
+    expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
     hasOptions: 0
     options: []
-  - characterName: ???
+  - characterName: Jacinto
     text: "Confiar\xE9 en ti... te he visto preguntarle a los compa\xF1eros."
-    expression: {fileID: 21300000, guid: 9fd63e9c35ce60f41b7a78282fbf2839, type: 3}
+    expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
     hasOptions: 0
     options: []
-  - characterName: ???
+  - characterName: Jacinto
     text: Vuelve a casa por ahora.
-    expression: {fileID: 21300000, guid: 9fd63e9c35ce60f41b7a78282fbf2839, type: 3}
+    expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
     hasOptions: 0
     options: []
