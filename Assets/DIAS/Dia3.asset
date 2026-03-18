@@ -20,6 +20,16 @@ MonoBehaviour:
     truthDialogue: {fileID: 11400000, guid: 46cd5c0a1eff0604da883518f2212335, type: 2}
     lieDialogue: {fileID: 11400000, guid: 46cd5c0a1eff0604da883518f2212335, type: 2}
     isLiarToday: 0
+  - characterName: Fernando
+    casualDialogue: {fileID: 11400000, guid: 5ef5a609c73bb96439951bbe938b2f47, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 5ef5a609c73bb96439951bbe938b2f47, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 5ef5a609c73bb96439951bbe938b2f47, type: 2}
+    isLiarToday: 0
+  - characterName: walter-3
+    casualDialogue: {fileID: 11400000, guid: f5a0408691d93964188db67122e745dc, type: 2}
+    truthDialogue: {fileID: 11400000, guid: f5a0408691d93964188db67122e745dc, type: 2}
+    lieDialogue: {fileID: 11400000, guid: f5a0408691d93964188db67122e745dc, type: 2}
+    isLiarToday: 0
   goalFindVictim: Encuentra a la persona acosada
   goalInvestigate: "Interroga a los compa\xF1eros"
   goalReport: Habla con el profesor
