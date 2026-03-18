@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: CasualJimmiA
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Jimmi
+    text: "Concha, entonces como terminamos el proyecto que es para ma\xF1ana."
+    expression: {fileID: 21300000, guid: 9b52ce13b33477647aa0a7a535cf20e9, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: No se, total no voy a aprobar haga lo que haga
+      nextDialogue: {fileID: 11400000, guid: d5f8a1d368e5844459652b727daba123, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
