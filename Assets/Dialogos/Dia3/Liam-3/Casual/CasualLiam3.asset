@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: FernandoCasual
+  m_Name: CasualLiam3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Fernando
-    text: Que tal chaval como te trata la vida hoy.
-    expression: {fileID: 21300000, guid: 48fb0692c2aebc843b08fe4b4d538d09, type: 3}
+  - characterName: Liam
+    text: Mi estimado, porque permiten caninos en este centro. Aunque como hombre
+      performativo, no me importa.
+    expression: {fileID: 21300000, guid: 58c72e1670d198641a0c0c44e18dad30, type: 3}
     hasOptions: 1
     options:
-    - optionText: Hola, me dijeron que sabes hacer buenos promts en la IA.
-      nextDialogue: {fileID: 11400000, guid: 83aab854da86dd74a9aa9804e5ced1c1, type: 2}
+    - optionText: Es Walter, un dia aparecio por aqui y ya no se fue.
+      nextDialogue: {fileID: 11400000, guid: b36b11c42fd7884438e61fadbe0ae302, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: Me han dicho que tienes un negocio de SEO.
-      nextDialogue: {fileID: 11400000, guid: 8c23fdf3b90162a4ea1655c78ad118b2, type: 2}
+    - optionText: Mi estimado, gracias por la informacion de ayer.
+      nextDialogue: {fileID: 11400000, guid: 9d54cb10caefabe49a12aeaa557bf181, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0

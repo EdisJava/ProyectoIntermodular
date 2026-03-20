@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: FernandoCasualB
+  m_Name: CasualHafidAA
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Fernando
-    text: Una larga historia para la media hora de patio que queda.
-    expression: {fileID: 21300000, guid: 48fb0692c2aebc843b08fe4b4d538d09, type: 3}
+  - characterName: Hafid
+    text: "El tiene una peque\xF1a alergia a las petunias, espero que no sea eso."
+    expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
     hasOptions: 0
     options: []

@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: FernandoCasual
+  m_Name: MohiCasual3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Fernando
-    text: Que tal chaval como te trata la vida hoy.
-    expression: {fileID: 21300000, guid: 48fb0692c2aebc843b08fe4b4d538d09, type: 3}
+  - characterName: Mohi
+    text: '*Te sientes ciertamente perturbado por su mirada*'
+    expression: {fileID: 21300000, guid: 5c4fae2e1d1a97e42b7760c627123627, type: 3}
     hasOptions: 1
     options:
-    - optionText: Hola, me dijeron que sabes hacer buenos promts en la IA.
-      nextDialogue: {fileID: 11400000, guid: 83aab854da86dd74a9aa9804e5ced1c1, type: 2}
+    - optionText: '*Tocarle la cabeza*'
+      nextDialogue: {fileID: 11400000, guid: 12ffa2ec34c28cd4892c3446cb8b9fbe, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: Me han dicho que tienes un negocio de SEO.
-      nextDialogue: {fileID: 11400000, guid: 8c23fdf3b90162a4ea1655c78ad118b2, type: 2}
+    - optionText: '*Intentar darle otra vez el caramelo de Adriel*'
+      nextDialogue: {fileID: 11400000, guid: a1f3b9f404262b14abc608859b1aeb45, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0
