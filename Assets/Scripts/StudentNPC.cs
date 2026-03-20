@@ -12,7 +12,8 @@ public class StudentNPC : MonoBehaviour
     public Transform centerPoint;
 
     private Image myImage;
-    private Vector3 startPos;
+    private RectTransform myRectTransform;
+    private Vector2 startAnchoredPos;
     private Vector3 startScale;
 
     [Header("Diálogos Especiales")]
@@ -28,7 +29,8 @@ public class StudentNPC : MonoBehaviour
     void Start()
     {
         myImage = GetComponent<Image>();
-        startPos = transform.position;
+        myRectTransform = GetComponent<RectTransform>();
+        startAnchoredPos = myRectTransform.anchoredPosition;
         startScale = transform.localScale;
         if (idleSprite) myImage.sprite = idleSprite;
     }
@@ -123,14 +125,28 @@ public class StudentNPC : MonoBehaviour
 
     public void EnterFocus()
     {
-        transform.position = centerPoint.position;
+        // Si el centerPoint es un objeto de la UI, usamos su posición anclada
+        RectTransform centerRect = centerPoint.GetComponent<RectTransform>();
+
+        if (centerRect != null)
+        {
+            myRectTransform.anchoredPosition = centerRect.anchoredPosition;
+        }
+        else
+        {
+            // Si por alguna razón no es UI, seguimos usando position pero es menos estable
+            transform.position = centerPoint.position;
+        }
+
         transform.localScale = startScale * 1.3f;
         myImage.enabled = false;
     }
 
     public void ExitFocus()
     {
-        transform.position = startPos;
+        // Volvemos a la posición anclada original (que no cambia con la resolución)
+        myRectTransform.anchoredPosition = startAnchoredPos; // <--- CAMBIADO
+
         transform.localScale = startScale;
         myImage.enabled = true;
     }
