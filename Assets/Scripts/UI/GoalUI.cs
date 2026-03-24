@@ -1,48 +1,78 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GoalUI : MonoBehaviour
 {
+    private const string PrologueSceneName = "HouseScene";
+
     private TextMeshProUGUI goalText;
+    private TMP_FontAsset fixedFontAsset;
     private DayPhase lastPhase;
     private int lastDay;
+    private bool lastAccusedState;
+    private bool lastPrologueReadState;
+    private string lastSceneName = string.Empty;
 
     void Awake()
     {
         goalText = GetComponent<TextMeshProUGUI>();
+        if (goalText != null)
+        {
+            fixedFontAsset = goalText.font;
+        }
     }
-
-    private bool lastAccusedState; // Para detectar el cambio
 
     void Update()
     {
-        // Añadimos la comprobación de hasAccusedThisDay al IF
-        if (GameManager.Instance.currentDayPhase != lastPhase ||
-            GameManager.Instance.currentDay != lastDay ||
-            GameManager.Instance.hasAccusedThisDay != lastAccusedState)
+        if (goalText == null || GameManager.Instance == null)
         {
-            UpdateGoalDisplay();
-        }
-    }
-
-    void UpdateGoalDisplay()
-    {
-        lastPhase = GameManager.Instance.currentDayPhase;
-        lastDay = GameManager.Instance.currentDay;
-        lastAccusedState = GameManager.Instance.hasAccusedThisDay; // Guardamos el estado
-
-        DayScenario currentScenario = GameManager.Instance.GetCurrentDayScenario();
-        if (currentScenario == null) return;
-
-        // Prioridad: Si ya acusó, mostrar el texto de salida
-        if (GameManager.Instance.hasAccusedThisDay)
-        {
-            // Si no tienes 'goalExit' en tu scriptable object, puedes poner "Sal por la puerta"
-            goalText.text = "Ya has terminado aquí. Sal por la puerta.";
             return;
         }
 
-        // Si no ha acusado, seguimos con el switch normal
+        string sceneName = SceneManager.GetActiveScene().name;
+        bool isPrologue = sceneName == PrologueSceneName;
+
+        if (isPrologue)
+        {
+            bool readLetter = GameManager.Instance.hasReadPrologueLetter;
+            if (sceneName != lastSceneName || readLetter != lastPrologueReadState)
+            {
+                goalText.text = readLetter ? "Ve a clases" : "Lee la carta";
+                lastSceneName = sceneName;
+                lastPrologueReadState = readLetter;
+            }
+            return;
+        }
+
+        if (sceneName != lastSceneName ||
+            GameManager.Instance.currentDayPhase != lastPhase ||
+            GameManager.Instance.currentDay != lastDay ||
+            GameManager.Instance.hasAccusedThisDay != lastAccusedState)
+        {
+            UpdateGoalDisplay(sceneName);
+        }
+    }
+
+    void UpdateGoalDisplay(string sceneName)
+    {
+        lastSceneName = sceneName;
+        lastPhase = GameManager.Instance.currentDayPhase;
+        lastDay = GameManager.Instance.currentDay;
+        lastAccusedState = GameManager.Instance.hasAccusedThisDay;
+
+        DayScenario currentScenario = GameManager.Instance.GetCurrentDayScenario();
+        if (currentScenario == null)
+        {
+            return;
+        }
+
+        if (GameManager.Instance.hasAccusedThisDay)
+        {
+            goalText.text = "Ya has terminado aqui. Sal por la puerta.";
+            return;
+        }
+
         switch (lastPhase)
         {
             case DayPhase.CasualTalk:
@@ -55,5 +85,27 @@ public class GoalUI : MonoBehaviour
                 goalText.text = currentScenario.goalReport;
                 break;
         }
+
+        ApplyUppercase();
+    }
+
+    private void LateUpdate()
+    {
+        ApplyUppercase();
+    }
+
+    private void ApplyUppercase()
+    {
+        if (goalText == null || string.IsNullOrEmpty(goalText.text))
+        {
+            return;
+        }
+
+        if (fixedFontAsset != null && goalText.font != fixedFontAsset)
+        {
+            goalText.font = fixedFontAsset;
+        }
+
+        goalText.text = goalText.text.ToUpperInvariant();
     }
 }

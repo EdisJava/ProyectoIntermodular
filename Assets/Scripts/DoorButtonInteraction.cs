@@ -1,13 +1,18 @@
-using System.Collections;
+﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DoorButtonInteraction : MonoBehaviour
 {
+    private const string LoadingBackgroundResourcePath = "PantallaCarga";
+    private static Sprite cachedLoadingBackgroundSprite;
+
     public GameObject cutsceneImage;
-    
-    public FirstPlayerController movementScript;  
+
+    public FirstPlayerController movementScript;
     public AudioClip DoorOpenAudio;
     public AudioClip DoorCloseAudio;
     public AudioSource audioSource;
@@ -18,8 +23,16 @@ public class DoorButtonInteraction : MonoBehaviour
 
     private bool cutsceneActive = false;
 
-    public bool isExitDoor = false; 
-    
+    public bool isExitDoor = false;
+
+    [Header("Prologo")]
+    public bool marksPrologueLetterAsRead = false;
+    public bool isPrologueExitDoor = false;
+    public string prologueDayOneSceneName = "SampleScene";
+
+    [Header("UI de Transicion")]
+    public GameObject fadePanel;
+    public TextMeshProUGUI dayText;
 
     void Awake()
     {
@@ -28,37 +41,36 @@ public class DoorButtonInteraction : MonoBehaviour
             audioSource = GetComponent<AudioSource>();
         }
 
-        // Si la puerta no tiene el componente AudioSource, se lo añadimos por código
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        // Nos aseguramos de configurarlo para que se escuche siempre a volumen máximo
         if (audioSource != null)
         {
             audioSource.playOnAwake = false;
-            audioSource.spatialBlend = 0f; // 0 = Sonido 2D (se escucha en toda la habitación igual)
-            audioSource.volume = 1f;       // Volumen al 100%
+            audioSource.spatialBlend = 0f;
+            audioSource.volume = 1f;
         }
     }
 
     void Update()
     {
-        if (cutsceneActive)
+        if (!cutsceneActive)
         {
-            // Importante: Usar .Instance para acceder a la copia que está viva en la escena
-            if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive)
-            {
-                return; // Si hay diálogo, no hacemos nada más en este Update
-            }
+            return;
+        }
 
-            if (Keyboard.current.spaceKey.wasPressedThisFrame ||
-                Keyboard.current.enterKey.wasPressedThisFrame ||
-                Keyboard.current.escapeKey.wasPressedThisFrame)
-            {
-                CloseCutscene();
-            }
+        if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive)
+        {
+            return;
+        }
+
+        if (Keyboard.current.spaceKey.wasPressedThisFrame ||
+            Keyboard.current.enterKey.wasPressedThisFrame ||
+            Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            CloseCutscene();
         }
     }
 
@@ -68,62 +80,59 @@ public class DoorButtonInteraction : MonoBehaviour
 
         if (isExitDoor)
         {
-            // Solo dejamos salir si ya acusó
+            if (isPrologueExitDoor)
+            {
+                if (GameManager.Instance != null && !GameManager.Instance.hasReadPrologueLetter)
+                {
+                    Debug.Log("Primero debes leer la carta.");
+                    return;
+                }
+
+                HideInteractionUI();
+                StartCoroutine(TransitionFromPrologueToDayOne());
+                return;
+            }
+
             if (GameManager.Instance.hasAccusedThisDay)
             {
+                HideInteractionUI();
                 StartCoroutine(TransitionToNextDay());
-                crosshair.SetActive(false);
-                interactText.SetActive(false);
-                cuadroInteract.SetActive(false);
             }
             else
             {
                 Debug.Log("No puedo irme sin acusar a alguien.");
             }
+            return;
         }
-        else
-        {
-            OpenCutscene();
-        }
-    }
 
-    void PlayDoorSound()
-    {
-        if (audioSource != null && DoorOpenAudio != null)
+        if (marksPrologueLetterAsRead && GameManager.Instance != null)
         {
-            audioSource.PlayOneShot(DoorOpenAudio);
-            Debug.Log("🔊 Reproduciendo sonido de abrir puerta");
+            GameManager.Instance.hasReadPrologueLetter = true;
         }
-        else if (DoorOpenAudio == null)
-        {
-            Debug.LogWarning("⚠️ Falta asignar el clip 'Door Open Audio' en el Inspector del botón de la puerta.");
-        }
-    }
 
-    [Header("UI de Transición")]
-    public GameObject fadePanel;
-    public TextMeshProUGUI dayText;
+        OpenCutscene();
+    }
 
     IEnumerator TransitionToNextDay()
     {
-        // 1. Pantalla en negro
-        fadePanel.SetActive(true);
+        ApplyLoadingBackgroundToFadePanel();
 
-        // Reproducimos el sonido de cerrar al salir
+        if (fadePanel != null)
+        {
+            fadePanel.SetActive(true);
+        }
+
         PlayDoorCloseSound();
 
         if (dayText != null)
         {
-            // Sumamos 1 porque el cambio en el GameManager aún no ha ocurrido
             int proximoDia = GameManager.Instance.currentDay + 1;
-            dayText.text = "DÍA " + proximoDia;
+            dayText.text = "DIA " + proximoDia;
             dayText.gameObject.SetActive(true);
         }
 
-        // 2. Esperar 5 segundos
         yield return new WaitForSeconds(5f);
 
-        // 3. Pasar de día
         GameManager.Instance.NextDay();
 
         if (dayText != null)
@@ -131,8 +140,131 @@ public class DoorButtonInteraction : MonoBehaviour
             dayText.gameObject.SetActive(false);
         }
 
-        // 4. Quitar pantalla en negro
-        fadePanel.SetActive(false);
+        if (fadePanel != null)
+        {
+            fadePanel.SetActive(false);
+        }
+    }
+
+    IEnumerator TransitionFromPrologueToDayOne()
+    {
+        GameObject runtimeOverlay = null;
+
+        ApplyLoadingBackgroundToFadePanel();
+
+        if (fadePanel != null)
+        {
+            fadePanel.SetActive(true);
+        }
+        else
+        {
+            runtimeOverlay = CreateRuntimeTransitionOverlay();
+        }
+
+        if (dayText != null)
+        {
+            dayText.text = "DIA 1";
+            dayText.gameObject.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(1.2f);
+        SceneManager.LoadScene(prologueDayOneSceneName);
+
+        if (runtimeOverlay != null)
+        {
+            Destroy(runtimeOverlay);
+        }
+    }
+
+    private GameObject CreateRuntimeTransitionOverlay()
+    {
+        GameObject canvasGO = new GameObject("PrologueTransitionCanvas");
+        Canvas canvas = canvasGO.AddComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        canvas.sortingOrder = 500;
+
+        CanvasScaler scaler = canvasGO.AddComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1920f, 1080f);
+
+        canvasGO.AddComponent<GraphicRaycaster>();
+
+        GameObject panelGO = new GameObject("FadePanel");
+        panelGO.transform.SetParent(canvasGO.transform, false);
+        RectTransform panelRect = panelGO.AddComponent<RectTransform>();
+        panelRect.anchorMin = Vector2.zero;
+        panelRect.anchorMax = Vector2.one;
+        panelRect.offsetMin = Vector2.zero;
+        panelRect.offsetMax = Vector2.zero;
+
+        Image panelImage = panelGO.AddComponent<Image>();
+        Sprite loadingSprite = GetLoadingBackgroundSprite();
+        if (loadingSprite != null)
+        {
+            panelImage.sprite = loadingSprite;
+            panelImage.color = Color.white;
+            panelImage.preserveAspect = false;
+        }
+        else
+        {
+            panelImage.color = Color.black;
+        }
+
+        GameObject textGO = new GameObject("DayText");
+        textGO.transform.SetParent(panelGO.transform, false);
+        RectTransform textRect = textGO.AddComponent<RectTransform>();
+        textRect.anchorMin = new Vector2(0.5f, 0.5f);
+        textRect.anchorMax = new Vector2(0.5f, 0.5f);
+        textRect.pivot = new Vector2(0.5f, 0.5f);
+        textRect.anchoredPosition = Vector2.zero;
+        textRect.sizeDelta = new Vector2(800f, 180f);
+
+        TextMeshProUGUI tmp = textGO.AddComponent<TextMeshProUGUI>();
+        if (TMP_Settings.defaultFontAsset != null)
+        {
+            tmp.font = TMP_Settings.defaultFontAsset;
+        }
+        tmp.text = "DIA 1";
+        tmp.alignment = TextAlignmentOptions.Center;
+        tmp.fontSize = 80f;
+        tmp.color = Color.white;
+
+        return canvasGO;
+    }
+
+    private void ApplyLoadingBackgroundToFadePanel()
+    {
+        if (fadePanel == null)
+        {
+            return;
+        }
+
+        Image panelImage = fadePanel.GetComponent<Image>();
+        if (panelImage == null)
+        {
+            return;
+        }
+
+        Sprite loadingSprite = GetLoadingBackgroundSprite();
+        if (loadingSprite == null)
+        {
+            return;
+        }
+
+        panelImage.sprite = loadingSprite;
+        panelImage.color = Color.white;
+        panelImage.preserveAspect = false;
+    }
+
+    private Sprite GetLoadingBackgroundSprite()
+    {
+        if (cachedLoadingBackgroundSprite != null)
+        {
+            return cachedLoadingBackgroundSprite;
+        }
+
+        cachedLoadingBackgroundSprite = Resources.Load<Sprite>(LoadingBackgroundResourcePath);
+        return cachedLoadingBackgroundSprite;
     }
 
     void OpenCutscene()
@@ -149,17 +281,16 @@ public class DoorButtonInteraction : MonoBehaviour
             movementScript.enabled = false;
             movementScript.canLook = false;
         }
-        // 2. Buscamos el RoomManager en el objeto que acabamos de activar
+
         RoomManager roomManager = cutsceneImage.GetComponent<RoomManager>();
 
         if (roomManager != null)
         {
-            // 3. Esta función es la que activará a Goran según el día
             roomManager.RefreshRoom();
         }
         else
         {
-            Debug.LogError("¡Ojo! El objeto cutsceneImage no tiene el script RoomManager.");
+            Debug.LogError("El objeto cutsceneImage no tiene el script RoomManager.");
         }
     }
 
@@ -180,16 +311,34 @@ public class DoorButtonInteraction : MonoBehaviour
         }
     }
 
+    void PlayDoorSound()
+    {
+        if (audioSource != null && DoorOpenAudio != null)
+        {
+            audioSource.PlayOneShot(DoorOpenAudio);
+        }
+        else if (DoorOpenAudio == null)
+        {
+            Debug.LogWarning("Falta asignar el clip 'Door Open Audio' en el inspector.");
+        }
+    }
+
     void PlayDoorCloseSound()
     {
         if (audioSource != null && DoorCloseAudio != null)
         {
             audioSource.PlayOneShot(DoorCloseAudio);
-            Debug.Log("🔊 Reproduciendo sonido de cerrar puerta");
         }
         else if (DoorCloseAudio == null)
         {
-            Debug.LogWarning("⚠️ Falta asignar el clip 'Door Close Audio' en el Inspector del botón de la puerta.");
+            Debug.LogWarning("Falta asignar el clip 'Door Close Audio' en el inspector.");
         }
+    }
+
+    void HideInteractionUI()
+    {
+        if (crosshair != null) crosshair.SetActive(false);
+        if (interactText != null) interactText.SetActive(false);
+        if (cuadroInteract != null) cuadroInteract.SetActive(false);
     }
 }

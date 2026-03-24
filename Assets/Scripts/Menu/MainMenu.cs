@@ -96,7 +96,16 @@ public class MainMenu : MonoBehaviour
             return;
         }
 
-        SceneManager.LoadScene("SampleScene");
+        SaveData saveData = SaveSystem.LoadGame();
+        if (saveData == null)
+        {
+            Debug.LogWarning("No se pudo leer la partida guardada. Cargando SampleScene por defecto.");
+            SceneManager.LoadScene("SampleScene");
+            return;
+        }
+
+        string targetScene = ResolveSceneForSavedGame(saveData);
+        SceneManager.LoadScene(targetScene);
     }
 
     public void NewGame()
@@ -108,7 +117,7 @@ public class MainMenu : MonoBehaviour
     {
         SaveSystem.DeleteSave();
         ShowMainOptions();
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("HouseScene");
     }
 
     public void CancelNewGame()
@@ -752,5 +761,21 @@ public class MainMenu : MonoBehaviour
         }
 
         return target == root || target.IsChildOf(root);
+    }
+
+    string ResolveSceneForSavedGame(SaveData saveData)
+    {
+        if (!string.IsNullOrWhiteSpace(saveData.sceneName) && Application.CanStreamedLevelBeLoaded(saveData.sceneName))
+        {
+            return saveData.sceneName;
+        }
+
+        // Compatibilidad con partidas antiguas que no guardaban escena.
+        if (!saveData.hasReadPrologueLetter && Application.CanStreamedLevelBeLoaded("HouseScene"))
+        {
+            return "HouseScene";
+        }
+
+        return "SampleScene";
     }
 }

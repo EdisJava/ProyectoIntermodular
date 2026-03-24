@@ -1,15 +1,13 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
-
-
 
 public class Selected : MonoBehaviour
 {
     public CrosshairAnimator crosshairAnimator;
     public PlayerInput playerInput;
-    LayerMask mask;
-    public float distancia  = 2f;
+    private LayerMask mask;
+    public float distancia = 2f;
 
     private InputAction interactAction;
 
@@ -26,28 +24,23 @@ public class Selected : MonoBehaviour
         mask = LayerMask.GetMask("Raycast Detect");
         if (playerInput != null)
             interactAction = playerInput.actions["Interact"];
+
         crosshair.SetActive(false);
         interactText.SetActive(false);
         cuadroInteract.SetActive(false);
         interactLabel.text = "E para interactuar";
     }
 
-
-
-    // Update is called once per frame
-void Update()
-{
-
-    if (GameManager.Instance.IsIn2D())
+    void Update()
     {
-            // 1. Verificamos si existe la instancia para evitar el error
+        if (GameManager.Instance.IsIn2D())
+        {
             bool talking = false;
             if (DialogueManager.Instance != null)
             {
                 talking = DialogueManager.Instance.IsDialogueActive;
             }
 
-            // 2. Usamos esa variable para decidir qué mostrar
             if (talking)
             {
                 crosshair.SetActive(false);
@@ -67,38 +60,48 @@ void Update()
         }
 
         RaycastHit hit;
-    isLookingAtDoor = false;
+        isLookingAtDoor = false;
 
-    if (Physics.Raycast(transform.position,
-        transform.TransformDirection(Vector3.forward),
-        out hit, distancia, mask))
-    {
-        if (hit.collider.CompareTag("PuertaInteractiva"))
+        if (Physics.Raycast(transform.position,
+            transform.TransformDirection(Vector3.forward),
+            out hit, distancia, mask))
         {
-            isLookingAtDoor = true;
+            if (hit.collider.CompareTag("PuertaInteractiva"))
+            {
+                isLookingAtDoor = true;
 
-                var interaction = hit.collider.GetComponent<DoorButtonInteraction>();
+                DoorButtonInteraction interaction = hit.collider.GetComponent<DoorButtonInteraction>();
 
-                // Cambiamos el texto según el tipo de puerta
-                interactLabel.text = interaction.isExitDoor ? "E para ir a casa" : "E para interactuar";
+                if (interaction != null && interaction.isPrologueExitDoor)
+                {
+                    interactLabel.text = "Pulsa E para ir a clases";
+                }
+                else if (interaction != null && interaction.isExitDoor)
+                {
+                    interactLabel.text = "E para ir a casa";
+                }
+                else
+                {
+                    interactLabel.text = "E para interactuar";
+                }
 
                 if (!wasLookingAtDoorLastFrame)
-            {
-                crosshair.SetActive(true);
-                interactText.SetActive(true);
-                cuadroInteract.SetActive(true);
-                    if (crosshairAnimator != null)
                 {
-                    crosshairAnimator.PlayAppear();
+                    crosshair.SetActive(true);
+                    interactText.SetActive(true);
+                    cuadroInteract.SetActive(true);
+                    if (crosshairAnimator != null)
+                    {
+                        crosshairAnimator.PlayAppear();
                     }
                 }
 
-                if (interactAction != null && interactAction.triggered)
+                if (interactAction != null && interactAction.triggered && interaction != null)
                 {
-                    interaction.Interact(); 
+                    interaction.Interact();
                 }
             }
-    }
+        }
 
         if (!isLookingAtDoor)
         {

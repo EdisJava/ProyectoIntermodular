@@ -4,12 +4,14 @@ using System.Collections.Generic;
 [Serializable]
 public class SaveData
 {
+    public string sceneName;
     public int currentDay;
     public int currentDayPhase;
     public int remainingQuestions;
     public int goodDecisions;
     public int badDecisions;
     public bool hasAccusedThisDay;
+    public bool hasReadPrologueLetter;
     public List<StudentDialogueProgressData> studentProgress = new List<StudentDialogueProgressData>();
     public TeacherDialogueProgressData teacherProgress;
     public bool hasPlayerPosition;

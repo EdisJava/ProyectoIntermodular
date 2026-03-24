@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GameState
 {
@@ -21,11 +22,11 @@ public class GameManager : MonoBehaviour
     public GameState currentState = GameState.Exploration3D;
     public DayPhase currentDayPhase = DayPhase.CasualTalk;
 
-    [Header("Días")]
+    [Header("D�as")]
     public int currentDay = 1;
     public int maxDays = 7;
 
-    [Header("Investigación")]
+    [Header("Investigaci�n")]
     public int maxQuestionsPerDay = 2;
     private int questionsUsed;
 
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour
     public int goodDecisions = 0;
     public int badDecisions = 0;
 
-    [Header("Configuración de la Historia")]
+    [Header("Configuraci�n de la Historia")]
     public DayScenario[] allDays;
 
     private void Awake()
@@ -72,9 +73,10 @@ public class GameManager : MonoBehaviour
         return currentState == GameState.Interaction2D;
     }
 
-    // ---------------- DÍAS ----------------
+    // ---------------- D�AS ----------------
 
     public bool hasAccusedThisDay = false; // Nueva variable
+    public bool hasReadPrologueLetter = false;
 
     [Header("Posicion Inicial")]
     public Transform playerSpawnPoint;
@@ -89,6 +91,7 @@ public class GameManager : MonoBehaviour
         currentState = GameState.Exploration3D;
         goodDecisions = 0;
         badDecisions = 0;
+        hasReadPrologueLetter = false;
         hasLoadedPlayerPosition = false;
         hasLoadedPlayerRotation = false;
         ResetDailyState();
@@ -115,7 +118,7 @@ public class GameManager : MonoBehaviour
 
         if (scenario != null)
         {
-            Debug.Log($"Configurando Día {currentDay}: {scenario.name}");
+            Debug.Log($"Configurando D�a {currentDay}: {scenario.name}");
 
             StudentNPC[] allNPCs = FindObjectsOfType<StudentNPC>();
             foreach (StudentNPC npc in allNPCs)
@@ -141,10 +144,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No hay un DayScenario configurado para el día " + currentDay);
+            Debug.LogError("No hay un DayScenario configurado para el d�a " + currentDay);
         }
 
-        Debug.Log($"Día {currentDay} comienza oficialmente");
+        Debug.Log($"D�a {currentDay} comienza oficialmente");
 
         if (playerObject != null)
         {
@@ -176,7 +179,7 @@ public class GameManager : MonoBehaviour
         currentDayPhase = DayPhase.Investigation;
         questionsUsed = 0;
 
-        Debug.Log("Has encontrado al acosado. Investigación desbloqueada.");
+        Debug.Log("Has encontrado al acosado. Investigaci�n desbloqueada.");
     }
 
     // ---------------- PREGUNTAS ----------------
@@ -206,8 +209,8 @@ public class GameManager : MonoBehaviour
         if (correct) goodDecisions++;
         else badDecisions++;
 
-        hasAccusedThisDay = true; // <--- Marcamos que ya se hizo la acusación
-        Debug.Log("Decisión registrada. Ahora puedes irte.");
+        hasAccusedThisDay = true; // <--- Marcamos que ya se hizo la acusaci�n
+        Debug.Log("Decisi�n registrada. Ahora puedes irte.");
     }
 
 
@@ -233,10 +236,10 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // Función auxiliar para que los alumnos sepan qué día es
+    // Funci�n auxiliar para que los alumnos sepan qu� d�a es
     public DayScenario GetCurrentDayScenario()
     {
-        // Restamos 1 porque el array empieza en 0 pero tus días en 1
+        // Restamos 1 porque el array empieza en 0 pero tus d�as en 1
         int index = currentDay - 1;
 
         if (index < allDays.Length)
@@ -269,12 +272,14 @@ public class GameManager : MonoBehaviour
     {
         SaveData saveData = new SaveData
         {
+            sceneName = SceneManager.GetActiveScene().name,
             currentDay = currentDay,
             currentDayPhase = (int)currentDayPhase,
             remainingQuestions = GetRemainingQuestions(),
             goodDecisions = goodDecisions,
             badDecisions = badDecisions,
-            hasAccusedThisDay = hasAccusedThisDay
+            hasAccusedThisDay = hasAccusedThisDay,
+            hasReadPrologueLetter = hasReadPrologueLetter
         };
 
         if (playerObject != null)
@@ -346,16 +351,29 @@ public class GameManager : MonoBehaviour
         goodDecisions = Mathf.Max(0, data.goodDecisions);
         badDecisions = Mathf.Max(0, data.badDecisions);
         hasAccusedThisDay = data.hasAccusedThisDay;
+        hasReadPrologueLetter = data.hasReadPrologueLetter;
         SetRemainingQuestions(data.remainingQuestions);
-        hasLoadedPlayerPosition = data.hasPlayerPosition;
+
+        string activeSceneName = SceneManager.GetActiveScene().name;
+        bool canRestorePlayerTransform =
+            !string.IsNullOrWhiteSpace(data.sceneName) &&
+            data.sceneName == activeSceneName;
+
+        hasLoadedPlayerPosition = canRestorePlayerTransform && data.hasPlayerPosition;
         if (hasLoadedPlayerPosition)
         {
             loadedPlayerPosition = new Vector3(data.playerPosX, data.playerPosY, data.playerPosZ);
         }
-        hasLoadedPlayerRotation = data.hasPlayerRotation;
+
+        hasLoadedPlayerRotation = canRestorePlayerTransform && data.hasPlayerRotation;
         if (hasLoadedPlayerRotation)
         {
             loadedPlayerRotation = new Quaternion(data.playerRotX, data.playerRotY, data.playerRotZ, data.playerRotW);
+        }
+
+        if (!canRestorePlayerTransform && (data.hasPlayerPosition || data.hasPlayerRotation))
+        {
+            Debug.Log($"Posicion/rotacion guardada ignorada (save: '{data.sceneName}', actual: '{activeSceneName}'). Se usara playerSpawnPoint.");
         }
 
         if (System.Enum.IsDefined(typeof(DayPhase), data.currentDayPhase))
@@ -380,4 +398,5 @@ public class GameManager : MonoBehaviour
 
 
 }
+
 
