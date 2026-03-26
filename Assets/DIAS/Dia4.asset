@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530b9f764835696469860bff74b39007, type: 3}
   m_Name: Dia4
   m_EditorClassIdentifier: Assembly-CSharp::DayScenario
-  victimName: 
+  victimName: Aday
   teacherName: 
   characterConfigs:
   - characterName: Pablo
