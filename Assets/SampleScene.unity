@@ -643,7 +643,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8f23a3bc989647941932c4297dead77f, type: 2}
+  - {fileID: 2100000, guid: 760cf0f86e57dc249895da42f10a767d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33232,7 +33232,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8f23a3bc989647941932c4297dead77f, type: 2}
+  - {fileID: 2100000, guid: 760cf0f86e57dc249895da42f10a767d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -262388,7 +262388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.50775146}
+  m_AnchoredPosition: {x: 0, y: 0.5078125}
   m_SizeDelta: {x: 0.00012207031, y: 1.0153809}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2034259325
