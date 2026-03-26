@@ -24,7 +24,7 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Aday
-    text: Y luego encima se cae TuMangaOnline...
+    text: "Y luego se cae la p\xE1gina de manga..."
     expression: {fileID: 21300000, guid: 2a97a01237af0b543bccd771a473a6b2, type: 3}
     hasOptions: 0
     options: []
@@ -34,7 +34,7 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Aday
-    text: Ya no tengo donde leer manga...
+    text: Ya no tengo donde leer manguita...
     expression: {fileID: 21300000, guid: a5e494c44e4e7b5419a7fb75d711dced, type: 3}
     hasOptions: 1
     options:
