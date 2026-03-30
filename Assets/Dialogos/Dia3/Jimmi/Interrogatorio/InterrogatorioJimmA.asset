@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: InterrogatorioJimmA
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Hafid
+    text: "Dime, \xBFTienes alguna pregunta que hacerme al respecto?"
+    expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: Cual es tu relacion con ???, de que lo conoces.
+      nextDialogue: {fileID: 11400000, guid: af7a9b950c244ac4a871480e94b42287, type: 2}
+      isInterrogation: 1
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: Tu quien crees que podria ser.
+      nextDialogue: {fileID: 11400000, guid: 386ff7c9c46622d409d4df5c27fd454a, type: 2}
+      isInterrogation: 1
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: Creo que tu relacion con Ian puede ser por el caso de bullyng con
+        Goran.
+      nextDialogue: {fileID: 11400000, guid: a6079f6236170ae469c75bf7699c559a, type: 2}
+      isInterrogation: 1
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: No tengo mas preguntas.
+      nextDialogue: {fileID: 11400000, guid: c59c9b5fbc5bc164190fa50c8596a257, type: 2}
+      isInterrogation: 1
+      isFinalDecision: 0
+      isCorrectAccusation: 0
