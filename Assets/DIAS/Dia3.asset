@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 530b9f764835696469860bff74b39007, type: 3}
   m_Name: Dia3
   m_EditorClassIdentifier: Assembly-CSharp::DayScenario
-  victimName: 
+  victimName: ???
   teacherName: Maria
   characterConfigs:
   - characterName: Jimmi
     casualDialogue: {fileID: 11400000, guid: 46cd5c0a1eff0604da883518f2212335, type: 2}
-    truthDialogue: {fileID: 11400000, guid: 46cd5c0a1eff0604da883518f2212335, type: 2}
-    lieDialogue: {fileID: 11400000, guid: 46cd5c0a1eff0604da883518f2212335, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 2d291ca553951b6458a73a1e35e3106b, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 2d291ca553951b6458a73a1e35e3106b, type: 2}
     isLiarToday: 0
   - characterName: Fernando
     casualDialogue: {fileID: 11400000, guid: 5ef5a609c73bb96439951bbe938b2f47, type: 2}
-    truthDialogue: {fileID: 11400000, guid: 5ef5a609c73bb96439951bbe938b2f47, type: 2}
-    lieDialogue: {fileID: 11400000, guid: 5ef5a609c73bb96439951bbe938b2f47, type: 2}
+    truthDialogue: {fileID: 11400000, guid: c5eb10448eb41e34a8950813e3c7a5fc, type: 2}
+    lieDialogue: {fileID: 11400000, guid: c5eb10448eb41e34a8950813e3c7a5fc, type: 2}
     isLiarToday: 0
   - characterName: walter-3
     casualDialogue: {fileID: 11400000, guid: f5a0408691d93964188db67122e745dc, type: 2}
@@ -32,8 +32,8 @@ MonoBehaviour:
     isLiarToday: 0
   - characterName: Hafid
     casualDialogue: {fileID: 11400000, guid: f976a3cbb0b6df74a988bdbbb588d468, type: 2}
-    truthDialogue: {fileID: 11400000, guid: f976a3cbb0b6df74a988bdbbb588d468, type: 2}
-    lieDialogue: {fileID: 11400000, guid: f976a3cbb0b6df74a988bdbbb588d468, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 643968351e47b0d42838eeb222fdb978, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 643968351e47b0d42838eeb222fdb978, type: 2}
     isLiarToday: 1
   - characterName: Mohi-3
     casualDialogue: {fileID: 11400000, guid: 6783cbf6eae9adc4bbebf4f066a0b955, type: 2}
@@ -52,12 +52,12 @@ MonoBehaviour:
     isLiarToday: 0
   - characterName: Alberto-3
     casualDialogue: {fileID: 11400000, guid: 4e445fef2dab5e04fb41433294db2f20, type: 2}
-    truthDialogue: {fileID: 11400000, guid: 4e445fef2dab5e04fb41433294db2f20, type: 2}
-    lieDialogue: {fileID: 11400000, guid: 4e445fef2dab5e04fb41433294db2f20, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 8725683dbe0b21048a13ecdc214be4e1, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 8725683dbe0b21048a13ecdc214be4e1, type: 2}
     isLiarToday: 0
   goalFindVictim: Encuentra a la persona acosada
   goalInvestigate: "Interroga a los compa\xF1eros"
   goalReport: Habla con el profesor
   teacherCasualDialogue: {fileID: 11400000, guid: 3b8fd5e9a7c2f4b4b93342663da26bfd, type: 2}
-  teacherDecisionDialogue: {fileID: 0}
-  postDecisionDialogue: {fileID: 0}
+  teacherDecisionDialogue: {fileID: 11400000, guid: 73b7138aad6e0b64792bfa8a2ecd54f6, type: 2}
+  postDecisionDialogue: {fileID: 11400000, guid: 6e7e86cdec8305f46a80e78736454b84, type: 2}
