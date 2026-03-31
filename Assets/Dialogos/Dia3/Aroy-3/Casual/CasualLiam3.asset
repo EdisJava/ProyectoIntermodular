@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: CasualLiam3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Liam
-    text: Mi estimado, porque permiten caninos en este centro. Aunque como hombre
-      performativo, no me importa.
-    expression: {fileID: 21300000, guid: 58c72e1670d198641a0c0c44e18dad30, type: 3}
+  - characterName: Aroy
+    text: Hola, porque permiten perros en este centro. Aunque como hombre performativo,
+      no me importa.
+    expression: {fileID: 21300000, guid: 7de5b54c4a667254f995e5c58d9c0e04, type: 3}
     hasOptions: 1
     options:
     - optionText: Es Walter, un dia aparecio por aqui y ya no se fue.
@@ -24,7 +24,7 @@ MonoBehaviour:
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: Mi estimado, gracias por la informacion de ayer.
+    - optionText: Como estas de los moretones.
       nextDialogue: {fileID: 11400000, guid: 9d54cb10caefabe49a12aeaa557bf181, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
