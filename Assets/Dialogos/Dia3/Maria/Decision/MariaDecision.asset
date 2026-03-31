@@ -12,4 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
   m_Name: MariaDecision
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  lines: []
+  lines:
+  - characterName: Maria
+    text: Oye, vente un segundito que tengo que decirte una cosa.
+    expression: {fileID: 21300000, guid: 38da1750fa0a7814aa32ddffb1b778e3, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Maria
+    text: Ya sabes algo sobre lo de ???.
+    expression: {fileID: 21300000, guid: 38da1750fa0a7814aa32ddffb1b778e3, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: Si, ya tengo la eleccion.
+      nextDialogue: {fileID: 11400000, guid: b3aaad3f900ead747a64910963bf62b4, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: Dejame un momento para pensarlo.
+      nextDialogue: {fileID: 11400000, guid: b4fdf5772df2efa46aa58929bfc85db0, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

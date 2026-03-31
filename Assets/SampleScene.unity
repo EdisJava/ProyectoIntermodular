@@ -4581,10 +4581,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
   studentName: Jimmi
   casualDialogue: {fileID: 11400000, guid: 46cd5c0a1eff0604da883518f2212335, type: 2}
-  investigationDialogue: {fileID: 11400000, guid: 46cd5c0a1eff0604da883518f2212335, type: 2}
+  investigationDialogue: {fileID: 11400000, guid: 2d291ca553951b6458a73a1e35e3106b, type: 2}
   idleSprite: {fileID: 21300000, guid: 9b52ce13b33477647aa0a7a535cf20e9, type: 3}
   centerPoint: {fileID: 1673134750}
-  alreadyInterrogatedDialogue: {fileID: 0}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 2d291ca553951b6458a73a1e35e3106b, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
 --- !u!114 &144809853
@@ -47703,6 +47703,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397890295}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &398033519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 398033520}
+  - component: {fileID: 398033523}
+  - component: {fileID: 398033522}
+  - component: {fileID: 398033521}
+  m_Layer: 5
+  m_Name: ???
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &398033520
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398033519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6.5, y: 6.5, z: 6.5}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1688630704}
+  m_Father: {fileID: 1440961518}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 302.44, y: -220.69}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &398033521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398033519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c366cccafad070e4ab477f8799bf6158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
+  studentName: ???
+  casualDialogue: {fileID: 11400000, guid: e204cb0cf30d3104c9dff8a84379b91c, type: 2}
+  investigationDialogue: {fileID: 11400000, guid: e6be95cc78c7ca945945380375fb0701, type: 2}
+  idleSprite: {fileID: 21300000, guid: fb5ea21415ad4a5439375d260dbe1176, type: 3}
+  centerPoint: {fileID: 1673134750}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 12b476abada8e7a4e9e0d216020f288f, type: 2}
+  victimStateDialogue: {fileID: 11400000, guid: 12b476abada8e7a4e9e0d216020f288f, type: 2}
+  isVictim: 1
+--- !u!114 &398033522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398033519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: fb5ea21415ad4a5439375d260dbe1176, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &398033523
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398033519}
+  m_CullTransparentMesh: 1
 --- !u!1 &399947603
 GameObject:
   m_ObjectHideFlags: 0
@@ -108244,10 +108341,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
   studentName: Hafid
   casualDialogue: {fileID: 11400000, guid: f976a3cbb0b6df74a988bdbbb588d468, type: 2}
-  investigationDialogue: {fileID: 0}
+  investigationDialogue: {fileID: 11400000, guid: 643968351e47b0d42838eeb222fdb978, type: 2}
   idleSprite: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
   centerPoint: {fileID: 1673134750}
-  alreadyInterrogatedDialogue: {fileID: 0}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 643968351e47b0d42838eeb222fdb978, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
 --- !u!114 &864823137
@@ -217535,6 +217632,7 @@ RectTransform:
   - {fileID: 902757802}
   - {fileID: 1994436997}
   - {fileID: 1012801419}
+  - {fileID: 398033520}
   m_Father: {fileID: 1722659304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -231598,6 +231696,7 @@ RectTransform:
   - {fileID: 1576766939}
   - {fileID: 1957737265}
   - {fileID: 202110441}
+  - {fileID: 1815742808}
   - {fileID: 2067629564}
   m_Father: {fileID: 1722659304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -261418,6 +261517,103 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoomManager
   schedule: []
+--- !u!1 &1815742807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1815742808}
+  - component: {fileID: 1815742811}
+  - component: {fileID: 1815742810}
+  - component: {fileID: 1815742809}
+  m_Layer: 5
+  m_Name: Aroy-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1815742808
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815742807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8.94, y: 8.94, z: 8.94}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1361431341}
+  m_Father: {fileID: 1516074816}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 270, y: -102.5}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1815742809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815742807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c366cccafad070e4ab477f8799bf6158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
+  studentName: Aroy
+  casualDialogue: {fileID: 11400000, guid: a72efd7979b7e604faf78ace29cbaf61, type: 2}
+  investigationDialogue: {fileID: 11400000, guid: a72efd7979b7e604faf78ace29cbaf61, type: 2}
+  idleSprite: {fileID: 21300000, guid: c72ec995d6cdb0e4a9af3895e947a61e, type: 3}
+  centerPoint: {fileID: 1983304952}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: a72efd7979b7e604faf78ace29cbaf61, type: 2}
+  victimStateDialogue: {fileID: 11400000, guid: 71eb4df8ef3ed334a825250842a890ab, type: 2}
+  isVictim: 1
+--- !u!114 &1815742810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815742807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c72ec995d6cdb0e4a9af3895e947a61e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1815742811
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815742807}
+  m_CullTransparentMesh: 1
 --- !u!1 &1819482288
 GameObject:
   m_ObjectHideFlags: 0
@@ -276152,10 +276348,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
   studentName: Fernando
   casualDialogue: {fileID: 11400000, guid: 5ef5a609c73bb96439951bbe938b2f47, type: 2}
-  investigationDialogue: {fileID: 0}
+  investigationDialogue: {fileID: 11400000, guid: c5eb10448eb41e34a8950813e3c7a5fc, type: 2}
   idleSprite: {fileID: 21300000, guid: 48fb0692c2aebc843b08fe4b4d538d09, type: 3}
   centerPoint: {fileID: 1673134750}
-  alreadyInterrogatedDialogue: {fileID: 0}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: c5eb10448eb41e34a8950813e3c7a5fc, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
 --- !u!114 &1994436995

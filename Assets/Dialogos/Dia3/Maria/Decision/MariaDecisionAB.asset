@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
   m_Name: MariaDecisionAB
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  lines: []
+  lines:
+  - characterName: Maria
+    text: Me imaginaba que podia ser Hafid, su amistad con Ian me olia raro.
+    expression: {fileID: 21300000, guid: 38da1750fa0a7814aa32ddffb1b778e3, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: "\xBFEntonces necesitas algo mas?"
+      nextDialogue: {fileID: 11400000, guid: 6e7e86cdec8305f46a80e78736454b84, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
