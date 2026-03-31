@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: CasualLiam3A
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Liam
+  - characterName: Aroy
     text: Increible, me encanta la anatomia canina, despues de terminar el ciclo...
-    expression: {fileID: 21300000, guid: 8e8b456a4e59998478a0830546a4a71f, type: 3}
+    expression: {fileID: 21300000, guid: 17b58aa7b6037a04dac62b5721a7ac11, type: 3}
     hasOptions: 0
     options: []
-  - characterName: Liam
+  - characterName: Aroy
     text: Quiero seguir investigandolos.
-    expression: {fileID: 21300000, guid: 8e8b456a4e59998478a0830546a4a71f, type: 3}
+    expression: {fileID: 21300000, guid: 17b58aa7b6037a04dac62b5721a7ac11, type: 3}
     hasOptions: 0
     options: []

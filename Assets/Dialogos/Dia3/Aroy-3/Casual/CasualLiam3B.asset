@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CasualLiam3B
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Liam
-    text: Lo sabia, mi informacion de primera seria suficiente para pillar al bully.
-    expression: {fileID: 21300000, guid: 58c72e1670d198641a0c0c44e18dad30, type: 3}
+  - characterName: Aroy
+    text: Estoy bien, menos mal.
+    expression: {fileID: 21300000, guid: 17b58aa7b6037a04dac62b5721a7ac11, type: 3}
     hasOptions: 0
     options: []
