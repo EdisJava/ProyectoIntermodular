@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Fernando
-    text: "A ver, yo siempre los veo jutnos asi que los dos siempre hacen las cosas
+    text: "A ver, yo siempre los veo juntos asi que los dos siempre hacen las cosas
       juntos, incluso entran al ba\xF1o juntos."
     expression: {fileID: 21300000, guid: 48fb0692c2aebc843b08fe4b4d538d09, type: 3}
     hasOptions: 0

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: Jesus4CasualA
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Jesus
+    text: No... Nada.
+    expression: {fileID: 21300000, guid: ffdd1d146e4b34e42a62ab994b7748bd, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: Solo observo a mis amigos.
+    expression: {fileID: 21300000, guid: ffdd1d146e4b34e42a62ab994b7748bd, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "\xBFQuieres ser mi amigo?"
+    expression: {fileID: 21300000, guid: 020131ba07572e644b61f9057c7a6bd6, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: "Est\xE1 bien..."
+      nextDialogue: {fileID: 11400000, guid: ae85d9b13a07c3c4e81e0ef55260bb80, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: (irte)
+      nextDialogue: {fileID: 11400000, guid: ef62e436bdbd6404b983a4ea181c81e6, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

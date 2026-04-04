@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Alberto
-    text: Hola que tal..
+    text: "Hola, \xBFqu\xE9 tal?"
     expression: {fileID: 21300000, guid: 2dd85e48578c0b542a0afe19722e812c, type: 3}
     hasOptions: 1
     options:
