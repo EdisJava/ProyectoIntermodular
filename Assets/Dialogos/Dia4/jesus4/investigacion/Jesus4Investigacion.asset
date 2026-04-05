@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: Jesus4Investigacion
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Jesus
+    text: No tienes buena cara.
+    expression: {fileID: 21300000, guid: ffdd1d146e4b34e42a62ab994b7748bd, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "S\xE9 feliz, amigo m\xEDo."
+    expression: {fileID: 21300000, guid: ffdd1d146e4b34e42a62ab994b7748bd, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: Necesito dormir.
+      nextDialogue: {fileID: 11400000, guid: bd1696e7e67341241ac343ff3b8aa561, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: "No fuiste t\xFA, \xBFverdad?"
+      nextDialogue: {fileID: 11400000, guid: dcd2fe823754a1942b35389da1ac3964, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

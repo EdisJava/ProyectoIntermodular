@@ -108574,7 +108574,7 @@ MonoBehaviour:
   investigationDialogue: {fileID: 11400000, guid: 643968351e47b0d42838eeb222fdb978, type: 2}
   idleSprite: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
   centerPoint: {fileID: 1673134750}
-  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 643968351e47b0d42838eeb222fdb978, type: 2}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 8638a317f0921c349b80db19129c82bd, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
 --- !u!114 &864823137
@@ -123499,11 +123499,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
   studentName: Alberto-3
-  casualDialogue: {fileID: 11400000, guid: 99088191cba83574287fb7dde0de3cbe, type: 2}
-  investigationDialogue: {fileID: 11400000, guid: 9317324bada44e246b755fb68f15bc7d, type: 2}
+  casualDialogue: {fileID: 11400000, guid: 4e445fef2dab5e04fb41433294db2f20, type: 2}
+  investigationDialogue: {fileID: 11400000, guid: 4e445fef2dab5e04fb41433294db2f20, type: 2}
   idleSprite: {fileID: 21300000, guid: a4bbcb7c93bd06342be8ae1349dbe70f, type: 3}
   centerPoint: {fileID: 1673134750}
-  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 9317324bada44e246b755fb68f15bc7d, type: 2}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 4e445fef2dab5e04fb41433294db2f20, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
 --- !u!114 &985743142
@@ -138043,7 +138043,7 @@ MonoBehaviour:
   teacherName: Maria
   idleSprite: {fileID: 21300000, guid: 38da1750fa0a7814aa32ddffb1b778e3, type: 3}
   centerPoint: {fileID: 1673134750}
-  postDecisionDialogue: {fileID: 0}
+  postDecisionDialogue: {fileID: 11400000, guid: b0534b5af57a3bd4cab823edd8469763, type: 2}
 --- !u!114 &1149193761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276713,7 +276713,7 @@ MonoBehaviour:
   investigationDialogue: {fileID: 11400000, guid: c5eb10448eb41e34a8950813e3c7a5fc, type: 2}
   idleSprite: {fileID: 21300000, guid: 48fb0692c2aebc843b08fe4b4d538d09, type: 3}
   centerPoint: {fileID: 1673134750}
-  alreadyInterrogatedDialogue: {fileID: 11400000, guid: c5eb10448eb41e34a8950813e3c7a5fc, type: 2}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 87e9e1be33d62374b82175d2778f18a8, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
 --- !u!114 &1994436995
@@ -295125,10 +295125,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
   studentName: Acharki
   casualDialogue: {fileID: 11400000, guid: 8334cf0d0a5745e4da489ebe738ae5e1, type: 2}
-  investigationDialogue: {fileID: 0}
+  investigationDialogue: {fileID: 11400000, guid: d974938a1168ce54e830dde765f315da, type: 2}
   idleSprite: {fileID: 21300000, guid: 656aefca4515b124d8026ea179cc35e0, type: 3}
   centerPoint: {fileID: 1983304952}
-  alreadyInterrogatedDialogue: {fileID: 0}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: f2dfaee73c7a0da489a9a530321e2963, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
 --- !u!114 &2142537073

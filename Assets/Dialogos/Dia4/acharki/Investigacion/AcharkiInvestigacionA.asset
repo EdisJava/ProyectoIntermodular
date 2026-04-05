@@ -10,31 +10,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: AcharkiCasualA
+  m_Name: AcharkiInvestigacionA
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Acharki
-    text: . . .
+    text: Hmmm...
     expression: {fileID: 21300000, guid: 42f51696b297c7c45ac2db34f3766b74, type: 3}
     hasOptions: 0
     options: []
   - characterName: Acharki
-    text: Es mosca fuerte.
+    text: "No me extra\xF1a que le hayan pegado."
     expression: {fileID: 21300000, guid: 42f51696b297c7c45ac2db34f3766b74, type: 3}
     hasOptions: 0
     options: []
   - characterName: Acharki
-    text: "Lo ves moro? Lo que te dec\xEDa..."
+    text: "La cosa es qui\xE9n lo hizo."
     expression: {fileID: 21300000, guid: 9bb335164a8cc6a438e3c94bd60994e9, type: 3}
     hasOptions: 0
     options: []
   - characterName: Acharki
-    text: Las mujeres no te dan la felicidad... Te la prestan.
-    expression: {fileID: 21300000, guid: 9bb335164a8cc6a438e3c94bd60994e9, type: 3}
+    text: "Creo que Pablo no se lleva muy bien con \xE9l..."
+    expression: {fileID: 21300000, guid: ccd9e9e3736351645b9fe1b532750caa, type: 3}
     hasOptions: 0
     options: []
   - characterName: Acharki
-    text: Y cuando te acostumbras, te la quitan...
+    text: "No te f\xEDes de nadie por aqu\xED."
     expression: {fileID: 21300000, guid: 42f51696b297c7c45ac2db34f3766b74, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Acharki
+    text: "Ni de t\xED mismo..."
+    expression: {fileID: 21300000, guid: ccd9e9e3736351645b9fe1b532750caa, type: 3}
     hasOptions: 0
     options: []

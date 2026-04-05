@@ -19,18 +19,23 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Aday
-    text: Primero, un loco asesina a toda mi familia...
+    text: Primero me dan una paliza...
     expression: {fileID: 21300000, guid: 2a97a01237af0b543bccd771a473a6b2, type: 3}
     hasOptions: 0
     options: []
   - characterName: Aday
-    text: "Y luego se cae la p\xE1gina de manga..."
-    expression: {fileID: 21300000, guid: 2a97a01237af0b543bccd771a473a6b2, type: 3}
+    text: Luego la misma persona mata a toda mi familia...
+    expression: {fileID: 21300000, guid: a5e494c44e4e7b5419a7fb75d711dced, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Aday
+    text: "Y encima se cae la p\xE1gina de manga..."
+    expression: {fileID: 21300000, guid: e2eb2a77d65f04c4491fb7560a07608a, type: 3}
     hasOptions: 0
     options: []
   - characterName: Aday
     text: Joder...
-    expression: {fileID: 21300000, guid: a5e494c44e4e7b5419a7fb75d711dced, type: 3}
+    expression: {fileID: 21300000, guid: e2eb2a77d65f04c4491fb7560a07608a, type: 3}
     hasOptions: 0
     options: []
   - characterName: Aday

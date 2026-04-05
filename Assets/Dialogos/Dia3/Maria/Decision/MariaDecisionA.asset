@@ -21,10 +21,10 @@ MonoBehaviour:
     - optionText: Fue Jimmi
       nextDialogue: {fileID: 11400000, guid: 98bb9ffd64d87d44eb96414a49a502d4, type: 2}
       isInterrogation: 0
-      isFinalDecision: 0
+      isFinalDecision: 1
       isCorrectAccusation: 0
     - optionText: Fue Hafid
       nextDialogue: {fileID: 11400000, guid: f9010fd62be61c049b2496fd69ffb22e, type: 2}
       isInterrogation: 0
-      isFinalDecision: 0
-      isCorrectAccusation: 0
+      isFinalDecision: 1
+      isCorrectAccusation: 1

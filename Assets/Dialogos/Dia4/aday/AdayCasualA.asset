@@ -24,11 +24,11 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Aday
-    text: . . . . . . . .
+    text: Baaaaaka
     expression: {fileID: 21300000, guid: 2a1c119ea838cd7479589137037d1baa, type: 3}
     hasOptions: 1
     options:
-    - optionText: "Perd\xF3n"
+    - optionText: "P-P-Perd\xF3n..."
       nextDialogue: {fileID: 11400000, guid: f91d21cacb4eb8a47adcba17e16d032a, type: 2}
       isInterrogation: 0
       isFinalDecision: 0

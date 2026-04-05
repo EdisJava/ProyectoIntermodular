@@ -27,13 +27,13 @@ MonoBehaviour:
     isLiarToday: 0
   - characterName: Acharki
     casualDialogue: {fileID: 11400000, guid: 8334cf0d0a5745e4da489ebe738ae5e1, type: 2}
-    truthDialogue: {fileID: 11400000, guid: 92679ceadc07d0b4fa54f1e5d472f5b5, type: 2}
-    lieDialogue: {fileID: 11400000, guid: 92679ceadc07d0b4fa54f1e5d472f5b5, type: 2}
+    truthDialogue: {fileID: 11400000, guid: d974938a1168ce54e830dde765f315da, type: 2}
+    lieDialogue: {fileID: 11400000, guid: d974938a1168ce54e830dde765f315da, type: 2}
     isLiarToday: 0
   - characterName: Jesus4
     casualDialogue: {fileID: 11400000, guid: 8a26e3623dfd95241b49ba43ad6f7445, type: 2}
-    truthDialogue: {fileID: 11400000, guid: 92679ceadc07d0b4fa54f1e5d472f5b5, type: 2}
-    lieDialogue: {fileID: 11400000, guid: 92679ceadc07d0b4fa54f1e5d472f5b5, type: 2}
+    truthDialogue: {fileID: 11400000, guid: e75916178aa41fe49a84f9de284c6c66, type: 2}
+    lieDialogue: {fileID: 11400000, guid: e75916178aa41fe49a84f9de284c6c66, type: 2}
     isLiarToday: 0
   goalFindVictim: Encuentra al acosado
   goalInvestigate: Interroga a los alumnos
