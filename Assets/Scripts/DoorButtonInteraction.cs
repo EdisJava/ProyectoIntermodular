@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -29,6 +29,7 @@ public class DoorButtonInteraction : MonoBehaviour
     public bool marksPrologueLetterAsRead = false;
     public bool isPrologueExitDoor = false;
     public string prologueDayOneSceneName = "SampleScene";
+    public bool preventExit = false;
 
     [Header("UI de Transicion")]
     public GameObject fadePanel;
@@ -70,7 +71,10 @@ public class DoorButtonInteraction : MonoBehaviour
             Keyboard.current.enterKey.wasPressedThisFrame ||
             Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            CloseCutscene();
+            if (!preventExit)
+            {
+                CloseCutscene();
+            }
         }
     }
 
@@ -126,8 +130,15 @@ public class DoorButtonInteraction : MonoBehaviour
 
         if (dayText != null)
         {
-            int proximoDia = GameManager.Instance.currentDay + 1;
-            dayText.text = "DIA " + proximoDia;
+            if (GameManager.Instance != null && GameManager.Instance.currentDay >= GameManager.Instance.GetPlayableDayCount())
+            {
+                dayText.text = "FINAL";
+            }
+            else
+            {
+                int proximoDia = GameManager.Instance.currentDay + 1;
+                dayText.text = "DIA " + proximoDia;
+            }
             dayText.gameObject.SetActive(true);
         }
 

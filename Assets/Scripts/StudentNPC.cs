@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class StudentNPC : MonoBehaviour
@@ -139,16 +139,16 @@ public class StudentNPC : MonoBehaviour
         }
 
         transform.localScale = startScale * 1.3f;
-        myImage.enabled = false;
+        // Ocultar todo el objeto en lugar de solo la imagen previene que queden hijos o textos visibles flotando (como el bug de Aroy que se duplica visualmente)
+        gameObject.SetActive(false);
     }
-
     public void ExitFocus()
     {
         // Volvemos a la posición anclada original (que no cambia con la resolución)
         myRectTransform.anchoredPosition = startAnchoredPos; // <--- CAMBIADO
 
         transform.localScale = startScale;
-        myImage.enabled = true;
+        gameObject.SetActive(true);
     }
 
     public void ResetMemory()

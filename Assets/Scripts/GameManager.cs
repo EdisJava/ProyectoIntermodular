@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public int maxQuestionsPerDay = 2;
     private int questionsUsed;
 
+
     public int GetRemainingQuestions()
     {
         return maxQuestionsPerDay - questionsUsed;
@@ -39,8 +40,10 @@ public class GameManager : MonoBehaviour
     [Header("Resultados")]
     public int goodDecisions = 0;
     public int badDecisions = 0;
+    public bool isEndingPhase = false;
+    public bool isGoodEnding = false;
 
-    [Header("Configuraci�n de la Historia")]
+    [Header("Configuracin de la Historia")]
     public DayScenario[] allDays;
 
     private void Awake()
@@ -73,7 +76,7 @@ public class GameManager : MonoBehaviour
         return currentState == GameState.Interaction2D;
     }
 
-    // ---------------- D�AS ----------------
+    // ---------------- DAS ----------------
 
     public bool hasAccusedThisDay = false; // Nueva variable
     public bool hasReadPrologueLetter = false;
@@ -91,6 +94,8 @@ public class GameManager : MonoBehaviour
         currentState = GameState.Exploration3D;
         goodDecisions = 0;
         badDecisions = 0;
+        isEndingPhase = false;
+        isGoodEnding = false;
         hasReadPrologueLetter = false;
         hasLoadedPlayerPosition = false;
         hasLoadedPlayerRotation = false;
@@ -118,7 +123,7 @@ public class GameManager : MonoBehaviour
 
         if (scenario != null)
         {
-            Debug.Log($"Configurando D�a {currentDay}: {scenario.name}");
+            Debug.Log($"Configurando Da {currentDay}: {scenario.name}");
 
             StudentNPC[] allNPCs = FindObjectsOfType<StudentNPC>();
             foreach (StudentNPC npc in allNPCs)
@@ -144,10 +149,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No hay un DayScenario configurado para el d�a " + currentDay);
+            Debug.LogError("No hay un DayScenario configurado para el da " + currentDay);
         }
 
-        Debug.Log($"D�a {currentDay} comienza oficialmente");
+        Debug.Log($"Da {currentDay} comienza oficialmente");
 
         if (playerObject != null)
         {
@@ -179,7 +184,7 @@ public class GameManager : MonoBehaviour
         currentDayPhase = DayPhase.Investigation;
         questionsUsed = 0;
 
-        Debug.Log("Has encontrado al acosado. Investigaci�n desbloqueada.");
+        Debug.Log("Has encontrado al acosado. Investigacin desbloqueada.");
     }
 
     // ---------------- PREGUNTAS ----------------
@@ -209,8 +214,8 @@ public class GameManager : MonoBehaviour
         if (correct) goodDecisions++;
         else badDecisions++;
 
-        hasAccusedThisDay = true; // <--- Marcamos que ya se hizo la acusaci�n
-        Debug.Log("Decisi�n registrada. Ahora puedes irte.");
+        hasAccusedThisDay = true; // <--- Marcamos que ya se hizo la acusacin
+        Debug.Log("Decisin registrada. Ahora puedes irte.");
     }
 
 
@@ -229,17 +234,28 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
-        if (badDecisions > 3)
-            Debug.Log("FINAL MALO");
-        else
+        isEndingPhase = true;
+        if (goodDecisions >= 5)
+        {
+            isGoodEnding = true;
             Debug.Log("FINAL BUENO");
+        }
+        else
+        {
+            isGoodEnding = false;
+            Debug.Log("FINAL MALO");
+        }
+
+        SaveSystem.SaveGame(BuildSaveData());
+
+        SceneManager.LoadScene("HouseScene");
     }
 
 
-    // Funci�n auxiliar para que los alumnos sepan qu� d�a es
+    // Funcin auxiliar para que los alumnos sepan qu da es
     public DayScenario GetCurrentDayScenario()
     {
-        // Restamos 1 porque el array empieza en 0 pero tus d�as en 1
+        // Restamos 1 porque el array empieza en 0 pero tus das en 1
         int index = currentDay - 1;
 
         if (index < allDays.Length)
@@ -279,7 +295,9 @@ public class GameManager : MonoBehaviour
             goodDecisions = goodDecisions,
             badDecisions = badDecisions,
             hasAccusedThisDay = hasAccusedThisDay,
-            hasReadPrologueLetter = hasReadPrologueLetter
+            hasReadPrologueLetter = hasReadPrologueLetter,
+            isEndingPhase = isEndingPhase,
+            isGoodEnding = isGoodEnding
         };
 
         if (playerObject != null)
@@ -352,6 +370,8 @@ public class GameManager : MonoBehaviour
         badDecisions = Mathf.Max(0, data.badDecisions);
         hasAccusedThisDay = data.hasAccusedThisDay;
         hasReadPrologueLetter = data.hasReadPrologueLetter;
+        isEndingPhase = data.isEndingPhase;
+        isGoodEnding = data.isGoodEnding;
         SetRemainingQuestions(data.remainingQuestions);
 
         string activeSceneName = SceneManager.GetActiveScene().name;
@@ -386,7 +406,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    int GetPlayableDayCount()
+    public int GetPlayableDayCount()
     {
         if (allDays == null || allDays.Length == 0)
         {
@@ -398,5 +418,3 @@ public class GameManager : MonoBehaviour
 
 
 }
-
-

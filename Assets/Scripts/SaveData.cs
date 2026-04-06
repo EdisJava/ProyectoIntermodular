@@ -12,6 +12,8 @@ public class SaveData
     public int badDecisions;
     public bool hasAccusedThisDay;
     public bool hasReadPrologueLetter;
+    public bool isEndingPhase;
+    public bool isGoodEnding;
     public List<StudentDialogueProgressData> studentProgress = new List<StudentDialogueProgressData>();
     public TeacherDialogueProgressData teacherProgress;
     public bool hasPlayerPosition;
