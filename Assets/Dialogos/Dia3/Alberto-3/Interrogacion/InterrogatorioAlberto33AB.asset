@@ -10,6 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: InterrogatorioAlberto3
+  m_Name: InterrogatorioAlberto33AB
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  lines: []
+  lines:
+  - characterName: Alberto
+    text: "El tiene problemas familiares, sufrio golpes siendo peque\xF1o."
+    expression: {fileID: 21300000, guid: 2dd85e48578c0b542a0afe19722e812c, type: 3}
+    hasOptions: 0
+    options: []

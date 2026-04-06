@@ -10,6 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: InterrogatorioAlberto3AA
+  m_Name: InterrogatorioAlberto33AA
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  lines: []
+  lines:
+  - characterName: Alberto
+    text: Lo siento pero al no ser de este edificio no estoy seguro.
+    expression: {fileID: 21300000, guid: 18dcd9369b77b364cb03ee59523a2953, type: 3}
+    hasOptions: 0
+    options: []
