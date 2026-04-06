@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dia4
   m_EditorClassIdentifier: Assembly-CSharp::DayScenario
   victimName: Aday
-  teacherName: Jacinto2
+  teacherName: Jacinto4
   characterConfigs:
   - characterName: Pablo
     casualDialogue: {fileID: 11400000, guid: 92679ceadc07d0b4fa54f1e5d472f5b5, type: 2}
@@ -21,15 +21,15 @@ MonoBehaviour:
     lieDialogue: {fileID: 11400000, guid: 92679ceadc07d0b4fa54f1e5d472f5b5, type: 2}
     isLiarToday: 0
   - characterName: Goran4
-    casualDialogue: {fileID: 11400000, guid: 92679ceadc07d0b4fa54f1e5d472f5b5, type: 2}
-    truthDialogue: {fileID: 11400000, guid: 92679ceadc07d0b4fa54f1e5d472f5b5, type: 2}
-    lieDialogue: {fileID: 11400000, guid: 92679ceadc07d0b4fa54f1e5d472f5b5, type: 2}
+    casualDialogue: {fileID: 11400000, guid: 5150bf5f94a2a33468b1956d6f9b1ae7, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 5150bf5f94a2a33468b1956d6f9b1ae7, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 5150bf5f94a2a33468b1956d6f9b1ae7, type: 2}
     isLiarToday: 0
   - characterName: Acharki
     casualDialogue: {fileID: 11400000, guid: 8334cf0d0a5745e4da489ebe738ae5e1, type: 2}
     truthDialogue: {fileID: 11400000, guid: d974938a1168ce54e830dde765f315da, type: 2}
     lieDialogue: {fileID: 11400000, guid: d974938a1168ce54e830dde765f315da, type: 2}
-    isLiarToday: 0
+    isLiarToday: 1
   - characterName: Jesus4
     casualDialogue: {fileID: 11400000, guid: 8a26e3623dfd95241b49ba43ad6f7445, type: 2}
     truthDialogue: {fileID: 11400000, guid: e75916178aa41fe49a84f9de284c6c66, type: 2}

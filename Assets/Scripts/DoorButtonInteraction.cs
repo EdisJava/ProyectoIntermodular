@@ -67,9 +67,7 @@ public class DoorButtonInteraction : MonoBehaviour
             return;
         }
 
-        if (Keyboard.current.spaceKey.wasPressedThisFrame ||
-            Keyboard.current.enterKey.wasPressedThisFrame ||
-            Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             if (!preventExit)
             {

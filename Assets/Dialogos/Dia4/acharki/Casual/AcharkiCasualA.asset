@@ -24,7 +24,7 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Acharki
-    text: "\xBFLo ves moro? Lo que te dec\xEDa..."
+    text: "\xBFLo ves, moro? Lo que te dec\xEDa..."
     expression: {fileID: 21300000, guid: 9bb335164a8cc6a438e3c94bd60994e9, type: 3}
     hasOptions: 0
     options: []
