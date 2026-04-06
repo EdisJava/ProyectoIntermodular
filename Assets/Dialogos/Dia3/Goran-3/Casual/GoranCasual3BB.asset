@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Goran
-    text: Es que me da pereza las clases de Jacinto.
+    text: Es que me dan pereza las clases de Jacinto.
     expression: {fileID: 21300000, guid: 15234bf764c7e06459fce2b441a61501, type: 3}
     hasOptions: 0
     options: []

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Hafid
-    text: "Dime, \xBFTienes alguna pregunta que hacerme al respecto?"
+    text: "Dime, \xBFtienes alguna pregunta que hacerme al respecto?"
     expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
     hasOptions: 1
     options:

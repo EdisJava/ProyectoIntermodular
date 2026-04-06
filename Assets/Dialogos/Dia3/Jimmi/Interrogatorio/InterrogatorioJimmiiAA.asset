@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: InterrogatorioJimmAA
+  m_Name: InterrogatorioJimmiiAA
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Hafid
-    text: Eramos de la misma clase, el repitio porque suspendio una asignatura.
-    expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
+  - characterName: Jimmi
+    text: "\xC9ramos de la misma clase; \xE9l repiti\xF3 porque suspendi\xF3 una
+      asignatura, pero no hablaba con nadie."
+    expression: {fileID: 21300000, guid: 9b52ce13b33477647aa0a7a535cf20e9, type: 3}
     hasOptions: 0
     options: []

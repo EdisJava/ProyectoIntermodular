@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Fernando
-    text: "No s\xE9 nada m\xE1s..."
+    text: "No s\xE9 nada m\xE1s."
     expression: {fileID: 0}
     hasOptions: 0
     options: []

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Hafid
-    text: No creo, Ian no es asi yo creo que se trata de un error.
+    text: "No lo creo, Ian no es as\xED. Yo creo que se trata de un error."
     expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
     hasOptions: 0
     options: []

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Goran
-    text: Si, para dentro de dos semanas me dijo el medico que me podre quitar las
-      vendas.
+    text: "S\xED, para dentro de dos semanas me dijo el m\xE9dico que me podr\xE9
+      quitar las vendas."
     expression: {fileID: 21300000, guid: 15234bf764c7e06459fce2b441a61501, type: 3}
     hasOptions: 1
     options:

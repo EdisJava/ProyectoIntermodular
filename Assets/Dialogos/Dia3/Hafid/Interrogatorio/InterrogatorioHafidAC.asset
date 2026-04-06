@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Hafid
-    text: Lo conozco desde el instituto, cuando me ilumino con sus petunias, nunca
-      pense y no creo que haya hecho algo asi.
+    text: "Lo conozco desde el instituto, cuando me ilumin\xF3 con sus petunias,
+      nunca pens\xE9, y no creo, que haya hecho algo as\xED."
     expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
     hasOptions: 0
     options: []

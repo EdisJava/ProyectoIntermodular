@@ -10,27 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: InterrogatorioJimmA
+  m_Name: InterrogatorioJimmiiA
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Hafid
-    text: "Dime, \xBFTienes alguna pregunta que hacerme al respecto?"
-    expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
+  - characterName: Jimmi
+    text: "Dime, \xBFtienes alguna pregunta que hacerme al respecto?"
+    expression: {fileID: 21300000, guid: 9b52ce13b33477647aa0a7a535cf20e9, type: 3}
     hasOptions: 1
     options:
-    - optionText: Cual es tu relacion con ???, de que lo conoces.
-      nextDialogue: {fileID: 11400000, guid: af7a9b950c244ac4a871480e94b42287, type: 2}
+    - optionText: "\xBFCu\xE1l es tu relaci\xF3n con ??? ? \xBFDe qu\xE9 lo conoces?"
+      nextDialogue: {fileID: 11400000, guid: f3ed144a88329e4448a27720a4a15242, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: Tu quien crees que podria ser.
-      nextDialogue: {fileID: 11400000, guid: 386ff7c9c46622d409d4df5c27fd454a, type: 2}
+    - optionText: "T\xFA, \xBFqui\xE9n crees que podr\xEDa ser?"
+      nextDialogue: {fileID: 11400000, guid: b5fa5676e7c26ff4db65b46441f1101c, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: Creo que tu relacion con Ian puede ser por el caso de bullyng con
-        Goran.
-      nextDialogue: {fileID: 11400000, guid: a6079f6236170ae469c75bf7699c559a, type: 2}
+    - optionText: "Creo que tus problemas familiares pueden dar alg\xFAn problema
+        aqu\xED."
+      nextDialogue: {fileID: 11400000, guid: bb7c113c9e9e31f4b8c494618a11af5b, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0

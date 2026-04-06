@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Goran
-    text: Hola, muchas gracias por ayudarme el Lunes.
+    text: Hola, muchas gracias por ayudarme el lunes.
     expression: {fileID: 21300000, guid: 15234bf764c7e06459fce2b441a61501, type: 3}
     hasOptions: 1
     options:

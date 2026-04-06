@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Hafid
-    text: Eramos de la misma clase, el repitio porque suspendio una asignatura.
+    text: "\xC9ramos de la misma clase, \xE9l repiti\xF3 porque suspendi\xF3 una
+      asignatura."
     expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
     hasOptions: 0
     options: []

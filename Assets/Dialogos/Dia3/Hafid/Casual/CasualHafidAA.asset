@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Hafid
-    text: "El tiene una peque\xF1a alergia a las petunias, espero que no sea eso."
+    text: "\xC9l tiene una peque\xF1a alergia a las petunias; espero que no sea eso."
     expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
     hasOptions: 0
     options: []

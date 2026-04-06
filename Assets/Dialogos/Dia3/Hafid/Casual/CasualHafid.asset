@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Hafid
-    text: Hace tiempo que no veo a Ian, donde esta.
+    text: "Hace tiempo que no veo a Ian; \xBFd\xF3nde est\xE1?"
     expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
     hasOptions: 1
     options:

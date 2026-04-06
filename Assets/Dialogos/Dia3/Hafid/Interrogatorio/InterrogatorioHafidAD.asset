@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Hafid
-    text: Avisame entonces cuando si necesites algo mas.
+    text: "Av\xEDsame, entonces, cuando s\xED necesites algo m\xE1s."
     expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
     hasOptions: 0
     options: []
