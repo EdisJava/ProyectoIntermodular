@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Jacinto
-    text: "Buenas... Me has decepcionado en el \xFAltimo examen..."
+    text: "Buenas... \xBFTu examen huele un poco raro no......? "
     expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
     hasOptions: 0
     options: []
   - characterName: Jacinto
-    text: "\xBFC\xF3mo vas a sacar nota negativa? \xBFEres una persona real?"
+    text: "Huele a Inteligencia artificial \xBFMe equivoco? "
     expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
     hasOptions: 0
     options: []
   - characterName: Jacinto
-    text: O acaso eres un robot del Mossad?
+    text: La proxima vez por lo menos borra los comentarios anda
     expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
     hasOptions: 1
     options:

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Alberto
-    text: Jajaja, claro... Es mi deber como espcialista en amueblamiento.
+    text: Jajaja, claro... Es mi deber como especialista en amueblamiento.
     expression: {fileID: 21300000, guid: 18dcd9369b77b364cb03ee59523a2953, type: 3}
     hasOptions: 0
     options: []

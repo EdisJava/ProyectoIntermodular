@@ -16329,6 +16329,7 @@ MonoBehaviour:
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
+  preventExit: 0
   fadePanel: {fileID: 0}
   dayText: {fileID: 0}
 --- !u!1 &197262168
@@ -35550,6 +35551,7 @@ MonoBehaviour:
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
+  preventExit: 0
   fadePanel: {fileID: 0}
   dayText: {fileID: 0}
 --- !u!1 &372084963
@@ -108396,11 +108398,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   currentState: 0
   currentDayPhase: 0
-  currentDay: 1
+  currentDay: 2
   maxDays: 7
   maxQuestionsPerDay: 2
   goodDecisions: 0
   badDecisions: 0
+  isEndingPhase: 0
+  isGoodEnding: 0
   allDays:
   - {fileID: 11400000, guid: bce19c2e9018971479469c5f52a6cb40, type: 2}
   - {fileID: 11400000, guid: 787b296248561dd44aa676eae738c757, type: 2}
@@ -150322,6 +150326,7 @@ MonoBehaviour:
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
+  preventExit: 0
   fadePanel: {fileID: 0}
   dayText: {fileID: 0}
 --- !u!1 &1213857777
@@ -232985,6 +232990,7 @@ MonoBehaviour:
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
+  preventExit: 0
   fadePanel: {fileID: 0}
   dayText: {fileID: 0}
 --- !u!65 &1556336283
@@ -259840,6 +259846,7 @@ MonoBehaviour:
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
+  preventExit: 0
   fadePanel: {fileID: 0}
   dayText: {fileID: 0}
 --- !u!1 &1738570027
@@ -264794,6 +264801,7 @@ MonoBehaviour:
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
+  preventExit: 0
   fadePanel: {fileID: 1296515770}
   dayText: {fileID: 690402678}
 --- !u!65 &1917822282
@@ -277874,6 +277882,7 @@ MonoBehaviour:
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
+  preventExit: 0
   fadePanel: {fileID: 0}
   dayText: {fileID: 0}
 --- !u!1 &2034259323
@@ -291073,6 +291082,7 @@ MonoBehaviour:
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
+  preventExit: 0
   fadePanel: {fileID: 0}
   dayText: {fileID: 0}
 --- !u!1 &2100984363

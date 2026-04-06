@@ -39,7 +39,7 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Boberto
-    text: "Yo solo us\xE9 mi saco de boxeo personal."
+    text: "\xBFQue insinuas? (se cabrea)"
     expression: {fileID: 21300000, guid: 39b7da4a823199d45a3524fa504599c0, type: 3}
     hasOptions: 0
     options: []

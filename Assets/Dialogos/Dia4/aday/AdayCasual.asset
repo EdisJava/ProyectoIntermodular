@@ -24,7 +24,7 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Aday
-    text: Luego la misma persona mata a toda mi familia...
+    text: Encima hoy juega La Liga y no podre ver mis mangas por culpa de Tebas
     expression: {fileID: 21300000, guid: a5e494c44e4e7b5419a7fb75d711dced, type: 3}
     hasOptions: 0
     options: []
