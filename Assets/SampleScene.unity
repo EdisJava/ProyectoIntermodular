@@ -109488,6 +109488,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 787b296248561dd44aa676eae738c757, type: 2}
   - {fileID: 11400000, guid: 9668463984519dc409b95742264e8567, type: 2}
   - {fileID: 11400000, guid: e576690b546df514daa880733bc54c04, type: 2}
+  - {fileID: 11400000, guid: e576690b546df514daa880733bc54c04, type: 2}
   hasAccusedThisDay: 0
   hasReadPrologueLetter: 0
   playerSpawnPoint: {fileID: 1285954494}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: JesusInvestigacion1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Jesus
+    text: "\xBFQue quieres?"
+    expression: {fileID: 21300000, guid: ffdd1d146e4b34e42a62ab994b7748bd, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: Sabes que ocurre con ???? (-1 pregunta)
+      nextDialogue: {fileID: 11400000, guid: ff4d3a4852433ba499d38959a558c1d9, type: 2}
+      isInterrogation: 1
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: Nada
+      nextDialogue: {fileID: 0}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
