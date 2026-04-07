@@ -248,7 +248,14 @@ public class GameManager : MonoBehaviour
 
         SaveSystem.SaveGame(BuildSaveData());
 
-        SceneManager.LoadScene("HouseScene");
+        if (isGoodEnding)
+        {
+            SceneManager.LoadScene("HouseSceneGood");
+        }
+        else
+        {
+            SceneManager.LoadScene("HouseSceneBad");
+        }
     }
 
 
