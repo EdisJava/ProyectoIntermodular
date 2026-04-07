@@ -9,17 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 419f30f9900c6674095bfd524c65c017
   - enabled: 1
-    path: Assets/Scenes/HouseScenePrologue.unity
+    path: Assets/Scenes/HouseScene.unity
     guid: f2c9b7efad44428479ac847a1055dbc6
   - enabled: 1
     path: Assets/SampleScene.unity
     guid: 5bff10f04cafaea4fb694f73110bf70a
-  - enabled: 1
-    path: Assets/Scenes/HouseSceneGood.unity
-    guid: e9dbb6f2d792aa74a943173750e629fd
-  - enabled: 1
-    path: Assets/Scenes/HouseSceneBad.unity
-    guid: d58c9e562e75b954fb3609f51ae74cf5
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
