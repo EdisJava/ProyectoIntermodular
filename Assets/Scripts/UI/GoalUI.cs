@@ -1,10 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
 public class GoalUI : MonoBehaviour
 {
-    private const string PrologueSceneName = "HouseScenePrologue";
+    private const string PrologueSceneName = "HouseScene";
 
     private TextMeshProUGUI goalText;
     private TMP_FontAsset fixedFontAsset;
