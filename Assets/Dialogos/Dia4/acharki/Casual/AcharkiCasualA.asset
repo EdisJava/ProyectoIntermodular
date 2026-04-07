@@ -14,27 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Acharki
-    text: . . .
+    text: "\xBFEl nuevo programa anti no se que rollo ese  no?"
     expression: {fileID: 21300000, guid: 42f51696b297c7c45ac2db34f3766b74, type: 3}
     hasOptions: 0
     options: []
   - characterName: Acharki
-    text: Es mosca fuerte.
+    text: Pereza fuerte.
     expression: {fileID: 21300000, guid: 42f51696b297c7c45ac2db34f3766b74, type: 3}
     hasOptions: 0
     options: []
   - characterName: Acharki
-    text: "\xBFLo ves, moro? Lo que te dec\xEDa..."
+    text: Ya te estas metiendo en lios raros como siempre......
     expression: {fileID: 21300000, guid: 9bb335164a8cc6a438e3c94bd60994e9, type: 3}
     hasOptions: 0
     options: []
   - characterName: Acharki
-    text: Las mujeres no te dan la felicidad... Te la prestan.
+    text: Se dice que son un grupillo los que andan molestando aqui a la gente
     expression: {fileID: 21300000, guid: 9bb335164a8cc6a438e3c94bd60994e9, type: 3}
     hasOptions: 0
     options: []
   - characterName: Acharki
-    text: Y cuando te acostumbras, te la quitan...
+    text: No se hermano, pero eso es mosca fuerte, ten cuidado por ahi mi colega,
+      nos vemos
     expression: {fileID: 21300000, guid: 42f51696b297c7c45ac2db34f3766b74, type: 3}
     hasOptions: 0
     options: []

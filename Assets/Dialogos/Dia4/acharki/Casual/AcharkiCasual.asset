@@ -23,7 +23,7 @@ MonoBehaviour:
     expression: {fileID: 21300000, guid: 9bb335164a8cc6a438e3c94bd60994e9, type: 3}
     hasOptions: 1
     options:
-    - optionText: Lo acabo de dejar con mi novia...
+    - optionText: "Me han metido en un rollo raro de educaci\xF3n"
       nextDialogue: {fileID: 11400000, guid: f6c728e33ff0ca844b6fdf80264c9c92, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
