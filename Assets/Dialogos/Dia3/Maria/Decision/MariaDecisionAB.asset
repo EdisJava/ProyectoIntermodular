@@ -15,7 +15,7 @@ MonoBehaviour:
   lines:
   - characterName: Maria
     text: Me imaginaba que podia ser Hafid, su amistad con Ian me olia raro.
-    expression: {fileID: 21300000, guid: 38da1750fa0a7814aa32ddffb1b778e3, type: 3}
+    expression: {fileID: 21300000, guid: 2366f5fefbef8914fb0a26e579d1e37d, type: 3}
     hasOptions: 1
     options:
     - optionText: "\xBFEntonces necesitas algo mas?"

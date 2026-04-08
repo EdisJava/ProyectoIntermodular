@@ -15,12 +15,12 @@ MonoBehaviour:
   lines:
   - characterName: Maria
     text: Oye, vente un segundito que tengo que decirte una cosa.
-    expression: {fileID: 21300000, guid: 38da1750fa0a7814aa32ddffb1b778e3, type: 3}
+    expression: {fileID: 21300000, guid: 8fc3fe3ba9623cb479cb836e93330310, type: 3}
     hasOptions: 0
     options: []
   - characterName: Maria
     text: Ya sabes algo sobre lo de ???.
-    expression: {fileID: 21300000, guid: 38da1750fa0a7814aa32ddffb1b778e3, type: 3}
+    expression: {fileID: 21300000, guid: 8fc3fe3ba9623cb479cb836e93330310, type: 3}
     hasOptions: 1
     options:
     - optionText: Si, ya tengo la eleccion.

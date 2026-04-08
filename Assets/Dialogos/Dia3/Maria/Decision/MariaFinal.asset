@@ -15,6 +15,6 @@ MonoBehaviour:
   lines:
   - characterName: "Mar\xEDa"
     text: Ve a casa a descansar.
-    expression: {fileID: 21300000, guid: 38da1750fa0a7814aa32ddffb1b778e3, type: 3}
+    expression: {fileID: 21300000, guid: 233eeb75585414246b3dd54055ee91f5, type: 3}
     hasOptions: 0
     options: []
