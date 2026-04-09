@@ -17,8 +17,8 @@ MonoBehaviour:
   characterConfigs:
   - characterName: Pablo
     casualDialogue: {fileID: 11400000, guid: 92679ceadc07d0b4fa54f1e5d472f5b5, type: 2}
-    truthDialogue: {fileID: 11400000, guid: 92679ceadc07d0b4fa54f1e5d472f5b5, type: 2}
-    lieDialogue: {fileID: 11400000, guid: 92679ceadc07d0b4fa54f1e5d472f5b5, type: 2}
+    truthDialogue: {fileID: 11400000, guid: b253d2cc6c35f434fb52ddafecb81340, type: 2}
+    lieDialogue: {fileID: 11400000, guid: b253d2cc6c35f434fb52ddafecb81340, type: 2}
     isLiarToday: 0
   - characterName: Goran4
     casualDialogue: {fileID: 11400000, guid: 5150bf5f94a2a33468b1956d6f9b1ae7, type: 2}
@@ -38,6 +38,6 @@ MonoBehaviour:
   goalFindVictim: Encuentra al acosado
   goalInvestigate: Interroga a los alumnos
   goalReport: Habla con el profesor
-  teacherCasualDialogue: {fileID: 0}
-  teacherDecisionDialogue: {fileID: 0}
-  postDecisionDialogue: {fileID: 0}
+  teacherCasualDialogue: {fileID: 11400000, guid: d38a896bf303c704f8155d708cbe2965, type: 2}
+  teacherDecisionDialogue: {fileID: 11400000, guid: 94ba8f7d2be3f7640ad5fa891a6ebbfd, type: 2}
+  postDecisionDialogue: {fileID: 11400000, guid: 00f345d8869e53b4e8f373413cbd04b6, type: 2}

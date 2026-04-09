@@ -21,6 +21,10 @@ public class DialogueManager : MonoBehaviour
     private StudentNPC currentNPC;
     private TeacherNPC currentTeacher;
 
+    [Header("Final y Efectos")]
+    public AudioSource fxSource;      // Arrastra un AudioSource aquí
+    public Image backgroundDisplay;   // La imagen de fondo de tu escena final
+
 
     public bool IsDialogueActive => dialoguePanel != null && dialoguePanel.activeSelf;
 
@@ -77,6 +81,39 @@ public class DialogueManager : MonoBehaviour
 
         nameDisplay.text = line.characterName;
         portraitDisplay.sprite = line.expression; // Cambia la expresión de la cara
+
+        // --- LÓGICA DE AUDIO CORREGIDA ---
+        if (fxSource != null)
+        {
+            // 1. Paramos cualquier sonido que estuviera sonando de la frase anterior
+            fxSource.Stop();
+
+            // 2. Si la nueva frase tiene un sonido asignado...
+            if (line.lineSound != null)
+            {
+                // Asignamos el clip y lo reproducimos
+                fxSource.clip = line.lineSound;
+                fxSource.Play();
+            }
+        }
+
+        if (backgroundDisplay != null)
+        {
+            if (line.backgroundOverride != null)
+            {
+                // Si la línea tiene imagen, activamos el objeto y la ponemos
+                backgroundDisplay.gameObject.SetActive(true);
+                backgroundDisplay.sprite = line.backgroundOverride;
+            }
+            else
+            {
+                // Si la línea NO tiene imagen, lo apagamos para ver el 3D 
+                // (En la escena de la casa, pon imagen a todas las líneas para que no parpadee)
+                backgroundDisplay.gameObject.SetActive(false);
+            }
+        }
+
+
         StartCoroutine(TypeLine(line.text));
     }
 

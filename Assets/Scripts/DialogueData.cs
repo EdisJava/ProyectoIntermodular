@@ -10,6 +10,11 @@ public class DialogueData : ScriptableObject
         public string characterName;
         [TextArea] public string text;
         public Sprite expression; // La cara que pone en esta frase
+
+        [Header("Efectos de la Línea")]
+        public AudioClip lineSound;        // Sonido al empezar la frase
+        public Sprite backgroundOverride;  // Si pones uno, cambia el fondo del escenario
+
         public bool hasOptions;
         public List<DialogueOption> options;
     }

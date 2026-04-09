@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: PabloInvestigacionA
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Pablo
+    text: . . .
+    expression: {fileID: 0}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Pablo
+    text: "Siempre me ha ca\xEDdo mal. "
+    expression: {fileID: 0}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Pablo
+    text: "Los profes siempre me ponen con \xE9l en los trabajos grupales..."
+    expression: {fileID: 0}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Pablo
+    text: Es un emo de mierda. Encima no ayuda en los trabajos...
+    expression: {fileID: 0}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Pablo
+    text: Se pone a dormir en medio de clase y a ver frikadas.
+    expression: {fileID: 0}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Pablo
+    text: No se entera de nada.
+    expression: {fileID: 0}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Pablo
+    text: "A\xFAn as\xED, te puedo asegurar que no fui yo. Nunca pegar\xEDa a alguien."
+    expression: {fileID: 0}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Pablo
+    text: Hay un chico en la R01 que tiene mala fama...
+    expression: {fileID: 0}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Pablo
+    text: Se lleva con un grupo de delincuentes y se ve que ya ha pegado a varias
+      personas.
+    expression: {fileID: 0}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Pablo
+    text: "Eso es todo lo que s\xE9."
+    expression: {fileID: 0}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []

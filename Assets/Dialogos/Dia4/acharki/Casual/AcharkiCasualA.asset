@@ -14,28 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Acharki
-    text: "\xBFEl nuevo programa anti no se que rollo ese  no?"
+    text: "\xBFEl nuevo programa anti no se que rollo ese no?"
     expression: {fileID: 21300000, guid: 42f51696b297c7c45ac2db34f3766b74, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Acharki
     text: Pereza fuerte.
     expression: {fileID: 21300000, guid: 42f51696b297c7c45ac2db34f3766b74, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Acharki
     text: Ya te estas metiendo en lios raros como siempre......
     expression: {fileID: 21300000, guid: 9bb335164a8cc6a438e3c94bd60994e9, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Acharki
     text: Se dice que son un grupillo los que andan molestando aqui a la gente
     expression: {fileID: 21300000, guid: 9bb335164a8cc6a438e3c94bd60994e9, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Acharki
     text: No se hermano, pero eso es mosca fuerte, ten cuidado por ahi mi colega,
       nos vemos
     expression: {fileID: 21300000, guid: 42f51696b297c7c45ac2db34f3766b74, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []

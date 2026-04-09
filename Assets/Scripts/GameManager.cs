@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     [Header("D�as")]
     public int currentDay = 1;
-    public int maxDays = 7;
+    public int maxDays = 5;
 
     [Header("Investigaci�n")]
     public int maxQuestionsPerDay = 2;
