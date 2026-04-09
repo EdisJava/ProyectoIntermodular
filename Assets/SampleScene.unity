@@ -109140,7 +109140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   currentState: 0
   currentDayPhase: 0
-  currentDay: 2
+  currentDay: 1
   maxDays: 7
   maxQuestionsPerDay: 2
   goodDecisions: 0

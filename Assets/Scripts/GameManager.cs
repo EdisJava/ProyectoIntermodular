@@ -30,12 +30,15 @@ public class GameManager : MonoBehaviour
     public int maxQuestionsPerDay = 2;
     private int questionsUsed;
 
+    public int GetMaxQuestions()
+    {
+        return currentDay == 3 ? 5 : maxQuestionsPerDay;
+    }
 
     public int GetRemainingQuestions()
     {
-        return maxQuestionsPerDay - questionsUsed;
+        return GetMaxQuestions() - questionsUsed;
     }
-
 
     [Header("Resultados")]
     public int goodDecisions = 0;
@@ -192,15 +195,15 @@ public class GameManager : MonoBehaviour
     public bool CanAskQuestion()
     {
         return currentDayPhase == DayPhase.Investigation
-            && questionsUsed < maxQuestionsPerDay;
+            && questionsUsed < GetMaxQuestions();
     }
 
     public void UseQuestion()
     {
         questionsUsed++;
-        Debug.Log($"Pregunta usada ({questionsUsed}/{maxQuestionsPerDay})");
+        Debug.Log($"Pregunta usada ({questionsUsed}/{GetMaxQuestions()})");
 
-        if (questionsUsed >= maxQuestionsPerDay)
+        if (questionsUsed >= GetMaxQuestions())
         {
             currentDayPhase = DayPhase.Decision;
             Debug.Log("Ya puedes chivarte al profesor.");
@@ -287,8 +290,8 @@ public class GameManager : MonoBehaviour
 
     public void SetRemainingQuestions(int remaining)
     {
-        int clampedRemaining = Mathf.Clamp(remaining, 0, maxQuestionsPerDay);
-        questionsUsed = maxQuestionsPerDay - clampedRemaining;
+        int clampedRemaining = Mathf.Clamp(remaining, 0, GetMaxQuestions());
+        questionsUsed = GetMaxQuestions() - clampedRemaining;
     }
 
     public SaveData BuildSaveData()
