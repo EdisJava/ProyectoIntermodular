@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: Goran4Casual
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Goran
+    text: El examen de BAE...
+    expression: {fileID: 21300000, guid: 319ea47984a234641ade82a2aeab4d25, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Goran
+    text: Sencillo.
+    expression: {fileID: 21300000, guid: 319ea47984a234641ade82a2aeab4d25, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Goran
+    text: "Creo que sacar\xE9 un 10. Ma\xF1ana veremos la nota."
+    expression: {fileID: 21300000, guid: 319ea47984a234641ade82a2aeab4d25, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Goran
+    text: "\xBFQu\xE9 tal te sali\xF3 a ti?"
+    expression: {fileID: 21300000, guid: 319ea47984a234641ade82a2aeab4d25, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 1
+    options:
+    - optionText: Horrible.
+      nextDialogue: {fileID: 11400000, guid: 629a938bb6fcdb041b29b91c8b2b21be, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: Bastante bien.
+      nextDialogue: {fileID: 11400000, guid: 28c0e67cbff83ce44868f65b8e9453ad, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

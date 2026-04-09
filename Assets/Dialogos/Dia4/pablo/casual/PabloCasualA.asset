@@ -15,35 +15,35 @@ MonoBehaviour:
   lines:
   - characterName: Pablo
     text: Si. Tienes cara de que tienes mucho miedo de algo.
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Pablo
     text: O de alguien...
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Pablo
     text: "Estate tranquilo. Es una sensaci\xF3n normal en este instituto. "
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Pablo
     text: "Y m\xE1s sabiendo el peso con el que cargas."
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Pablo
     text: Este programa anti bullying... Espero que no pase nada malo.
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0

@@ -22,8 +22,8 @@ MonoBehaviour:
     isLiarToday: 0
   - characterName: Goran4
     casualDialogue: {fileID: 11400000, guid: 5150bf5f94a2a33468b1956d6f9b1ae7, type: 2}
-    truthDialogue: {fileID: 11400000, guid: 5150bf5f94a2a33468b1956d6f9b1ae7, type: 2}
-    lieDialogue: {fileID: 11400000, guid: 5150bf5f94a2a33468b1956d6f9b1ae7, type: 2}
+    truthDialogue: {fileID: 11400000, guid: a75d1b60edd9c58418146f0ea9699c4c, type: 2}
+    lieDialogue: {fileID: 11400000, guid: a75d1b60edd9c58418146f0ea9699c4c, type: 2}
     isLiarToday: 0
   - characterName: Acharki
     casualDialogue: {fileID: 11400000, guid: 8334cf0d0a5745e4da489ebe738ae5e1, type: 2}
@@ -35,8 +35,18 @@ MonoBehaviour:
     truthDialogue: {fileID: 11400000, guid: e75916178aa41fe49a84f9de284c6c66, type: 2}
     lieDialogue: {fileID: 11400000, guid: e75916178aa41fe49a84f9de284c6c66, type: 2}
     isLiarToday: 0
-  goalFindVictim: Encuentra al acosado
-  goalInvestigate: Interroga a los alumnos
+  - characterName: Walter4
+    casualDialogue: {fileID: 11400000, guid: 2e63a1b08ab844946abfb76e1bb49e6e, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 2e63a1b08ab844946abfb76e1bb49e6e, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 2e63a1b08ab844946abfb76e1bb49e6e, type: 2}
+    isLiarToday: 0
+  - characterName: Mohi4
+    casualDialogue: {fileID: 11400000, guid: 6783cbf6eae9adc4bbebf4f066a0b955, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 6783cbf6eae9adc4bbebf4f066a0b955, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 6783cbf6eae9adc4bbebf4f066a0b955, type: 2}
+    isLiarToday: 0
+  goalFindVictim: Encuentra a la persona acosada
+  goalInvestigate: "Interroga a los compa\xF1eros"
   goalReport: Habla con el profesor
   teacherCasualDialogue: {fileID: 11400000, guid: d38a896bf303c704f8155d708cbe2965, type: 2}
   teacherDecisionDialogue: {fileID: 11400000, guid: 94ba8f7d2be3f7640ad5fa891a6ebbfd, type: 2}

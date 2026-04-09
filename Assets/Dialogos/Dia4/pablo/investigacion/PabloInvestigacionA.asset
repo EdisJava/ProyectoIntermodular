@@ -15,56 +15,56 @@ MonoBehaviour:
   lines:
   - characterName: Pablo
     text: . . .
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Pablo
     text: "Siempre me ha ca\xEDdo mal. "
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Pablo
     text: "Los profes siempre me ponen con \xE9l en los trabajos grupales..."
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Pablo
     text: Es un emo de mierda. Encima no ayuda en los trabajos...
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Pablo
     text: Se pone a dormir en medio de clase y a ver frikadas.
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Pablo
     text: No se entera de nada.
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Pablo
     text: "A\xFAn as\xED, te puedo asegurar que no fui yo. Nunca pegar\xEDa a alguien."
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Pablo
     text: Hay un chico en la R01 que tiene mala fama...
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
@@ -72,14 +72,14 @@ MonoBehaviour:
   - characterName: Pablo
     text: Se lleva con un grupo de delincuentes y se ve que ya ha pegado a varias
       personas.
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
   - characterName: Pablo
     text: "Eso es todo lo que s\xE9."
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0

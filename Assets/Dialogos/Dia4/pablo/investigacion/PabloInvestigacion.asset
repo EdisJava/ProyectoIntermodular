@@ -15,18 +15,18 @@ MonoBehaviour:
   lines:
   - characterName: Pablo
     text: "Vienes a interrogarme, \xBFverdad?"
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: b22cf00ae9336504bad4d34479e943d9, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 1
     options:
     - optionText: "S\xED, dime qu\xE9 sabes sobre lo de Aday (-1 pregunta)"
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000, guid: babe997076b6b434684e00e4e57dd276, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
     - optionText: "Solo pasaba por aqu\xED."
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000, guid: 126082255151cdb42b48ff2de51c4445, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0
