@@ -18,13 +18,18 @@ MonoBehaviour:
     expression: {fileID: 21300000, guid: 2dd85e48578c0b542a0afe19722e812c, type: 3}
     hasOptions: 1
     options:
-    - optionText: "\xBFSabes si tiene relacion con ??? ?"
+    - optionText: "\xBFSabes si tiene relacion con ??? ?(-1)"
       nextDialogue: {fileID: 11400000, guid: a25658c33aad924478f355aed20b1c65, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: Que sabes de el.
+    - optionText: Que sabes de el.(-1)
       nextDialogue: {fileID: 11400000, guid: 07186b5aa70939441a6ddf96d60ec2e5, type: 2}
       isInterrogation: 1
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: No necesito nada mas por ahora.
+      nextDialogue: {fileID: 11400000, guid: 63884ad9141bb6e43a5badc4bd8ee870, type: 2}
+      isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0

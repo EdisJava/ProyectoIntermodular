@@ -24,7 +24,7 @@ MonoBehaviour:
       isFinalDecision: 0
       isCorrectAccusation: 0
     - optionText: Se me olvido perdon.
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000, guid: c6d2ac5aa852e6c4681896216bce75a6, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0
