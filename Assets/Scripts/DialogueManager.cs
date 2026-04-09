@@ -137,6 +137,10 @@ public class DialogueManager : MonoBehaviour
 
             btn.GetComponent<Button>().onClick.AddListener(() => {
 
+                string optionTextNormalized = currentOpt.optionText != null ? currentOpt.optionText.ToLowerInvariant() : string.Empty;
+                bool noMoreQuestionsOption = optionTextNormalized.Contains("no tengo más preguntas")
+                    || optionTextNormalized.Contains("no tengo mas preguntas");
+
                 if (currentOpt.isFinalDecision)
                 {
                     GameManager.Instance.RegisterDecision(currentOpt.isCorrectAccusation);
@@ -151,6 +155,19 @@ public class DialogueManager : MonoBehaviour
                 }
 
                 optionsParent.SetActive(false);
+
+                if (currentNPC != null && noMoreQuestionsOption)
+                {
+                    DialogueData fallback = currentNPC.alreadyInterrogatedDialogue != null
+                        ? currentNPC.alreadyInterrogatedDialogue
+                        : currentNPC.casualDialogue;
+
+                    if (fallback != null)
+                    {
+                        StartDialogue(fallback, currentNPC);
+                        return;
+                    }
+                }
 
                 if (currentOpt.nextDialogue != null)
                 {
