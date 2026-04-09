@@ -58,6 +58,11 @@ public class DoorButtonInteraction : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f)
+        {
+            return;
+        }
+
         if (!cutsceneActive)
         {
             return;
@@ -79,6 +84,11 @@ public class DoorButtonInteraction : MonoBehaviour
 
     public void Interact()
     {
+        if (Time.timeScale == 0f)
+        {
+            return;
+        }
+
         if (isDayTransitionInProgress)
         {
             return;

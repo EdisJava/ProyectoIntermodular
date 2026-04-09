@@ -33,6 +33,15 @@ public class Selected : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f)
+        {
+            crosshair.SetActive(false);
+            interactText.SetActive(false);
+            cuadroInteract.SetActive(false);
+            wasLookingAtDoorLastFrame = false;
+            return;
+        }
+
         if (GameManager.Instance.IsIn2D())
         {
             bool talking = false;

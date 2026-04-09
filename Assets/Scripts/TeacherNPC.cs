@@ -44,6 +44,8 @@ public class TeacherNPC : MonoBehaviour
 
     public void Interact()
     {
+        if (Time.timeScale == 0f) return;
+
         if (DialogueManager.Instance.IsDialogueActive) return;
         if (!GameManager.Instance.IsIn2D()) return;
 

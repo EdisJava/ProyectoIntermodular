@@ -97,6 +97,10 @@ public class DialogueManager : MonoBehaviour
 
     public void OnClickPanel() // Llamar desde un botón invisible en el panel
     {
+        if (Time.timeScale == 0f)
+        {
+            return;
+        }
 
         if (optionsParent.activeSelf) return;
 
