@@ -15,6 +15,6 @@ MonoBehaviour:
   lines:
   - characterName: Maria
     text: Vale, pero rapidito eh.
-    expression: {fileID: 21300000, guid: 38da1750fa0a7814aa32ddffb1b778e3, type: 3}
+    expression: {fileID: 21300000, guid: 8fc3fe3ba9623cb479cb836e93330310, type: 3}
     hasOptions: 0
     options: []

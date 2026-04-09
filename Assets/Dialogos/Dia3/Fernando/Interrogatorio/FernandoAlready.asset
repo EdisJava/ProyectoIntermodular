@@ -15,6 +15,6 @@ MonoBehaviour:
   lines:
   - characterName: Fernando
     text: "No s\xE9 nada m\xE1s."
-    expression: {fileID: 0}
+    expression: {fileID: 21300000, guid: 96c6ee650139f8a4a8402e5401d925ad, type: 3}
     hasOptions: 0
     options: []

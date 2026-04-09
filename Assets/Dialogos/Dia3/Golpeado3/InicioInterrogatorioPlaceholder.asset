@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: ???
-    text: De vuelta pa la vuelta is coming.
+    text: De vuelta pa la vuelta is coming. Y viene cargado.
     expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
     hasOptions: 0
     options: []
