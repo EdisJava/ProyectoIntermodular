@@ -35,7 +35,7 @@ MonoBehaviour:
       isFinalDecision: 0
       isCorrectAccusation: 0
     - optionText: No tengo mas preguntas.
-      nextDialogue: {fileID: 11400000, guid: c59c9b5fbc5bc164190fa50c8596a257, type: 2}
+      nextDialogue: {fileID: 11400000, guid: ae0f40e63c987cb4894aea13d8a40e6e, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0

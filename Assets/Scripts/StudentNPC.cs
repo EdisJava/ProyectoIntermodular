@@ -38,6 +38,8 @@ public class StudentNPC : MonoBehaviour
     private bool casualRead = false;
     public void Interact()
     {
+        if (Time.timeScale == 0f) return;
+
         if (DialogueManager.Instance.IsDialogueActive) return;
 
         if (!GameManager.Instance.IsIn2D()) return;

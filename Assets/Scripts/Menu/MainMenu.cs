@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -89,6 +90,12 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
+        GameObject selected = EventSystem.current != null ? EventSystem.current.currentSelectedGameObject : null;
+        if (playButton != null && selected != null && selected != playButton.gameObject)
+        {
+            return;
+        }
+
         if (!SaveSystem.HasSave())
         {
             Debug.Log("No hay partida guardada para continuar.");
