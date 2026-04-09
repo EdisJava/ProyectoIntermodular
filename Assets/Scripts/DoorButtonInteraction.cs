@@ -22,6 +22,7 @@ public class DoorButtonInteraction : MonoBehaviour
     public GameObject interactText;
 
     private bool cutsceneActive = false;
+    private bool isDayTransitionInProgress = false;
 
     public bool isExitDoor = false;
 
@@ -78,6 +79,11 @@ public class DoorButtonInteraction : MonoBehaviour
 
     public void Interact()
     {
+        if (isDayTransitionInProgress)
+        {
+            return;
+        }
+
         PlayDoorSound();
 
         if (isExitDoor)
@@ -91,6 +97,7 @@ public class DoorButtonInteraction : MonoBehaviour
                 }
 
                 HideInteractionUI();
+                isDayTransitionInProgress = true;
                 StartCoroutine(TransitionFromPrologueToDayOne());
                 return;
             }
@@ -98,6 +105,7 @@ public class DoorButtonInteraction : MonoBehaviour
             if (GameManager.Instance.hasAccusedThisDay)
             {
                 HideInteractionUI();
+                isDayTransitionInProgress = true;
                 StartCoroutine(TransitionToNextDay());
             }
             else
@@ -153,6 +161,8 @@ public class DoorButtonInteraction : MonoBehaviour
         {
             fadePanel.SetActive(false);
         }
+
+        isDayTransitionInProgress = false;
     }
 
     IEnumerator TransitionFromPrologueToDayOne()
