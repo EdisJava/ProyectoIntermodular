@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class StudentNPC : MonoBehaviour
 {
+    // este script va en cada alumno del escenario. contiene su dialogo casual, su dialogo de investigacion, y controla que sale segun la fase del dia y si ya leiste el casual o no
     public string studentName;
     public DialogueData casualDialogue;
     public DialogueData investigationDialogue;
@@ -11,19 +12,22 @@ public class StudentNPC : MonoBehaviour
     public Sprite idleSprite;
     public Transform centerPoint;
 
+    // componentes y datos para el efecto de enfoque al hablar
     private Image myImage;
     private RectTransform myRectTransform;
     private Vector2 startAnchoredPos;
     private Vector3 startScale;
 
+    // Dialogo que sale si ya leiste el casual y vuelves a hablar con el alumno durante investigacion (o si eliges "no tengo mas preguntas")
     [Header("Diálogos Especiales")]
     public DialogueData alreadyInterrogatedDialogue;
 
+    // Dialogo que sale si vuelves a hablar con la victima despues de haberla encontrado
     [Header("Diálogos de Víctima")]
     public DialogueData victimStateDialogue;
 
     private bool victimFound = false;
-    private bool alreadyInterrogated = false; // Control de si ya soltó la pista
+    private bool alreadyInterrogated = false; // Control de si ya solto la pista
     public bool isVictim;
 
     void Start()
@@ -35,7 +39,10 @@ public class StudentNPC : MonoBehaviour
         if (idleSprite) myImage.sprite = idleSprite;
     }
 
+    //controla si el dialogo casual ya fue leido
     private bool casualRead = false;
+
+    // esta funcion la llama el DialogueManager cuando haces click en el npc para hablar
     public void Interact()
     {
         if (Time.timeScale == 0f) return;
@@ -44,7 +51,9 @@ public class StudentNPC : MonoBehaviour
 
         if (!GameManager.Instance.IsIn2D()) return;
 
-        // --- LÓGICA DE VÍCTIMA ---
+        //logica de victima, tiene prioridad sobre la de alumno normal porque es un caso especial que no sigue las mismas reglas
+        //(si es victima, siempre sale el mismo dialogo la primera vez, y luego otro dialogo distinto cada vez que hablas con ella,
+        //sin importar la fase del dia ni si ya leiste el casual o no)
         if (isVictim)
         {
             if (!victimFound)
@@ -55,34 +64,38 @@ public class StudentNPC : MonoBehaviour
             }
             else
             {
+                // si ya encontraste a la victima, cada vez que hables con ella sale un dialogo distinto (el victimStateDialogue, si es que se le asignao en el inspector)
                 DialogueData nextD = victimStateDialogue != null ? victimStateDialogue : casualDialogue;
                 DialogueManager.Instance.StartDialogue(nextD, this);
             }
             return;
         }
 
-        // --- LÓGICA DE ALUMNOS ---
+        //logica de alumnos
 
-        // CASO A: Aún no has leído su diálogo casual (Prioridad máxima)
-        // Saldrá este diálogo tanto en fase CasualTalk como en Investigation
+        // CASO A: aun no se ha leido su diálogo casual (maxima prioridad)
+        // Saldra este dialogo tanto en fase Csual como en Investigation
         if (!casualRead)
         {
-            casualRead = true; // La próxima vez ya pasará a la siguiente lógica
+            casualRead = true; // La proxima vez ya pasara a la siguiente logica
             DialogueManager.Instance.StartDialogue(casualDialogue, this);
             return;
         }
 
-        // CASO B: Ya leíste el casual, pero aún no estamos en investigación
+        // CASO B: ya se leyo el casual, pero aun no estamos en fase de investigacion (sale el casual de nuevo)
         if (GameManager.Instance.currentDayPhase == DayPhase.CasualTalk)
         {
             DialogueManager.Instance.StartDialogue(casualDialogue, this);
             return;
         }
 
-        // CASO C: Ya leíste el casual y estamos en investigación
+        // CASO C: ya se leyo el casual y estamos en fase de investigacion
         if (GameManager.Instance.currentDayPhase == DayPhase.Investigation ||
             GameManager.Instance.currentDayPhase == DayPhase.Decision)
         {
+            // si ya se leyo el casual y estamos en investigacion,
+            // pero ya se interrogo a este alumno antes, sale un
+            // dialogo distinto (alreadyInterrogatedDialogue) o el casual de nuevo si no se asigno uno especial para esto
             if (alreadyInterrogated)
             {
                 DialogueData nextD = alreadyInterrogatedDialogue != null ? alreadyInterrogatedDialogue : casualDialogue;
@@ -90,18 +103,20 @@ public class StudentNPC : MonoBehaviour
             }
             else
             {
-                // Ahora sí, después de haber leído el casual una vez, sale la investigación
+                // si ya se leyo el casual y estamos en investigacion, y aun no se interrogo a este alumno, sale su dialogo de investigacion normal
                 DialogueManager.Instance.StartDialogue(investigationDialogue, this);
             }
         }
     }
 
-    // Esta función la llama el DialogueManager cuando eliges una opción con isInterrogation = true
+    // esta funcion la llama el DialogueManager cuando eliges una opcion de interrogatorio sobre este npc,
+    // para marcar que ya se interrogo a este npc y asi cambiar su dialogo en futuras interacciones
     public void MarkAsInterrogated()
     {
         alreadyInterrogated = true;
     }
 
+    // funciones para guardar y cargar el progreso de este NPC
     public StudentDialogueProgressData BuildProgressData()
     {
         return new StudentDialogueProgressData
@@ -113,6 +128,7 @@ public class StudentNPC : MonoBehaviour
         };
     }
 
+    // esta funcion se llama desde el GameManager al cargar el progreso, para aplicar los datos guardados a este npc
     public void ApplyProgressData(StudentDialogueProgressData data)
     {
         if (data == null || data.studentName != studentName)
@@ -125,9 +141,10 @@ public class StudentNPC : MonoBehaviour
         victimFound = data.victimFound;
     }
 
+    // funciones para el efecto de enfoque al hablar, que se llama desde el DialogueManager al empezar a hablar con este npc, y al dejar de hablar
     public void EnterFocus()
     {
-        // Si el centerPoint es un objeto de la UI, usamos su posición anclada
+        // si el centerPoint es un objeto de la UI, usamos su posicion anclada
         RectTransform centerRect = centerPoint.GetComponent<RectTransform>();
 
         if (centerRect != null)
@@ -136,23 +153,25 @@ public class StudentNPC : MonoBehaviour
         }
         else
         {
-            // Si por alguna razón no es UI, seguimos usando position pero es menos estable
+            // si por alguna razon no es UI, seguimos usando position pero es menos estable
             transform.position = centerPoint.position;
         }
 
         transform.localScale = startScale * 1.3f;
-        // Ocultar todo el objeto en lugar de solo la imagen previene que queden hijos o textos visibles flotando (como el bug de Aroy que se duplica visualmente)
+        // ocultar todo el objeto en lugar de solo la imagen previene que queden hijos o textos visibles flotando (como el bug de Aroy que se duplica visualmente)
         gameObject.SetActive(false);
     }
     public void ExitFocus()
     {
-        // Volvemos a la posición anclada original (que no cambia con la resolución)
-        myRectTransform.anchoredPosition = startAnchoredPos; // <--- CAMBIADO
+        // Volvemos a la posicion anclada original (que no cambia con la resolucion)
+        myRectTransform.anchoredPosition = startAnchoredPos;
 
         transform.localScale = startScale;
         gameObject.SetActive(true);
     }
 
+    // esta funcion se llama desde el GameManager al empezar un nuevo dia, para resetear la memoria de los npcs y que vuelvan a su estado inicial
+    // (sin interrogar, sin encontrar la victima, sin haber leido el casualread)
     public void ResetMemory()
     {
         alreadyInterrogated = false;
@@ -160,16 +179,20 @@ public class StudentNPC : MonoBehaviour
         casualRead = false;
     }
 
+    // esta funcion se llama desde el GameManager al empezar un nuevo dia, para configurar el dialogo de cada npc segun el escenario del dia
     public void SetupCharacterForToday()
     {
-        
 
+        // obtenemos el escenario del dia actual para configurar el dialogo de este npc segun lo que diga ese escenario
         DayScenario today = GameManager.Instance.GetCurrentDayScenario();
         if (today == null) return;
 
+        // verificamos si este npc es la victima del dia, para configurar su dialogo y su estado de victima
         isVictim = (studentName == today.victimName);
+        //log para debug
         if (isVictim) Debug.Log(studentName + " es la víctima hoy.");
 
+        // buscamos la configuracion de los npc en el escenario del dia, para configurar su dialogo casual y de investigacion segun lo que diga esa configuracion
         foreach (var config in today.characterConfigs)
         {
             if (config.characterName == studentName)
