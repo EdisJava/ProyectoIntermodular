@@ -1,5 +1,25 @@
 using System;
 
+/*
+* Script para guardar la configuracion del jugador.
+* 
+* Metodos:
+*   - None
+*
+*   Variables:
+*   - masterVolume: Volumen general.
+*   - brightness: Brillo de la pantalla.
+*   - fullscreen: Pantalla completa.
+*   - resolutionIndex: Indice de la resolucion.
+*
+*   Funcionamiento:
+*   - Guarda la configuracion del jugador.
+*
+*   Flujo:
+*   1. El jugador cambia la configuracion.
+*   2. Se guarda la configuracion.
+*/
+
 [Serializable]
 public class PlayerSettingsData
 {

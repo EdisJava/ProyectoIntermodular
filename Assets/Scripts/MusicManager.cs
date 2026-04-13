@@ -1,6 +1,36 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+* Script para manejar la musica del juego.
+* 
+* Metodos:
+*   - EnsureInstance(): Metodo que asegura que solo haya una instancia del MusicManager.
+*   - Awake(): Metodo que se llama al iniciar la escena.
+*   - Start(): Metodo que se llama al iniciar la escena.
+*   - OnEnable(): Metodo que se llama cuando el script se habilita.
+*   - OnDisable(): Metodo que se llama cuando el script se deshabilita.
+*   - Update(): Metodo que se llama cada frame.
+*   - OnSceneLoaded(): Metodo que se llama cuando se carga una escena.
+*   - ApplyMusicForScene(): Metodo que aplica la musica para la escena actual.
+*
+*   Variables:
+*   - musicVolume: Volumen de la musica.
+*   - audioSource: Fuente de audio.
+*   - mainMenuMusic: Musica del menu principal.
+*   - gameplayMusic: Musica del juego.
+*
+*   Funcionamiento:
+*   - Al iniciar, carga la musica del menu principal y del juego.
+*   - Al cambiar de escena, reproduce la musica correspondiente.
+*
+*   Flujo:
+*   1. El jugador inicia el juego.
+*   2. Se reproduce la musica del menu principal.
+*   3. El jugador cambia a la escena del juego.
+*   4. Se reproduce la musica del juego.
+*/
+
 public class MusicManager : MonoBehaviour
 {
     private const string MainMenuSceneName = "MainMenu";
@@ -17,6 +47,9 @@ public class MusicManager : MonoBehaviour
     private AudioClip mainMenuMusic;
     private AudioClip gameplayMusic;
 
+    /*
+    * Metodo que asegura que solo haya una instancia del MusicManager.
+    */
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     static void EnsureInstance()
     {
@@ -36,6 +69,9 @@ public class MusicManager : MonoBehaviour
         Instance = go.AddComponent<MusicManager>();
     }
 
+    /*
+    * Metodo que se llama al crear el objeto.
+    */
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -63,21 +99,33 @@ public class MusicManager : MonoBehaviour
         gameplayMusic = Resources.Load<AudioClip>(GameplayMusicResourcePath);
     }
 
+    /*
+    * Metodo que se llama cuando el script se habilita.
+    */
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    /*
+    * Metodo que se llama al iniciar la escena.
+    */
     void Start()
     {
         ApplyMusicForScene(SceneManager.GetActiveScene().name);
     }
 
+    /*
+    * Metodo que se llama cuando el script se deshabilita.
+    */
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    /*
+    * Metodo que se llama cada frame.
+    */
     void Update()
     {
         if (audioSource != null)
@@ -86,11 +134,17 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que se llama cuando se carga una escena.
+    */
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         ApplyMusicForScene(scene.name);
     }
 
+    /*
+    * Metodo que aplica la musica para la escena actual.
+    */
     void ApplyMusicForScene(string sceneName)
     {
         AudioClip targetClip = null;

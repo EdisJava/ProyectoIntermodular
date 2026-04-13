@@ -1,9 +1,48 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+* Script para manejar el comportamiento de los alumnos.
+* 
+* Metodos:
+*   - Start(): Metodo que se ejecuta al iniciar el script.
+*   - Interact(): Metodo que se ejecuta al interactuar con el alumno.
+*   - MarkAsInterrogated(): Metodo que marca al alumno como interrogado.
+*   - BuildProgressData(): Metodo que construye los datos de progreso.
+*   - ApplyProgressData(): Metodo que aplica los datos de progreso.
+*   - EnterFocus(): Metodo que entra en estado de enfoque.
+*   - ExitFocus(): Metodo que sale del estado de enfoque.
+*
+*   Variables:
+*   - studentName: Nombre del alumno.
+*   - casualDialogue: Dialogo casual.
+*   - investigationDialogue: Dialogo de investigacion.
+*   - idleSprite: Sprite en estado de reposo.
+*   - centerPoint: Punto central para el enfoque.
+*   - myImage: Imagen del alumno.
+*   - myRectTransform: Transformacion de la imagen.
+*   - startAnchoredPos: Posicion anclada inicial.
+*   - startScale: Escala inicial.
+*   - alreadyInterrogatedDialogue: Dialogo de interrogatorio previo.
+*   - victimStateDialogue: Dialogo de estado de victima.
+*   - victimFound: Si se ha encontrado a la victima.
+*   - alreadyInterrogated: Si se ha interrogado al alumno.
+*   - isVictim: Si el alumno es la victima.
+*   - casualRead: Si se ha leido el dialogo casual.
+*
+*   Funcionamiento:
+*   - Controla el dialogo que se muestra segun la fase del dia y si se ha leido el dialogo casual.
+*
+*   Flujo:
+*   1. El jugador interactua con el alumno.
+*   2. Se determina la fase actual del dia.
+*   3. Se llama al metodo correspondiente segun la fase.
+*   4. Se muestra el dialogo del alumno.
+*   5. El jugador puede interactuar con otro alumno.
+*/
+
 public class StudentNPC : MonoBehaviour
 {
-    // este script va en cada alumno del escenario. contiene su dialogo casual, su dialogo de investigacion, y controla que sale segun la fase del dia y si ya leiste el casual o no
     public string studentName;
     public DialogueData casualDialogue;
     public DialogueData investigationDialogue;
@@ -18,11 +57,11 @@ public class StudentNPC : MonoBehaviour
     private Vector2 startAnchoredPos;
     private Vector3 startScale;
 
-    // Dialogo que sale si ya leiste el casual y vuelves a hablar con el alumno durante investigacion (o si eliges "no tengo mas preguntas")
+    // Dialogo que sale si ya leyo el casual y vuelve a hablar con el alumno durante investigacion (o si elige "no tengo mas preguntas")
     [Header("Diálogos Especiales")]
     public DialogueData alreadyInterrogatedDialogue;
 
-    // Dialogo que sale si vuelves a hablar con la victima despues de haberla encontrado
+    // Dialogo que sale si vuelve a hablar con la victima despues de haberla encontrado
     [Header("Diálogos de Víctima")]
     public DialogueData victimStateDialogue;
 
@@ -30,6 +69,9 @@ public class StudentNPC : MonoBehaviour
     private bool alreadyInterrogated = false; // Control de si ya solto la pista
     public bool isVictim;
 
+    /*
+    * Metodo que se ejecuta al iniciar el script.
+    */
     void Start()
     {
         myImage = GetComponent<Image>();
@@ -42,7 +84,9 @@ public class StudentNPC : MonoBehaviour
     //controla si el dialogo casual ya fue leido
     private bool casualRead = false;
 
-    // esta funcion la llama el DialogueManager cuando haces click en el npc para hablar
+    /*
+    * Metodo que se ejecuta al interactuar con el alumno.
+    */
     public void Interact()
     {
         if (Time.timeScale == 0f) return;
@@ -64,7 +108,7 @@ public class StudentNPC : MonoBehaviour
             }
             else
             {
-                // si ya encontraste a la victima, cada vez que hables con ella sale un dialogo distinto (el victimStateDialogue, si es que se le asignao en el inspector)
+                // si ya encontro a la victima, cada vez que hable con ella sale un dialogo distinto (el victimStateDialogue, si es que se le asignao en el inspector)
                 DialogueData nextD = victimStateDialogue != null ? victimStateDialogue : casualDialogue;
                 DialogueManager.Instance.StartDialogue(nextD, this);
             }
@@ -109,7 +153,7 @@ public class StudentNPC : MonoBehaviour
         }
     }
 
-    // esta funcion la llama el DialogueManager cuando eliges una opcion de interrogatorio sobre este npc,
+    // esta funcion la llama el DialogueManager cuando elige una opcion de interrogatorio sobre este npc,
     // para marcar que ya se interrogo a este npc y asi cambiar su dialogo en futuras interacciones
     public void MarkAsInterrogated()
     {
