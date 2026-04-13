@@ -15,10 +15,25 @@ MonoBehaviour:
   victimName: 
   teacherName: 
   characterConfigs:
-  - characterName: Mohi
-    casualDialogue: {fileID: 0}
-    truthDialogue: {fileID: 0}
-    lieDialogue: {fileID: 0}
+  - characterName: Mohi5
+    casualDialogue: {fileID: 11400000, guid: 69387d74df769cc4887099079ab525aa, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 69387d74df769cc4887099079ab525aa, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 69387d74df769cc4887099079ab525aa, type: 2}
+    isLiarToday: 0
+  - characterName: Fernando5
+    casualDialogue: {fileID: 11400000, guid: 591379b49bb49ce45812279f7c6d3143, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 591379b49bb49ce45812279f7c6d3143, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 591379b49bb49ce45812279f7c6d3143, type: 2}
+    isLiarToday: 0
+  - characterName: Goran5
+    casualDialogue: {fileID: 11400000, guid: 0db1532f632b9944d8f73183b3e33d4a, type: 2}
+    truthDialogue: {fileID: 11400000, guid: c8e59ec2822a04046a1027cc0b345ad6, type: 2}
+    lieDialogue: {fileID: 11400000, guid: c8e59ec2822a04046a1027cc0b345ad6, type: 2}
+    isLiarToday: 0
+  - characterName: Jesus5
+    casualDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
     isLiarToday: 0
   goalFindVictim: Encuentra al acosado
   goalInvestigate: Interroga a los alumnos

@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: Jesus1
+  m_Name: Jesus5A
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Jesus
-    text: "Hola amigo \xBFEres mi amigo verdad?"
-    expression: {fileID: 21300000, guid: 020131ba07572e644b61f9057c7a6bd6, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: "Si quiero que seas mi amigo lo seras \xBFVale?"
-    expression: {fileID: 21300000, guid: bdc179761ef4d734798f2ac440ae6ec4, type: 3}
+    text: Muy bien, menos mal que estamos en el descanso, no quiero ir a clases ahora
+      mismo.
+    expression: {fileID: 21300000, guid: 70fedb3a3b533c245a55736e6bd3a4ab, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []
