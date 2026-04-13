@@ -3,6 +3,48 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 
+/*
+* Script para manejar los dialogos.
+* 
+* Metodos:
+*   - StartDialogue(): Metodo que inicia el dialogo.
+*   - CleanPreviousFocus(): Metodo que limpia el foco anterior.
+*   - DisplayLine(): Metodo que muestra la linea actual.
+*   - TypeLine(): Metodo que escribe la linea actual.
+*   - OnClickPanel(): Metodo que se llama al hacer clic en el panel.
+*   - NextLine(): Metodo que pasa a la siguiente linea.
+*   - ShowOptions(): Metodo que muestra las opciones.
+*   - CloseDialogue(): Metodo que cierra el dialogo.
+*
+*   Variables:
+*   - dialoguePanel: Panel que muestra el dialogo.
+*   - textDisplay: Texto que muestra la linea actual.
+*   - nameDisplay: Texto que muestra el nombre del personaje.
+*   - portraitDisplay: Imagen que muestra la expresion del personaje.
+*   - optionsParent: Panel que muestra las opciones.
+*   - optionButtonPrefab: Prefab que crea los botones de las opciones.
+*   - currentData: Datos del dialogo actual.
+*   - lineIndex: Indice de la linea actual.
+*   - isTyping: Indica si se esta escribiendo la linea actual.
+*   - currentNPC: NPC actual.
+*   - currentTeacher: Profesor actual.
+*   - fxSource: Fuente de sonido.
+*   - backgroundDisplay: Imagen de fondo.
+*
+*   Funcionamiento:
+*   - Al iniciar, limpia el foco anterior y muestra la linea actual.
+*   - Al hacer clic en el panel, pasa a la siguiente linea o muestra las opciones.
+*   - Al cerrar el dialogo, limpia el foco anterior.
+*
+*   Flujo:
+*   1. El jugador interactua con el alumno.
+*   2. Se llama al metodo StartDialogue().
+*   3. Se determina la fase actual del dia.
+*   4. Se llama al metodo correspondiente segun la fase.
+*   5. Se muestra el dialogo del alumno.
+*   6. El jugador puede interactuar con otro alumno.
+*/
+
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
@@ -23,16 +65,19 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Final y Efectos")]
     public AudioSource fxSource;      // aqui va el audiosource para que se escuchen los audios 
-    public Image backgroundDisplay;   // imagen de fondo por cada linea para que hagamos el final 
+    public Image backgroundDisplay;   // imagen de fondo por cada linea 
 
 
     public bool IsDialogueActive => dialoguePanel != null && dialoguePanel.activeSelf;
 
     void Awake() => Instance = this;
 
+    /*
+    * Metodo que inicia el dialogo con un alumno.
+    */
     public void StartDialogue(DialogueData data, StudentNPC npc)
     {
-        CleanPreviousFocus(); // limpiamos lo que hubiera antes
+        CleanPreviousFocus(); // limpia lo que hubiera antes
 
         currentData = data;
         currentNPC = npc;
@@ -47,12 +92,15 @@ public class DialogueManager : MonoBehaviour
         DisplayLine();
     }
 
+    /*
+    * Metodo que inicia el dialogo con un profesor.
+    */
     public void StartDialogue(DialogueData data, TeacherNPC teacher)
     {
         CleanPreviousFocus();
 
         currentData = data;
-        currentTeacher = teacher; // guardamos al profe
+        currentTeacher = teacher; // guarda al profe
         lineIndex = 0;
 
         dialoguePanel.SetActive(true);
@@ -64,7 +112,9 @@ public class DialogueManager : MonoBehaviour
         DisplayLine();
     }
 
-   
+    /*
+    * Metodo que limpia el foco anterior.
+    */
     private void CleanPreviousFocus()
     {
         if (currentNPC != null) currentNPC.ExitFocus();
@@ -74,6 +124,9 @@ public class DialogueManager : MonoBehaviour
         currentTeacher = null;
     }
 
+    /*
+    * Metodo que muestra la linea actual.
+    */
     void DisplayLine()
     {
         StopAllCoroutines();
@@ -85,13 +138,13 @@ public class DialogueManager : MonoBehaviour
         // Logica de audio
         if (fxSource != null)
         {
-            // paramos cualquier sonido que estuviera sonando de la frase anterior
+            // para cualquier sonido que estuviera sonando de la frase anterior
             fxSource.Stop();
 
-            //si la nueva frase tiene un sonido asignado-
+            //si la nueva frase tiene un sonido asignado
             if (line.lineSound != null)
             {
-                // -asignamos el clip y lo reproducimos
+                // asigna el clip y lo reproduce
                 fxSource.clip = line.lineSound;
                 fxSource.Play();
             }
@@ -101,22 +154,24 @@ public class DialogueManager : MonoBehaviour
         {
             if (line.backgroundOverride != null)
             {
-                // si la linea tiene imagen, activamos el objeto y la ponemos
+                // si la linea tiene imagen, activa el objeto y la pone
                 backgroundDisplay.gameObject.SetActive(true);
                 backgroundDisplay.sprite = line.backgroundOverride;
             }
             else
             {
-                // si la linea no tiene imagen, lo apagamos para ver el 3D 
+                // si la linea no tiene imagen, lo apaga para ver el 3D 
                
                 backgroundDisplay.gameObject.SetActive(false);
             }
         }
 
-
         StartCoroutine(TypeLine(line.text));
     }
 
+    /*
+    * Metodo que escribe la linea actual.
+    */
     IEnumerator TypeLine(string text)
     {
         isTyping = true;
@@ -128,13 +183,16 @@ public class DialogueManager : MonoBehaviour
         }
         isTyping = false;
 
-        // si hay opciones, las mostramos al terminar el texto
+        // si hay opciones, las muestra al terminar el texto
         if (currentData.lines[lineIndex].hasOptions) ShowOptions();
     }
 
+    /*
+    * Metodo que se llama al hacer clic en el panel.
+    */
     public void OnClickPanel() // llamar desde un boton invisible en el panel. 
-    //si le das click cuadno el personaje escribe, para la corrutina y muestra toda la linea. 
-    //si le das click cuando el personaje ya termino de escribir y no hay opciones, pasa a la siguiente linea.
+    //si le da click cuadno el personaje escribe, para la corrutina y muestra toda la linea. 
+    //si le da click cuando el personaje ya termino de escribir y no hay opciones, pasa a la siguiente linea.
     {
         if (Time.timeScale == 0f)
         {
@@ -156,41 +214,46 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-
-    void NextLine() // pasamos a la siguiente linea (si es que hay) o cerramos el dialogo si no hay mas lineas
+    /*
+    * Metodo que pasa a la siguiente linea.
+    */
+    void NextLine() // pasa a la siguiente linea (si es que hay) o cierra el dialogo si no hay mas lineas
     {
         lineIndex++;
         if (lineIndex < currentData.lines.Count) DisplayLine();
         else CloseDialogue();
     }
 
-    void ShowOptions() // mostramos las opciones de la linea actual, creando un boton por cada una y asignandole su texto y funcionalidad
+    /*
+    * Metodo que muestra las opciones.
+    */
+    void ShowOptions() // muestra las opciones de la linea actual, creando un boton por cada una y asignandole su texto y funcionalidad
     {
         optionsParent.SetActive(true);
-        // limpiamos cualquier opcion que hubiera antes
+        // limpia cualquier opcion que hubiera antes
         foreach (Transform child in optionsParent.transform) Destroy(child.gameObject);
         
-        // por cada opcion, creamos un boton y le asignamos su texto y funcionalidad
+        // por cada opcion, crea un boton y le asigna su texto y funcionalidad
         foreach (var opt in currentData.lines[lineIndex].options)
         {
-            // creamos el boton y le ponemos el texto de la opcion
+            // crea el boton y le pone el texto de la opcion
             GameObject btn = Instantiate(optionButtonPrefab, optionsParent.transform);
             btn.GetComponentInChildren<TextMeshProUGUI>().text = opt.optionText;
             DialogueOption currentOpt = opt;
-            // asignamos la funcionalidad del boton segun la opcion
+            // asigna la funcionalidad del boton segun la opcion
             btn.GetComponent<Button>().onClick.AddListener(() => {
                 
                 string optionTextNormalized = currentOpt.optionText != null ? currentOpt.optionText.ToLowerInvariant() : string.Empty;
-                bool noMoreQuestionsOption = optionTextNormalized.Contains("no tengo más preguntas")
+                bool noMoreQuestionsOption = optionTextNormalized.Contains("no tengo mas preguntas")
                     || optionTextNormalized.Contains("no tengo mas preguntas");
-                // si es una decision final del profesor, registramos la decision y avisamos al profesor para que cambie su dialogo
+                // si es una decision final del profesor, registra la decision y avisa al profesor para que cambie su dialogo
                 if (currentOpt.isFinalDecision)
                 {
                     GameManager.Instance.RegisterDecision(currentOpt.isCorrectAccusation);
                     TeacherNPC teacher = Object.FindFirstObjectByType<TeacherNPC>();
                     if (teacher != null) teacher.SetAccusedFlag();
                 }
-                // si es una opcion de interrogatorio, consumimos un uso de interrogatorio y marcamos al npc como interrogado para que cambie su dialogo
+                // si es una opcion de interrogatorio, consume un uso de interrogatorio y marca al npc como interrogado para que cambie su dialogo
                 if (currentOpt.isInterrogation)
                 {
                     GameManager.Instance.UseQuestion();
@@ -201,6 +264,9 @@ public class DialogueManager : MonoBehaviour
                 /* si la opcion es "no tengo mas preguntas", y tenemos un npc hablando, mostramos su dialogo de fallback (si lo tiene) en vez de seguir con la siguiente linea del dialogo
                 esto es para que el npc deje de hablar de la investigacion y vuelva a su dialogo casual si el jugador decide no seguir interrogando
                 aunque seguramente no lo utilicemos en el juego final, lo dejo por si queremos hacer algo parecido en alguna parte*/
+                /*
+                Vale
+                */
                 if (currentNPC != null && noMoreQuestionsOption)
                 {
                     DialogueData fallback = currentNPC.alreadyInterrogatedDialogue != null
@@ -213,15 +279,15 @@ public class DialogueManager : MonoBehaviour
                         return;
                     }
                 }
-                // si la opcion tiene un siguiente dialogo asignado, seguimos con ese dialogo. Si no, cerramos el dialogo
+                // si la opcion tiene un siguiente dialogo asignado, seguimos con ese dialogo. Si no, termina el dialogo
                 if (currentOpt.nextDialogue != null)
                 {
-                    // si tenemos un profesor hablando, seguimos con el profesor (esto es para arreglar el bug de que salga un alumno al hablar con el profesor)
+                    // si tiene un profesor hablando, sigue con el profesor (esto es para arreglar el bug de que salga un alumno al hablar con el profesor)
                     if (currentTeacher != null)
                     {
                         StartDialogue(currentOpt.nextDialogue, currentTeacher);
                     }
-                    // si no, seguimos con el alumno
+                    // si no, sigue con el alumno
                     else
                     {
                         StartDialogue(currentOpt.nextDialogue, currentNPC);
@@ -234,14 +300,14 @@ public class DialogueManager : MonoBehaviour
             });
         }
     }
-    // cerramos el dialogo, apagando el panel y la imagen del personaje, y reseteando los npcs para que dejen de estar en focus
+    // cierra el dialogo, apagando el panel y la imagen del personaje, y reseteando los npcs para que dejen de estar en focus
     public void CloseDialogue()
     {
         dialoguePanel.SetActive(false);
         portraitDisplay.gameObject.SetActive(false);
 
-        if (currentNPC != null) currentNPC.ExitFocus(); // apagamos al npc si estaba hablando
-        if (currentTeacher != null) currentTeacher.ExitFocus(); // apagamos al profe si estaba hablando
+        if (currentNPC != null) currentNPC.ExitFocus(); // apaga al npc si estaba hablando
+        if (currentTeacher != null) currentTeacher.ExitFocus(); // apaga al profe si estaba hablando
 
         currentNPC = null;
         currentTeacher = null;

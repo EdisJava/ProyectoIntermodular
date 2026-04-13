@@ -5,6 +5,59 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/*
+* Script para manejar la interaccion con la puerta.
+* 
+* Metodos:
+*   - Interact(): Metodo principal que se llama al interactuar con la puerta.
+*   - CloseCutscene(): Metodo que se llama para cerrar la cutscene.
+*   - TransitionToNextDay(): Metodo que se llama para transicionar al siguiente dia.
+*   - TransitionFromPrologueToDayOne(): Metodo que se llama para transicionar del prologo al dia 1.
+*   - ApplyLoadingBackgroundToFadePanel(): Metodo que aplica el fondo de carga al panel de transicion.
+*   - GetLoadingBackgroundSprite(): Metodo que obtiene el sprite de fondo de carga.
+*   - CreateRuntimeTransitionOverlay(): Metodo que crea un overlay de transicion en tiempo de ejecucion.
+*   - PlayDoorSound(): Metodo que reproduce el sonido de la puerta.
+*   - PlayDoorOpenSound(): Metodo que reproduce el sonido de la puerta abriendose.
+*   - PlayDoorCloseSound(): Metodo que reproduce el sonido de la puerta cerrandose.
+*   - ShowInteractionUI(): Metodo que muestra la UI de interaccion.
+*   - HideInteractionUI(): Metodo que oculta la UI de interaccion.
+*
+*   Variables:
+*   - cutsceneImage: Imagen de la cutscene.
+*   - movementScript: Script de movimiento del jugador.
+*   - DoorOpenAudio: Sonido de la puerta abriendose.
+*   - DoorCloseAudio: Sonido de la puerta cerrandose.
+*   - audioSource: Fuente de audio.
+*   - crosshair: Mira del jugador.
+*   - cuadroInteract: Cuadro de interaccion.
+*   - interactText: Texto de interaccion.
+*   - cutsceneActive: Si la cutscene esta activa.
+*   - isDayTransitionInProgress: Si la transicion de dia esta en progreso.
+*   - isExitDoor: Si la puerta es una puerta de salida.
+*   - marksPrologueLetterAsRead: Si la puerta marca la carta del prologo como leida.
+*   - isPrologueExitDoor: Si la puerta es una puerta de salida del prologo.
+*   - prologueDayOneSceneName: Nombre de la escena del dia 1 del prologo.
+*   - preventExit: Si se previene la salida.
+*   - fadePanel: Panel de transicion.
+*   - dayText: Texto del dia.
+*
+*   Funcionamiento:
+*   - Al interactuar con la puerta, se llama al metodo Interact().
+*   - El metodo Interact() llama al metodo correspondiente segun la fase actual del dia.
+*   - En la fase de dialogo casual, se llama al metodo CasualTalk().
+*   - En la fase de investigacion, se llama al metodo InvestigationTalk().
+*   - En la fase de decision, se llama al metodo Accuse().
+*   - El metodo ResetForNewDay() se llama al inicio de cada dia.
+*
+*   Flujo:
+*   1. El jugador interactua con la puerta.
+*   2. Se llama al metodo Interact().
+*   3. Se determina la fase actual del dia.
+*   4. Se llama al metodo correspondiente segun la fase.
+*   5. Se muestra el dialogo del alumno.
+*   6. El jugador puede interactuar con otro alumno.
+*/
+
 public class DoorButtonInteraction : MonoBehaviour
 {
     private const string LoadingBackgroundResourcePath = "PantallaCarga";
@@ -36,6 +89,9 @@ public class DoorButtonInteraction : MonoBehaviour
     public GameObject fadePanel;
     public TextMeshProUGUI dayText;
 
+    /*
+    * Metodo que se llama al iniciar el script.
+    */
     void Awake()
     {
         if (audioSource == null)
@@ -56,6 +112,9 @@ public class DoorButtonInteraction : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que se llama en cada frame.
+    */
     void Update()
     {
         if (Time.timeScale == 0f)
@@ -82,6 +141,9 @@ public class DoorButtonInteraction : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que se llama al interactuar con la puerta.
+    */
     public void Interact()
     {
         if (Time.timeScale == 0f)
@@ -95,7 +157,10 @@ public class DoorButtonInteraction : MonoBehaviour
         }
 
         PlayDoorSound();
-
+        /*
+        * Si la puerta es una puerta de salida, se llama al metodo TransitionToNextDay().
+        * Si la puerta es una puerta de entrada, se llama al metodo CloseCutscene().
+        */
         if (isExitDoor)
         {
             if (isPrologueExitDoor)
@@ -124,15 +189,22 @@ public class DoorButtonInteraction : MonoBehaviour
             }
             return;
         }
-
+        /*
+        * Si la puerta marca la carta del prologo como leida, se llama al metodo MarkPrologueLetterAsRead().
+        */
         if (marksPrologueLetterAsRead && GameManager.Instance != null)
         {
             GameManager.Instance.hasReadPrologueLetter = true;
         }
-
+        /*
+        * Abre la cutscene.
+        */
         OpenCutscene();
     }
 
+    /*
+    * Metodo que se llama para transicionar al siguiente dia.
+    */
     IEnumerator TransitionToNextDay()
     {
         ApplyLoadingBackgroundToFadePanel();
@@ -157,7 +229,9 @@ public class DoorButtonInteraction : MonoBehaviour
             }
             dayText.gameObject.SetActive(true);
         }
-
+        /*
+        * Espera 5 segundos.
+        */
         yield return new WaitForSeconds(5f);
 
         GameManager.Instance.NextDay();
@@ -175,6 +249,9 @@ public class DoorButtonInteraction : MonoBehaviour
         isDayTransitionInProgress = false;
     }
 
+    /*
+    * Metodo que se llama para transicionar del prologo al dia 1.
+    */
     IEnumerator TransitionFromPrologueToDayOne()
     {
         GameObject runtimeOverlay = null;
@@ -205,6 +282,9 @@ public class DoorButtonInteraction : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que se llama para crear un overlay de transicion en tiempo de ejecucion.
+    */
     private GameObject CreateRuntimeTransitionOverlay()
     {
         GameObject canvasGO = new GameObject("PrologueTransitionCanvas");
@@ -261,6 +341,9 @@ public class DoorButtonInteraction : MonoBehaviour
         return canvasGO;
     }
 
+    /*
+    * Metodo que se llama para aplicar el fondo de carga al panel de transicion.
+    */
     private void ApplyLoadingBackgroundToFadePanel()
     {
         if (fadePanel == null)
@@ -285,6 +368,9 @@ public class DoorButtonInteraction : MonoBehaviour
         panelImage.preserveAspect = false;
     }
 
+    /*
+    * Metodo que se llama para obtener el sprite de fondo de carga.
+    */
     private Sprite GetLoadingBackgroundSprite()
     {
         if (cachedLoadingBackgroundSprite != null)
@@ -296,8 +382,14 @@ public class DoorButtonInteraction : MonoBehaviour
         return cachedLoadingBackgroundSprite;
     }
 
+    /*
+    * Metodo que se llama para abrir la cutscene.
+    */
     void OpenCutscene()
-    {
+    {   
+        /*
+        * Hace visible el cursor y desbloquea el cursor.
+        */
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         cutsceneImage.SetActive(true);
@@ -310,7 +402,9 @@ public class DoorButtonInteraction : MonoBehaviour
             movementScript.enabled = false;
             movementScript.canLook = false;
         }
-
+        /*
+        * Obtiene el RoomManager del objeto cutsceneImage.
+        */
         RoomManager roomManager = cutsceneImage.GetComponent<RoomManager>();
 
         if (roomManager != null)
@@ -323,6 +417,9 @@ public class DoorButtonInteraction : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que se llama para cerrar la cutscene.
+    */
     void CloseCutscene()
     {
         PlayDoorCloseSound();
@@ -340,6 +437,9 @@ public class DoorButtonInteraction : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que se llama para reproducir el sonido de la puerta.
+    */
     void PlayDoorSound()
     {
         if (audioSource != null && DoorOpenAudio != null)
@@ -352,6 +452,9 @@ public class DoorButtonInteraction : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que se llama para reproducir el sonido de la puerta.
+    */
     void PlayDoorCloseSound()
     {
         if (audioSource != null && DoorCloseAudio != null)
@@ -364,6 +467,9 @@ public class DoorButtonInteraction : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que se llama para ocultar la UI de interaccion.
+    */
     void HideInteractionUI()
     {
         if (crosshair != null) crosshair.SetActive(false);

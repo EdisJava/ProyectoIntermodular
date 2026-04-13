@@ -7,6 +7,71 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
+/*
+* Script para manejar el menu principal.
+* 
+* Metodos:
+*   - OpenMainMenuPanel(): Metodo que abre el menu principal.
+*   - OpenSettingsMenu(): Metodo que abre el menu de configuraciones.
+*   - BackFromSettings(): Metodo que cierra el menu de configuraciones.
+*   - QuitGame(): Metodo que cierra el juego.
+*   - PlayGame(): Metodo que inicia el juego.
+*   - NewGame(): Metodo que inicia una nueva partida.
+*   - ConfirmNewGame(): Metodo que confirma la nueva partida.
+*   - CancelNewGame(): Metodo que cancela la nueva partida.
+*   - LoadAndApplyPlayerSettings(): Metodo que carga la configuracion del jugador.
+*   - ConfigureResolutionDropdown(): Metodo que configura el dropdown de resolucion.
+*   - ConfigureResolutionDropdownScroll(): Metodo que configura el scroll del dropdown de resolucion.
+*   - ApplySettings(): Metodo que aplica la configuracion del jugador.
+*   - SetActiveIfAssigned(): Metodo que activa un objeto si esta asignado.
+*   - ShowMainOptions(): Metodo que muestra las opciones principales.
+*   - ShowNewGameConfirmation(): Metodo que muestra la confirmacion de nueva partida.
+*   - RefreshButtons(): Metodo que refresca los botones.
+*   - ResolveSceneForSavedGame(): Metodo que resuelve la escena para la partida guardada.
+*   - GetSceneNameForDay(): Metodo que obtiene el nombre de la escena para el dia.
+*   - GetSceneNameForDay(): Metodo que obtiene el nombre de la escena para el dia.
+*
+*   Variables:
+*   - mainMenu: Panel que muestra el menu principal.
+*   - playButton: Boton de jugar.
+*   - newGameButton: Boton de nueva partida.
+*   - settingsButton: Boton de configuraciones.
+*   - exitButton: Boton de salir.
+*   - newGameConfirmationText: Texto de confirmacion de nueva partida.
+*   - confirmYesButton: Boton de confirmacion de nueva partida.
+*   - confirmNoButton: Boton de cancelacion de nueva partida.
+*   - settingsMenuUI: Panel que muestra el menu de configuraciones.
+*   - settingsBackButton: Boton de regreso del menu de configuraciones.
+*   - volumeSlider: Slider de volumen.
+*   - brightnessSlider: Slider de brillo.
+*   - fullscreenToggle: Toggle de pantalla completa.
+*   - resolutionDropdown: Dropdown de resolucion.
+*   - brightnessOverlay: Overlay de brillo.
+*   - playerSettings: Datos de configuracion del jugador.
+*   - isApplyingUIState: Si se esta aplicando la configuracion del jugador.
+*   - colorAdjustments: Ajustes de color.
+*   - settingsMenuBackgroundImage: Imagen de fondo del menu de configuraciones.
+*   - settingsMenuBackgroundBaseColor: Color base de la imagen de fondo del menu de configuraciones.
+*   - commonResolutions: Resoluciones comunes.
+*
+*   Funcionamiento:
+*   - Al iniciar el juego, se muestra el menu principal.
+*   - El jugador puede iniciar una nueva partida, continuar la partida guardada, abrir el menu de configuraciones o salir del juego.
+*   - El menu de configuraciones permite ajustar el volumen, brillo, pantalla completa y resolucion.
+*   - El jugador puede guardar la partida en cualquier momento.
+*
+*   Flujo:
+*   1. El jugador inicia el juego.
+*   2. Se muestra el menu principal.
+*   3. El jugador puede iniciar una nueva partida, continuar la partida guardada, abrir el menu de configuraciones o salir del juego.
+*   4. El jugador puede guardar la partida en cualquier momento.
+*
+*   Hay mucho codigo quer se repite, solo estan comentados algunos metodos.
+*
+*/
+
+
 public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
@@ -32,6 +97,7 @@ public class MainMenu : MonoBehaviour
     private Image settingsMenuBackgroundImage;
     private Color settingsMenuBackgroundBaseColor = Color.white;
 
+    //Esto hace que el juego se vea bien en diferentes resoluciones.
     private readonly Vector2Int[] commonResolutions =
     {
         new Vector2Int(1920, 1080),
@@ -39,6 +105,10 @@ public class MainMenu : MonoBehaviour
         new Vector2Int(1366, 768),
         new Vector2Int(1280, 720)
     };
+
+    /*
+    * Metodo que se ejecuta al iniciar el juego.
+    */
 
     void Awake()
     {
@@ -51,11 +121,17 @@ public class MainMenu : MonoBehaviour
         LoadAndApplyPlayerSettings();
     }
 
+    /*
+    * Metodo que se ejecuta al iniciar el juego.
+    */
     void Start()
     {
         ShowMainOptions();
     }
 
+    /*
+    * Metodo que abre el menu principal.
+    */
     public void OpenMainMenuPanel()
     {
         if (mainMenu != null)
@@ -65,6 +141,9 @@ public class MainMenu : MonoBehaviour
         ShowMainOptions();
     }
 
+    /*
+    * Metodo que abre el menu de configuraciones.
+    */
     public void OpenSettingsMenu()
     {
         SetActiveIfAssigned(playButton, false);
@@ -78,24 +157,36 @@ public class MainMenu : MonoBehaviour
         SetActiveIfAssigned(settingsBackButton, true);
     }
 
+    /*
+    * Metodo que regresa al menu principal.
+    */
     public void BackFromSettings()
     {
         ShowMainOptions();
     }
 
+    /*
+    * Metodo que cierra el juego.
+    */
     public void QuitGame()
     {
         Application.Quit();
     }
 
+    /*
+    * Metodo que inicia el juego.
+    */
     public void PlayGame()
     {
+        //Obtiene el objeto seleccionado.
         GameObject selected = EventSystem.current != null ? EventSystem.current.currentSelectedGameObject : null;
+        //Si el boton de jugar no esta seleccionado, no se puede iniciar el juego.
         if (playButton != null && selected != null && selected != playButton.gameObject)
         {
             return;
         }
 
+        //Si no hay partida guardada, no se puede iniciar el juego.
         if (!SaveSystem.HasSave())
         {
             Debug.Log("No hay partida guardada para continuar.");
@@ -103,7 +194,9 @@ public class MainMenu : MonoBehaviour
             return;
         }
 
+        //Carga la partida guardada.
         SaveData saveData = SaveSystem.LoadGame();
+        //Si no se pudo cargar la partida guardada, se carga la escena por defecto.
         if (saveData == null)
         {
             Debug.LogWarning("No se pudo leer la partida guardada. Cargando SampleScene por defecto.");
@@ -111,15 +204,23 @@ public class MainMenu : MonoBehaviour
             return;
         }
 
+        //Resuelve la escena para la partida guardada.
         string targetScene = ResolveSceneForSavedGame(saveData);
+        //Carga la escena para la partida guardada.
         SceneManager.LoadScene(targetScene);
     }
 
+    /*
+    * Metodo que inicia una nueva partida.
+    */
     public void NewGame()
     {
         ShowNewGameConfirmation();
     }
 
+    /*
+    * Metodo que confirma la nueva partida.
+    */
     public void ConfirmNewGame()
     {
         SaveSystem.DeleteSave();
@@ -127,41 +228,56 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("HouseScenePrologue");
     }
 
+    /*
+    * Metodo que cancela la nueva partida.
+    */
     public void CancelNewGame()
     {
         ShowMainOptions();
     }
 
+    /*
+    * Metodo que carga y aplica la configuracion del jugador.
+    */
     void LoadAndApplyPlayerSettings()
     {
         playerSettings = PlayerSettingsSystem.Load();
+        //Si no hay configuracion del jugador, se crea una nueva.
         if (playerSettings == null)
         {
             playerSettings = new PlayerSettingsData();
         }
 
+        //Clampa el volumen y el brillo.
+        //clampar es para que el valor no se salga de un rango.
         playerSettings.masterVolume = Mathf.Clamp01(playerSettings.masterVolume);
         playerSettings.brightness = Mathf.Clamp01(playerSettings.brightness);
         playerSettings.resolutionIndex = Mathf.Clamp(playerSettings.resolutionIndex, 0, commonResolutions.Length - 1);
 
+        //Configura el dropdown de resolucion.
+        // El dropdown es una lista desplegable.
         ConfigureResolutionDropdown();
 
         isApplyingUIState = true;
+        //Si el slider de volumen no es nulo, se establece el valor del slider.
         if (volumeSlider != null)
         {
             volumeSlider.value = playerSettings.masterVolume;
         }
 
+        //Si el slider de brillo no es nulo, se establece el valor del slider.
         if (brightnessSlider != null)
         {
             brightnessSlider.value = playerSettings.brightness;
         }
 
+        //Si el toggle de pantalla completa no es nulo, se establece el valor del toggle.
         if (fullscreenToggle != null)
         {
             fullscreenToggle.isOn = playerSettings.fullscreen;
         }
 
+        //Si el dropdown de resolucion no es nulo, se establece el valor del dropdown.
         if (resolutionDropdown != null)
         {
             resolutionDropdown.value = playerSettings.resolutionIndex;
@@ -172,14 +288,19 @@ public class MainMenu : MonoBehaviour
         ApplySettings(false);
     }
 
+    /*
+    * Metodo que configura el dropdown de resolucion.
+    */
     void ConfigureResolutionDropdown()
     {
+        //Si el dropdown de resolucion no es nulo, se configura.
         if (resolutionDropdown == null)
         {
             return;
         }
 
         List<string> options = new List<string>();
+        //Recorre las resoluciones comunes.
         for (int i = 0; i < commonResolutions.Length; i++)
         {
             Vector2Int res = commonResolutions[i];
@@ -191,8 +312,12 @@ public class MainMenu : MonoBehaviour
         ConfigureResolutionDropdownScroll();
     }
 
+    /*
+    * Metodo que configura el scroll del dropdown de resolucion.
+    */
     void ConfigureResolutionDropdownScroll()
     {
+        //Si el dropdown de resolucion o su plantilla no es nulo, se configura.
         if (resolutionDropdown == null || resolutionDropdown.template == null)
         {
             return;
@@ -200,16 +325,19 @@ public class MainMenu : MonoBehaviour
 
         RectTransform template = resolutionDropdown.template;
         ScrollRect scrollRect = template.GetComponentInChildren<ScrollRect>(true);
+        //Si el scrollRect o su contenido o su viewport no es nulo, se configura.
         if (scrollRect == null || scrollRect.content == null || scrollRect.viewport == null)
         {
             return;
         }
 
+        //Si el scrollRect.verticalScrollbar no es nulo, se configura.
         if (scrollRect.verticalScrollbar == null)
         {
             scrollRect.verticalScrollbar = template.GetComponentInChildren<Scrollbar>(true);
         }
 
+        //Si el scrollRect.verticalScrollbar no es nulo, se configura.
         if (scrollRect.verticalScrollbar != null)
         {
             Scrollbar scrollbar = scrollRect.verticalScrollbar;
@@ -218,6 +346,7 @@ public class MainMenu : MonoBehaviour
             scrollbar.direction = Scrollbar.Direction.BottomToTop;
 
             RectTransform scrollbarRect = scrollbar.transform as RectTransform;
+            //Si el scrollbarRect no es nulo, se configura.
             if (scrollbarRect != null)
             {
                 scrollbarRect.anchorMin = new Vector2(1f, 0f);
@@ -228,11 +357,13 @@ public class MainMenu : MonoBehaviour
             }
 
             Image scrollbarBackground = scrollbar.GetComponent<Image>();
+            //Si el scrollbarBackground no es nulo, se configura.
             if (scrollbarBackground != null)
             {
                 scrollbarBackground.color = new Color(0.05f, 0.07f, 0.22f, 0.75f);
             }
 
+            //Si el scrollbar.targetGraphic no es nulo, se configura.
             if (scrollbar.targetGraphic != null)
             {
                 scrollbar.targetGraphic.color = new Color(0.82f, 0.88f, 1f, 0.96f);
@@ -243,24 +374,30 @@ public class MainMenu : MonoBehaviour
 
         Toggle itemToggle = scrollRect.content.GetComponentInChildren<Toggle>(true);
         float itemHeight = 28f;
+        //Si el itemToggle no es nulo, se configura.
         if (itemToggle != null)
         {
             RectTransform itemRect = itemToggle.transform as RectTransform;
+            //Si el itemRect no es nulo y su altura es mayor a 1, se establece la altura del item.
             if (itemRect != null && itemRect.rect.height > 1f)
             {
                 itemHeight = itemRect.rect.height;
             }
         }
 
+        //Configura el viewport.
         float visibleItems = 2f;
         float viewportHeight = itemHeight * visibleItems;
         Vector2 viewportSize = scrollRect.viewport.sizeDelta;
         scrollRect.viewport.sizeDelta = new Vector2(viewportSize.x, viewportHeight);
-
+        //Configura el template.
         Vector2 templateSize = template.sizeDelta;
         template.sizeDelta = new Vector2(templateSize.x, viewportHeight + itemHeight);
     }
 
+    /*
+    * Metodo que aplica la configuracion.
+    */
     void ApplySettings(bool save)
     {
         AudioListener.volume = playerSettings.masterVolume;
@@ -271,14 +408,19 @@ public class MainMenu : MonoBehaviour
         Screen.SetResolution(targetRes.x, targetRes.y, screenMode);
         Screen.fullScreen = playerSettings.fullscreen;
 
+        //Si se debe guardar, se guarda.
         if (save)
         {
             PlayerSettingsSystem.Save(playerSettings);
         }
     }
 
+    /*
+    * Metodo que aplica el brillo.
+    */
     void ApplyBrightness(float brightnessT)
     {
+        //Si el brilloOverlay no es nulo, se asegura de que exista.
         if (brightnessOverlay == null)
         {
             EnsureBrightnessOverlay();
@@ -288,13 +430,16 @@ public class MainMenu : MonoBehaviour
         float effectiveT = previewT * 0.75f;
 
         float postExposure = 0f;
+        //Si el brilloOverlay no es nulo, se aplica el brillo.
         if (brightnessOverlay != null)
         {
+            //Si el brillo es menor a 0.5, se aplica un brillo oscuro.
             if (effectiveT < 0.5f)
             {
                 float darkAlpha = Mathf.Lerp(0.85f, 0f, effectiveT * 2f);
                 brightnessOverlay.color = new Color(0f, 0f, 0f, darkAlpha);
             }
+            //Si el brillo es mayor a 0.5, se aplica un brillo brillante.
             else
             {
                 brightnessOverlay.color = new Color(0f, 0f, 0f, 0f);
@@ -304,6 +449,7 @@ public class MainMenu : MonoBehaviour
             }
         }
 
+        //Si el colorAdjustments no es nulo, se aplica el brillo.
         if (colorAdjustments != null)
         {
             colorAdjustments.postExposure.Override(postExposure);
@@ -312,28 +458,36 @@ public class MainMenu : MonoBehaviour
         ApplySettingsMenuBackgroundBrightness(previewT);
     }
 
+    /*
+    * Metodo que asegura que el brilloOverlay exista.
+    */
     void EnsureBrightnessOverlay()
     {
         Canvas rootCanvas = null;
+        //Si el mainMenu no es nulo, se busca el canvas padre.
         if (mainMenu != null)
         {
             rootCanvas = mainMenu.GetComponentInParent<Canvas>();
         }
 
+        //Si el rootCanvas no es nulo, se busca el canvas padre.
         if (rootCanvas == null)
         {
             rootCanvas = FindFirstObjectByType<Canvas>();
         }
 
+        //Lo mismo que el de arriba.
         if (rootCanvas == null)
         {
             return;
         }
 
         Transform existing = rootCanvas.transform.Find("BrightnessOverlay");
+        //Si el existing no es nulo, se configura.
         if (existing != null)
         {
             brightnessOverlay = existing.GetComponent<Image>();
+            //Si el brilloOverlay no es nulo, se configura.
             if (brightnessOverlay != null)
             {
                 brightnessOverlay.raycastTarget = false;
@@ -341,6 +495,7 @@ public class MainMenu : MonoBehaviour
             return;
         }
 
+        //Crea el brilloOverlay.
         GameObject overlayGO = new GameObject("BrightnessOverlay");
         overlayGO.transform.SetParent(rootCanvas.transform, false);
         RectTransform rt = overlayGO.AddComponent<RectTransform>();
@@ -350,36 +505,47 @@ public class MainMenu : MonoBehaviour
         rt.offsetMax = Vector2.zero;
 
         brightnessOverlay = overlayGO.AddComponent<Image>();
+        // Cuatro colores: negro, blanco, rojo y azul. (No se usan)
+        // Se usan para debug.
         brightnessOverlay.color = new Color(0f, 0f, 0f, 0f);
         brightnessOverlay.raycastTarget = false;
         overlayGO.transform.SetAsFirstSibling();
     }
 
+    /*
+    * Metodo que cachea el colorAdjustments.
+    */
     void CacheColorAdjustments()
     {
         colorAdjustments = null;
         Volume[] volumes = FindObjectsByType<Volume>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        //Recorre todos los volúmenes.
         foreach (Volume v in volumes)
         {
+            //Si el volumen es nulo o no es global, se salta.
             if (v == null || !v.isGlobal)
             {
                 continue;
             }
 
+            //Si el perfil es nulo, se crea uno nuevo.
             if (v.profile == null)
             {
                 v.profile = ScriptableObject.CreateInstance<VolumeProfile>();
             }
+            //Si el perfil no es nulo, se instancia.
             else
             {
                 v.profile = Instantiate(v.profile);
             }
 
+            //Si el colorAdjustments no es nulo, se configura.
             if (!v.profile.TryGet(out ColorAdjustments found))
             {
                 found = v.profile.Add<ColorAdjustments>(true);
             }
 
+            //Si el colorAdjustments no es nulo, se configura.
             if (found != null)
             {
                 colorAdjustments = found;
@@ -390,23 +556,32 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que cachea el settingsMenuBackgroundImage.
+    */
     void CacheSettingsMenuBackground()
     {
         settingsMenuBackgroundImage = null;
+        //Si el settingsMenuUI no es nulo, se busca el background.
         if (settingsMenuUI == null)
         {
             return;
         }
 
         settingsMenuBackgroundImage = settingsMenuUI.GetComponent<Image>();
+        //Si el settingsMenuBackgroundImage no es nulo, se configura.
         if (settingsMenuBackgroundImage != null)
         {
             settingsMenuBackgroundBaseColor = settingsMenuBackgroundImage.color;
         }
     }
 
+    /*
+    * Metodo que aplica el brillo al background del menu de configuracion.
+    */
     void ApplySettingsMenuBackgroundBrightness(float brightnessT)
     {
+        //Si el settingsMenuBackgroundImage no es nulo, se aplica el brillo.
         if (settingsMenuBackgroundImage == null)
         {
             return;
@@ -414,11 +589,13 @@ public class MainMenu : MonoBehaviour
 
         Color baseColor = settingsMenuBackgroundBaseColor;
         Color result;
+        //Si el brillo es menor a 0.5, se aplica un brillo oscuro.
         if (brightnessT < 0.5f)
         {
             float darkFactor = Mathf.Lerp(0.2f, 1f, brightnessT * 2f);
             result = new Color(baseColor.r * darkFactor, baseColor.g * darkFactor, baseColor.b * darkFactor, baseColor.a);
         }
+        //Si el brillo es mayor a 0.5, se aplica un brillo brillante.
         else
         {
             float lightT = (brightnessT - 0.5f) * 2f;
@@ -431,8 +608,12 @@ public class MainMenu : MonoBehaviour
         settingsMenuBackgroundImage.color = result;
     }
 
+    /*
+    * Metodo que se llama cuando cambia el volumen.
+    */
     void OnVolumeChanged(float value)
     {
+        //Si se esta aplicando el estado de la UI, no se hace nada.
         if (isApplyingUIState)
         {
             return;
@@ -442,8 +623,12 @@ public class MainMenu : MonoBehaviour
         ApplySettings(true);
     }
 
+    /*
+    * Metodo que se llama cuando cambia el brillo.
+    */
     void OnBrightnessChanged(float value)
     {
+        //Si se esta aplicando el estado de la UI, no se hace nada.
         if (isApplyingUIState)
         {
             return;
@@ -453,8 +638,12 @@ public class MainMenu : MonoBehaviour
         ApplySettings(true);
     }
 
+    /*
+    * Metodo que se llama cuando cambia el modo de pantalla completa.
+    */
     void OnFullscreenChanged(bool value)
     {
+        //Si se esta aplicando el estado de la UI, no se hace nada.
         if (isApplyingUIState)
         {
             return;
@@ -464,8 +653,12 @@ public class MainMenu : MonoBehaviour
         ApplySettings(true);
     }
 
+    /*
+    * Metodo que se llama cuando cambia la resolucion.
+    */
     void OnResolutionChanged(int value)
     {
+        //Si se esta aplicando el estado de la UI, no se hace nada.
         if (isApplyingUIState)
         {
             return;
@@ -475,16 +668,24 @@ public class MainMenu : MonoBehaviour
         ApplySettings(true);
     }
 
+    /*
+    * Metodo que refresca los botones.
+    */
     void RefreshButtons()
     {
+        //Si el playButton no es nulo, se actualiza su interactividad.
         if (playButton != null)
         {
             playButton.interactable = SaveSystem.HasSave();
         }
     }
 
+    /*
+    * Metodo que muestra la confirmacion de nuevo juego.
+    */
     void ShowNewGameConfirmation()
     {
+        //Desactiva los botones principales.
         SetActiveIfAssigned(playButton, false);
         SetActiveIfAssigned(newGameButton, false);
         SetActiveIfAssigned(settingsButton, false);
@@ -497,6 +698,9 @@ public class MainMenu : MonoBehaviour
         RefreshButtons();
     }
 
+    /*
+    * Metodo que muestra las opciones principales.
+    */
     void ShowMainOptions()
     {
         SetActiveIfAssigned(playButton, true);
@@ -511,6 +715,9 @@ public class MainMenu : MonoBehaviour
         RefreshButtons();
     }
 
+    /*
+    * Metodo que conecta los botones del menu.
+    */
     void WireMenuButtons()
     {
         if (settingsButton != null)
@@ -550,6 +757,9 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que busca las referencias del menu.
+    */
     void FindMenuReferences()
     {
         if (playButton == null)
@@ -585,12 +795,13 @@ public class MainMenu : MonoBehaviour
         {
             settingsBackButton = FindButtonByName("AtrasButton");
         }
-
+        //Busca el texto de confirmacion de nuevo juego.
         if (newGameConfirmationText == null)
         {
             TextMeshProUGUI[] texts = FindObjectsByType<TextMeshProUGUI>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             foreach (TextMeshProUGUI text in texts)
             {
+                //Si el texto contiene "SEGURO", se asigna a newGameConfirmationText.
                 if (text.text.Contains("SEGURO"))
                 {
                     newGameConfirmationText = text.gameObject;
@@ -777,7 +988,6 @@ public class MainMenu : MonoBehaviour
             return saveData.sceneName;
         }
 
-        // Compatibilidad con partidas antiguas que no guardaban escena.
         if (!saveData.hasReadPrologueLetter && Application.CanStreamedLevelBeLoaded("HouseScenePrologue"))
         {
             return "HouseScenePrologue";
