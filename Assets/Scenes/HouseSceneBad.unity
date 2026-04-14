@@ -25680,7 +25680,7 @@ MonoBehaviour:
   studentName: final
   casualDialogue: {fileID: 11400000, guid: 846b842a1c73a73459fd28db8a8b2c60, type: 2}
   investigationDialogue: {fileID: 11400000, guid: 846b842a1c73a73459fd28db8a8b2c60, type: 2}
-  idleSprite: {fileID: 21300000, guid: c9c786b38a691f44b8ad4b83c54f871b, type: 3}
+  idleSprite: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
   centerPoint: {fileID: 1177654387}
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 846b842a1c73a73459fd28db8a8b2c60, type: 2}
   victimStateDialogue: {fileID: 0}
@@ -29759,9 +29759,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 401aafd8a1d1cf44dae872e2367e8cba, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -29786,8 +29786,8 @@ RectTransform:
   m_GameObject: {fileID: 1914401515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.19, y: 1.19, z: 1.19}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1748145764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

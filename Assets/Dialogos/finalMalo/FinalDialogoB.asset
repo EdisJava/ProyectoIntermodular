@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: FinalDialogoB
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: "(t\xFA)"
+    text: . . .
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 8300000, guid: d185550ffb33de44d920a24515abe62c, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: Un momento... No recuerdo haber dejado las ventanas abiertas...
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: . . .
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: "Bueno, se me habr\xE1 pasado."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: '. . . '
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 8300000, guid: 5db013c1044bd404a8cda555a9d29755, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: ?!?!?!?
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 401aafd8a1d1cf44dae872e2367e8cba, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: "\xA1\xBFQu\xE9 haces en mi casa?!"
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 401aafd8a1d1cf44dae872e2367e8cba, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: . . .
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: Tenemos que hablar.
+    expression: {fileID: 21300000, guid: 2abdd9bc3f3e4434d9789b2a6f2ef19c, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "\xBFTe acuerdas de m\xED?"
+    expression: {fileID: 21300000, guid: 2abdd9bc3f3e4434d9789b2a6f2ef19c, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: "Te conoc\xED el jueves, \xBFverdad?"
+      nextDialogue: {fileID: 11400000, guid: d686cbc5cfb5dce43a38092a71e968b0, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

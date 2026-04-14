@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: FinalDialogoA
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: "(t\xFA)"
+    text: . . .
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 18e18d91a5dfdf744b607303017fc17e, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: "No me extra\xF1a que me dijesen que ten\xEDa mala cara en clase..."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 18e18d91a5dfdf744b607303017fc17e, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: (parar de mirar)
+      nextDialogue: {fileID: 11400000, guid: 7c8dcb632dc3a3c49b86f9728577c4d9, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

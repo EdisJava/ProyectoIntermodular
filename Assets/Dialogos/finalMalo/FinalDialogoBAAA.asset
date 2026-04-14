@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: FinalDialogoBAAA
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Jesus
+    text: "\xBFNo me crees?"
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: 'Mira esta foto... '
+    expression: {fileID: 21300000, guid: f116a2a3f423e6d43b11ff1a6068d795, type: 3}
+    lineSound: {fileID: 8300000, guid: 30d8ae907c019224eb219368031a39b6, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "Somos nosotros de peque\xF1os, antes de entrar al instituto."
+    expression: {fileID: 21300000, guid: f116a2a3f423e6d43b11ff1a6068d795, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "\xBFYa has sido capaz de recordar algo?"
+    expression: {fileID: 21300000, guid: f116a2a3f423e6d43b11ff1a6068d795, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: (Tengo los recuerdos muy borrosos. Pero...)
+    expression: {fileID: 21300000, guid: f116a2a3f423e6d43b11ff1a6068d795, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: "(Los ni\xF1os de la foto... S\xE9 que somos nosotros)"
+    expression: {fileID: 21300000, guid: f116a2a3f423e6d43b11ff1a6068d795, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: . . .
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "\xBFC\xF3mo es que no te acuerdas de nada?"
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "\xBFTienes amnesia?"
+    expression: {fileID: 21300000, guid: 2abdd9bc3f3e4434d9789b2a6f2ef19c, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: "No s\xE9... Simplemente no recuerdo nada."
+      nextDialogue: {fileID: 11400000, guid: 4507cc0534e6bd7459a0315dbd0ac4c0, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
