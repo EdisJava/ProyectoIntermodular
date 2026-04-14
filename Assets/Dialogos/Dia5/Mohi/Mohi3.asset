@@ -10,23 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: Mohi
+  m_Name: Mohi3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Mohi
-    text: (Mohi te mira fijamente)
+    text: Te mira fijamente tambien
     expression: {fileID: 21300000, guid: 5c4fae2e1d1a97e42b7760c627123627, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
-    hasOptions: 1
-    options:
-    - optionText: 'Darle el caramelo de Adriel '
-      nextDialogue: {fileID: 11400000, guid: 4dae55fe3d2bee641b6738c5527f29fa, type: 2}
-      isInterrogation: 0
-      isFinalDecision: 0
-      isCorrectAccusation: 0
-    - optionText: Mirar a Mohi
-      nextDialogue: {fileID: 11400000, guid: 89aff226af1e8c648ba92065f8415f5b, type: 2}
-      isInterrogation: 0
-      isFinalDecision: 0
-      isCorrectAccusation: 0
+    hasOptions: 0
+    options: []

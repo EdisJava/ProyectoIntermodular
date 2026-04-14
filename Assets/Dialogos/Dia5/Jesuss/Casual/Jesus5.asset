@@ -10,21 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: JesusInvestigacion1
+  m_Name: Jesus5
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Jesus
-    text: "\xBFQue quieres?"
-    expression: {fileID: 21300000, guid: ffdd1d146e4b34e42a62ab994b7748bd, type: 3}
-    hasOptions: 1
+    text: Hola amigo que tal estas, como te encuentras.
+    expression: {fileID: 21300000, guid: 497362aed8e849a42a7d2fc5a8fd6f03, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
     options:
-    - optionText: Sabes que ocurre con ???? (-1 pregunta)
-      nextDialogue: {fileID: 11400000, guid: ff4d3a4852433ba499d38959a558c1d9, type: 2}
-      isInterrogation: 1
+    - optionText: Hola Jesus, como estas hoy.
+      nextDialogue: {fileID: 11400000, guid: 97e2d90407dd3904f9a65ce665534c38, type: 2}
+      isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: Nada
-      nextDialogue: {fileID: 0}
+    - optionText: "Oye, \xBFCuando llegaste a este instituto?"
+      nextDialogue: {fileID: 11400000, guid: 665f8599ce14f864ea482f39f95b1f26, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0

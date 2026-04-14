@@ -15,7 +15,47 @@ MonoBehaviour:
   victimName: 
   teacherName: 
   characterConfigs:
-  - characterName: Mohi
+  - characterName: Mohi5
+    casualDialogue: {fileID: 11400000, guid: 69387d74df769cc4887099079ab525aa, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 69387d74df769cc4887099079ab525aa, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 69387d74df769cc4887099079ab525aa, type: 2}
+    isLiarToday: 0
+  - characterName: Fernando5
+    casualDialogue: {fileID: 11400000, guid: 591379b49bb49ce45812279f7c6d3143, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 591379b49bb49ce45812279f7c6d3143, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 591379b49bb49ce45812279f7c6d3143, type: 2}
+    isLiarToday: 0
+  - characterName: Goran5
+    casualDialogue: {fileID: 11400000, guid: 0db1532f632b9944d8f73183b3e33d4a, type: 2}
+    truthDialogue: {fileID: 11400000, guid: c8e59ec2822a04046a1027cc0b345ad6, type: 2}
+    lieDialogue: {fileID: 11400000, guid: c8e59ec2822a04046a1027cc0b345ad6, type: 2}
+    isLiarToday: 0
+  - characterName: Jesus5
+    casualDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
+    isLiarToday: 0
+  - characterName: Alberto5
+    casualDialogue: {fileID: 11400000, guid: f539b43192102624586d674564988356, type: 2}
+    truthDialogue: {fileID: 11400000, guid: f539b43192102624586d674564988356, type: 2}
+    lieDialogue: {fileID: 11400000, guid: f539b43192102624586d674564988356, type: 2}
+    isLiarToday: 0
+  - characterName: Miki
+    casualDialogue: {fileID: 11400000, guid: 311765fff61bbcb45927d1bb53d552ba, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 311765fff61bbcb45927d1bb53d552ba, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 311765fff61bbcb45927d1bb53d552ba, type: 2}
+    isLiarToday: 0
+  - characterName: Zia
+    casualDialogue: {fileID: 11400000, guid: cd93cbc1f6ab24d498fd0be8e00621b5, type: 2}
+    truthDialogue: {fileID: 11400000, guid: cd93cbc1f6ab24d498fd0be8e00621b5, type: 2}
+    lieDialogue: {fileID: 11400000, guid: cd93cbc1f6ab24d498fd0be8e00621b5, type: 2}
+    isLiarToday: 0
+  - characterName: Guayre
+    casualDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
+    truthDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
+    lieDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
+    isLiarToday: 0
+  - characterName: walter-5
     casualDialogue: {fileID: 0}
     truthDialogue: {fileID: 0}
     lieDialogue: {fileID: 0}
