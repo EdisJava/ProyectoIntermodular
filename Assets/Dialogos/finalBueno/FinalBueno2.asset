@@ -10,13 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: DialogoWelcome
+  m_Name: FinalBueno2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  lines:
-  - characterName: Todos
-    text: "\xA1Sorpresa bienvenido!"
-    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 0}
-    hasOptions: 0
-    options: []
+  lines: []

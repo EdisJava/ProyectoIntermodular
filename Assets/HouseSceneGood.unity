@@ -25591,7 +25591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c9c786b38a691f44b8ad4b83c54f871b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4820d3027dccc041be443697d19be92, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -25680,7 +25680,7 @@ MonoBehaviour:
   studentName: final
   casualDialogue: {fileID: 11400000, guid: 846b842a1c73a73459fd28db8a8b2c60, type: 2}
   investigationDialogue: {fileID: 11400000, guid: 846b842a1c73a73459fd28db8a8b2c60, type: 2}
-  idleSprite: {fileID: 21300000, guid: c9c786b38a691f44b8ad4b83c54f871b, type: 3}
+  idleSprite: {fileID: 21300000, guid: b4820d3027dccc041be443697d19be92, type: 3}
   centerPoint: {fileID: 1177654387}
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 846b842a1c73a73459fd28db8a8b2c60, type: 2}
   victimStateDialogue: {fileID: 0}
