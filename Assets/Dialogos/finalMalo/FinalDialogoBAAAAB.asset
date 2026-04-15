@@ -42,7 +42,7 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Jesus
-    text: "Vaya puta decepci\xF3n..."
+    text: "Vaya  decepci\xF3n..."
     expression: {fileID: 21300000, guid: 7a1f1148a45af9940bbc1a3a3f97a452, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
@@ -50,7 +50,7 @@ MonoBehaviour:
     options: []
   - characterName: Jesus
     text: "Cuando por fin me reencuentro con mi mejor amigo... Descubro que est\xE1
-      tomando pastillass para olvidar su pasado..."
+      tomando pastillas para olvidar su pasado..."
     expression: {fileID: 21300000, guid: 7a1f1148a45af9940bbc1a3a3f97a452, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
