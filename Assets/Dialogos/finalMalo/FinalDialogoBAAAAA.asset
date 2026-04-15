@@ -10,39 +10,118 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: FinalDialogoBAA
+  m_Name: FinalDialogoBAAAAA
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
+  - characterName: "(t\xFA)"
+    text: "C\xC1LLATE. No sabes nada... No entiendes por lo que estoy pasando..."
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
   - characterName: Jesus
-    text: "T\xFA y yo nos conocemos de hace tiempo..."
+    text: Pffffffttt...
+    expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "\xBFCrees que puedes escapar de tu pasado?"
+    expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "\xBFTomando pastillas para olvidarte de todo lo que hiciste?"
+    expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: . . .
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: Me arrepiento de todo lo que he hecho.
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: 'Cada vez que lo recuerdo quiero volver a olvidarlo. '
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: No quiero vivir con este sentimiento de culpa y este arrepentimiento. Quiero
+      olvidarme de todo.
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: . . .
+    expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "\xBFEs una broma?"
+    expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "Huir de tu pasado... \xBFQu\xE9 crees que opinar\xEDan nuestras v\xEDctimas?"
+    expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "Despu\xE9s de que los hayas roto por completo... De que les hayas arruinado..."
+    expression: {fileID: 21300000, guid: 5a67d1d35e8d4a845b48cdba1b4a0b98, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "\xBFTienes la cara de intentar olvidar lo que hiciste?"
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: 'Afronta la realidad. Nada de lo que hiciste va a desaparecer. '
     expression: {fileID: 21300000, guid: 2abdd9bc3f3e4434d9789b2a6f2ef19c, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
   - characterName: Jesus
-    text: Eramos mejores amigos en secundaria.
-    expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: "Ten\xEDamos muchos juguetes en aquel entonces..."
-    expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: . . .
+    text: "Nuestras v\xEDctimas viven d\xEDa a d\xEDa un infierno por culpa nuestra."
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
   - characterName: Jesus
-    text: No te acuerdas de nada, verdad...
+    text: "En cambio t\xFA... Est\xE1s viviendo tranquilamente y con la conciencia
+      limpia. "
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
@@ -56,95 +135,31 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Jesus
-    text: Espera . . .
+    text: "\xBFDices que est\xE1s arrepentido?"
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
   - characterName: Jesus
-    text: "\xA1\xA1\xA1\xA1TENGO UNA IDEA!!!!"
+    text: Si es verdad, enfrenta tu pasado.
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "Habla con tus v\xEDctimas... Cu\xE9ntales como has vivido tu vida despu\xE9s
+      de arruinar las suyas."
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: No me quiero ni imaginar sus reacciones...
     expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
-  - characterName: Jesus
-    text: "Te contar\xE9 an\xE9cdotas de aquel entonces... A ver si recuerdas algo,
-      amigo m\xEDo."
-    expression: {fileID: 21300000, guid: 5a67d1d35e8d4a845b48cdba1b4a0b98, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: "Los primeros d\xEDas de 2o de la ESO, empezamos a buscar nuestro nuevo
-      juguete."
-    expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: "Ah\xED fue cuando lo encontramos. Un chico bajito con gafas..."
-    expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: "Nada m\xE1s verlo, los dos pensamos lo mismo. Esa ser\xEDa nuestra pr\xF3xima
-      v\xEDctima."
-    expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: "La persona con la que jugar\xEDamos ese a\xF1o."
-    expression: {fileID: 21300000, guid: 5a67d1d35e8d4a845b48cdba1b4a0b98, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: "Todav\xEDa recuerdo el primer juego al que jugamos..."
-    expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: "En la hora del recreo, le llevamos al ba\xF1o... "
-    expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: "Le tiramos la comida al vater y le grabamos mientras se la com\xEDa..."
-    expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: JAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJA
-    expression: {fileID: 21300000, guid: 80104af068bcb94418a4b92c805738b5, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: "Me acuerdo que subimos el v\xEDdeo al foro del instituto... Me estuve
-      riendo una semana entera sin parar."
-    expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
-    lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 1
-    options:
-    - optionText: No mientas... Yo no hice eso...
-      nextDialogue: {fileID: 11400000, guid: 3d84017ab04393e4491c141607c949b1, type: 2}
-      isInterrogation: 0
-      isFinalDecision: 0
-      isCorrectAccusation: 0

@@ -21,7 +21,29 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: "(t\xFA)"
-    text: "No me extra\xF1a que me dijesen que ten\xEDa mala cara en clase..."
+    text: "(Mi expresi\xF3n... No puedo controlarla...)"
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 18e18d91a5dfdf744b607303017fc17e, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: "(Simplemente est\xE1 ah\xED. Como si no tuviese nada que ver conmigo)"
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 18e18d91a5dfdf744b607303017fc17e, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: "(Ya ni me reconozco a m\xED mismo. Siento que la persona frente al espejo
+      no soy yo...)"
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 18e18d91a5dfdf744b607303017fc17e, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: "(Esto es demasiado inc\xF3modo...)"
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 18e18d91a5dfdf744b607303017fc17e, type: 3}

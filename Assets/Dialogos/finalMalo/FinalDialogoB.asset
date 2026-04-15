@@ -14,35 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: "(t\xFA)"
-    text: . . .
+    text: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . '
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 8300000, guid: d185550ffb33de44d920a24515abe62c, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
   - characterName: "(t\xFA)"
-    text: Un momento... No recuerdo haber dejado las ventanas abiertas...
+    text: Un momento...
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
   - characterName: "(t\xFA)"
-    text: . . .
+    text: No recuerdo haber dejado las ventanas abiertas...
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
   - characterName: "(t\xFA)"
-    text: "Bueno, se me habr\xE1 pasado."
+    text: ". . . Bueno, se me habr\xE1 pasado."
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
   - characterName: "(t\xFA)"
-    text: '. . . '
+    text: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+      . . . . . . . . . . . . . '
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 8300000, guid: 5db013c1044bd404a8cda555a9d29755, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}

@@ -29,7 +29,7 @@ MonoBehaviour:
     options: []
   - characterName: Jesus
     text: "Somos nosotros de peque\xF1os, antes de entrar al instituto."
-    expression: {fileID: 21300000, guid: f116a2a3f423e6d43b11ff1a6068d795, type: 3}
+    expression: {fileID: 21300000, guid: 35d8848ec2a9e964b8362172957d2956, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
@@ -43,14 +43,14 @@ MonoBehaviour:
     options: []
   - characterName: "(t\xFA)"
     text: (Tengo los recuerdos muy borrosos. Pero...)
-    expression: {fileID: 21300000, guid: f116a2a3f423e6d43b11ff1a6068d795, type: 3}
+    expression: {fileID: 21300000, guid: 35d8848ec2a9e964b8362172957d2956, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
   - characterName: "(t\xFA)"
     text: "(Los ni\xF1os de la foto... S\xE9 que somos nosotros)"
-    expression: {fileID: 21300000, guid: f116a2a3f423e6d43b11ff1a6068d795, type: 3}
+    expression: {fileID: 21300000, guid: 35d8848ec2a9e964b8362172957d2956, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0

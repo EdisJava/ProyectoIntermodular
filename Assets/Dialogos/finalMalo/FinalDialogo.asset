@@ -34,8 +34,8 @@ MonoBehaviour:
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
-  - characterName: (yo)
-    text: Tengo que tener una cara de cansado... Necesito dormir pronto.
+  - characterName: "(t\xFA)"
+    text: Necesito dormir pronto...
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
