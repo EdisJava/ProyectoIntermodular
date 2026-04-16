@@ -486,12 +486,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
   studentName: Goran-3
   casualDialogue: {fileID: 11400000, guid: 262c9f5bc15539944992c50ed72f834c, type: 2}
-  investigationDialogue: {fileID: 11400000, guid: 262c9f5bc15539944992c50ed72f834c, type: 2}
+  investigationDialogue: {fileID: 0}
   idleSprite: {fileID: 21300000, guid: 02b2295d918047c40bc4f7fabcbf5127, type: 3}
   centerPoint: {fileID: 1673134750}
-  alreadyInterrogatedDialogue: {fileID: 0}
-  victimStateDialogue: {fileID: 0}
-  isVictim: 0
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: a8e522f36b47012429fb734b2e67e900, type: 2}
+  victimStateDialogue: {fileID: 11400000, guid: 9279859f314017a4ba0b56eb63a4f636, type: 2}
+  isVictim: 1
   voiceSound: {fileID: 0}
 --- !u!114 &10776032
 MonoBehaviour:
@@ -778,8 +778,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.8, y: 1.59}
-  m_SizeDelta: {x: 61.6, y: 71.15}
+  m_AnchoredPosition: {x: -1.4, y: 1.59}
+  m_SizeDelta: {x: 69.2, y: 73.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &17341559
 MonoBehaviour:
@@ -800,7 +800,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -810,8 +810,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 3c55e15d980aa0f4bba6dc9172c4a7d8, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 3c55e15d980aa0f4bba6dc9172c4a7d8, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 641ac584fbac11e4fa7b466127b40ff6, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 641ac584fbac11e4fa7b466127b40ff6, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -821,7 +821,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1019082127}
+  m_TargetGraphic: {fileID: 1573467373}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -5211,7 +5211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -401.9, y: -68.85}
+  m_AnchoredPosition: {x: -719.7, y: -177}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &144809852
@@ -5435,8 +5435,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.3, y: -7.8}
-  m_SizeDelta: {x: 145.1, y: 123.6}
+  m_AnchoredPosition: {x: 11.1, y: 6.34}
+  m_SizeDelta: {x: 145.1, y: 129.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &147427798
 MonoBehaviour:
@@ -5457,7 +5457,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -5467,8 +5467,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 9b52ce13b33477647aa0a7a535cf20e9, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 3c55e15d980aa0f4bba6dc9172c4a7d8, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 41f949eaa88d28447a2b2d4f58e57c50, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 41f949eaa88d28447a2b2d4f58e57c50, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -17084,7 +17084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.9, y: 2.02}
+  m_AnchoredPosition: {x: -17.5, y: 6.61}
   m_SizeDelta: {x: 101.4, y: 105.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &192885360
@@ -17106,7 +17106,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -17116,8 +17116,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 7fffc5c9c3637cb478c43e4e438c3c76, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 7fffc5c9c3637cb478c43e4e438c3c76, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 20c679e1940063d4fae32051f4dbdd3a, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 20c679e1940063d4fae32051f4dbdd3a, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -17314,7 +17314,6 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
-  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -17353,11 +17352,12 @@ RectTransform:
   - {fileID: 522956492}
   - {fileID: 698048577}
   - {fileID: 852176244}
+  - {fileID: 10776034}
   - {fileID: 1990205725}
   - {fileID: 1983304952}
   - {fileID: 2094623944}
   - {fileID: 783309711}
-  - {fileID: 10776034}
+  - {fileID: 1675095187}
   m_Father: {fileID: 1722659304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -18241,7 +18241,7 @@ MonoBehaviour:
   teacherName: Jacinto4
   idleSprite: {fileID: 21300000, guid: e59afffb71a939e48bae3b2b870565ba, type: 3}
   centerPoint: {fileID: 1983304952}
-  postDecisionDialogue: {fileID: 0}
+  postDecisionDialogue: {fileID: 11400000, guid: 00f345d8869e53b4e8f373413cbd04b6, type: 2}
 --- !u!222 &204437506
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18363,138 +18363,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &208827573
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 208827574}
-  - component: {fileID: 208827577}
-  - component: {fileID: 208827576}
-  - component: {fileID: 208827575}
-  m_Layer: 5
-  m_Name: ClickArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &208827574
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208827573}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7441406, y: 0.7441406, z: 0.7441406}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2057948064}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.2, y: -5.2}
-  m_SizeDelta: {x: 100.2, y: 65.07}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &208827575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208827573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1020509125}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2057948065}
-        m_TargetAssemblyTypeName: StudentNPC, Assembly-CSharp
-        m_MethodName: Interact
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &208827576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208827573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &208827577
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208827573}
-  m_CullTransparentMesh: 1
 --- !u!1 &209088117
 GameObject:
   m_ObjectHideFlags: 0
@@ -19537,7 +19405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c366cccafad070e4ab477f8799bf6158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
-  studentName: Mohi
+  studentName: Mohi4
   casualDialogue: {fileID: 11400000, guid: 263f59106d538f2428e43c6e0cb51627, type: 2}
   investigationDialogue: {fileID: 11400000, guid: 263f59106d538f2428e43c6e0cb51627, type: 2}
   idleSprite: {fileID: 21300000, guid: 662e79ec089de4d468dc2771e50b6a2c, type: 3}
@@ -20124,6 +19992,138 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feb11bdd0b967f54eb0e5d88798fd7b2, type: 3}
+--- !u!1 &244919070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244919071}
+  - component: {fileID: 244919073}
+  - component: {fileID: 244919072}
+  - component: {fileID: 244919074}
+  m_Layer: 5
+  m_Name: ClickArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &244919071
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244919070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1675095187}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.2, y: 3.3}
+  m_SizeDelta: {x: 37.41, y: 92.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &244919072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244919070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &244919073
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244919070}
+  m_CullTransparentMesh: 1
+--- !u!114 &244919074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244919070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 21300000, guid: d6b6da1ba1defb44da16087edbcb450e, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: d6b6da1ba1defb44da16087edbcb450e, type: 3}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1675095189}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1675095188}
+        m_TargetAssemblyTypeName: StudentNPC, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &244945088
 GameObject:
   m_ObjectHideFlags: 0
@@ -37400,7 +37400,6 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
-  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -91099,7 +91098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
   studentName: Jesus5
   casualDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
-  investigationDialogue: {fileID: 0}
+  investigationDialogue: {fileID: 11400000, guid: 257350959f159c74389619bb6dd5bb7c, type: 2}
   idleSprite: {fileID: 21300000, guid: c7ef4a4371101ba47944482c9b78bf93, type: 3}
   centerPoint: {fileID: 1983304952}
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: ef62e436bdbd6404b983a4ea181c81e6, type: 2}
@@ -103886,8 +103885,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.4, y: 9.9}
-  m_SizeDelta: {x: 99.28, y: 72.4}
+  m_AnchoredPosition: {x: -19.2, y: 12.81}
+  m_SizeDelta: {x: 99.28, y: 80.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &641052203
 MonoBehaviour:
@@ -110344,7 +110343,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -9, y: -10.71}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 109.8, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &847350961
 MonoBehaviour:
@@ -110365,7 +110364,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -110375,8 +110374,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 2918112b7e00fbd4c969c904e20eb2ac, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 2918112b7e00fbd4c969c904e20eb2ac, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: d512c69e23f899b4c916bdc0222033d0, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: d512c69e23f899b4c916bdc0222033d0, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -110386,7 +110385,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 202110444}
+  m_TargetGraphic: {fileID: 488452234}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -110701,11 +110700,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
   studentName: Goran4
-  casualDialogue: {fileID: 0}
-  investigationDialogue: {fileID: 0}
+  casualDialogue: {fileID: 11400000, guid: 5150bf5f94a2a33468b1956d6f9b1ae7, type: 2}
+  investigationDialogue: {fileID: 11400000, guid: a75d1b60edd9c58418146f0ea9699c4c, type: 2}
   idleSprite: {fileID: 21300000, guid: 8e9aba3c58c0eff4ebca6edc79517f96, type: 3}
   centerPoint: {fileID: 1983304952}
-  alreadyInterrogatedDialogue: {fileID: 0}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: a75d1b60edd9c58418146f0ea9699c4c, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
   voiceSound: {fileID: 0}
@@ -111084,7 +111083,7 @@ MonoBehaviour:
   studentName: Hafid
   casualDialogue: {fileID: 11400000, guid: f976a3cbb0b6df74a988bdbbb588d468, type: 2}
   investigationDialogue: {fileID: 11400000, guid: 643968351e47b0d42838eeb222fdb978, type: 2}
-  idleSprite: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
+  idleSprite: {fileID: 21300000, guid: 86ba2aaad261a74478834c510a093972, type: 3}
   centerPoint: {fileID: 1673134750}
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 8638a317f0921c349b80db19129c82bd, type: 2}
   victimStateDialogue: {fileID: 0}
@@ -111110,7 +111109,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86ba2aaad261a74478834c510a093972, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -111145,7 +111144,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 274.8, y: -123.7}
+  m_AnchoredPosition: {x: 447.21, y: -143.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &870520661
@@ -124560,7 +124559,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -124570,8 +124569,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 7ace3fffd5238b844b612b8597819a67, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 7ace3fffd5238b844b612b8597819a67, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -126830,11 +126829,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
   studentName: walter-5
-  casualDialogue: {fileID: 11400000, guid: 345b802f5e7cae94d8ab87c538412d96, type: 2}
-  investigationDialogue: {fileID: 11400000, guid: 345b802f5e7cae94d8ab87c538412d96, type: 2}
+  casualDialogue: {fileID: 11400000, guid: 74a8e3175cfa6df44ac8475227c9274e, type: 2}
+  investigationDialogue: {fileID: 11400000, guid: 74a8e3175cfa6df44ac8475227c9274e, type: 2}
   idleSprite: {fileID: 21300000, guid: 65cc904b062e93f438ba8cd5f5d30ffd, type: 3}
   centerPoint: {fileID: 1673134750}
-  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 345b802f5e7cae94d8ab87c538412d96, type: 2}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 7942769f63ec6694c98fd57db594e77d, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
   voiceSound: {fileID: 0}
@@ -128269,8 +128268,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.28, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -11.98, y: 4.31}
+  m_SizeDelta: {x: 102.44, y: 106.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1083439735
 MonoBehaviour:
@@ -128291,7 +128290,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -128301,8 +128300,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 100cefd238c02e84b8115bdf903f350a, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 100cefd238c02e84b8115bdf903f350a, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -153010,7 +153009,6 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
-  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -221017,7 +221015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1441389014
 RectTransform:
   m_ObjectHideFlags: 0
@@ -232424,7 +232422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.7, y: -1.7}
+  m_AnchoredPosition: {x: -11.17, y: 0.18}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1468098854
@@ -232446,7 +232444,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -232457,7 +232455,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 50ecbb42a2240374798e33b14cb0a077, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -232980,7 +232978,7 @@ MonoBehaviour:
   studentName: Mohi-3
   casualDialogue: {fileID: 11400000, guid: 263f59106d538f2428e43c6e0cb51627, type: 2}
   investigationDialogue: {fileID: 11400000, guid: 263f59106d538f2428e43c6e0cb51627, type: 2}
-  idleSprite: {fileID: 21300000, guid: 5c4fae2e1d1a97e42b7760c627123627, type: 3}
+  idleSprite: {fileID: 21300000, guid: 32b65e856a411e94e8f8fa6a58a62ffe, type: 3}
   centerPoint: {fileID: 1673134750}
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 263f59106d538f2428e43c6e0cb51627, type: 2}
   victimStateDialogue: {fileID: 0}
@@ -233006,7 +233004,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5c4fae2e1d1a97e42b7760c627123627, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32b65e856a411e94e8f8fa6a58a62ffe, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -233033,7 +233031,7 @@ RectTransform:
   m_GameObject: {fileID: 1494338678}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 3.1, y: 3.1, z: 3.1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1083439734}
@@ -233041,7 +233039,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 670.74, y: -104.600006}
+  m_AnchoredPosition: {x: 728.21, y: -154.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1496581249
@@ -236146,7 +236144,6 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
-  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -247489,7 +247486,7 @@ MonoBehaviour:
   studentName: Miki
   casualDialogue: {fileID: 11400000, guid: 311765fff61bbcb45927d1bb53d552ba, type: 2}
   investigationDialogue: {fileID: 11400000, guid: 311765fff61bbcb45927d1bb53d552ba, type: 2}
-  idleSprite: {fileID: 21300000, guid: 0eca2176c93515645bd1cb7ee2f4ee3e, type: 3}
+  idleSprite: {fileID: 21300000, guid: 97b6abf5442bf5d45962f488eb1fee41, type: 3}
   centerPoint: {fileID: 1673134750}
   alreadyInterrogatedDialogue: {fileID: 0}
   victimStateDialogue: {fileID: 0}
@@ -247515,7 +247512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0eca2176c93515645bd1cb7ee2f4ee3e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97b6abf5442bf5d45962f488eb1fee41, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -248729,7 +248726,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -248739,8 +248736,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 7ace3fffd5238b844b612b8597819a67, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 7ace3fffd5238b844b612b8597819a67, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -249018,10 +249015,9 @@ RectTransform:
   - {fileID: 939235466}
   - {fileID: 1573467371}
   - {fileID: 437089774}
-  - {fileID: 1020509123}
-  - {fileID: 919149735}
-  - {fileID: 2057948064}
   - {fileID: 1019082125}
+  - {fileID: 919149735}
+  - {fileID: 1020509123}
   m_Father: {fileID: 1722659304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -251409,6 +251405,104 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1675095186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1675095187}
+  - component: {fileID: 1675095190}
+  - component: {fileID: 1675095189}
+  - component: {fileID: 1675095188}
+  m_Layer: 5
+  m_Name: Edgar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1675095187
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675095186}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 7.56, y: 7.56, z: 7.56}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 244919071}
+  m_Father: {fileID: 197262169}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -162.54}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1675095188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675095186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c366cccafad070e4ab477f8799bf6158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
+  studentName: Edgar
+  casualDialogue: {fileID: 11400000, guid: 8abf12c4b15f2da469828f695c49f780, type: 2}
+  investigationDialogue: {fileID: 0}
+  idleSprite: {fileID: 21300000, guid: 231059a346a195648a7e6f4bb374a477, type: 3}
+  centerPoint: {fileID: 1983304952}
+  alreadyInterrogatedDialogue: {fileID: 0}
+  victimStateDialogue: {fileID: 11400000, guid: 83f98c09c753879458216e9063914d5e, type: 2}
+  isVictim: 1
+  voiceSound: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
+--- !u!114 &1675095189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675095186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 231059a346a195648a7e6f4bb374a477, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1675095190
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675095186}
+  m_CullTransparentMesh: 1
 --- !u!1 &1679893687
 GameObject:
   m_ObjectHideFlags: 0
@@ -263693,7 +263787,6 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
-  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -263735,8 +263828,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.9, y: 2.02}
-  m_SizeDelta: {x: 101.4, y: 105.88}
+  m_AnchoredPosition: {x: -17.56, y: 4.7}
+  m_SizeDelta: {x: 105.1, y: 110.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1738570029
 MonoBehaviour:
@@ -263757,7 +263850,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -263767,8 +263860,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 7fffc5c9c3637cb478c43e4e438c3c76, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 7fffc5c9c3637cb478c43e4e438c3c76, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 20c679e1940063d4fae32051f4dbdd3a, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 20c679e1940063d4fae32051f4dbdd3a, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -269055,7 +269148,6 @@ MonoBehaviour:
   cuadroInteract: {fileID: 730338967}
   interactText: {fileID: 1332634228}
   isExitDoor: 1
-  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -279709,7 +279801,7 @@ RectTransform:
   m_GameObject: {fileID: 1957737264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.2, y: 7.2, z: 7.2}
+  m_LocalScale: {x: 12.7, y: 12.7, z: 12.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1397089527}
@@ -279717,7 +279809,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 603.4, y: -44}
+  m_AnchoredPosition: {x: 545.1, y: -274.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1957737267
@@ -281019,7 +281111,7 @@ RectTransform:
   m_GameObject: {fileID: 1994436993}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 11.099999, y: 11.099999, z: 11.099999}
+  m_LocalScale: {x: 10.1, y: 10.1, z: 10.1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1738570028}
@@ -281027,7 +281119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -490.33, y: -154.10999}
+  m_AnchoredPosition: {x: -323.25, y: -154.10999}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1999449903
@@ -282391,7 +282483,6 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
-  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -294119,104 +294210,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!1 &2057948063
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2057948064}
-  - component: {fileID: 2057948067}
-  - component: {fileID: 2057948066}
-  - component: {fileID: 2057948065}
-  m_Layer: 5
-  m_Name: Luna
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &2057948064
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057948063}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.1999998, y: 3.1999998, z: 3.1999998}
-  m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 208827574}
-  m_Father: {fileID: 1608650781}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40.03, y: -0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2057948065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057948063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c366cccafad070e4ab477f8799bf6158, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
-  studentName: Luna
-  casualDialogue: {fileID: 11400000, guid: 83e4a45cfa4b11442b8b6fec0e38aff6, type: 2}
-  investigationDialogue: {fileID: 11400000, guid: 83e4a45cfa4b11442b8b6fec0e38aff6, type: 2}
-  idleSprite: {fileID: 21300000, guid: 6f2ff931f20d19d4487e07ad284b15ff, type: 3}
-  centerPoint: {fileID: 1673134750}
-  alreadyInterrogatedDialogue: {fileID: 0}
-  victimStateDialogue: {fileID: 0}
-  isVictim: 0
-  voiceSound: {fileID: 0}
---- !u!114 &2057948066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057948063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6f2ff931f20d19d4487e07ad284b15ff, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2057948067
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057948063}
-  m_CullTransparentMesh: 1
 --- !u!1 &2058590769
 GameObject:
   m_ObjectHideFlags: 0
@@ -296200,7 +296193,6 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
-  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
