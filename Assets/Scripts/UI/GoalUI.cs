@@ -36,6 +36,8 @@ using UnityEngine.SceneManagement;
 public class GoalUI : MonoBehaviour
 {
     private const string PrologueSceneName = "HouseScenePrologue";
+    private const string GoodEndingSceneName = "HouseSceneGood";
+    private const string BadEndingSceneName = "HouseSceneBad";
 
     private TextMeshProUGUI goalText;
     private TMP_FontAsset fixedFontAsset;
@@ -69,6 +71,19 @@ public class GoalUI : MonoBehaviour
 
         string sceneName = SceneManager.GetActiveScene().name;
         bool isPrologue = sceneName == PrologueSceneName;
+        bool isEndingScene = sceneName == GoodEndingSceneName || sceneName == BadEndingSceneName;
+
+        if (isEndingScene)
+        {
+            if (sceneName != lastSceneName)
+            {
+                goalText.text = "Vuelve a casa";
+                lastSceneName = sceneName;
+            }
+
+            ApplyUppercase();
+            return;
+        }
 
         if (isPrologue)
         {

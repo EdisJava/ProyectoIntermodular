@@ -12,4 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
   m_Name: InvestigacionJesus5A
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  lines: []
+  lines:
+  - characterName: Jesus
+    text: "\xBFCon Alberto? \xBFEl rarito ese no? "
+    expression: {fileID: 21300000, guid: 70fedb3a3b533c245a55736e6bd3a4ab, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: Que va.... a ese no lo toca nadie ni con un palo
+    expression: {fileID: 21300000, guid: 70fedb3a3b533c245a55736e6bd3a4ab, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Jesus
+    text: "\xBFPor que lo preguntas?"
+    expression: {fileID: 21300000, guid: c7ef4a4371101ba47944482c9b78bf93, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options:
+    - optionText: "Por nada, era por saber, a mi me parece raro tambi\xE9n"
+      nextDialogue: {fileID: 0}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: "No se.... Van por ah\xED diciendo que alguien se rie y abusa de
+        el"
+      nextDialogue: {fileID: 0}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

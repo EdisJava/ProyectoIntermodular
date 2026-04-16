@@ -61,6 +61,7 @@ using UnityEngine.UI;
 public class DoorButtonInteraction : MonoBehaviour
 {
     private const string LoadingBackgroundResourcePath = "PantallaCarga";
+    private const string PrologueSceneName = "HouseScenePrologue";
     private static Sprite cachedLoadingBackgroundSprite;
 
     public GameObject cutsceneImage;
@@ -163,7 +164,9 @@ public class DoorButtonInteraction : MonoBehaviour
         */
         if (isExitDoor)
         {
-            if (isPrologueExitDoor)
+            bool isInPrologueScene = SceneManager.GetActiveScene().name == PrologueSceneName;
+
+            if (isPrologueExitDoor && isInPrologueScene)
             {
                 if (GameManager.Instance != null && !GameManager.Instance.hasReadPrologueLetter)
                 {
