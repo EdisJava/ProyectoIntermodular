@@ -16,6 +16,8 @@ MonoBehaviour:
   - characterName: Fernando
     text: "Dime, \xBFqu\xE9 crees que puedo saber?"
     expression: {fileID: 21300000, guid: 0f7f3c8c854e51d41adb295ff7fe3173, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 1
     options:
     - optionText: Tu llevas mas que yo, como es la relacion entre Ian y Hafid(-1)
@@ -23,7 +25,7 @@ MonoBehaviour:
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: Crees que es Hafid el que le hizo eso a ???.(-1)
+    - optionText: Crees que es Hafid el que le hizo eso a Haydin.(-1)
       nextDialogue: {fileID: 11400000, guid: 0af3e04f0d5bd1b498495c8b61243a91, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
