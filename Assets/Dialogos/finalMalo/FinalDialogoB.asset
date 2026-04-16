@@ -18,6 +18,7 @@ MonoBehaviour:
       . . . . . . . . . . . . . '
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 8300000, guid: d185550ffb33de44d920a24515abe62c, type: 3}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -25,6 +26,7 @@ MonoBehaviour:
     text: Un momento...
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -32,6 +34,7 @@ MonoBehaviour:
     text: No recuerdo haber dejado las ventanas abiertas...
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -39,6 +42,7 @@ MonoBehaviour:
     text: ". . . Bueno, se me habr\xE1 pasado."
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -47,6 +51,7 @@ MonoBehaviour:
       . . . . . . . . . . . . . '
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 8300000, guid: 5db013c1044bd404a8cda555a9d29755, type: 3}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -54,6 +59,7 @@ MonoBehaviour:
     text: ?!?!?!?
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 401aafd8a1d1cf44dae872e2367e8cba, type: 3}
     hasOptions: 0
     options: []
@@ -61,6 +67,7 @@ MonoBehaviour:
     text: "\xA1\xBFQu\xE9 haces en mi casa?!"
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 401aafd8a1d1cf44dae872e2367e8cba, type: 3}
     hasOptions: 0
     options: []
@@ -68,6 +75,7 @@ MonoBehaviour:
     text: . . .
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -75,6 +83,7 @@ MonoBehaviour:
     text: Tenemos que hablar.
     expression: {fileID: 21300000, guid: 2abdd9bc3f3e4434d9789b2a6f2ef19c, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -82,6 +91,7 @@ MonoBehaviour:
     text: "\xBFTe acuerdas de m\xED?"
     expression: {fileID: 21300000, guid: 2abdd9bc3f3e4434d9789b2a6f2ef19c, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 1
     options:

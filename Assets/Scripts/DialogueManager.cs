@@ -141,15 +141,25 @@ public class DialogueManager : MonoBehaviour
         portraitDisplay.sprite = line.expression; //expresion del persoaje
 
         // Logica de audio
+        if (line.typingVoice != null)
+        {
+            currentVoice = line.typingVoice;
+        }
+        else if (currentNPC != null)
+        {
+            currentVoice = currentNPC.voiceSound;
+        }
+        else
+        {
+            currentVoice = null; 
+        }
+
+        
         if (fxSource != null)
         {
-            // para cualquier sonido que estuviera sonando de la frase anterior
             fxSource.Stop();
-
-            //si la nueva frase tiene un sonido asignado
             if (line.lineSound != null)
             {
-                // asigna el clip y lo reproduce
                 fxSource.clip = line.lineSound;
                 fxSource.Play();
             }

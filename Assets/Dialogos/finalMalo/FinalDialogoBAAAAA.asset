@@ -17,6 +17,7 @@ MonoBehaviour:
     text: "C\xC1LLATE. No sabes nada... No entiendes por lo que estoy pasando..."
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -24,20 +25,16 @@ MonoBehaviour:
     text: Pffffffttt...
     expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
   - characterName: Jesus
-    text: "\xBFCrees que puedes escapar de tu pasado?"
+    text: "\xBFCrees que puedes escapar de tu pasado tomando pastillas para olvidarte
+      de todo lo que hiciste"
     expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
     lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: "\xBFTomando pastillas para olvidarte de todo lo que hiciste?"
-    expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
-    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -45,6 +42,7 @@ MonoBehaviour:
     text: . . .
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -52,6 +50,7 @@ MonoBehaviour:
     text: Me arrepiento de todo lo que he hecho.
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -59,6 +58,7 @@ MonoBehaviour:
     text: 'Cada vez que lo recuerdo quiero volver a olvidarlo. '
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -67,6 +67,7 @@ MonoBehaviour:
       olvidarme de todo.
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -74,6 +75,7 @@ MonoBehaviour:
     text: . . .
     expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -81,6 +83,7 @@ MonoBehaviour:
     text: "\xBFEs una broma?"
     expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -88,6 +91,7 @@ MonoBehaviour:
     text: "Huir de tu pasado... \xBFQu\xE9 crees que opinar\xEDan nuestras v\xEDctimas?"
     expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -95,6 +99,7 @@ MonoBehaviour:
     text: "Despu\xE9s de que los hayas roto por completo... De que les hayas arruinado..."
     expression: {fileID: 21300000, guid: 5a67d1d35e8d4a845b48cdba1b4a0b98, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -102,6 +107,7 @@ MonoBehaviour:
     text: "\xBFTienes la cara de intentar olvidar lo que hiciste?"
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -109,6 +115,7 @@ MonoBehaviour:
     text: 'Afronta la realidad. Nada de lo que hiciste va a desaparecer. '
     expression: {fileID: 21300000, guid: 2abdd9bc3f3e4434d9789b2a6f2ef19c, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -116,6 +123,7 @@ MonoBehaviour:
     text: "Nuestras v\xEDctimas viven d\xEDa a d\xEDa un infierno por culpa nuestra."
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -124,6 +132,7 @@ MonoBehaviour:
       limpia. "
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -131,20 +140,15 @@ MonoBehaviour:
     text: . . .
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
   - characterName: Jesus
-    text: "\xBFDices que est\xE1s arrepentido?"
+    text: "Si es verdad que est\xE1s arrepentido, enfrenta tu pasado."
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
-    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
-    hasOptions: 0
-    options: []
-  - characterName: Jesus
-    text: Si es verdad, enfrenta tu pasado.
-    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
-    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -153,6 +157,7 @@ MonoBehaviour:
       de arruinar las suyas."
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -160,6 +165,7 @@ MonoBehaviour:
     text: No me quiero ni imaginar sus reacciones...
     expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []

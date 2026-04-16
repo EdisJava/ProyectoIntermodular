@@ -105407,7 +105407,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 0}
   victimStateDialogue: {fileID: 11400000, guid: f91d21cacb4eb8a47adcba17e16d032a, type: 2}
   isVictim: 1
-  voiceSound: {fileID: 8300000, guid: 2038fe22634c0cd4caafe1795b9b2309, type: 3}
+  voiceSound: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
 --- !u!114 &701580494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110271,7 +110271,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: a8e522f36b47012429fb734b2e67e900, type: 2}
   victimStateDialogue: {fileID: 11400000, guid: 9279859f314017a4ba0b56eb63a4f636, type: 2}
   isVictim: 1
-  voiceSound: {fileID: 0}
+  voiceSound: {fileID: 8300000, guid: 29b5ee40bbd61eb4184cb5045b77165d, type: 3}
 --- !u!1 &853647481
 GameObject:
   m_ObjectHideFlags: 0
@@ -262479,7 +262479,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.632
   m_Pitch: 1
   Loop: 0
   Mute: 0

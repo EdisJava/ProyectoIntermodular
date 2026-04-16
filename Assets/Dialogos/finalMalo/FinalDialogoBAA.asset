@@ -17,6 +17,7 @@ MonoBehaviour:
     text: "T\xFA y yo nos conocemos de hace tiempo..."
     expression: {fileID: 21300000, guid: 2abdd9bc3f3e4434d9789b2a6f2ef19c, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -24,6 +25,7 @@ MonoBehaviour:
     text: Eramos mejores amigos en secundaria.
     expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -31,6 +33,7 @@ MonoBehaviour:
     text: "Ten\xEDamos muchos juguetes en aquel entonces..."
     expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -38,6 +41,7 @@ MonoBehaviour:
     text: . . .
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -45,6 +49,7 @@ MonoBehaviour:
     text: No te acuerdas de nada, verdad...
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -52,6 +57,7 @@ MonoBehaviour:
     text: . . .
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -59,6 +65,7 @@ MonoBehaviour:
     text: Espera . . .
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -66,6 +73,7 @@ MonoBehaviour:
     text: "\xA1\xA1\xA1\xA1TENGO UNA IDEA!!!!"
     expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -74,6 +82,7 @@ MonoBehaviour:
       amigo m\xEDo."
     expression: {fileID: 21300000, guid: 5a67d1d35e8d4a845b48cdba1b4a0b98, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -82,6 +91,7 @@ MonoBehaviour:
       juguete."
     expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -89,6 +99,7 @@ MonoBehaviour:
     text: "Ah\xED fue cuando lo encontramos. Un chico bajito con gafas..."
     expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -97,6 +108,7 @@ MonoBehaviour:
       v\xEDctima."
     expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -104,6 +116,7 @@ MonoBehaviour:
     text: "La persona con la que jugar\xEDamos ese a\xF1o."
     expression: {fileID: 21300000, guid: 5a67d1d35e8d4a845b48cdba1b4a0b98, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -111,6 +124,7 @@ MonoBehaviour:
     text: "Todav\xEDa recuerdo el primer juego al que jugamos..."
     expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -118,6 +132,7 @@ MonoBehaviour:
     text: "En la hora del recreo, le llevamos al ba\xF1o... "
     expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -125,6 +140,7 @@ MonoBehaviour:
     text: "Le tiramos la comida al vater y le grabamos mientras se la com\xEDa..."
     expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -132,6 +148,7 @@ MonoBehaviour:
     text: JAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJA
     expression: {fileID: 21300000, guid: 80104af068bcb94418a4b92c805738b5, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -140,6 +157,7 @@ MonoBehaviour:
       riendo una semana entera sin parar."
     expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 1
     options:

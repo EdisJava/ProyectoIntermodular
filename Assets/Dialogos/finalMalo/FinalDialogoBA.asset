@@ -17,6 +17,7 @@ MonoBehaviour:
     text: JAJAJAJAJA!!!! El jueves, eh...
     expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -24,6 +25,7 @@ MonoBehaviour:
     text: "As\xED que era verdad el rumor..."
     expression: {fileID: 21300000, guid: f7f186458fc313941bac93e131be3506, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -32,6 +34,7 @@ MonoBehaviour:
       que pasamos juntos."
     expression: {fileID: 21300000, guid: 01e209d0ba4cc38408aea47044a5b675, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 1
     options:

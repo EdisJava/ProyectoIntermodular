@@ -43,7 +43,8 @@ public class DialogueData : ScriptableObject
         public Sprite expression; // La cara que pone en esta frase
 
         [Header("Efectos de la Linea")]
-        public AudioClip lineSound;        // Sonido al empezar la frase
+        public AudioClip lineSound;    // Sonido al empezar la frase
+        public AudioClip typingVoice;
         public Sprite backgroundOverride;  // Si pones uno, cambia el fondo del escenario
 
         public bool hasOptions;

@@ -17,6 +17,7 @@ MonoBehaviour:
     text: "\xBFNo me crees?"
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -24,6 +25,7 @@ MonoBehaviour:
     text: 'Mira esta foto... '
     expression: {fileID: 21300000, guid: f116a2a3f423e6d43b11ff1a6068d795, type: 3}
     lineSound: {fileID: 8300000, guid: 30d8ae907c019224eb219368031a39b6, type: 3}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -31,6 +33,7 @@ MonoBehaviour:
     text: "Somos nosotros de peque\xF1os, antes de entrar al instituto."
     expression: {fileID: 21300000, guid: 35d8848ec2a9e964b8362172957d2956, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -38,6 +41,7 @@ MonoBehaviour:
     text: "\xBFYa has sido capaz de recordar algo?"
     expression: {fileID: 21300000, guid: f116a2a3f423e6d43b11ff1a6068d795, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -45,6 +49,7 @@ MonoBehaviour:
     text: (Tengo los recuerdos muy borrosos. Pero...)
     expression: {fileID: 21300000, guid: 35d8848ec2a9e964b8362172957d2956, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -52,6 +57,7 @@ MonoBehaviour:
     text: "(Los ni\xF1os de la foto... S\xE9 que somos nosotros)"
     expression: {fileID: 21300000, guid: 35d8848ec2a9e964b8362172957d2956, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -59,6 +65,7 @@ MonoBehaviour:
     text: . . .
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -66,6 +73,7 @@ MonoBehaviour:
     text: "\xBFC\xF3mo es que no te acuerdas de nada?"
     expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 0
     options: []
@@ -73,6 +81,7 @@ MonoBehaviour:
     text: "\xBFTienes amnesia?"
     expression: {fileID: 21300000, guid: 2abdd9bc3f3e4434d9789b2a6f2ef19c, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
     hasOptions: 1
     options:
