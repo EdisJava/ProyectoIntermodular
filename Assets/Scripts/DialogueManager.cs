@@ -266,6 +266,8 @@ public class DialogueManager : MonoBehaviour
         // limpia cualquier opcion que hubiera antes
         foreach (Transform child in optionsParent.transform) Destroy(child.gameObject);
         
+        bool canAsk = GameManager.Instance.CanAskQuestion(); // Comprueba si podemos hacer preguntas de interrogatorio
+
         // por cada opcion, crea un boton y le asigna su texto y funcionalidad
         foreach (var opt in currentData.lines[lineIndex].options)
         {
@@ -273,64 +275,74 @@ public class DialogueManager : MonoBehaviour
             GameObject btn = Instantiate(optionButtonPrefab, optionsParent.transform);
             btn.GetComponentInChildren<TextMeshProUGUI>().text = opt.optionText;
             DialogueOption currentOpt = opt;
-            // asigna la funcionalidad del boton segun la opcion
-            btn.GetComponent<Button>().onClick.AddListener(() => {
-                
-                string optionTextNormalized = currentOpt.optionText != null ? currentOpt.optionText.ToLowerInvariant() : string.Empty;
-                bool noMoreQuestionsOption = optionTextNormalized.Contains("no tengo mas preguntas")
-                    || optionTextNormalized.Contains("no tengo mas preguntas");
-                // si es una decision final del profesor, registra la decision y avisa al profesor para que cambie su dialogo
-                if (currentOpt.isFinalDecision)
-                {
-                    GameManager.Instance.RegisterDecision(currentOpt.isCorrectAccusation);
-                    TeacherNPC teacher = Object.FindFirstObjectByType<TeacherNPC>();
-                    if (teacher != null) teacher.SetAccusedFlag();
-                }
-                // si es una opcion de interrogatorio, consume un uso de interrogatorio y marca al npc como interrogado para que cambie su dialogo
-                if (currentOpt.isInterrogation)
-                {
-                    GameManager.Instance.UseQuestion();
-                    if (currentNPC != null) currentNPC.MarkAsInterrogated();
-                }
-                // cerramos las opciones
-                optionsParent.SetActive(false);
-                /* si la opcion es "no tengo mas preguntas", y tenemos un npc hablando, mostramos su dialogo de fallback (si lo tiene) en vez de seguir con la siguiente linea del dialogo
-                esto es para que el npc deje de hablar de la investigacion y vuelva a su dialogo casual si el jugador decide no seguir interrogando
-                aunque seguramente no lo utilicemos en el juego final, lo dejo por si queremos hacer algo parecido en alguna parte*/
-                /*
-                Vale
-                */
-                if (currentNPC != null && noMoreQuestionsOption)
-                {
-                    DialogueData fallback = currentNPC.alreadyInterrogatedDialogue != null
-                        ? currentNPC.alreadyInterrogatedDialogue
-                        : currentNPC.casualDialogue;
+            
+            Button buttonComponent = btn.GetComponent<Button>();
 
-                    if (fallback != null)
+            if (currentOpt.isInterrogation && !canAsk)
+            {
+                buttonComponent.interactable = false;
+            }
+            else
+            {
+                // asigna la funcionalidad del boton segun la opcion
+                buttonComponent.onClick.AddListener(() => {
+                    
+                    string optionTextNormalized = currentOpt.optionText != null ? currentOpt.optionText.ToLowerInvariant() : string.Empty;
+                    bool noMoreQuestionsOption = optionTextNormalized.Contains("no tengo mas preguntas")
+                        || optionTextNormalized.Contains("no tengo mas preguntas");
+                    // si es una decision final del profesor, registra la decision y avisa al profesor para que cambie su dialogo
+                    if (currentOpt.isFinalDecision)
                     {
-                        StartDialogue(fallback, currentNPC);
-                        return;
+                        GameManager.Instance.RegisterDecision(currentOpt.isCorrectAccusation);
+                        TeacherNPC teacher = Object.FindFirstObjectByType<TeacherNPC>();
+                        if (teacher != null) teacher.SetAccusedFlag();
                     }
-                }
-                // si la opcion tiene un siguiente dialogo asignado, seguimos con ese dialogo. Si no, termina el dialogo
-                if (currentOpt.nextDialogue != null)
-                {
-                    // si tiene un profesor hablando, sigue con el profesor (esto es para arreglar el bug de que salga un alumno al hablar con el profesor)
-                    if (currentTeacher != null)
+                    // si es una opcion de interrogatorio, consume un uso de interrogatorio y marca al npc como interrogado para que cambie su dialogo
+                    if (currentOpt.isInterrogation)
                     {
-                        StartDialogue(currentOpt.nextDialogue, currentTeacher);
+                        GameManager.Instance.UseQuestion();
+                        if (currentNPC != null) currentNPC.MarkAsInterrogated();
                     }
-                    // si no, sigue con el alumno
+                    // cerramos las opciones
+                    optionsParent.SetActive(false);
+                    /* si la opcion es "no tengo mas preguntas", y tenemos un npc hablando, mostramos su dialogo de fallback (si lo tiene) en vez de seguir con la siguiente linea del dialogo
+                    esto es para que el npc deje de hablar de la investigacion y vuelva a su dialogo casual si el jugador decide no seguir interrogando
+                    aunque seguramente no lo utilicemos en el juego final, lo dejo por si queremos hacer algo parecido en alguna parte*/
+                    /*
+                    Vale
+                    */
+                    if (currentNPC != null && noMoreQuestionsOption)
+                    {
+                        DialogueData fallback = currentNPC.alreadyInterrogatedDialogue != null
+                            ? currentNPC.alreadyInterrogatedDialogue
+                            : currentNPC.casualDialogue;
+
+                        if (fallback != null)
+                        {
+                            StartDialogue(fallback, currentNPC);
+                            return;
+                        }
+                    }
+                    // si la opcion tiene un siguiente dialogo asignado, seguimos con ese dialogo. Si no, termina el dialogo
+                    if (currentOpt.nextDialogue != null)
+                    {
+                        // si tiene un profesor hablando, sigue con el profesor (esto es para arreglar el bug de que salga un alumno al hablar con el profesor)
+                        if (currentTeacher != null)
+                        {
+                            StartDialogue(currentOpt.nextDialogue, currentTeacher);
+                        }
+                        // si no, sigue con el alumno
+                        else
+                        {
+                            StartDialogue(currentOpt.nextDialogue, currentNPC);
+                        }
+                    }
                     else
                     {
-                        StartDialogue(currentOpt.nextDialogue, currentNPC);
+                        CloseDialogue();
                     }
-                }
-                else
-                {
-                    CloseDialogue();
-                }
-            });
+                });
+            }
         }
     }
     // cierra el dialogo, apagando el panel y la imagen del personaje, y reseteando los npcs para que dejen de estar en focus
