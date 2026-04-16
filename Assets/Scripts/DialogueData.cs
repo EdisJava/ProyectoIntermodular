@@ -20,7 +20,7 @@ using System.Collections.Generic;
 *
 *   Funcionamiento:
 *   - Al actualizar, verifica si la fase, el dia, el estado de acusacion o el nombre de la escena han cambiado.
-*   - Si han cambiado, actualiza la visualizacion de objetivos.
+*   - Si han cambiado, actualiza la visualizacion de objetos.
 *   - Aplica mayusculas al texto.
 *
 *   Flujo:
@@ -48,6 +48,7 @@ public class DialogueData : ScriptableObject
         public Sprite backgroundOverride;  // Si pones uno, cambia el fondo del escenario
 
         public bool hasOptions;
+        public bool isFinalButton; // Marca esto para que al terminar el dialogo cargue el MainMenu
         public List<DialogueOption> options;
     }
 

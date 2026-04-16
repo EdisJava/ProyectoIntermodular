@@ -236,7 +236,14 @@ public class DialogueManager : MonoBehaviour
         }
         else if (!currentData.lines[lineIndex].hasOptions)
         {
-            NextLine();
+            if (currentData.lines[lineIndex].isFinalButton)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+            }
+            else
+            {
+                NextLine();
+            }
         }
     }
 
@@ -329,6 +336,8 @@ public class DialogueManager : MonoBehaviour
     // cierra el dialogo, apagando el panel y la imagen del personaje, y reseteando los npcs para que dejen de estar en focus
     public void CloseDialogue()
     {
+        bool wasFinalButton = currentData != null && lineIndex < currentData.lines.Count && currentData.lines[lineIndex].isFinalButton;
+
         dialoguePanel.SetActive(false);
         portraitDisplay.gameObject.SetActive(false);
 
@@ -337,5 +346,10 @@ public class DialogueManager : MonoBehaviour
 
         currentNPC = null;
         currentTeacher = null;
+
+        if (wasFinalButton)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        }
     }
 }

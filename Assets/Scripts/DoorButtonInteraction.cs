@@ -79,6 +79,7 @@ public class DoorButtonInteraction : MonoBehaviour
     private bool isDayTransitionInProgress = false;
 
     public bool isExitDoor = false;
+    public bool isFinalDoor = false; // Added isFinalDoor variable
 
     [Header("Prologo")]
     public bool marksPrologueLetterAsRead = false;
@@ -154,6 +155,12 @@ public class DoorButtonInteraction : MonoBehaviour
 
         if (isDayTransitionInProgress)
         {
+            return;
+        }
+
+        if (isFinalDoor)
+        {
+            StartCoroutine(FinalDoorTransition());
             return;
         }
 
@@ -478,5 +485,28 @@ public class DoorButtonInteraction : MonoBehaviour
         if (crosshair != null) crosshair.SetActive(false);
         if (interactText != null) interactText.SetActive(false);
         if (cuadroInteract != null) cuadroInteract.SetActive(false);
+    }
+
+    private IEnumerator FinalDoorTransition()
+    {
+        OpenCutscene();
+
+        // Espera a que el dialogo se comience
+        yield return new WaitUntil(() => DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive);
+
+        // Espera a que el dialogo termine
+        yield return new WaitUntil(() => DialogueManager.Instance != null && !DialogueManager.Instance.IsDialogueActive);
+
+        ApplyLoadingBackgroundToFadePanel();
+
+        if (fadePanel != null)
+        {
+            fadePanel.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        // Carga la escena del menu principal
+        SceneManager.LoadScene("MainMenu");
     }
 }

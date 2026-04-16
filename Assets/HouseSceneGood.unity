@@ -2534,6 +2534,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -3148,6 +3149,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 1
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 1
   prologueDayOneSceneName: SampleScene
@@ -24516,6 +24518,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 1
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -27090,6 +27093,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 1269280127}
   interactText: {fileID: 1899608143}
   isExitDoor: 0
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -27141,6 +27145,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 1269280127}
   interactText: {fileID: 1899608143}
   isExitDoor: 0
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene

@@ -17,78 +17,100 @@ MonoBehaviour:
     text: "\xA1Sorpresa bienvenido!"
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: 519c7d0e57a13c94291b700bfdbacc95, type: 3}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Todos
     text: "\xA1Bienvenido feliz cumplea\xF1os!"
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Liam
     text: "Feliz cumplea\xF1os buen hombre, estuve lo que quedaba de semana en suspension....
       Pero al final ya volvimos todos."
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Aday
     text: Ya les conte la situacion de todo lo que paso.
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jimmi
     text: Concha, no me esperaba eso de Hafid la verdad, lo bueno es que el centro
       esta porfil limpio se podria decir.
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Agoney
     text: Por ahora.
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Pablo
     text: Tengo hambre... Quiero comer.
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Edgar
     text: "\xBFY si pedimos un buen delivery?, Que les parece se\xF1ores."
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: (Yo)
     text: "(El ni\xF1o este que pone mala cara porque sigue aqui...)"
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: (Yo)
     text: (Entonces lo hice bien, creo que todo esta bien.)
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: (Yo)
     text: (Se acabo entonces.)
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 8300000, guid: 77835dd1c80dbab4da285d5aa6d35650, type: 3}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 21300000, guid: bb89b65ba262c3845bde73e3b44593c7, type: 3}
     hasOptions: 0
+    isFinalButton: 1
     options: []
