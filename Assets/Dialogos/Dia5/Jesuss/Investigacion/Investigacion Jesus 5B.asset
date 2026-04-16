@@ -21,7 +21,7 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Jesus
-    text: No me suena haber visto a nadie no
+    text: No me suena haber visto a nadie no.
     expression: {fileID: 21300000, guid: c7ef4a4371101ba47944482c9b78bf93, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
