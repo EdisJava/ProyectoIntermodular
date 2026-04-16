@@ -25679,11 +25679,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
   studentName: final
-  casualDialogue: {fileID: 11400000, guid: 846b842a1c73a73459fd28db8a8b2c60, type: 2}
-  investigationDialogue: {fileID: 11400000, guid: 846b842a1c73a73459fd28db8a8b2c60, type: 2}
-  idleSprite: {fileID: 21300000, guid: b4820d3027dccc041be443697d19be92, type: 3}
+  casualDialogue: {fileID: 11400000, guid: 4fec7bf7b878da448b30f0afa6721a04, type: 2}
+  investigationDialogue: {fileID: 11400000, guid: 4fec7bf7b878da448b30f0afa6721a04, type: 2}
+  idleSprite: {fileID: 21300000, guid: 519c7d0e57a13c94291b700bfdbacc95, type: 3}
   centerPoint: {fileID: 1177654387}
-  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 846b842a1c73a73459fd28db8a8b2c60, type: 2}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 4fec7bf7b878da448b30f0afa6721a04, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
   voiceSound: {fileID: 0}
