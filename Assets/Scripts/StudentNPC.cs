@@ -69,6 +69,10 @@ public class StudentNPC : MonoBehaviour
     private bool alreadyInterrogated = false; // Control de si ya solto la pista
     public bool isVictim;
 
+    //voz del personaje para los dialogos
+    [Header("Voz del personaje")]
+    public AudioClip voiceSound;
+
     /*
     * Metodo que se ejecuta al iniciar el script.
     */

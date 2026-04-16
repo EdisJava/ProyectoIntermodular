@@ -492,6 +492,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: a8e522f36b47012429fb734b2e67e900, type: 2}
   victimStateDialogue: {fileID: 11400000, guid: 9279859f314017a4ba0b56eb63a4f636, type: 2}
   isVictim: 1
+  voiceSound: {fileID: 0}
 --- !u!114 &10776032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5233,6 +5234,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 2d291ca553951b6458a73a1e35e3106b, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &144809853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17672,6 +17674,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 71eb4df8ef3ed334a825250842a890ab, type: 2}
   victimStateDialogue: {fileID: 11400000, guid: 71eb4df8ef3ed334a825250842a890ab, type: 2}
   isVictim: 1
+  voiceSound: {fileID: 0}
 --- !u!114 &202110444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19020,6 +19023,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 7942769f63ec6694c98fd57db594e77d, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &221177594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19408,6 +19412,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 263f59106d538f2428e43c6e0cb51627, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &225994059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63751,6 +63756,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: bb494d8197979b046a5b8b52eeaaadca, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &425342432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64287,6 +64293,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 0}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &437089776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77408,6 +77415,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 69387d74df769cc4887099079ab525aa, type: 2}
   victimStateDialogue: {fileID: 11400000, guid: 69387d74df769cc4887099079ab525aa, type: 2}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &488452234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90831,6 +90839,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: ef62e436bdbd6404b983a4ea181c81e6, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &577466532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105300,6 +105309,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: ef62e436bdbd6404b983a4ea181c81e6, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &698048579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105397,6 +105407,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 0}
   victimStateDialogue: {fileID: 11400000, guid: f91d21cacb4eb8a47adcba17e16d032a, type: 2}
   isVictim: 1
+  voiceSound: {fileID: 8300000, guid: 2038fe22634c0cd4caafe1795b9b2309, type: 3}
 --- !u!114 &701580494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108268,6 +108279,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: e87765cf438dacf4fa71fb67867a3eb9, type: 2}
   victimStateDialogue: {fileID: 11400000, guid: e87765cf438dacf4fa71fb67867a3eb9, type: 2}
   isVictim: 1
+  voiceSound: {fileID: 0}
 --- !u!114 &783309713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108765,6 +108777,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 7942769f63ec6694c98fd57db594e77d, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &804286363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110258,6 +110271,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: a8e522f36b47012429fb734b2e67e900, type: 2}
   victimStateDialogue: {fileID: 11400000, guid: 9279859f314017a4ba0b56eb63a4f636, type: 2}
   isVictim: 1
+  voiceSound: {fileID: 0}
 --- !u!1 &853647481
 GameObject:
   m_ObjectHideFlags: 0
@@ -110428,6 +110442,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 0}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &855833238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110808,6 +110823,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 8638a317f0921c349b80db19129c82bd, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &864823137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112502,6 +112518,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 9317324bada44e246b755fb68f15bc7d, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &919149737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112888,6 +112905,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 9317324bada44e246b755fb68f15bc7d, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &939235469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125654,6 +125672,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 4e445fef2dab5e04fb41433294db2f20, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &985743142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126420,6 +126439,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 7942769f63ec6694c98fd57db594e77d, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1019082127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129163,6 +129183,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 0}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1105208562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231640,6 +231661,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 0}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1451658488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232563,6 +232585,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 263f59106d538f2428e43c6e0cb51627, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1494338680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234817,6 +234840,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 263f59106d538f2428e43c6e0cb51627, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1518855301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234914,6 +234938,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 87e9e1be33d62374b82175d2778f18a8, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1521286003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247068,6 +247093,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 0}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1573467373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247165,6 +247191,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 7942769f63ec6694c98fd57db594e77d, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1576766941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262298,6 +262325,7 @@ GameObject:
   - component: {fileID: 1705803189}
   - component: {fileID: 1705803188}
   - component: {fileID: 1705803190}
+  - component: {fileID: 1705803191}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -262325,6 +262353,7 @@ MonoBehaviour:
   optionButtonPrefab: {fileID: 3710064717457847358, guid: 4665f755a9841a549a196faafa959d65, type: 3}
   fxSource: {fileID: 1705803190}
   backgroundDisplay: {fileID: 776087348}
+  voiceSource: {fileID: 1705803191}
 --- !u!4 &1705803189
 Transform:
   m_ObjectHideFlags: 0
@@ -262354,6 +262383,103 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1705803191
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705803187}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -265041,6 +265167,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 7942769f63ec6694c98fd57db594e77d, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1807136250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265561,6 +265688,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: a72efd7979b7e604faf78ace29cbaf61, type: 2}
   victimStateDialogue: {fileID: 11400000, guid: 71eb4df8ef3ed334a825250842a890ab, type: 2}
   isVictim: 1
+  voiceSound: {fileID: 0}
 --- !u!114 &1815742810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279340,6 +279468,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 74b21f3747dfd524bb805f723914220b, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1957737268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279861,6 +279990,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: b86e17e293cbd5047bd5b29c1e360eb6, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1973132920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280491,6 +280621,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 6860a729b339e7c45a3607d6e68b27cc, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1990205728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280568,6 +280699,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 87e9e1be33d62374b82175d2778f18a8, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &1994436995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293961,6 +294093,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 7f137c13d50adaf4789df6fefac8df5c, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 8300000, guid: 61099143d66960b4bb9bd8311997df33, type: 3}
 --- !u!114 &2067629567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295226,6 +295359,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 6860a729b339e7c45a3607d6e68b27cc, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &2094623947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299751,6 +299885,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: f2dfaee73c7a0da489a9a530321e2963, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!114 &2142537073
 MonoBehaviour:
   m_ObjectHideFlags: 0

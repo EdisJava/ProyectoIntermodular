@@ -67,6 +67,10 @@ public class DialogueManager : MonoBehaviour
     public AudioSource fxSource;      // aqui va el audiosource para que se escuchen los audios 
     public Image backgroundDisplay;   // imagen de fondo por cada linea 
 
+    private AudioClip currentVoice;
+    private float nextSoundTime = 0f;
+    public AudioSource voiceSource;
+
 
     public bool IsDialogueActive => dialoguePanel != null && dialoguePanel.activeSelf;
 
@@ -79,6 +83,7 @@ public class DialogueManager : MonoBehaviour
     {
         CleanPreviousFocus(); // limpia lo que hubiera antes
 
+        currentVoice = npc != null ? npc.voiceSound : null;
         currentData = data;
         currentNPC = npc;
         lineIndex = 0;
@@ -98,7 +103,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(DialogueData data, TeacherNPC teacher)
     {
         CleanPreviousFocus();
-
+        currentVoice = null;
         currentData = data;
         currentTeacher = teacher; // guarda al profe
         lineIndex = 0;
@@ -176,15 +181,25 @@ public class DialogueManager : MonoBehaviour
     {
         isTyping = true;
         textDisplay.text = "";
+
         foreach (char c in text)
         {
             textDisplay.text += c;
+
+            //sonido por letra
+            if (currentVoice != null && c != ' ' && Time.time > nextSoundTime)
+            {
+                voiceSource.PlayOneShot(currentVoice);
+                nextSoundTime = Time.time + 0.09f; 
+            }
+
             yield return new WaitForSeconds(0.02f);
         }
+
         isTyping = false;
 
-        // si hay opciones, las muestra al terminar el texto
-        if (currentData.lines[lineIndex].hasOptions) ShowOptions();
+        if (currentData.lines[lineIndex].hasOptions)
+            ShowOptions();
     }
 
     /*
@@ -205,6 +220,7 @@ public class DialogueManager : MonoBehaviour
         {
             StopAllCoroutines();
             textDisplay.text = currentData.lines[lineIndex].text;
+            nextSoundTime = 0f;
             isTyping = false;
             if (currentData.lines[lineIndex].hasOptions) ShowOptions();
         }
