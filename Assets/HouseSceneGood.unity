@@ -11559,6 +11559,7 @@ MonoBehaviour:
   optionButtonPrefab: {fileID: 3710064717457847358, guid: 4665f755a9841a549a196faafa959d65, type: 3}
   fxSource: {fileID: 685436760}
   backgroundDisplay: {fileID: 1914401516}
+  voiceSource: {fileID: 0}
 --- !u!82 &685436760
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15299,14 +15300,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980784817}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.97924834, z: -0, w: 0.20266405}
-  m_LocalPosition: {x: -54, y: 16.51, z: -28}
+  m_LocalRotation: {x: -0, y: 0.07469662, z: -0, w: 0.99720633}
+  m_LocalPosition: {x: -62.446, y: 1.971, z: -28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1628086864}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 876.614, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 728.568, z: 0}
 --- !u!1001 &986251351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25685,6 +25686,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 846b842a1c73a73459fd28db8a8b2c60, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!1 &1570512960
 GameObject:
   m_ObjectHideFlags: 0

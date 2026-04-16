@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Jesus
-    text: No evadas mi pregunta, no me gusta que lo hagas.
+    text: 'No evadas mi pregunta, no me gusta que lo hagas. '
     expression: {fileID: 21300000, guid: 70fedb3a3b533c245a55736e6bd3a4ab, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
@@ -29,6 +29,18 @@ MonoBehaviour:
     options: []
   - characterName: Jesus
     text: Yo nunca te mentiria.
+    expression: {fileID: 21300000, guid: 020131ba07572e644b61f9057c7a6bd6, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options:
+    - optionText: ...
+      nextDialogue: {fileID: 0}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+  - characterName: Jesus
+    text: "Sabes que nunca lo har\xEDa"
     expression: {fileID: 21300000, guid: 020131ba07572e644b61f9057c7a6bd6, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}

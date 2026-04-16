@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Jesus
-    text: Dime, te veo tus intenciones.
+    text: Dime,  veo tus intenciones.
     expression: {fileID: 21300000, guid: 497362aed8e849a42a7d2fc5a8fd6f03, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}
@@ -27,13 +27,14 @@ MonoBehaviour:
     backgroundOverride: {fileID: 0}
     hasOptions: 1
     options:
-    - optionText: 
-      nextDialogue: {fileID: 0}
+    - optionText: "Recuerdas si viste a alguien meterse con Alberto al ba\xF1o de
+        mujeres? (-1 punto)"
+      nextDialogue: {fileID: 11400000, guid: b65d0ae9af5ee064591321bc823925a0, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: 
-      nextDialogue: {fileID: 0}
+    - optionText: Has visto a alguien ultimamente reirse de Alberto? (-1 punto)
+      nextDialogue: {fileID: 11400000, guid: 181f16f1124c7ee45b1d63049e87d956, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0

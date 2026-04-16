@@ -21,7 +21,7 @@ MonoBehaviour:
     hasOptions: 0
     options: []
   - characterName: Alberto
-    text: No pasa nada dos semanas mas aqui podre estar y lo pondre todo como estaba.
+    text: No pasa nada dos semanas mas aqui y lo pondre todo como estaba y mejor.
     expression: {fileID: 21300000, guid: 18dcd9369b77b364cb03ee59523a2953, type: 3}
     lineSound: {fileID: 0}
     backgroundOverride: {fileID: 0}

@@ -359,12 +359,29 @@ public class GameManager : MonoBehaviour
 
         if (isGoodEnding)
         {
-            SceneManager.LoadScene("HouseSceneGood");
+            LoadEndingScene("HouseSceneGood", "Assets/HouseSceneGood.unity");
         }
         else
         {
-            SceneManager.LoadScene("HouseSceneBad");
+            LoadEndingScene("HouseSceneBad", "Assets/Scenes/HouseSceneBad.unity");
         }
+    }
+
+    void LoadEndingScene(string sceneName, string scenePath)
+    {
+        if (Application.CanStreamedLevelBeLoaded(sceneName))
+        {
+            SceneManager.LoadScene(sceneName);
+            return;
+        }
+
+        if (Application.CanStreamedLevelBeLoaded(scenePath))
+        {
+            SceneManager.LoadScene(scenePath);
+            return;
+        }
+
+        Debug.LogError($"No se pudo cargar la escena de final '{sceneName}'.");
     }
 
 

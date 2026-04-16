@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: ErmisCasual5
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Ermis
+    text: Estos alumnos...
+    expression: {fileID: 21300000, guid: 17699742146844243ac1cdb93b06e522, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Ermis
+    text: No dejan de romper las maquinas virtuales...
+    expression: {fileID: 21300000, guid: 17699742146844243ac1cdb93b06e522, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 1
+    options:
+    - optionText: Cual es el castigo debido para estos alumnos.
+      nextDialogue: {fileID: 11400000, guid: 6e4a5368df8d1ba47ae4f731a2da292a, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: "\xBFLa terapia de Odoo servira?"
+      nextDialogue: {fileID: 11400000, guid: cc05b88a212d4844eafc7176d5950a15, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

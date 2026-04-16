@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Goran
-    text: Nada hombre, para eso estamos
+    text: Nada hombre, para eso estamos, solo no se lo digas a nadie por favor.
     expression: {fileID: 21300000, guid: 1db7104e500b8a44e941fd23dcb543ce, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []

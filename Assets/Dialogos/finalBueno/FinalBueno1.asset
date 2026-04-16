@@ -12,4 +12,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
   m_Name: FinalBueno1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  lines: []
+  lines:
+  - characterName: "(T\xFA)"
+    text: Otra vez en casa......
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 8300000, guid: 6e1f3312551cd094b996414506fa04f2, type: 3}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: "(T\xFA)"
+    text: "\xBFQue es eso?"
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: "(T\xFA)"
+    text: "\xBFUna tarta de cumplea\xF1os?"
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: "(T\xFA)"
+    text: "Que raro.... Hacia tiempo que nadie se acordaba de mi cumplea\xF1os."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: "(T\xFA)"
+    text: Pero........ Si aqui no hay nadie.
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: "(T\xFA)"
+    text: "\xBFQue es ese ruido?"
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: ....
+    text: "!Sorpresa\xA1 "
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dia5
   m_EditorClassIdentifier: Assembly-CSharp::DayScenario
   victimName: 
-  teacherName: 
+  teacherName: Ermis5
   characterConfigs:
   - characterName: Mohi5
     casualDialogue: {fileID: 11400000, guid: 69387d74df769cc4887099079ab525aa, type: 2}
@@ -34,7 +34,7 @@ MonoBehaviour:
     casualDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
     truthDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
     lieDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
-    isLiarToday: 0
+    isLiarToday: 1
   - characterName: Alberto5
     casualDialogue: {fileID: 11400000, guid: f539b43192102624586d674564988356, type: 2}
     truthDialogue: {fileID: 11400000, guid: f539b43192102624586d674564988356, type: 2}
@@ -60,9 +60,14 @@ MonoBehaviour:
     truthDialogue: {fileID: 0}
     lieDialogue: {fileID: 0}
     isLiarToday: 0
+  - characterName: Agoney
+    casualDialogue: {fileID: 11400000, guid: 1f106d94741e91243b8f54f09540e01a, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 1f106d94741e91243b8f54f09540e01a, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 1f106d94741e91243b8f54f09540e01a, type: 2}
+    isLiarToday: 0
   goalFindVictim: Encuentra al acosado
   goalInvestigate: Interroga a los alumnos
   goalReport: Habla con el profesor
-  teacherCasualDialogue: {fileID: 0}
-  teacherDecisionDialogue: {fileID: 0}
-  postDecisionDialogue: {fileID: 0}
+  teacherCasualDialogue: {fileID: 11400000, guid: 591379b49bb49ce45812279f7c6d3143, type: 2}
+  teacherDecisionDialogue: {fileID: 11400000, guid: f0b17bab227bf6747aac3a02ab08f616, type: 2}
+  postDecisionDialogue: {fileID: 11400000, guid: 729f73082ba00d04bb8158b3ce77a93a, type: 2}
