@@ -11559,6 +11559,7 @@ MonoBehaviour:
   optionButtonPrefab: {fileID: 3710064717457847358, guid: 4665f755a9841a549a196faafa959d65, type: 3}
   fxSource: {fileID: 685436760}
   backgroundDisplay: {fileID: 1914401516}
+  voiceSource: {fileID: 0}
 --- !u!82 &685436760
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25685,6 +25686,7 @@ MonoBehaviour:
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 846b842a1c73a73459fd28db8a8b2c60, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
+  voiceSound: {fileID: 0}
 --- !u!1 &1570512960
 GameObject:
   m_ObjectHideFlags: 0

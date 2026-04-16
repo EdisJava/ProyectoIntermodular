@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MikiCasual
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Yo
+  - characterName: "(T\xFA)"
     text: (Este perro desde su calcetin ve todo, tiene un collar que pone Mickey)
     expression: {fileID: 21300000, guid: 0eca2176c93515645bd1cb7ee2f4ee3e, type: 3}
     lineSound: {fileID: 0}
