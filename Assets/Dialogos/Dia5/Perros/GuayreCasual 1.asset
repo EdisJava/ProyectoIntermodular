@@ -18,6 +18,7 @@ MonoBehaviour:
       un collar que pone Guayre)
     expression: {fileID: 21300000, guid: 5a8734786ce356f44ab2d7af870faceb, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     options: []

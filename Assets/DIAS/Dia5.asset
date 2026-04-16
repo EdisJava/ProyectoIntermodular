@@ -50,11 +50,6 @@ MonoBehaviour:
     truthDialogue: {fileID: 11400000, guid: cd93cbc1f6ab24d498fd0be8e00621b5, type: 2}
     lieDialogue: {fileID: 11400000, guid: cd93cbc1f6ab24d498fd0be8e00621b5, type: 2}
     isLiarToday: 0
-  - characterName: Guayre
-    casualDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
-    truthDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
-    lieDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
-    isLiarToday: 0
   - characterName: walter-5
     casualDialogue: {fileID: 0}
     truthDialogue: {fileID: 0}
@@ -64,6 +59,11 @@ MonoBehaviour:
     casualDialogue: {fileID: 11400000, guid: 1f106d94741e91243b8f54f09540e01a, type: 2}
     truthDialogue: {fileID: 11400000, guid: 1f106d94741e91243b8f54f09540e01a, type: 2}
     lieDialogue: {fileID: 11400000, guid: 1f106d94741e91243b8f54f09540e01a, type: 2}
+    isLiarToday: 0
+  - characterName: Guayre5
+    casualDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
+    truthDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
+    lieDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
     isLiarToday: 0
   goalFindVictim: Encuentra al acosado
   goalInvestigate: Interroga a los alumnos
