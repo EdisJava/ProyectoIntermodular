@@ -147,10 +147,11 @@ public class FirstPlayerController : MonoBehaviour
             {
                 if (footstepAudioSource != null && footstepClip != null)
                 {
-                    footstepAudioSource.PlayOneShot(footstepClip);
+                    footstepAudioSource.clip = footstepClip;
+                    footstepAudioSource.Play();
                 }
                 
-                // Usamos el intervalo configurado para repetirlo. Puedes ajustar 'footstepInterval' en el Inspector desde Unity.
+                // Usamos el intervalo configurado para repetirlo.
                 _footstepTimer = footstepInterval; 
             }
         }
@@ -158,6 +159,12 @@ public class FirstPlayerController : MonoBehaviour
         {
             // Resetear el temporizador para que suene la primera pisada tan pronto como empiece a moverse de nuevo.
             _footstepTimer = 0f;
+            
+            // Si el jugador se detiene y el audio sigue sonando, lo paramos.
+            if (footstepAudioSource != null && footstepAudioSource.isPlaying)
+            {
+                footstepAudioSource.Stop();
+            }
         }
 
         _velocity.y += gravity * Time.deltaTime;
