@@ -19,7 +19,7 @@ MonoBehaviour:
     lineSound: {fileID: 0}
     typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
-    hasOptions: 0
+    hasOptions: 1
     isFinalButton: 0
     options:
     - optionText: Sabes quien le hizo eso a Alberto

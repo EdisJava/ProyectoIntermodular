@@ -17,8 +17,10 @@ MonoBehaviour:
     text: "Dime, \xBFtienes alguna pregunta que hacerme al respecto?"
     expression: {fileID: 21300000, guid: 57c1768104c6f2f42aab364e5f61f789, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 1
+    isFinalButton: 0
     options:
     - optionText: Cual es tu relacion con Haydin, de que lo conoces.(-1)
       nextDialogue: {fileID: 11400000, guid: af7a9b950c244ac4a871480e94b42287, type: 2}
@@ -38,6 +40,6 @@ MonoBehaviour:
       isCorrectAccusation: 0
     - optionText: No tengo mas preguntas.
       nextDialogue: {fileID: 11400000, guid: c59c9b5fbc5bc164190fa50c8596a257, type: 2}
-      isInterrogation: 1
+      isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0

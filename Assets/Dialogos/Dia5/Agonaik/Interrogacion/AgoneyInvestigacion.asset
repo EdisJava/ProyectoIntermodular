@@ -22,7 +22,7 @@ MonoBehaviour:
     hasOptions: 1
     isFinalButton: 0
     options:
-    - optionText: "Alguien peg\xF3 a Edgar. \xBFSabes algo?"
+    - optionText: "Alguien peg\xF3 a Edgar. \xBFSabes algo? (-1 pregunta)"
       nextDialogue: {fileID: 11400000, guid: 611a6d8922046bf40b3e16f9b58b88be, type: 2}
       isInterrogation: 1
       isFinalDecision: 0

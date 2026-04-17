@@ -28,7 +28,7 @@ MonoBehaviour:
     lineSound: {fileID: 0}
     typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
-    hasOptions: 0
+    hasOptions: 1
     isFinalButton: 0
     options:
     - optionText: "\xBFNo es alumno de este centro?"
