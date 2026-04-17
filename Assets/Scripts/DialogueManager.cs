@@ -70,11 +70,27 @@ public class DialogueManager : MonoBehaviour
     private AudioClip currentVoice;
     private float nextSoundTime = 0f;
     public AudioSource voiceSource;
+    private bool showingFinalScreen;
+    private Color dialoguePanelBaseColor = Color.white;
+    private bool hasDialoguePanelImage;
 
 
     public bool IsDialogueActive => dialoguePanel != null && dialoguePanel.activeSelf;
 
-    void Awake() => Instance = this;
+    void Awake()
+    {
+        Instance = this;
+
+        if (dialoguePanel != null)
+        {
+            Image panelImage = dialoguePanel.GetComponent<Image>();
+            if (panelImage != null)
+            {
+                dialoguePanelBaseColor = panelImage.color;
+                hasDialoguePanelImage = true;
+            }
+        }
+    }
 
     /*
     * Metodo que inicia el dialogo con un alumno.
@@ -137,6 +153,34 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         var line = currentData.lines[lineIndex];
 
+        if (line.isFinalButton)
+        {
+            showingFinalScreen = true;
+            SetDialogueForegroundVisible(false);
+
+            if (backgroundDisplay != null)
+            {
+                if (line.backgroundOverride != null)
+                {
+                    backgroundDisplay.gameObject.SetActive(true);
+                    backgroundDisplay.sprite = line.backgroundOverride;
+                }
+                else
+                {
+                    backgroundDisplay.gameObject.SetActive(false);
+                }
+            }
+
+            isTyping = false;
+            return;
+        }
+
+        if (showingFinalScreen)
+        {
+            showingFinalScreen = false;
+            SetDialogueForegroundVisible(true);
+        }
+
         nameDisplay.text = line.characterName;
         portraitDisplay.sprite = line.expression; //expresion del persoaje
 
@@ -182,6 +226,40 @@ public class DialogueManager : MonoBehaviour
         }
 
         StartCoroutine(TypeLine(line.text));
+    }
+
+    private void SetDialogueForegroundVisible(bool visible)
+    {
+        if (dialoguePanel != null && hasDialoguePanelImage)
+        {
+            Image panelImage = dialoguePanel.GetComponent<Image>();
+            if (panelImage != null)
+            {
+                Color color = dialoguePanelBaseColor;
+                color.a = visible ? dialoguePanelBaseColor.a : 0f;
+                panelImage.color = color;
+            }
+        }
+
+        if (textDisplay != null)
+        {
+            textDisplay.gameObject.SetActive(visible);
+        }
+
+        if (nameDisplay != null)
+        {
+            nameDisplay.gameObject.SetActive(visible);
+        }
+
+        if (portraitDisplay != null)
+        {
+            portraitDisplay.gameObject.SetActive(visible);
+        }
+
+        if (!visible && optionsParent != null)
+        {
+            optionsParent.SetActive(false);
+        }
     }
 
     /*
@@ -349,6 +427,12 @@ public class DialogueManager : MonoBehaviour
     public void CloseDialogue()
     {
         bool wasFinalButton = currentData != null && lineIndex < currentData.lines.Count && currentData.lines[lineIndex].isFinalButton;
+
+        if (showingFinalScreen)
+        {
+            showingFinalScreen = false;
+            SetDialogueForegroundVisible(true);
+        }
 
         dialoguePanel.SetActive(false);
         portraitDisplay.gameObject.SetActive(false);

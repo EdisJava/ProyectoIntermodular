@@ -15189,6 +15189,9 @@ MonoBehaviour:
   sensitivity: 0.2
   minLimit: -80
   maxLimit: 80
+  footstepAudioSource: {fileID: 0}
+  footstepClip: {fileID: 0}
+  footstepInterval: 0.5
   canLook: 1
 --- !u!143 &980784821
 CharacterController:
@@ -31380,6 +31383,7 @@ MonoBehaviour:
   hasReadPrologueLetter: 0
   playerSpawnPoint: {fileID: 0}
   playerObject: {fileID: 0}
+  backgroundAudioSource: {fileID: 0}
 --- !u!4 &2017365977
 Transform:
   m_ObjectHideFlags: 0
