@@ -138,7 +138,6 @@ public class FirstPlayerController : MonoBehaviour
         Vector3 move = transform.right * _movement.x + transform.forward * _movement.y;
         _characterController.Move(move * movementSpeed * Time.deltaTime);
 
-        // Eliminamos el chequeo de _characterController.isGrounded porque a veces falla y causa que el audio se corte o no suene.
         // Comprobamos solamente si hay intención de moverse.
         if (move.sqrMagnitude > 0.01f)
         {
