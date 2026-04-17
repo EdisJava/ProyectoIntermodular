@@ -79,7 +79,7 @@ public class DoorButtonInteraction : MonoBehaviour
     private bool isDayTransitionInProgress = false;
 
     public bool isExitDoor = false;
-    public bool isFinalDoor = false; // Added isFinalDoor variable
+    public bool isFinalDoor = false;
 
     [Header("Prologo")]
     public bool marksPrologueLetterAsRead = false;
