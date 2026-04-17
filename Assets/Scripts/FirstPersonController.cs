@@ -49,6 +49,13 @@ public class FirstPlayerController : MonoBehaviour
     public float sensitivity = 0.5f;
     public float minLimit= -80f;
     public float maxLimit= 80f;
+
+    [Header("Footsteps")]
+    public AudioSource footstepAudioSource;
+    public AudioClip footstepClip;
+    public float footstepInterval = 0.5f;
+    private float _footstepTimer;
+
     public bool canLook = true;
 
     private PlayerInputAction _inputAction;
@@ -130,6 +137,29 @@ public class FirstPlayerController : MonoBehaviour
     {
         Vector3 move = transform.right * _movement.x + transform.forward * _movement.y;
         _characterController.Move(move * movementSpeed * Time.deltaTime);
+
+        // Eliminamos el chequeo de _characterController.isGrounded porque a veces falla y causa que el audio se corte o no suene.
+        // Comprobamos solamente si hay intención de moverse.
+        if (move.sqrMagnitude > 0.01f)
+        {
+            _footstepTimer -= Time.deltaTime;
+            
+            if (_footstepTimer <= 0f)
+            {
+                if (footstepAudioSource != null && footstepClip != null)
+                {
+                    footstepAudioSource.PlayOneShot(footstepClip);
+                }
+                
+                // Usamos el intervalo configurado para repetirlo. Puedes ajustar 'footstepInterval' en el Inspector desde Unity.
+                _footstepTimer = footstepInterval; 
+            }
+        }
+        else 
+        {
+            // Resetear el temporizador para que suene la primera pisada tan pronto como empiece a moverse de nuevo.
+            _footstepTimer = 0f;
+        }
 
         _velocity.y += gravity * Time.deltaTime;
         _characterController.Move(_velocity * Time.deltaTime);

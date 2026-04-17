@@ -38,6 +38,11 @@ public class DayScenario : ScriptableObject
     public string victimName;
     public string teacherName; 
 
+    [Header("Audio")]
+    public AudioClip backgroundMusic;
+    [Range(0f, 1f)]
+    public float musicVolume = 1f;
+
     public List<StudentDailyConfig> characterConfigs;
 
     [Header("Textos de Objetivo")]

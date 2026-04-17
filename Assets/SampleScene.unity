@@ -17314,6 +17314,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -37400,6 +37401,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -110921,6 +110923,7 @@ MonoBehaviour:
   hasReadPrologueLetter: 0
   playerSpawnPoint: {fileID: 1285954494}
   playerObject: {fileID: 2095150376}
+  backgroundAudioSource: {fileID: 0}
 --- !u!4 &861333548
 Transform:
   m_ObjectHideFlags: 0
@@ -153009,6 +153012,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -221015,7 +221019,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1441389014
 RectTransform:
   m_ObjectHideFlags: 0
@@ -236144,6 +236148,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -263787,6 +263792,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -269148,6 +269154,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 730338967}
   interactText: {fileID: 1332634228}
   isExitDoor: 1
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -282483,6 +282490,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene
@@ -295778,6 +295786,7 @@ GameObject:
   - component: {fileID: 2095150377}
   - component: {fileID: 2095150383}
   - component: {fileID: 2095150384}
+  - component: {fileID: 2095150385}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -295803,6 +295812,9 @@ MonoBehaviour:
   sensitivity: 0.2
   minLimit: -80
   maxLimit: 80
+  footstepAudioSource: {fileID: 2095150385}
+  footstepClip: {fileID: 8300000, guid: 2e92661861a1a0c49a878ad7ef1db409, type: 3}
+  footstepInterval: 1.8
   canLook: 1
 --- !u!143 &2095150378
 CharacterController:
@@ -295917,7 +295929,7 @@ Transform:
   m_GameObject: {fileID: 2095150376}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.66397756, z: -0, w: -0.7477526}
-  m_LocalPosition: {x: 13.441, y: 1.31, z: -7.623}
+  m_LocalPosition: {x: 13.441, y: 1.31, z: -6.15}
   m_LocalScale: {x: 1, y: 1.18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -295962,6 +295974,103 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095150376}
   m_Enabled: 1
+--- !u!82 &2095150385
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095150376}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 4f640675a6b6f6042a7243f3569fe261, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2100389514
 GameObject:
   m_ObjectHideFlags: 0
@@ -296193,6 +296302,7 @@ MonoBehaviour:
   cuadroInteract: {fileID: 0}
   interactText: {fileID: 0}
   isExitDoor: 0
+  isFinalDoor: 0
   marksPrologueLetterAsRead: 0
   isPrologueExitDoor: 0
   prologueDayOneSceneName: SampleScene

@@ -148,6 +148,22 @@ public class GameManager : MonoBehaviour
         StartNewGameState();
     }
 
+    private void Update()
+    {
+        // Actualizamos el volumen continuamente por si cambias el valor en el inspector durante el juego
+        if (backgroundAudioSource != null)
+        {
+            DayScenario scenario = GetCurrentDayScenario();
+            if (scenario != null)
+            {
+                if (backgroundAudioSource.volume != scenario.musicVolume)
+                {
+                    backgroundAudioSource.volume = scenario.musicVolume;
+                }
+            }
+        }
+    }
+
     // ---------------- ESTADOS ----------------
 
     /*
@@ -170,6 +186,9 @@ public class GameManager : MonoBehaviour
     private Vector3 loadedPlayerPosition;
     private bool hasLoadedPlayerRotation = false;
     private Quaternion loadedPlayerRotation;
+    
+    [Header("Audio")]
+    public AudioSource backgroundAudioSource;
 
     /*
     * Metodo que inicia un nuevo estado del juego.
@@ -245,6 +264,39 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.LogError("No hay un DayScenario configurado para el dia " + currentDay);
+        }
+
+        // Si no hay AudioSource asignado, intentamos buscar uno en este mismo GameObject o crear uno
+        if (backgroundAudioSource == null)
+        {
+            backgroundAudioSource = GetComponent<AudioSource>();
+            if (backgroundAudioSource == null)
+            {
+                backgroundAudioSource = gameObject.AddComponent<AudioSource>();
+            }
+            Debug.LogWarning("AudioSource no estaba asignado en GameManager, se auto-asigno/creocl uno.");
+        }
+
+        if (scenario != null && backgroundAudioSource != null)
+        {
+            if (scenario.backgroundMusic != null)
+            {
+                // Actualizamos el volumen siempre, incluso si la cancion ya esta sonando
+                backgroundAudioSource.volume = scenario.musicVolume;
+
+                if (backgroundAudioSource.clip != scenario.backgroundMusic || !backgroundAudioSource.isPlaying)
+                {
+                    backgroundAudioSource.clip = scenario.backgroundMusic;
+                    backgroundAudioSource.loop = true;
+                    backgroundAudioSource.Play();
+                    Debug.Log($"Reproduciendo la cancion: {scenario.backgroundMusic.name} a volumen {scenario.musicVolume}");
+                }
+            }
+            else
+            {
+                backgroundAudioSource.Stop();
+                Debug.Log("No hay msica configurada para este da, silenciando el AudioSource.");
+            }
         }
 
         Debug.Log($"Dia {currentDay} comienza oficialmente");
