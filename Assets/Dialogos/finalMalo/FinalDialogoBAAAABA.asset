@@ -1,0 +1,311 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: FinalDialogoBAAAABA
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: "(t\xFA)"
+    text: "No pienso volver. Me disculpar\xE9 con todos."
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: No quiero que me perdonen. No lo merezco.
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: "Esto es lo que deb\xED haber hecho desde el comienzo.\n"
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: 'Ahora, incluso un cobarde como yo... '
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: "...est\xE1 preparado para afrontar su pasado."
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: . . .
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: Cualquier castigo... cualquier consecuencia...
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: 'Lo que sea que me hagan... No voy a quejarme. '
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: "Si el dolor puede limpiar aunque sea una m\xEDnima parte de los cr\xEDmenes
+      con los que cargo... Lo aceptar\xE9 sin dudar."
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: Jesus
+    text: . . .
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: Jesus
+    text: No me esperaba esto de ti.
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: Jesus
+    text: Pero bueno... No te voy a detener. Haz lo que quieras.
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: Jesus
+    text: "Al fin y al cabo... Solo te seguir\xE1s mintiendo a ti mismo."
+    expression: {fileID: 21300000, guid: 2abdd9bc3f3e4434d9789b2a6f2ef19c, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: Jesus
+    text: Las personas no cambian. Y menos, gente como nosotros.
+    expression: {fileID: 21300000, guid: 2abdd9bc3f3e4434d9789b2a6f2ef19c, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 8cfa5884b22dc284bbf09abbad8a9188, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "(t\xFA)"
+    text: . . .
+    expression: {fileID: 21300000, guid: 15b96650d9d0061419f014e91ab6444e, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
+    backgroundOverride: {fileID: 21300000, guid: 1a58f7c2170f4924e8fdf9b8abbda060, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "Los d\xEDas pasaban como siempre. El ruido de la ciudad segu\xEDa llenando
+      las ma\xF1anas... El mundo continuaba girando con la misma indiferencia de
+      siempre."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "Nada se hab\xEDa detenido por \xE9l. Nada iba a hacerlo."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "Pero algo se sent\xEDa diferente."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "Hab\xEDa tocado puertas que nunca quiso recordar. No todas se abrieron...
+      Algunas veces, nadie respondi\xF3."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "Otras, las palabras se quedaron del otro lado... Sin perd\xF3n, sin respuesta."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "Y en algunos casos, el silencio pes\xF3 m\xE1s que cualquier cosa que
+      alguna vez hizo."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "Pero tambi\xE9n hubo momentos distintos..."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "Una mirada menos dura, un \"est\xE1 bien\" apenas susurrado... Un \"ya
+      era hora\"..."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "No fue redenci\xF3n. No del todo."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: Las cicactrices no desaparecen porque alguien diga "lo siento".
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "Y \xE9l lo sab\xEDa mejor que nadie."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "Los d\xEDas ya no se sent\xEDan tan oscuros... El aire se sent\xEDa distinto...
+      O tal vez solo era \xE9l."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "Por primera vez, no intent\xF3 huir de sus actos. Sigui\xF3 caminando."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "El mundo no lo esperaba con aplausos ni con castigos. Nada hab\xEDa cambiado.
+      Simplemente segu\xEDa adelante."
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: "Y \xE9l, por fin, decidi\xF3 seguir tambi\xE9n... "
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: . . .
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []
+  - characterName: "FIN - Ep\xEDlogo"
+    text: . . .
+    expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 21300000, guid: ac7e8b0d06c2c554fab980af0b7db5f2, type: 3}
+    hasOptions: 0
+    isFinalButton: 0
+    options: []

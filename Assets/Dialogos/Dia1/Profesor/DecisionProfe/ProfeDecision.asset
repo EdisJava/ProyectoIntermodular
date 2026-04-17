@@ -16,7 +16,11 @@ MonoBehaviour:
   - characterName: Jacinto
     text: "\xBFA qu\xE9 vienes ahora?"
     expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 0}
     hasOptions: 1
+    isFinalButton: 0
     options:
     - optionText: "S\xE9 qui\xE9n lo hizo."
       nextDialogue: {fileID: 11400000, guid: 8baf5246efe61ed4281efe1c9d5682c8, type: 2}

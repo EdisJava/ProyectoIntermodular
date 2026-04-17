@@ -17,5 +17,9 @@ MonoBehaviour:
     text: "Las actividades de React tienes que documentarlas mejor, la verdad que
       eso de hacer un documento explicativo de dos paginas es una verg\xFCenza..."
     expression: {fileID: 21300000, guid: 8fc3fe3ba9623cb479cb836e93330310, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 95c15080ea5b9984d971388234de22ef, type: 3}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []

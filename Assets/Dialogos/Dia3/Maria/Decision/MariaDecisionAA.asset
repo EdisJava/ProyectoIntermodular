@@ -14,9 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Maria
-    text: Con que Jimmi eh, ya decia yo que su historial familiar... Dejaba que desear
+    text: "Con que Jimmi eh, ya dec\xCDa yo que su historial familiar... Dejaba que
+      desear"
     expression: {fileID: 21300000, guid: 2366f5fefbef8914fb0a26e579d1e37d, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 95c15080ea5b9984d971388234de22ef, type: 3}
+    backgroundOverride: {fileID: 0}
     hasOptions: 1
+    isFinalButton: 0
     options:
     - optionText: "\xBFEntonces necesitas algo mas?"
       nextDialogue: {fileID: 11400000, guid: 6e7e86cdec8305f46a80e78736454b84, type: 2}
