@@ -15,7 +15,7 @@ MonoBehaviour:
   victimName: Goran
   teacherName: Jacinto
   backgroundMusic: {fileID: 0}
-  musicVolume: 0.049
+  musicVolume: 0.043
   characterConfigs:
   - characterName: Ian
     casualDialogue: {fileID: 11400000, guid: 9f356d3411aa2764390b8fdd18d6687a, type: 2}

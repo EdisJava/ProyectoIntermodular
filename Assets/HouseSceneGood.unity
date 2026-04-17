@@ -11561,7 +11561,7 @@ MonoBehaviour:
   optionButtonPrefab: {fileID: 3710064717457847358, guid: 4665f755a9841a549a196faafa959d65, type: 3}
   fxSource: {fileID: 685436760}
   backgroundDisplay: {fileID: 1914401516}
-  voiceSource: {fileID: 0}
+  voiceSource: {fileID: 980784826}
 --- !u!82 &685436760
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12570,8 +12570,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 73a0cde7c4cde4649a0b0f9e61cbd261, type: 2}
-  m_sharedMaterial: {fileID: -8634762507739151401, guid: 73a0cde7c4cde4649a0b0f9e61cbd261, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15326,7 +15326,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 2e92661861a1a0c49a878ad7ef1db409, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

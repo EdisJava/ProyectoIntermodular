@@ -17,7 +17,7 @@ MonoBehaviour:
     text: "\xA1Sorpresa bienvenido!"
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
-    typingVoice: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 95c15080ea5b9984d971388234de22ef, type: 3}
     backgroundOverride: {fileID: 21300000, guid: 519c7d0e57a13c94291b700bfdbacc95, type: 3}
     hasOptions: 0
     isFinalButton: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
     text: "\xA1Bienvenido feliz cumplea\xF1os!"
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
-    typingVoice: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 95c15080ea5b9984d971388234de22ef, type: 3}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
     isFinalButton: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
       Pero al final ya volvimos todos."
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
-    typingVoice: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
     isFinalButton: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
     text: Ya les conte la situacion de todo lo que paso.
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
-    typingVoice: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 0682f1301744ad04aa6ca2a0b5e3abf1, type: 3}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
     isFinalButton: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
       esta porfil limpio se podria decir.
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
-    typingVoice: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
     isFinalButton: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
     text: Por ahora.
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
-    typingVoice: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
     isFinalButton: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
     text: Tengo hambre... Quiero comer.
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
-    typingVoice: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: b92f312a8d0e63342b73886be00bda27, type: 3}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
     isFinalButton: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
     text: "\xBFY si pedimos un buen delivery?, Que les parece se\xF1ores."
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
-    typingVoice: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: b92f312a8d0e63342b73886be00bda27, type: 3}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
     isFinalButton: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
     text: "(El ni\xF1o este que pone mala cara porque sigue aqui...)"
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
-    typingVoice: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
     isFinalButton: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
     text: (Entonces lo hice bien, creo que todo esta bien.)
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 0}
-    typingVoice: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 21300000, guid: ecd42771c5b76ef4abf93b669b4c9bf0, type: 3}
     hasOptions: 0
     isFinalButton: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
     text: (Se acabo entonces.)
     expression: {fileID: 21300000, guid: 17b04b154ed836b4c918645fa5478925, type: 3}
     lineSound: {fileID: 8300000, guid: 77835dd1c80dbab4da285d5aa6d35650, type: 3}
-    typingVoice: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 21300000, guid: bb89b65ba262c3845bde73e3b44593c7, type: 3}
     hasOptions: 0
     isFinalButton: 1
