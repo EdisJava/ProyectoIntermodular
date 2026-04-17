@@ -17,15 +17,19 @@ MonoBehaviour:
     text: ....
     expression: {fileID: 21300000, guid: 17699742146844243ac1cdb93b06e522, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Ermis
-    text: Quien se supone que es Jesus.
+    text: "Qui\xE9n se supone que es Jesus."
     expression: {fileID: 21300000, guid: 17699742146844243ac1cdb93b06e522, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options:
     - optionText: "\xBFNo es alumno de este centro?"
       nextDialogue: {fileID: 11400000, guid: 88ecf4378d122d64681df131e94ec47b, type: 2}

@@ -17,22 +17,28 @@ MonoBehaviour:
     text: Te voy a hacer una pregunta...
     expression: {fileID: 21300000, guid: f94a8c12243f77c4c9decaa5a85aab5d, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: "Tu nota final depender\xE1 de la respuesta."
     expression: {fileID: 21300000, guid: f94a8c12243f77c4c9decaa5a85aab5d, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: "\xBFQu\xE9 opinas de Jetpack Compose?"
     expression: {fileID: 21300000, guid: 17596ac46fa52c24ab7b18f266351044, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 1
+    isFinalButton: 0
     options:
     - optionText: Es basura obsoleta
       nextDialogue: {fileID: 11400000, guid: 28205967d0e8966479c2aa7d012ea1ee, type: 2}

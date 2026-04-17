@@ -17,29 +17,37 @@ MonoBehaviour:
     text: "Han pegado a mi alumno favorito. No se lo merec\xEDa..."
     expression: {fileID: 21300000, guid: ae997d6ff22d5f54faa48ab5e4fd9472, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: Era un gran desarrollador de Jetpack Compose...
     expression: {fileID: 21300000, guid: ae997d6ff22d5f54faa48ab5e4fd9472, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: Estoy devastado.
     expression: {fileID: 21300000, guid: 0543c65062eba9b48adb234ef6e7725f, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: "\xBFSabes qui\xE9n fue? Le har\xE9 pagar por lo que ha hecho."
     expression: {fileID: 21300000, guid: 17596ac46fa52c24ab7b18f266351044, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 1
+    isFinalButton: 0
     options:
     - optionText: Fue Pablo
       nextDialogue: {fileID: 11400000, guid: 59a875dc9fd2a2f45a1cc83150715e4b, type: 2}

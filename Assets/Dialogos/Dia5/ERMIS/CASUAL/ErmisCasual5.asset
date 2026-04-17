@@ -17,22 +17,26 @@ MonoBehaviour:
     text: Estos alumnos...
     expression: {fileID: 21300000, guid: 17699742146844243ac1cdb93b06e522, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Ermis
     text: No dejan de romper las maquinas virtuales...
     expression: {fileID: 21300000, guid: 17699742146844243ac1cdb93b06e522, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 1
+    isFinalButton: 0
     options:
-    - optionText: Cual es el castigo debido para estos alumnos.
+    - optionText: "\xBFCu\xE1l es el castigo debido para estos alumnos?"
       nextDialogue: {fileID: 11400000, guid: 6e4a5368df8d1ba47ae4f731a2da292a, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: "\xBFLa terapia de Odoo servira?"
+    - optionText: "\xBFLa terapia de Odoo servir\xE1?"
       nextDialogue: {fileID: 11400000, guid: cc05b88a212d4844eafc7176d5950a15, type: 2}
       isInterrogation: 0
       isFinalDecision: 0

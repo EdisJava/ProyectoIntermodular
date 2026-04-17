@@ -14,18 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Ermis
-    text: Tu y yo sabes que ha pasado, lo has visto, quien crees que fue.
+    text: "Tu y yo sabemos que ha pasado. Lo has visto.... \xBFQui\xE9n crees que
+      fue?"
     expression: {fileID: 21300000, guid: 43640beb0febedd4d8e5e9fe43a2b07a, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options:
-    - optionText: Agoney
+    - optionText: Fue Agoney
       nextDialogue: {fileID: 11400000, guid: ee516bdeebe300d459df2ff761508fb7, type: 2}
       isInterrogation: 0
       isFinalDecision: 1
       isCorrectAccusation: 0
-    - optionText: Jesus
+    - optionText: Fue Jesus
       nextDialogue: {fileID: 11400000, guid: 86d7eb0b7c66b0d40bbcf7e6d5f8c0fa, type: 2}
       isInterrogation: 0
       isFinalDecision: 1

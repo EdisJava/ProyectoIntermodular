@@ -16,12 +16,20 @@ MonoBehaviour:
   - characterName: Ermis
     text: Una pregunta...
     expression: {fileID: 21300000, guid: 43640beb0febedd4d8e5e9fe43a2b07a, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Ermis
     text: "Alguien ha golpeado a Aroy... No s\xE9 qui\xE9n ha sido. \xBFSabes algo?"
     expression: {fileID: 21300000, guid: 17699742146844243ac1cdb93b06e522, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 0}
     hasOptions: 1
+    isFinalButton: 0
     options:
     - optionText: "S\xE9 qui\xE9n fue."
       nextDialogue: {fileID: 11400000, guid: 7094760b7f0e40348ba904bff73aaea8, type: 2}
