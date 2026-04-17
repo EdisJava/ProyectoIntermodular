@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: ZiaCasual
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: "(T\xFA)"
+  - characterName: "(t\xFA)"
     text: (Este perro me esta mirando raro, tiene un collar que pone Zia)
     expression: {fileID: 21300000, guid: 0b8bfdbbf0ee2f64b9cab7a8c5e2d495, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []

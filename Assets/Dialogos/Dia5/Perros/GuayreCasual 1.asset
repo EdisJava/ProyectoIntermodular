@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GuayreCasual 1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: "(T\xFA)"
+  - characterName: "(t\xFA)"
     text: (Este perro ni me mira, se le ve muy feliz estando con los demas, tiene
       un collar que pone Guayre)
     expression: {fileID: 21300000, guid: 5a8734786ce356f44ab2d7af870faceb, type: 3}
@@ -21,4 +21,5 @@ MonoBehaviour:
     typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []

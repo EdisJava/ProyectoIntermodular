@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LunaCasual
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: (Yo)
+  - characterName: "(t\xFA)"
     text: (Ojala ser un gato, mira como se relaja ahi tirada sin que la molesten,
       tiene un collar que pone Luna)
     expression: {fileID: 21300000, guid: 6f2ff931f20d19d4487e07ad284b15ff, type: 3}

@@ -33,7 +33,7 @@ MonoBehaviour:
     options: []
   - characterName: Jesus
     text: "\xBFPor qu\xE9 lo preguntas?"
-    expression: {fileID: 21300000, guid: c7ef4a4371101ba47944482c9b78bf93, type: 3}
+    expression: {fileID: 21300000, guid: ffdd1d146e4b34e42a62ab994b7748bd, type: 3}
     lineSound: {fileID: 0}
     typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
