@@ -10,25 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: AgoneyInterroga2
+  m_Name: AgoneyInvestigacionB
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Agoney
-    text: Creo que se ha pegado con alguien
+    text: Hasta luego.
     expression: {fileID: 21300000, guid: 1d1f35a71b7665241b5582f8d851601a, type: 3}
     lineSound: {fileID: 0}
     typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
     isFinalButton: 0
-    options:
-    - optionText: "\xBFSabes con quien?"
-      nextDialogue: {fileID: 11400000, guid: 80b94aee8f9b8dc4ba097f34b0972a93, type: 2}
-      isInterrogation: 0
-      isFinalDecision: 0
-      isCorrectAccusation: 0
-    - optionText: Ok, gracias supongo
-      nextDialogue: {fileID: 11400000, guid: 8c34b69a749c58c429f2f8fc3350b7d3, type: 2}
-      isInterrogation: 0
-      isFinalDecision: 0
-      isCorrectAccusation: 0
+    options: []

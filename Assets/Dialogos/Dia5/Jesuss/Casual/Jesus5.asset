@@ -14,18 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Jesus
-    text: Hola amigo que tal estas, como te encuentras.
+    text: "Hola amigo que tal est\xE1s, c\xF3mo te encuentras."
     expression: {fileID: 21300000, guid: 497362aed8e849a42a7d2fc5a8fd6f03, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options:
-    - optionText: Hola Jesus, como estas hoy.
+    - optionText: "Hola Jesus, como est\xE1s hoy."
       nextDialogue: {fileID: 11400000, guid: 97e2d90407dd3904f9a65ce665534c38, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: "Oye, \xBFCuando llegaste a este instituto?"
+    - optionText: "Oye, \xBFCu\xE1ndo llegaste a este instituto?"
       nextDialogue: {fileID: 11400000, guid: 665f8599ce14f864ea482f39f95b1f26, type: 2}
       isInterrogation: 0
       isFinalDecision: 0

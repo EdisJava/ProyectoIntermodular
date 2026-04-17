@@ -10,25 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: Goran
+  m_Name: GoranAlready
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Goran
-    text: Hombre, tu por aqui, que tal, como andas
+    text: "No s\xE9 nada m\xE1s..."
     expression: {fileID: 21300000, guid: 1db7104e500b8a44e941fd23dcb543ce, type: 3}
     lineSound: {fileID: 0}
     typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
-    hasOptions: 1
+    hasOptions: 0
     isFinalButton: 0
-    options:
-    - optionText: Igual de bien que tu, por lo que veo ya no tienes las vendas
-      nextDialogue: {fileID: 11400000, guid: d2ee7de3bcf32ff448e3c71eb263978f, type: 2}
-      isInterrogation: 0
-      isFinalDecision: 0
-      isCorrectAccusation: 0
-    - optionText: Aqui Andamos, ya sabes, bastante chill
-      nextDialogue: {fileID: 11400000, guid: f6a9ab01eb721f940a87522f70bac091, type: 2}
-      isInterrogation: 0
-      isFinalDecision: 0
-      isCorrectAccusation: 0
+    options: []

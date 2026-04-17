@@ -10,21 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: AgoneyInterrgoa3
+  m_Name: InvestigacionJesus5AA
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
-  - characterName: Agoney
-    text: Creo que fue Jesus, dicen que viene de otro centro porque lo expulsaron
-    expression: {fileID: 21300000, guid: 1d1f35a71b7665241b5582f8d851601a, type: 3}
-    lineSound: {fileID: 0}
-    typingVoice: {fileID: 0}
-    backgroundOverride: {fileID: 0}
-    hasOptions: 0
-    isFinalButton: 0
-    options: []
-  - characterName: Agoney
-    text: Son rumores supongo
-    expression: {fileID: 21300000, guid: 1d1f35a71b7665241b5582f8d851601a, type: 3}
+  - characterName: Jesus
+    text: "Bueno, yo no s\xE9 nada. Cu\xEDdate."
+    expression: {fileID: 21300000, guid: ffdd1d146e4b34e42a62ab994b7748bd, type: 3}
     lineSound: {fileID: 0}
     typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}

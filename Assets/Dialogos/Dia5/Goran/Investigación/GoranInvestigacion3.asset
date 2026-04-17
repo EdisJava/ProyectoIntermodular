@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Goran
-    text: Dicen que Jesus es el que esta detras de todo, no se si es verdad, pero
-      a mi me da miedo
+    text: "Dicen que Jesus es el que est\xE1 detr\xE1s de todo, no s\xE9 si es verdad,
+      pero a mi me da miedo"
     expression: {fileID: 21300000, guid: 77d7ccbf56d620243b49886cc9cfdb61, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 1
+    isFinalButton: 0
     options:
-    - optionText: "\xBFCon que jesus eh...? Gracias por ayudamre Goran, nos vemos"
+    - optionText: "\xBFCon que Jesus eh...? Gracias por ayudarme Goran, nos vemos"
       nextDialogue: {fileID: 11400000, guid: 9c4c5d71e6d3dea4cb491bb02167187f, type: 2}
       isInterrogation: 0
       isFinalDecision: 0

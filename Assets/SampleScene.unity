@@ -5229,7 +5229,7 @@ MonoBehaviour:
   studentName: Jimmi
   casualDialogue: {fileID: 11400000, guid: 46cd5c0a1eff0604da883518f2212335, type: 2}
   investigationDialogue: {fileID: 11400000, guid: 2d291ca553951b6458a73a1e35e3106b, type: 2}
-  idleSprite: {fileID: 21300000, guid: 9b52ce13b33477647aa0a7a535cf20e9, type: 3}
+  idleSprite: {fileID: 21300000, guid: e590b49a0764d6349979edc000f96f48, type: 3}
   centerPoint: {fileID: 1673134750}
   alreadyInterrogatedDialogue: {fileID: 11400000, guid: 2d291ca553951b6458a73a1e35e3106b, type: 2}
   victimStateDialogue: {fileID: 0}
@@ -5255,7 +5255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9b52ce13b33477647aa0a7a535cf20e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e590b49a0764d6349979edc000f96f48, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -129679,7 +129679,7 @@ MonoBehaviour:
   investigationDialogue: {fileID: 11400000, guid: c8e59ec2822a04046a1027cc0b345ad6, type: 2}
   idleSprite: {fileID: 21300000, guid: 8e9aba3c58c0eff4ebca6edc79517f96, type: 3}
   centerPoint: {fileID: 1983304952}
-  alreadyInterrogatedDialogue: {fileID: 0}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 0acbbc413b21f1d4d990e6eefda387d5, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
   voiceSound: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
@@ -283053,7 +283053,7 @@ MonoBehaviour:
   teacherName: Ermis5
   idleSprite: {fileID: 21300000, guid: 50bfbb1829bbbb84492865a6cd84f6d0, type: 3}
   centerPoint: {fileID: 1983304952}
-  postDecisionDialogue: {fileID: 11400000, guid: 0aed41d82a6e4f44e9c40b50c4d9c537, type: 2}
+  postDecisionDialogue: {fileID: 11400000, guid: 729f73082ba00d04bb8158b3ce77a93a, type: 2}
 --- !u!114 &2046374001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296450,10 +296450,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StudentNPC
   studentName: Agoney
   casualDialogue: {fileID: 11400000, guid: 1f106d94741e91243b8f54f09540e01a, type: 2}
-  investigationDialogue: {fileID: 0}
+  investigationDialogue: {fileID: 11400000, guid: 5a7454e875822a944879630c30148aaf, type: 2}
   idleSprite: {fileID: 21300000, guid: 28a5f744906ade54a96cec3800ff9737, type: 3}
   centerPoint: {fileID: 1673134750}
-  alreadyInterrogatedDialogue: {fileID: 0}
+  alreadyInterrogatedDialogue: {fileID: 11400000, guid: 10eef42b3028c1443a8a3c165096132f, type: 2}
   victimStateDialogue: {fileID: 0}
   isVictim: 0
   voiceSound: {fileID: 8300000, guid: 95c15080ea5b9984d971388234de22ef, type: 3}

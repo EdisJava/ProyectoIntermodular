@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
-  m_Name: AgoneyInterroga4
+  m_Name: AgoneyInvestigacionA
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Agoney
-    text: Hmm....
+    text: Me suena haber visto a Jesus con Edgar, a pesar de que no se llevan muy
+      bien.
     expression: {fileID: 21300000, guid: 1d1f35a71b7665241b5582f8d851601a, type: 3}
     lineSound: {fileID: 0}
     typingVoice: {fileID: 0}
@@ -23,7 +24,7 @@ MonoBehaviour:
     isFinalButton: 0
     options: []
   - characterName: Agoney
-    text: Solo te dire lo que he visto.....
+    text: No te confirmo nada pero... Me huele mal
     expression: {fileID: 21300000, guid: 1d1f35a71b7665241b5582f8d851601a, type: 3}
     lineSound: {fileID: 0}
     typingVoice: {fileID: 0}
@@ -32,7 +33,7 @@ MonoBehaviour:
     isFinalButton: 0
     options: []
   - characterName: Agoney
-    text: No he visto nada
+    text: "Ten cuidado con \xE9l."
     expression: {fileID: 21300000, guid: 1d1f35a71b7665241b5582f8d851601a, type: 3}
     lineSound: {fileID: 0}
     typingVoice: {fileID: 0}

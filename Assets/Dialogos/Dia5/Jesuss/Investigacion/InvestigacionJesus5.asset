@@ -32,18 +32,18 @@ MonoBehaviour:
     isFinalButton: 0
     options:
     - optionText: "Recuerdas si viste a alguien meterse con Alberto al ba\xF1o de
-        mujeres? (-1 punto)"
+        mujeres? (-1 pregunta)"
       nextDialogue: {fileID: 11400000, guid: b65d0ae9af5ee064591321bc823925a0, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: Has visto a alguien ultimamente reirse de Alberto? (-1 punto)
+    - optionText: Has visto a alguien ultimamente reirse de Alberto? (-1 pregunta)
       nextDialogue: {fileID: 11400000, guid: 181f16f1124c7ee45b1d63049e87d956, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
     - optionText: Nada...
       nextDialogue: {fileID: 11400000, guid: 7b01a0f3ac1f9c045844eb31e0e0330c, type: 2}
-      isInterrogation: 1
+      isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0

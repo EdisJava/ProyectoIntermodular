@@ -34,8 +34,8 @@ MonoBehaviour:
     isLiarToday: 0
   - characterName: Jesus5
     casualDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
-    truthDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
-    lieDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 257350959f159c74389619bb6dd5bb7c, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 257350959f159c74389619bb6dd5bb7c, type: 2}
     isLiarToday: 1
   - characterName: Alberto5
     casualDialogue: {fileID: 11400000, guid: f539b43192102624586d674564988356, type: 2}
@@ -59,8 +59,8 @@ MonoBehaviour:
     isLiarToday: 0
   - characterName: Agoney
     casualDialogue: {fileID: 11400000, guid: 1f106d94741e91243b8f54f09540e01a, type: 2}
-    truthDialogue: {fileID: 11400000, guid: 1f106d94741e91243b8f54f09540e01a, type: 2}
-    lieDialogue: {fileID: 11400000, guid: 1f106d94741e91243b8f54f09540e01a, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 5a7454e875822a944879630c30148aaf, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 5a7454e875822a944879630c30148aaf, type: 2}
     isLiarToday: 0
   - characterName: Guayre5
     casualDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
@@ -75,6 +75,6 @@ MonoBehaviour:
   goalFindVictim: Encuentra al acosado
   goalInvestigate: Interroga a los alumnos
   goalReport: Habla con el profesor
-  teacherCasualDialogue: {fileID: 11400000, guid: 591379b49bb49ce45812279f7c6d3143, type: 2}
+  teacherCasualDialogue: {fileID: 11400000, guid: e9b1adc80fd80a14c85766af68b67f3c, type: 2}
   teacherDecisionDialogue: {fileID: 11400000, guid: f0b17bab227bf6747aac3a02ab08f616, type: 2}
   postDecisionDialogue: {fileID: 11400000, guid: 729f73082ba00d04bb8158b3ce77a93a, type: 2}

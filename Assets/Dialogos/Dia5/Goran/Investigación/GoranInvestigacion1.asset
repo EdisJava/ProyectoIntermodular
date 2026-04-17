@@ -17,8 +17,10 @@ MonoBehaviour:
     text: "\xBFQue pasa colega?"
     expression: {fileID: 21300000, guid: 1db7104e500b8a44e941fd23dcb543ce, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options:
     - optionText: Sabes quien le hizo eso a Alberto
       nextDialogue: {fileID: 11400000, guid: 9f5dc3aa1961930489107d6ce9554f4f, type: 2}
@@ -26,7 +28,7 @@ MonoBehaviour:
       isFinalDecision: 0
       isCorrectAccusation: 0
     - optionText: Nada
-      nextDialogue: {fileID: 0}
+      nextDialogue: {fileID: 11400000, guid: d77740f752604ce488d528a1a6af9d29, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0

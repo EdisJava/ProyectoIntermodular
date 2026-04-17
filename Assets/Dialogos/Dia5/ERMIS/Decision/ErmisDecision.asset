@@ -33,3 +33,8 @@ MonoBehaviour:
       isInterrogation: 0
       isFinalDecision: 1
       isCorrectAccusation: 1
+    - optionText: "D\xE9jame un tiempo..."
+      nextDialogue: {fileID: 11400000, guid: 27d41f8d82f46de42b2ad10c0595ee1a, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
