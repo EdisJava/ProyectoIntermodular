@@ -17,55 +17,71 @@ MonoBehaviour:
     text: "\xA1LO SAB\xCDA!"
     expression: {fileID: 21300000, guid: f94a8c12243f77c4c9decaa5a85aab5d, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: "Jetpack Compose es un incre\xEDble framework adelantado a su \xE9poca."
     expression: {fileID: 21300000, guid: f3fb3353d52094b4f9e179e9987c3a2c, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: Muchas gracias por todo, Jetpack Compose.
     expression: {fileID: 21300000, guid: 0543c65062eba9b48adb234ef6e7725f, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: "Un segundo, me est\xE1n llamando..."
     expression: {fileID: 21300000, guid: 6d78c2009c7ca2541b27f81173abe5f9, type: 3}
     lineSound: {fileID: 8300000, guid: 4b382c4d6c862ef42a8609046c0b7cee, type: 3}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: . . .
     expression: {fileID: 21300000, guid: 79b7f6473ff66d6479163f5ee894a5a5, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: 'Una de OpenAI Pro y una de Claude Premium. '
     expression: {fileID: 21300000, guid: 79b7f6473ff66d6479163f5ee894a5a5, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: "Realiza el dep\xF3sito de 50k\u20AC en su cuenta inmediatamente. "
     expression: {fileID: 21300000, guid: 79b7f6473ff66d6479163f5ee894a5a5, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: ' . . .'
     expression: {fileID: 21300000, guid: 6d78c2009c7ca2541b27f81173abe5f9, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []

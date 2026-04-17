@@ -17,6 +17,8 @@ MonoBehaviour:
     text: "Vuelve a casa por ahora. Nos vemos ma\xF1ana."
     expression: {fileID: 21300000, guid: f94a8c12243f77c4c9decaa5a85aab5d, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []

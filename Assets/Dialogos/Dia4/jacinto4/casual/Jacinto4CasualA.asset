@@ -17,15 +17,19 @@ MonoBehaviour:
     text: . . .
     expression: {fileID: 21300000, guid: ae997d6ff22d5f54faa48ab5e4fd9472, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: 'Fuera de mi clase. '
     expression: {fileID: 21300000, guid: ae997d6ff22d5f54faa48ab5e4fd9472, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 1
+    isFinalButton: 0
     options:
     - optionText: Era broma.
       nextDialogue: {fileID: 11400000, guid: e302ed98f8af0b047ac7f9c9deafb353, type: 2}

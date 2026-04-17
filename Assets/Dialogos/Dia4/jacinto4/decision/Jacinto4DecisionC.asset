@@ -17,6 +17,8 @@ MonoBehaviour:
     text: Desde que sepas algo, habla conmigo.
     expression: {fileID: 21300000, guid: 17596ac46fa52c24ab7b18f266351044, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []

@@ -16,12 +16,20 @@ MonoBehaviour:
   - characterName: Ermis
     text: "Si, si... Perd\xF3n, me conmovi\xF3 el esplenderoso programa."
     expression: {fileID: 21300000, guid: 17699742146844243ac1cdb93b06e522, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Ermis
     text: "Por cierto, \xBFest\xE1s usando el Clickup para crear las tareas?"
     expression: {fileID: 21300000, guid: 43640beb0febedd4d8e5e9fe43a2b07a, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options:
     - optionText: No...
       nextDialogue: {fileID: 11400000, guid: c51284e3b8e0afa4e94a4ff312a1fc58, type: 2}

@@ -17,34 +17,44 @@ MonoBehaviour:
     text: "Ese alumno siempre usaba IA para hacer sus c\xF3digos..."
     expression: {fileID: 21300000, guid: 17596ac46fa52c24ab7b18f266351044, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: "Y lo peor de todo es que promov\xEDa el odio de Jetpack Compose."
     expression: {fileID: 21300000, guid: ae997d6ff22d5f54faa48ab5e4fd9472, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: "Siendo honesto... Me lo esperaba de \xE9l."
     expression: {fileID: 21300000, guid: 17596ac46fa52c24ab7b18f266351044, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: "Tomar\xE9 medidas al respecto."
     expression: {fileID: 21300000, guid: f94a8c12243f77c4c9decaa5a85aab5d, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: "Vuelve a casa por ahora. Nos vemos ma\xF1ana."
     expression: {fileID: 21300000, guid: f94a8c12243f77c4c9decaa5a85aab5d, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
