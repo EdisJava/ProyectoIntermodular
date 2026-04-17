@@ -51,7 +51,7 @@ MonoBehaviour:
       isFinalDecision: 0
       isCorrectAccusation: 0
     - optionText: "\xBFQui\xE9n te peg\xF3?"
-      nextDialogue: {fileID: 11400000, guid: 9338cfe2264ef474994bc16e49a8391e, type: 2}
+      nextDialogue: {fileID: 11400000, guid: 24a7d2ecdc3611546aac460eb4ce0b7b, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0
