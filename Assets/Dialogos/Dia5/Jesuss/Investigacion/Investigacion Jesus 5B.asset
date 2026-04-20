@@ -14,31 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - characterName: Jesus
-    text: "\xBFCon Alberto?"
+    text: "\xBFDe Edgar?"
     expression: {fileID: 21300000, guid: 497362aed8e849a42a7d2fc5a8fd6f03, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jesus
     text: No me suena haber visto a nadie no.
-    expression: {fileID: 21300000, guid: c7ef4a4371101ba47944482c9b78bf93, type: 3}
+    expression: {fileID: 21300000, guid: ffdd1d146e4b34e42a62ab994b7748bd, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jesus
     text: "Aunque no me extra\xF1ar\xEDa, lleva casi toda la semana metido en el
       ba\xF1o"
-    expression: {fileID: 21300000, guid: c7ef4a4371101ba47944482c9b78bf93, type: 3}
+    expression: {fileID: 21300000, guid: ffdd1d146e4b34e42a62ab994b7748bd, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jesus
     text: Creo que es un poco pervertido
-    expression: {fileID: 21300000, guid: c7ef4a4371101ba47944482c9b78bf93, type: 3}
+    expression: {fileID: 21300000, guid: ffdd1d146e4b34e42a62ab994b7748bd, type: 3}
     lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
     backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []

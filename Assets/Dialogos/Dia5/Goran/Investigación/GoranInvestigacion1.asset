@@ -22,7 +22,7 @@ MonoBehaviour:
     hasOptions: 1
     isFinalButton: 0
     options:
-    - optionText: Sabes quien le hizo eso a Alberto
+    - optionText: Sabes quien le hizo eso a Edgar
       nextDialogue: {fileID: 11400000, guid: 9f5dc3aa1961930489107d6ce9554f4f, type: 2}
       isInterrogation: 1
       isFinalDecision: 0

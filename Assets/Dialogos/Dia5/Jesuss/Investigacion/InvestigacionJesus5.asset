@@ -37,7 +37,7 @@ MonoBehaviour:
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: Has visto a alguien ultimamente reirse de Alberto? (-1 pregunta)
+    - optionText: Has visto a alguien ultimamente reirse de Edgar? (-1 pregunta)
       nextDialogue: {fileID: 11400000, guid: 181f16f1124c7ee45b1d63049e87d956, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
