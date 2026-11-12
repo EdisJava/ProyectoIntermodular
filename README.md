@@ -215,7 +215,7 @@ La demostración exportada está disponible en [Download.mp4](Download.mp4 "Víd
 
 [Volver al índice](#índice)
 
-**Las fórmulas de esta sección son inventadas y tienen una finalidad exclusivamente didáctica: sirven para representar posibles mecánicas del juego, no resultados reales de una partida.**
+**Las fórmulas de esta sección son inventadas: sirven para representar posibles mecánicas del juego, no resultados reales de una partida.**
 
 La confianza se expresa en línea como $C = \frac{p}{n}$, donde $p$ son pistas coherentes y $n$ pistas analizadas.
 
