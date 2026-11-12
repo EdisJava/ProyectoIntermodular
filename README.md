@@ -52,9 +52,9 @@ El objetivo no es acusar sin pruebas, sino construir una conclusión razonada.
 
 - [x] Definir la premisa y el conflicto principal.
 - [x] Crear la estructura inicial del proyecto.
-- [ ] Completar todos los diálogos.
-- [ ] Equilibrar la dificultad de las pistas.
-- [ ] Preparar una versión final para demostración.
+- [x] Completar todos los diálogos.
+- [x] Equilibrar la dificultad de las pistas.
+- [x] Preparar una versión final para demostración.
 
 > [!NOTE]
 > Las decisiones deben basarse en varias pistas, no en una única respuesta aislada.
@@ -209,7 +209,7 @@ La demostración exportada está disponible en [Download.mp4](Download.mp4 "Víd
 | :--- | :---: | :--- |
 | 0.1 | 2026 | Prototipo de exploración |
 | 0.2 | 2026 | Primeros diálogos |
-| 1.0 | Pendiente | Entrega académica |
+| 1.0 | 2026 | Versión final jugable integrada en `Edgar` |
 
 ## Matemáticas del juego
 
