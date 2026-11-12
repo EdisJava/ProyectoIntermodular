@@ -1,63 +1,328 @@
-# Proyecto Intermodular — Juego narrativo 3D (Unity)
+# Proyecto Intermodular: Aula en Silencio
 
-**ProyectoIntermodular** es un juego narrativo 3D creado en **Unity** con estética **retro / low poly**. El protagonista debe **encontrar al alumno que está molestando al resto** a través de **preguntas** para finalmente **informar al profesor**.
+[![Unity](https://img.shields.io/badge/Unity-2022%2B-black?logo=unity)](https://unity.com/) [![Estado](https://img.shields.io/badge/estado-en%20desarrollo-yellow)](#estado-del-proyecto)
 
-## 🎮 Descripción del juego
-En un entorno escolar, el jugador explora, interactúa con personajes y reúne pistas mediante diálogos/preguntas. El objetivo es identificar al responsable de los problemas en clase tomando decisiones y avanzando por la narrativa.
+> Juego narrativo 3D de estética retro/low poly. El jugador reúne pistas mediante preguntas, identifica al alumno responsable del conflicto y comunica la situación al profesor.
 
-## 🧰 Tecnologías
-- **Motor:** Unity
-- **Lenguajes principales del repositorio:**
-  - C# (scripts de gameplay)
-  - ShaderLab / HLSL (shaders y efectos)
-  - HTML (archivos auxiliares como logs o documentación exportada)
+## Índice
 
-## 📦 Paquetes / dependencias (Unity)
-El proyecto usa, entre otros, paquetes como:
-- **Input System**
-- **Cinemachine**
-- **AI Navigation**
-- **URP/HDRP Core + ShaderGraph** (según configuración del proyecto)
-- **ProBuilder**
-- **Timeline**
-- **Visual Scripting** (habilitado en dependencias)
+- [Presentación](#presentación)
+- [Objetivos del proyecto](#objetivos-del-proyecto)
+- [Tecnologías y estructura](#tecnologías-y-estructura)
+- [Diseño del juego](#diseño-del-juego)
+- [Guía de instalación y uso](#guía-de-instalación-y-uso)
+- [Evidencias visuales](#evidencias-visuales)
+- [Datos y planificación](#datos-y-planificación)
+- [Matemáticas del juego](#matemáticas-del-juego)
+- [Diagramas](#diagramas)
+- [Estado del proyecto](#estado-del-proyecto)
+- [Contribución y licencia](#contribución-y-licencia)
 
-> Nota: las versiones exactas están definidas en `Packages/manifest.json`.
+<!-- README académico del proyecto intermodular. -->
 
-## 📁 Estructura del repositorio (resumen)
-- `Assets/` — Contenido principal del juego (escenas, scripts, materiales, modelos, etc.)
-- `Packages/` — Manifiesto y configuración de paquetes de Unity
-- `ProjectSettings/` — Configuración del proyecto Unity
-- `LiarGame/` — Carpeta adicional del proyecto/solución (contiene también `Packages/`, etc.)
-- `Download.mp4` — Vídeo (probablemente demo/gameplay)
-- `UpgradeLog.htm` — Log de actualización de Unity
+## Presentación
 
-## ▶️ Cómo abrir el proyecto
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/EdisJava/ProyectoIntermodular.git
-   ```
-2. Abre el proyecto con **Unity Hub**:
-   - **Add / Añadir** → selecciona la carpeta del proyecto (la raíz que contenga `Assets`, `Packages` y `ProjectSettings`).
-3. Espera a que Unity importe los assets y paquetes.
+[Volver al índice](#índice)
 
-## 🕹️ Controles (por completar)
-- Movimiento: *(por definir)*
-- Interacción / hablar: *(por definir)*
-- Menú / pausa: *(por definir)*
+**Aula en Silencio** es una experiencia de investigación ambientada en un centro educativo. El jugador explora el escenario, conversa con personajes y compara respuestas antes de tomar una decisión.
 
-> Si me dices qué teclas/usas en el Input System, te lo dejo documentado aquí.
-
-## 📽️ Demo
-Revisa el archivo:
-- `Download.mp4`
-
-## ✅ Estado del proyecto
-Proyecto académico / intermodular en desarrollo.
-
-## 📄 Licencia
-Este repositorio no especifica licencia todavía.  
-Si quieres, puedo ayudarte a añadir una (MIT, Apache 2.0, GPL, etc.) según lo que necesites.
+La historia fomenta la *empatía*, la comunicación y la resolución responsable de conflictos.  
+El objetivo no es acusar sin pruebas, sino construir una conclusión razonada.
 
 ---
-**Autor:** @EdisJava
+
+## Objetivos del proyecto
+
+[Volver al índice](#índice)
+
+1. Crear una experiencia narrativa breve y accesible.
+   1. Diseñar diálogos ramificados.
+   2. Integrar pistas en el escenario.
+   3. Mostrar una conclusión coherente.
+2. Practicar el flujo de producción de Unity.
+   1. Escenas y prefabs.
+   2. Scripts en C#.
+   3. Pruebas de interacción.
+
+### Lista de tareas
+
+- [x] Definir la premisa y el conflicto principal.
+- [x] Crear la estructura inicial del proyecto.
+- [ ] Completar todos los diálogos.
+- [ ] Equilibrar la dificultad de las pistas.
+- [ ] Preparar una versión final para demostración.
+
+> [!NOTE]
+> Las decisiones deben basarse en varias pistas, no en una única respuesta aislada.
+
+> [!WARNING]
+> El contenido representa un conflicto escolar de forma responsable. No se debe utilizar para señalar a personas reales.
+
+## Tecnologías y estructura
+
+[Volver al índice](#índice)
+
+| Tecnología | Uso | Referencia |
+| :--- | :--- | :--- |
+| **Unity** | Motor y escenas 3D | [Sitio oficial](https://unity.com/ "Web oficial de Unity") |
+| **C#** | Lógica de gameplay | [Documentación](https://learn.microsoft.com/es-es/dotnet/csharp/ "Documentación de C#") |
+| **ShaderLab/HLSL** | Materiales y efectos | [Unity Manual](https://docs.unity3d.com/Manual/Shaders.html "Manual de shaders") |
+
+### Estructura principal
+
+```text
+.
+├── Assets/             # Escenas, scripts, modelos y materiales
+├── Packages/           # Dependencias de Unity
+├── ProjectSettings/    # Configuración del proyecto
+├── LiarGame/           # Solución y contenido adicional
+├── LiarGame.slnx       # Solución para el editor
+└── README.md           # Documentación
+```
+
+Consulta el [manifiesto de paquetes](Packages/manifest.json "Abrir manifest.json") y la carpeta de [recursos](Assets/ "Abrir Assets").
+
+### Código C#
+
+```csharp
+public bool EsPistaSuficiente(int respuestasCorrectas, int totalPreguntas)
+{
+    const float umbral = 0.60f;
+    return totalPreguntas > 0 &&
+           (float)respuestasCorrectas / totalPreguntas >= umbral;
+}
+```
+
+También se utiliza código en línea como `Debug.Log("Pista registrada")` durante las pruebas.
+
+## Diseño del juego
+
+[Volver al índice](#índice)
+
+### Bucle de juego
+
+El ciclo principal combina exploración y diálogo:
+
+1. Observar el aula.
+2. Hablar con un personaje.
+3. Registrar una pista.
+4. Comparar testimonios.
+5. Informar al profesor.
+
+<details>
+<summary><strong>Decisiones de diseño</strong></summary>
+
+La interfaz debe ser clara, con textos breves y señales visuales para que el jugador se concentre en la investigación.
+
+</details>
+
+> “Los juegos son la forma más elevada de investigación.”  
+> — Albert Einstein, cita atribuida
+
+> “La educación es el arma más poderosa que puedes usar para cambiar el mundo.”  
+> — Nelson Mandela
+
+### Personajes
+
+| Rol | Responsabilidad narrativa | Indicador |
+| --- | :---: | ---: |
+| Jugador | Recoger y contrastar pistas | 🔎 |
+| Compañeros | Aportar testimonios | 💬 |
+| Profesor | Recibir el informe final | 🧑‍🏫 |
+| Sospechoso | Reaccionar a las preguntas | ❓ |
+
+## Guía de instalación y uso
+
+[Volver al índice](#índice)
+
+### Requisitos
+
+- Unity Hub y una versión compatible.
+- Sistema operativo capaz de ejecutar Unity.
+- Git.
+
+### Pasos
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/EdisJava/ProyectoIntermodular.git
+cd ProyectoIntermodular
+git switch Edgar
+```
+
+1. Abre Unity Hub.
+2. Selecciona **Add** y elige la carpeta que contiene `Assets`, `Packages` y `ProjectSettings`.
+3. Espera a que Unity importe los paquetes.
+4. Ejecuta la escena inicial.
+
+Revisa [UpgradeLog.htm](UpgradeLog.htm "Registro de actualización") y la [solución](LiarGame.slnx "Abrir solución LiarGame").
+
+## Evidencias visuales
+
+[Volver al índice](#índice)
+
+### Imagen externa
+
+![Aula escolar de referencia](https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80 "Aula escolar")
+
+*Imagen externa de referencia. Fuente: [Unsplash](https://unsplash.com/ "Banco de imágenes").*
+
+### Imágenes locales
+
+![Boceto local del aula](assets/readme/aula-retro.svg "Boceto local del aula")
+
+![Flujo local de investigación](assets/readme/flujo-investigacion.svg "Flujo local de investigación")
+
+El material visual comunica el tono **retro** y la progresión de la historia. Algunas partes siguen *en prototipo*.
+
+## Datos y planificación
+
+[Volver al índice](#índice)
+
+### Prioridades
+
+| Tarea | Prioridad | Responsable |
+| ---: | :---: | --- |
+| Diálogos | Alta | Narrativa |
+| Interacciones | Media | Programación |
+| Materiales | Baja | Arte |
+
+### Evaluación
+
+| Criterio | Puntuación máxima | Resultado esperado |
+| :--- | ---: | :--- |
+| Narrativa | 10 | Historia comprensible |
+| Jugabilidad | 10 | Controles claros |
+| Presentación | 10 | Estética coherente |
+
+### Versiones
+
+| Versión | Fecha | Cambio |
+| :--- | :---: | :--- |
+| 0.1 | 2026 | Prototipo de exploración |
+| 0.2 | 2026 | Primeros diálogos |
+| 1.0 | Pendiente | Entrega académica |
+
+## Matemáticas del juego
+
+[Volver al índice](#índice)
+
+La confianza se expresa en línea como $C = \frac{p}{n}$, donde $p$ son pistas coherentes y $n$ pistas analizadas.
+
+La probabilidad de hallar una pista es:
+
+$$P(\text{hallazgo}) = 1 - (1-q)^k$$
+
+La distancia euclídea entre dos posiciones es:
+
+$$d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}$$
+
+La intensidad de una señal periódica puede modelarse así:
+
+$$I(t) = I_0 + A\sin(2\pi ft + \varphi)$$
+
+El tiempo medio de una partida es:
+
+$$\bar{t} = \frac{1}{m}\sum_{i=1}^{m} t_i$$
+
+La experiencia acumulada puede seguir una progresión geométrica:
+
+$$E_n = E_0r^n$$
+
+## Diagramas
+
+[Volver al índice](#índice)
+
+### Flujo
+
+```mermaid
+flowchart TD
+    A[Inicio] --> B[Explorar aula]
+    B --> C[Hacer preguntas]
+    C --> D{¿Pista coherente?}
+    D -- Sí --> E[Registrar pista]
+    D -- No --> B
+    E --> F{¿Confianza suficiente?}
+    F -- No --> B
+    F -- Sí --> G[Informar al profesor]
+```
+
+### Secuencia
+
+```mermaid
+sequenceDiagram
+    actor Jugador
+    participant NPC
+    participant Sistema
+    Jugador->>NPC: Formula pregunta
+    NPC-->>Sistema: Devuelve respuesta
+    Sistema->>Sistema: Evalúa coherencia
+    Sistema-->>Jugador: Actualiza diario
+```
+
+### Clases
+
+```mermaid
+classDiagram
+    class Jugador {
+      +Vector3 posicion
+      +preguntar(NPC npc)
+      +registrarPista(Pista pista)
+    }
+    class NPC {
+      +string nombre
+      +responder()
+    }
+    class Pista {
+      +string texto
+      +float fiabilidad
+    }
+    Jugador --> NPC : interroga
+    Jugador --> Pista : recopila
+```
+
+### Estados
+
+```mermaid
+stateDiagram-v2
+    [*] --> Explorando
+    Explorando --> Conversando : interactuar
+    Conversando --> Explorando : cerrar diálogo
+    Conversando --> Analizando : registrar respuesta
+    Analizando --> Explorando : faltan pistas
+    Analizando --> InformeFinal : confianza suficiente
+    InformeFinal --> [*]
+```
+
+## Estado del proyecto
+
+[Volver al índice](#índice)
+
+| Área | Estado | Próximo paso |
+| :--- | :---: | :--- |
+| Concepto | ✅ Completo | Mantener alcance |
+| Escenas | 🟡 En desarrollo | Pulir iluminación |
+| Diálogos | 🟡 En desarrollo | Revisar respuestas |
+| Entrega | ⏳ Pendiente | Generar build |
+
+> [!TIP]
+> Para probar una interacción, crea primero un caso pequeño: un personaje, una pregunta y una pista.
+
+El proyecto está **en desarrollo**. ~~La versión definitiva ya está publicada~~; la entrega final todavía requiere pruebas.
+
+## Contribución y licencia
+
+[Volver al índice](#índice)
+
+- Crea una rama descriptiva: `feature/dialogos-aula`.
+- Documenta cualquier cambio de jugabilidad.
+- Prueba la escena antes de abrir una propuesta.
+- Evita datos personales o contenido identificable.
+
+Consulta la [página del repositorio](https://github.com/EdisJava/ProyectoIntermodular "Repositorio en GitHub") y el [manual de Markdown](https://docs.github.com/es/get-started/writing-on-github "Guía oficial").
+
+### Licencia
+
+Este repositorio se utiliza con fines académicos. No se ha definido todavía una licencia de distribución.
+
+<div align="center"><strong>🎮 Investiga con empatía · Construye con código · Aprende jugando 🎮</strong></div>
