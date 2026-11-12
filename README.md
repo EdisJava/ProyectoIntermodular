@@ -1,8 +1,12 @@
 # Proyecto Intermodular: Aula en Silencio
 
-[![Unity](https://img.shields.io/badge/Unity-2022%2B-black?logo=unity)](https://unity.com/) [![Estado](https://img.shields.io/badge/estado-en%20desarrollo-yellow)](#estado-del-proyecto)
+[Ir al índice](#índice)
 
-> Juego narrativo 3D de estética retro/low poly. El jugador reúne pistas mediante preguntas, identifica al alumno responsable del conflicto y comunica la situación al profesor.
+[![Unity](https://img.shields.io/badge/Unity-2022%2B-black?logo=unity)](https://unity.com/) [![Estado](https://img.shields.io/badge/estado-versión%20final-green)](#estado-del-proyecto)
+
+> Versión final del juego narrativo 3D de estética retro/low poly. El jugador reúne pistas mediante preguntas, identifica al alumno responsable del conflicto y comunica la situación al profesor.
+
+La rama `Edgar` incorpora ahora la versión final jugable procedente de `main`, incluidos los diálogos, escenas, correcciones de bugs y contenido de los distintos días.
 
 ## Índice
 
@@ -175,6 +179,10 @@ Revisa [UpgradeLog.htm](UpgradeLog.htm "Registro de actualización") y la [soluc
 
 El material visual comunica el tono **retro** y la progresión de la historia. Algunas partes siguen *en prototipo*.
 
+### Vídeo de la versión final
+
+La demostración exportada está disponible en [Download.mp4](Download.mp4 "Vídeo de gameplay del proyecto").
+
 ## Datos y planificación
 
 [Volver al índice](#índice)
@@ -301,14 +309,15 @@ stateDiagram-v2
 | Área | Estado | Próximo paso |
 | :--- | :---: | :--- |
 | Concepto | ✅ Completo | Mantener alcance |
-| Escenas | 🟡 En desarrollo | Pulir iluminación |
-| Diálogos | 🟡 En desarrollo | Revisar respuestas |
-| Entrega | ⏳ Pendiente | Generar build |
+| Escenas | ✅ Integradas | Revisar iluminación opcional |
+| Diálogos | ✅ Integrados | Correcciones menores |
+| Bugs principales | ✅ Corregidos | Validación final |
+| Entrega | ✅ Disponible | Compartir build |
 
 > [!TIP]
 > Para probar una interacción, crea primero un caso pequeño: un personaje, una pregunta y una pista.
 
-El proyecto está **en desarrollo**. ~~La versión definitiva ya está publicada~~; la entrega final todavía requiere pruebas.
+El proyecto está en su **versión final jugable**, integrada desde `main` en la rama `Edgar`. ~~La versión definitiva estaba pendiente~~; ahora el contenido principal y el vídeo de demostración están disponibles.
 
 ## Contribución y licencia
 
