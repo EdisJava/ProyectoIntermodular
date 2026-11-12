@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
@@ -35,13 +35,9 @@ using UnityEngine.SceneManagement;
 
 public class GoalUI : MonoBehaviour
 {
-<<<<<<< HEAD
-    private const string PrologueSceneName = "HouseScene";
-=======
     private const string PrologueSceneName = "HouseScenePrologue";
     private const string GoodEndingSceneName = "HouseSceneGood";
     private const string BadEndingSceneName = "HouseSceneBad";
->>>>>>> origin/main
 
     private TextMeshProUGUI goalText;
     private TMP_FontAsset fixedFontAsset;

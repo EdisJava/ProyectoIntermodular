@@ -409,9 +409,6 @@ public class GameManager : MonoBehaviour
 
         SaveSystem.SaveGame(BuildSaveData());
 
-<<<<<<< HEAD
-        SceneManager.LoadScene("HouseScene");
-=======
         if (isGoodEnding)
         {
             LoadEndingScene("HouseSceneGood", "Assets/HouseSceneGood.unity");
@@ -420,7 +417,6 @@ public class GameManager : MonoBehaviour
         {
             LoadEndingScene("HouseSceneBad", "Assets/Scenes/HouseSceneBad.unity");
         }
->>>>>>> origin/main
     }
 
     void LoadEndingScene(string sceneName, string scenePath)

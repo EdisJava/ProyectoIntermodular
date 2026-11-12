@@ -225,7 +225,7 @@ public class MainMenu : MonoBehaviour
     {
         SaveSystem.DeleteSave();
         ShowMainOptions();
-        SceneManager.LoadScene("HouseScene");
+        SceneManager.LoadScene("HouseScenePrologue");
     }
 
     /*
@@ -988,14 +988,9 @@ public class MainMenu : MonoBehaviour
             return saveData.sceneName;
         }
 
-<<<<<<< HEAD
-        // Compatibilidad con partidas antiguas que no guardaban escena.
-        if (!saveData.hasReadPrologueLetter && Application.CanStreamedLevelBeLoaded("HouseScene"))
-=======
         if (!saveData.hasReadPrologueLetter && Application.CanStreamedLevelBeLoaded("HouseScenePrologue"))
->>>>>>> origin/main
         {
-            return "HouseScene";
+            return "HouseScenePrologue";
         }
 
         return "SampleScene";
