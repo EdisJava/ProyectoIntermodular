@@ -171,13 +171,15 @@ Revisa [UpgradeLog.htm](UpgradeLog.htm "Registro de actualización") y la [soluc
 
 *Imagen externa de referencia. Fuente: [Unsplash](https://unsplash.com/ "Banco de imágenes").*
 
-### Imágenes locales
+### Sprites del juego
 
-![Boceto local del aula](assets/readme/aula-retro.svg "Boceto local del aula")
+![Jesús en el juego](Assets/Sprites/personajes/Dia4/jesus/jesus-pose.png "Sprite de Jesús")
 
-![Flujo local de investigación](assets/readme/flujo-investigacion.svg "Flujo local de investigación")
+![Goran en el juego](Assets/Sprites/personajes/Dia4/goran/goran-pose-sprite.png "Sprite de Goran")
 
-El material visual comunica el tono **retro** y la progresión de la historia. Algunas partes siguen *en prototipo*.
+![Aday en el juego](Assets/Sprites/personajes/Dia4/aday/aday-pose.png "Sprite de Aday")
+
+Estos son sprites reales utilizados por los personajes del juego y muestran mejor el estilo visual **retro** de la versión final.
 
 ## Datos y planificación
 
