@@ -378,7 +378,7 @@ pie title Distribución del esfuerzo
 
 Imágenes del proyecto:
 
-![Fondo de habitación](Assets/Sprites/escenas/fondo_habitacion.png "Escenario del juego")
+![Fondo de habitación](Assets/Sprites/personajes/Dia3/Jimmi "Escenario del juego")
 
 ![Personaje del día 1](Assets/Sprites/personajes/Dia1/personaje.png "Personaje del día 1")
 
