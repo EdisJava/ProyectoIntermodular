@@ -419,7 +419,9 @@ Recursos consultados:
 | Autor | Rol | Rama |
 | :--- | :---: | ---: |
 | Pablo | Desarrollo | `Pablo` |
-| Equipo | Diseño y pruebas | `main` |
+| Aday | Desarrollo | `AdayPS1` |
+| Edgar | Algo | `Edgar` |
+
 
 ✏️ <strong>Escrito por el equipo de ProyectoIntermodular</strong>
 
