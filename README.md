@@ -378,7 +378,7 @@ pie title Distribución del esfuerzo
 
 Imágenes del proyecto:
 
-![Personaje Jimmi](Assets/Sprites/personajes/Dia3/Jimmi - copia.png "Jimmi")
+![Personaje Jimmi](Assets/Sprites/personajes/Dia3/Jimmi%20-%20copia.png "Jimmi")
 
 ![Personaje del día 1](Assets/Sprites/personajes/Dia1/personaje.png "Personaje del día 1")
 
