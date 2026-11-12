@@ -179,10 +179,6 @@ Revisa [UpgradeLog.htm](UpgradeLog.htm "Registro de actualización") y la [soluc
 
 El material visual comunica el tono **retro** y la progresión de la historia. Algunas partes siguen *en prototipo*.
 
-### Vídeo de la versión final
-
-La demostración exportada está disponible en [Download.mp4](Download.mp4 "Vídeo de gameplay del proyecto").
-
 ## Datos y planificación
 
 [Volver al índice](#índice)
