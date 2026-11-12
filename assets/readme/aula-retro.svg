@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+<title id="title">Boceto retro de un aula</title><desc id="desc">Aula con pizarra, ventanas, pupitres y una lupa.</desc>
+<rect width="1200" height="600" fill="#161b33"/><rect x="80" y="70" width="1040" height="360" rx="18" fill="#28345c" stroke="#7fe7dc" stroke-width="8"/><rect x="150" y="125" width="420" height="220" fill="#10251f" stroke="#f7d774" stroke-width="8"/>
+<text x="185" y="210" fill="#7fe7dc" font-size="42" font-family="monospace">AULA 3D</text><text x="185" y="270" fill="#f7d774" font-size="28" font-family="monospace">PREGUNTA · OBSERVA</text>
+<rect x="680" y="125" width="320" height="150" fill="#91c9ef" stroke="#f7d774" stroke-width="8"/><path d="M840 125v150M680 200h320" stroke="#f7d774" stroke-width="8"/>
+<g fill="#d87093" stroke="#f7d774" stroke-width="7"><path d="M220 470h180l-25-105H245z"/><path d="M520 470h180l-25-105H545z"/><path d="M820 470h180l-25-105H845z"/></g><circle cx="1060" cy="455" r="58" fill="none" stroke="#7fe7dc" stroke-width="18"/><path d="M1102 497l65 58" stroke="#7fe7dc" stroke-width="18" stroke-linecap="round"/>
+<text x="82" y="555" fill="#ffffff" font-size="27" font-family="sans-serif">Boceto local · Proyecto Intermodular</text></svg>
