@@ -1,6 +1,70 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+* Script para manejar el estado del juego.
+* 
+* Metodos:
+*   - Awake(): Metodo que se llama al crear el objeto.
+*   - StartNewGameState(): Metodo que inicia un nuevo estado del juego.
+*   - RefreshCurrentDay(): Metodo que actualiza el dia actual.
+*   - SetCurrentDayPhase(): Metodo que establece la fase actual del dia.
+*   - GetCurrentDayScenario(): Metodo que obtiene el escenario actual del dia.
+*   - ResetAllNPCs(): Metodo que reinicia todos los NPCs.
+*   - SetRemainingQuestions(): Metodo que establece las preguntas restantes.
+*   - BuildSaveData(): Metodo que construye los datos de guardado.
+*   - ApplyDialogueProgress(): Metodo que aplica el progreso del dialogo.
+*   - ApplySaveData(): Metodo que aplica los datos de guardado.
+*   - GetPlayableDayCount(): Metodo que obtiene el numero de dias jugables.
+*   - RegisterDecision(): Metodo que registra una decision.
+*   - NextDay(): Metodo que pasa al siguiente dia.
+*   - EndGame(): Metodo que termina el juego.
+*   - IsIn2D(): Metodo que verifica si el juego esta en 2D.
+*   - HasAccusedThisDay(): Metodo que verifica si se ha acusado hoy.
+*   - HasReadPrologueLetter(): Metodo que verifica si se ha leido el prologo.
+*   - HasLoadedPlayerPosition(): Metodo que verifica si se ha cargado la posicion del jugador.
+*   - HasLoadedPlayerRotation(): Metodo que verifica si se ha cargado la rotacion del jugador.
+*   - LoadedPlayerPosition(): Metodo que obtiene la posicion del jugador.
+*   - LoadedPlayerRotation(): Metodo que obtiene la rotacion del jugador.
+*
+*   Variables:
+*   - currentState: Estado actual del juego.
+*   - currentDayPhase: Fase actual del dia.
+*   - currentDay: Dia actual.
+*   - maxDays: Numero maximo de dias.
+*   - maxQuestionsPerDay: Numero maximo de preguntas por dia.
+*   - questionsUsed: Numero de preguntas usadas.
+*   - goodDecisions: Numero de decisiones correctas.
+*   - badDecisions: Numero de decisiones incorrectas.
+*   - isEndingPhase: Si el juego esta en fase de final.
+*   - isGoodEnding: Si el juego esta en fase de final bueno.
+*   - allDays: Array de escenarios del dia.
+*   - hasAccusedThisDay: Si se ha acusado hoy.
+*   - hasReadPrologueLetter: Si se ha leido el prologo.
+*   - playerSpawnPoint: Punto de aparicion del jugador.
+*   - playerObject: Objeto del jugador.
+*   - hasLoadedPlayerPosition: Si se ha cargado la posicion del jugador.
+*   - loadedPlayerPosition: Posicion del jugador.
+*   - hasLoadedPlayerRotation: Si se ha cargado la rotacion del jugador.
+*   - loadedPlayerRotation: Rotacion del jugador.
+*
+*   Funcionamiento:
+*   - Al crear el objeto, verifica si existe una partida guardada.
+*   - Si existe, aplica los datos de guardado.
+*   - Si no existe, inicia un nuevo estado del juego.
+*   - Al presionar el boton de siguiente dia, pasa al siguiente dia.
+*   - Al presionar el boton de acusar, registra la decision.
+*   - Al presionar el boton de leer prologo, registra la lectura del prologo.
+*
+*   Flujo:
+*   1. El jugador presiona el boton de siguiente dia.
+*   2. Se llama al metodo NextDay().
+*   3. Se incrementa el dia actual.
+*   4. Se reinicia el estado diario.
+*   5. Se actualiza la visualizacion de objetivos.
+*   6. El jugador puede interactuar con otro alumno.
+*/
+
 public enum GameState
 {
     Exploration3D,
@@ -22,20 +86,29 @@ public class GameManager : MonoBehaviour
     public GameState currentState = GameState.Exploration3D;
     public DayPhase currentDayPhase = DayPhase.CasualTalk;
 
-    [Header("D�as")]
+    [Header("Dias")]
     public int currentDay = 1;
-    public int maxDays = 7;
+    public int maxDays = 5;
 
-    [Header("Investigaci�n")]
+    [Header("Investigacion")]
     public int maxQuestionsPerDay = 2;
     private int questionsUsed;
 
-
-    public int GetRemainingQuestions()
+    /*
+    * Metodo que obtiene el numero maximo de preguntas.
+    */
+    public int GetMaxQuestions()
     {
-        return maxQuestionsPerDay - questionsUsed;
+        return currentDay == 3 ? 5 : maxQuestionsPerDay;
     }
 
+    /*
+    * Metodo que obtiene el numero de preguntas restantes.
+    */
+    public int GetRemainingQuestions()
+    {
+        return GetMaxQuestions() - questionsUsed;
+    }
 
     [Header("Resultados")]
     public int goodDecisions = 0;
@@ -43,19 +116,25 @@ public class GameManager : MonoBehaviour
     public bool isEndingPhase = false;
     public bool isGoodEnding = false;
 
-    [Header("Configuracin de la Historia")]
+    [Header("Configuracion de la Historia")]
     public DayScenario[] allDays;
 
+    /*
+    * Metodo que se llama al crear el objeto.
+    */
     private void Awake()
     {
+        //Si no existe una instancia, crea una.
         if (Instance == null)
             Instance = this;
         else
         {
+            //Si existe una instancia, destruye el objeto.
             Destroy(gameObject);
             return;
         }
 
+        //Si existe una partida guardada, aplica los datos de guardado.
         if (SaveSystem.HasSave())
         {
             SaveData saveData = SaveSystem.LoadGame();
@@ -69,14 +148,33 @@ public class GameManager : MonoBehaviour
         StartNewGameState();
     }
 
+    private void Update()
+    {
+        // Actualizamos el volumen continuamente por si cambias el valor en el inspector durante el juego
+        if (backgroundAudioSource != null)
+        {
+            DayScenario scenario = GetCurrentDayScenario();
+            if (scenario != null)
+            {
+                if (backgroundAudioSource.volume != scenario.musicVolume)
+                {
+                    backgroundAudioSource.volume = scenario.musicVolume;
+                }
+            }
+        }
+    }
+
     // ---------------- ESTADOS ----------------
 
+    /*
+    * Metodo que verifica si el juego esta en 2D.
+    */
     public bool IsIn2D()
     {
         return currentState == GameState.Interaction2D;
     }
 
-    // ---------------- DAS ----------------
+    // ---------------- DIAS ----------------
 
     public bool hasAccusedThisDay = false; // Nueva variable
     public bool hasReadPrologueLetter = false;
@@ -88,6 +186,13 @@ public class GameManager : MonoBehaviour
     private Vector3 loadedPlayerPosition;
     private bool hasLoadedPlayerRotation = false;
     private Quaternion loadedPlayerRotation;
+    
+    [Header("Audio")]
+    public AudioSource backgroundAudioSource;
+
+    /*
+    * Metodo que inicia un nuevo estado del juego.
+    */
     void StartNewGameState()
     {
         currentDay = 1;
@@ -103,6 +208,9 @@ public class GameManager : MonoBehaviour
         RefreshCurrentDay(true);
     }
 
+    /*
+    * Metodo que aplica los datos de guardado.
+    */
     void ApplyLoadedGameState(SaveData data)
     {
         ApplySaveData(data);
@@ -110,6 +218,9 @@ public class GameManager : MonoBehaviour
         ApplyDialogueProgress(data);
     }
 
+    /*
+    * Metodo que reinicia el estado diario.
+    */
     void ResetDailyState()
     {
         currentDayPhase = DayPhase.CasualTalk;
@@ -117,14 +228,17 @@ public class GameManager : MonoBehaviour
         hasAccusedThisDay = false;
     }
 
+    /*
+    * Metodo que refresca el dia actual.
+    */
     void RefreshCurrentDay(bool resetDailyMemory)
     {
         DayScenario scenario = GetCurrentDayScenario();
-
+        // si no hay escenario, muestra un error.
         if (scenario != null)
         {
-            Debug.Log($"Configurando Da {currentDay}: {scenario.name}");
-
+            Debug.Log($"Configurando Dia {currentDay}: {scenario.name}");
+            // busca todos los alumnos.
             StudentNPC[] allNPCs = FindObjectsOfType<StudentNPC>();
             foreach (StudentNPC npc in allNPCs)
             {
@@ -135,7 +249,7 @@ public class GameManager : MonoBehaviour
 
                 npc.SetupCharacterForToday();
             }
-
+            // si no hay profesor, muestra un error.
             TeacherNPC teacher = FindFirstObjectByType<TeacherNPC>();
             if (teacher != null)
             {
@@ -149,11 +263,44 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No hay un DayScenario configurado para el da " + currentDay);
+            Debug.LogError("No hay un DayScenario configurado para el dia " + currentDay);
         }
 
-        Debug.Log($"Da {currentDay} comienza oficialmente");
+        // Si no hay AudioSource asignado, intentamos buscar uno en este mismo GameObject o crear uno
+        if (backgroundAudioSource == null)
+        {
+            backgroundAudioSource = GetComponent<AudioSource>();
+            if (backgroundAudioSource == null)
+            {
+                backgroundAudioSource = gameObject.AddComponent<AudioSource>();
+            }
+            Debug.LogWarning("AudioSource no estaba asignado en GameManager, se auto-asigno/creocl uno.");
+        }
 
+        if (scenario != null && backgroundAudioSource != null)
+        {
+            if (scenario.backgroundMusic != null)
+            {
+                // Actualizamos el volumen siempre, incluso si la cancion ya esta sonando
+                backgroundAudioSource.volume = scenario.musicVolume;
+
+                if (backgroundAudioSource.clip != scenario.backgroundMusic || !backgroundAudioSource.isPlaying)
+                {
+                    backgroundAudioSource.clip = scenario.backgroundMusic;
+                    backgroundAudioSource.loop = true;
+                    backgroundAudioSource.Play();
+                    Debug.Log($"Reproduciendo la cancion: {scenario.backgroundMusic.name} a volumen {scenario.musicVolume}");
+                }
+            }
+            else
+            {
+                backgroundAudioSource.Stop();
+                Debug.Log("No hay msica configurada para este da, silenciando el AudioSource.");
+            }
+        }
+
+        Debug.Log($"Dia {currentDay} comienza oficialmente");
+        // si el jugador existe, carga su posicion.
         if (playerObject != null)
         {
             if (hasLoadedPlayerPosition)
@@ -175,7 +322,9 @@ public class GameManager : MonoBehaviour
     }
 
     // ---------------- ACOSADO ----------------
-
+    /*
+    * Metodo que se llama cuando se encuentra al acosado.
+    */
     public void FoundVictim()
     {
         if (currentDayPhase != DayPhase.CasualTalk)
@@ -188,19 +337,24 @@ public class GameManager : MonoBehaviour
     }
 
     // ---------------- PREGUNTAS ----------------
-
+    /*
+    * Metodo que verifica si se puede hacer una pregunta.
+    */
     public bool CanAskQuestion()
     {
         return currentDayPhase == DayPhase.Investigation
-            && questionsUsed < maxQuestionsPerDay;
+            && questionsUsed < GetMaxQuestions();
     }
 
+    /*
+    * Metodo que registra el uso de una pregunta.
+    */
     public void UseQuestion()
     {
         questionsUsed++;
-        Debug.Log($"Pregunta usada ({questionsUsed}/{maxQuestionsPerDay})");
+        Debug.Log($"Pregunta usada ({questionsUsed}/{GetMaxQuestions()})");
 
-        if (questionsUsed >= maxQuestionsPerDay)
+        if (questionsUsed >= GetMaxQuestions())
         {
             currentDayPhase = DayPhase.Decision;
             Debug.Log("Ya puedes chivarte al profesor.");
@@ -208,17 +362,21 @@ public class GameManager : MonoBehaviour
     }
 
     // ---------------- DECISIONES ----------------
-
+    /*
+    * Metodo que registra la decision.
+    */
     public void RegisterDecision(bool correct)
     {
         if (correct) goodDecisions++;
         else badDecisions++;
 
-        hasAccusedThisDay = true; // <--- Marcamos que ya se hizo la acusacin
+        hasAccusedThisDay = true; // <--- Marca que ya se hizo la acusacion
         Debug.Log("Decisin registrada. Ahora puedes irte.");
     }
 
-
+    /*
+    * Metodo que pasa al siguiente dia.
+    */
     public void NextDay()
     {
         if (currentDay >= GetPlayableDayCount())
@@ -232,6 +390,9 @@ public class GameManager : MonoBehaviour
         RefreshCurrentDay(true);
     }
 
+    /*
+    * Metodo que termina el juego.
+    */
     void EndGame()
     {
         isEndingPhase = true;
@@ -248,11 +409,41 @@ public class GameManager : MonoBehaviour
 
         SaveSystem.SaveGame(BuildSaveData());
 
+<<<<<<< HEAD
         SceneManager.LoadScene("HouseScene");
+=======
+        if (isGoodEnding)
+        {
+            LoadEndingScene("HouseSceneGood", "Assets/HouseSceneGood.unity");
+        }
+        else
+        {
+            LoadEndingScene("HouseSceneBad", "Assets/Scenes/HouseSceneBad.unity");
+        }
+>>>>>>> origin/main
+    }
+
+    void LoadEndingScene(string sceneName, string scenePath)
+    {
+        if (Application.CanStreamedLevelBeLoaded(sceneName))
+        {
+            SceneManager.LoadScene(sceneName);
+            return;
+        }
+
+        if (Application.CanStreamedLevelBeLoaded(scenePath))
+        {
+            SceneManager.LoadScene(scenePath);
+            return;
+        }
+
+        Debug.LogError($"No se pudo cargar la escena de final '{sceneName}'.");
     }
 
 
-    // Funcin auxiliar para que los alumnos sepan qu da es
+    /*
+    * Metodo auxiliar para que los alumnos sepan que dia es.
+    */
     public DayScenario GetCurrentDayScenario()
     {
         // Restamos 1 porque el array empieza en 0 pero tus das en 1
@@ -264,6 +455,9 @@ public class GameManager : MonoBehaviour
         return null;
     }
 
+    /*
+    * Metodo que reinicia todos los NPCs.
+    */
     public void ResetAllNPCs()
     {
         StudentNPC[] allNPCs = FindObjectsOfType<StudentNPC>();
@@ -278,14 +472,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que establece el numero de preguntas restantes.
+    */
     public void SetRemainingQuestions(int remaining)
     {
-        int clampedRemaining = Mathf.Clamp(remaining, 0, maxQuestionsPerDay);
-        questionsUsed = maxQuestionsPerDay - clampedRemaining;
+        int clampedRemaining = Mathf.Clamp(remaining, 0, GetMaxQuestions());
+        questionsUsed = GetMaxQuestions() - clampedRemaining;
     }
 
+    /*
+    * Metodo que construye los datos de guardado.
+    */
     public SaveData BuildSaveData()
     {
+        // Crea una nueva instancia de SaveData.
         SaveData saveData = new SaveData
         {
             sceneName = SceneManager.GetActiveScene().name,
@@ -330,7 +531,9 @@ public class GameManager : MonoBehaviour
 
         return saveData;
     }
-
+    /*
+    * Metodo que aplica los datos de guardado.
+    */
     void ApplyDialogueProgress(SaveData data)
     {
         if (data == null || data.studentProgress == null)
@@ -354,7 +557,9 @@ public class GameManager : MonoBehaviour
             teacher.ApplyProgressData(data.teacherProgress);
         }
     }
-
+    /*
+    * Metodo que aplica los datos de guardado.
+    */
     public void ApplySaveData(SaveData data)
     {
         if (data == null)
@@ -405,7 +610,9 @@ public class GameManager : MonoBehaviour
             currentDayPhase = DayPhase.CasualTalk;
         }
     }
-
+    /*
+    * Metodo que obtiene el numero de dias jugables.
+    */
     public int GetPlayableDayCount()
     {
         if (allDays == null || allDays.Length == 0)

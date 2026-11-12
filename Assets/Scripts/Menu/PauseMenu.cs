@@ -8,6 +8,84 @@ using UnityEngine.UI;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
+/*
+* Script para manjear el menu de pausa
+* Metodos:
+*   - Resume(): Metodo que reanuda el juego.
+*   - SaveAndExit(): Metodo que guarda y sale del juego.
+*   - ExitWithoutSaving(): Metodo que sale del juego sin guardar.
+*   - ConfirmExitYes(): Metodo que confirma la salida del juego.
+*   - ConfirmExitNo(): Metodo que cancela la salida del juego.
+*   - OpenSettingsMenu(): Metodo que abre el menu de configuraciones.
+*   - CloseSettingsMenu(): Metodo que cierra el menu de configuraciones.
+*   - QuitGame(): Metodo que sale del juego.
+*   - Pause(): Metodo que pausa el juego.
+*   - DoSaveAndExit(): Metodo que guarda y sale del juego.
+*   - DoExitWithoutSaving(): Metodo que sale del juego sin guardar.
+*   - ShowConfirmation(): Metodo que muestra la confirmacion de salida.
+*   - ShowPauseButtons(): Metodo que muestra los botones del menu de pausa.
+*   - SetSettingsElementsActive(): Metodo que activa los elementos del menu de configuraciones.
+*   - FindPauseMenuReferences(): Metodo que encuentra las referencias del menu de pausa.
+*   - FindSettingsReferences(): Metodo que encuentra las referencias del menu de configuraciones.
+*   - CacheSettingsMenuBackground(): Metodo que cachea la imagen de fondo del menu de configuraciones.
+*   - CollectSettingsUiElements(): Metodo que recolecta los elementos del menu de configuraciones.
+*   - WireButtons(): Metodo que conecta los botones del menu de pausa.
+*   - EnsureBrightnessOverlay(): Metodo que asegura que el overlay de brillo este presente.
+*   - CacheColorAdjustments(): Metodo que cachea los ajustes de color.
+*   - LoadAndApplyPlayerSettings(): Metodo que carga y aplica la configuracion del jugador.
+*   - ConfigureResolutionDropdown(): Metodo que configura el dropdown de resolucion.
+*   - ConfigureResolutionDropdownScroll(): Metodo que configura el scroll del dropdown de resolucion.
+*   - ApplySettings(): Metodo que aplica la configuracion del jugador.
+*   - SetActiveIfAssigned(): Metodo que activa un objeto si esta asignado.
+*   - ShowMainOptions(): Metodo que muestra las opciones principales.
+*   - ShowNewGameConfirmation(): Metodo que muestra la confirmacion de nueva partida.
+*   - RefreshButtons(): Metodo que refresca los botones.
+*   - ResolveSceneForSavedGame(): Metodo que resuelve la escena para la partida guardada.
+*   - GetSceneNameForDay(): Metodo que obtiene el nombre de la escena para el dia.
+*   - GetSceneNameForDay(): Metodo que obtiene el nombre de la escena para el dia.
+*
+*   Variables:
+*   - pauseMenuUI: Panel que muestra el menu de pausa.
+*   - movementScript: Script de movimiento del jugador.
+*   - resumeButton: Boton de reanudar.
+*   - saveAndExitButton: Boton de guardar y salir.
+*   - exitWithoutSaveButton: Boton de salir sin guardar.
+*   - settingsButton: Boton de configuraciones.
+*   - confirmationTextObject: Objeto que muestra el texto de confirmacion.
+*   - confirmationTextLabel: Etiqueta que muestra el texto de confirmacion.
+*   - confirmYesButton: Boton de confirmacion de salida.
+*   - confirmNoButton: Boton de cancelacion de salida.
+*   - settingsMenuUI: Panel que muestra el menu de configuraciones.
+*   - settingsBackButton: Boton de regreso del menu de configuraciones.
+*   - volumeSlider: Slider de volumen.
+*   - brightnessSlider: Slider de brillo.
+*   - fullscreenToggle: Toggle de pantalla completa.
+*   - resolutionDropdown: Dropdown de resolucion.
+*   - brightnessOverlay: Overlay de brillo.
+*   - playerSettings: Datos de configuracion del jugador.
+*   - isApplyingUIState: Si se esta aplicando la configuracion del jugador.
+*   - colorAdjustments: Ajustes de color.
+*   - settingsMenuBackgroundImage: Imagen de fondo del menu de configuraciones.
+*   - settingsMenuBackgroundBaseColor: Color base de la imagen de fondo del menu de configuraciones.
+*   - commonResolutions: Resoluciones comunes.
+*   - pendingExitAction: Accion pendiente de salida.
+*
+*   Funcionamiento:
+*   - Al iniciar el juego, se muestra el menu de pausa.
+*   - El jugador puede reanudar el juego, guardar y salir, salir sin guardar, abrir el menu de configuraciones o salir del juego.
+*   - El menu de configuraciones permite ajustar el volumen, brillo, pantalla completa y resolucion.
+*   - El jugador puede guardar la partida en cualquier momento.
+*
+*   Flujo:
+*   1. El jugador inicia el juego.
+*   2. Se muestra el menu de pausa.
+*   3. El jugador puede reanudar el juego, guardar y salir, salir sin guardar, abrir el menu de configuraciones o salir del juego.
+*   4. El jugador puede guardar la partida en cualquier momento.
+*
+*   Hay mucho codigo quer se repite, solo estan comentados algunos metodos.
+*
+*/
+
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
@@ -57,6 +135,9 @@ public class PauseMenu : MonoBehaviour
 
     private PendingExitAction pendingExitAction = PendingExitAction.None;
 
+    /*
+    * Metodo que se llama al iniciar el juego.
+    */
     void Awake()
     {
         FindPauseMenuReferences();
@@ -69,6 +150,9 @@ public class PauseMenu : MonoBehaviour
         LoadAndApplyPlayerSettings();
     }
 
+    /*
+    * Metodo que se llama en cada frame.
+    */
     void Update()
     {
         if (Keyboard.current == null || !Keyboard.current.escapeKey.wasPressedThisFrame)
@@ -97,15 +181,19 @@ public class PauseMenu : MonoBehaviour
         Pause();
     }
 
+    /*
+    * Metodo que reanuda el juego.
+    */
     public void Resume()
     {
         GameObject selected = EventSystem.current != null ? EventSystem.current.currentSelectedGameObject : null;
+        //Si se presiona el boton de configuraciones.
         if (isPaused && settingsButton != null && selected == settingsButton.gameObject)
         {
             OpenSettingsMenu();
             return;
         }
-
+        //Si se presiona el boton de regreso del menu de configuraciones.
         if (settingsMenuUI != null && settingsMenuUI.activeSelf && settingsBackButton != null && selected == settingsBackButton.gameObject)
         {
             CloseSettingsMenu();
@@ -126,13 +214,13 @@ public class PauseMenu : MonoBehaviour
 
         Time.timeScale = 1f;
         isPaused = false;
-
+        //Si el juego esta en modo exploracion 3D.
         if (GameManager.Instance != null && GameManager.Instance.currentState == GameState.Exploration3D)
         {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
-
+        //Si el script de movimiento no es nulo.
         if (movementScript != null)
         {
             movementScript.enabled = true;
@@ -140,12 +228,18 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que guarda y sale del juego.
+    */
     public void SaveAndExit()
     {
         pendingExitAction = PendingExitAction.SaveAndExit;
         ShowConfirmation("QUIERES GUARDAR Y SALIR?");
     }
 
+    /*
+    * Metodo que sale del juego sin guardar.
+    */
     public void ExitWithoutSaving()
     {
         GameObject selected = EventSystem.current != null ? EventSystem.current.currentSelectedGameObject : null;
@@ -168,6 +262,9 @@ public class PauseMenu : MonoBehaviour
         ShowConfirmation("QUIERES SALIR SIN GUARDAR?");
     }
 
+    /*
+    * Metodo que confirma la salida del juego.
+    */
     public void ConfirmExitYes()
     {
         if (isExitingToMenu)
@@ -189,12 +286,18 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que cancela la salida del juego.
+    */
     public void ConfirmExitNo()
     {
         pendingExitAction = PendingExitAction.None;
         ShowPauseButtons();
     }
 
+    /*
+    * Metodo que abre el menu de configuraciones.
+    */
     public void OpenSettingsMenu()
     {
         if (settingsUiElements.Count == 0)
@@ -213,17 +316,26 @@ public class PauseMenu : MonoBehaviour
         SetSettingsElementsActive(true);
     }
 
+    /*
+    * Metodo que cierra el menu de configuraciones.
+    */
     public void CloseSettingsMenu()
     {
         SetSettingsElementsActive(false);
         ShowPauseButtons();
     }
 
+    /*
+    * Metodo que sale del juego.
+    */
     public void QuitGame()
     {
         ExitWithoutSaving();
     }
 
+    /*
+    * Metodo que pausa el juego.
+    */
     void Pause()
     {
         if (pauseMenuUI != null)
@@ -252,6 +364,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que guarda y sale del juego.
+    */
     void DoSaveAndExit()
     {
         if (GameManager.Instance != null)
@@ -262,11 +377,17 @@ public class PauseMenu : MonoBehaviour
         ExitToMainMenu("Guardando partida y volviendo al menu principal...");
     }
 
+    /*
+    * Metodo que sale del juego sin guardar.
+    */
     void DoExitWithoutSaving()
     {
         ExitToMainMenu("Volviendo al menu principal sin guardar...");
     }
 
+    /*
+    * Metodo que sale del juego.
+    */
     void ExitToMainMenu(string logMessage)
     {
         isExitingToMenu = true;
@@ -291,6 +412,9 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    /*
+    * Metodo que muestra la confirmacion de salida.
+    */
     void ShowConfirmation(string message)
     {
         SetActiveIfAssigned(resumeButton, false);
@@ -313,6 +437,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que muestra los botones del menu de pausa.
+    */
     void ShowPauseButtons()
     {
         SetActiveIfAssigned(resumeButton, true);
@@ -324,6 +451,9 @@ public class PauseMenu : MonoBehaviour
         SetActiveIfAssigned(confirmNoButton, false);
     }
 
+    /*
+    * Metodo que carga la configuracion del jugador.
+    */
     void LoadAndApplyPlayerSettings()
     {
         playerSettings = PlayerSettingsSystem.Load();
@@ -366,6 +496,9 @@ public class PauseMenu : MonoBehaviour
         SetSettingsElementsActive(false);
     }
 
+    /*
+    * Metodo que configura el dropdown de resolucion.
+    */
     void ConfigureResolutionDropdown()
     {
         if (resolutionDropdown == null)
@@ -385,6 +518,9 @@ public class PauseMenu : MonoBehaviour
         ConfigureResolutionDropdownScroll();
     }
 
+    /*
+    * Metodo que configura el scroll del dropdown de resolucion.
+    */
     void ConfigureResolutionDropdownScroll()
     {
         if (resolutionDropdown == null || resolutionDropdown.template == null)
@@ -446,7 +582,6 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        // Forzamos un viewport pequeño para que haya desplazamiento visible con 5 opciones.
         float visibleItems = 2f;
         float viewportHeight = itemHeight * visibleItems;
         Vector2 viewportSize = scrollRect.viewport.sizeDelta;
@@ -456,6 +591,9 @@ public class PauseMenu : MonoBehaviour
         template.sizeDelta = new Vector2(templateSize.x, viewportHeight + itemHeight);
     }
 
+    /*
+    * Metodo que aplica la configuracion del jugador.
+    */
     void ApplySettings(bool save)
     {
         AudioListener.volume = playerSettings.masterVolume;
@@ -472,6 +610,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que asegura el overlay de brillo.
+    */
     void EnsureBrightnessOverlay()
     {
         if (brightnessOverlay != null)
@@ -520,6 +661,9 @@ public class PauseMenu : MonoBehaviour
         overlayGO.transform.SetAsFirstSibling();
     }
 
+    /*
+    * Metodo que aplica el overlay de brillo.
+    */
     void ApplyBrightnessOverlay(float brightnessT)
     {
         if (brightnessOverlay == null)
@@ -532,8 +676,8 @@ public class PauseMenu : MonoBehaviour
             return;
         }
 
-        // Por debajo de 0.5 oscurecemos con overlay negro.
-        // Por encima de 0.5 aclaramos con postExposure (sin overlay blanco grisáceo).
+        // Por debajo de 0.5 oscurecem con overlay negro.
+        // Por encima de 0.5 aclara con postExposure (sin overlay blanco grisáceo).
         float previewT = Mathf.Clamp01(brightnessT);
         float effectiveT = previewT * 0.75f;
 
@@ -559,6 +703,9 @@ public class PauseMenu : MonoBehaviour
         ApplySettingsMenuBackgroundBrightness(previewT);
     }
 
+    /*
+    * Metodo que cachea el fondo del menu de configuracion.
+    */
     void CacheSettingsMenuBackground()
     {
         settingsMenuBackgroundImage = null;
@@ -574,6 +721,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que aplica el brillo al fondo del menu de configuracion.
+    */
     void ApplySettingsMenuBackgroundBrightness(float brightnessT)
     {
         if (settingsMenuBackgroundImage == null)
@@ -604,10 +754,14 @@ public class PauseMenu : MonoBehaviour
         settingsMenuBackgroundImage.color = result;
     }
 
+    /*
+    * Metodo que cachea los ajustes de color.
+    */
     void CacheColorAdjustments()
     {
         colorAdjustments = null;
         Volume[] volumes = FindObjectsByType<Volume>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        // Recorre todos los volumes.
         foreach (Volume v in volumes)
         {
             if (v == null || !v.isGlobal)
@@ -621,10 +775,10 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
-                // Clonamos para no editar el asset original del proyecto en tiempo de juego.
+                // Clona para no editar el asset original del proyecto en tiempo de juego.
                 v.profile = Instantiate(v.profile);
             }
-
+            // Busca si hay ColorAdjustments en el perfil.
             if (!v.profile.TryGet(out ColorAdjustments found))
             {
                 found = v.profile.Add<ColorAdjustments>(true);
@@ -640,6 +794,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que cambia el volumen.
+    */
     void OnVolumeChanged(float value)
     {
         if (isApplyingUIState)
@@ -651,6 +808,9 @@ public class PauseMenu : MonoBehaviour
         ApplySettings(save: true);
     }
 
+    /*
+    * Metodo que cambia el brillo.
+    */
     void OnBrightnessChanged(float value)
     {
         if (isApplyingUIState)
@@ -662,6 +822,9 @@ public class PauseMenu : MonoBehaviour
         ApplySettings(save: true);
     }
 
+    /*
+    * Metodo que cambia la pantalla completa.
+    */
     void OnFullscreenChanged(bool value)
     {
         if (isApplyingUIState)
@@ -673,6 +836,9 @@ public class PauseMenu : MonoBehaviour
         ApplySettings(save: true);
     }
 
+    /*
+    * Metodo que cambia la resolucion.
+    */
     void OnResolutionChanged(int value)
     {
         if (isApplyingUIState)
@@ -684,6 +850,9 @@ public class PauseMenu : MonoBehaviour
         ApplySettings(save: true);
     }
 
+    /*
+    * Metodo que conecta los botones.
+    */
     void WireButtons()
     {
         if (confirmYesButton != null)
@@ -735,6 +904,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que busca las referencias del menu de pausa.
+    */
     void FindPauseMenuReferences()
     {
         Transform pauseRoot = pauseMenuUI != null ? pauseMenuUI.transform : null;
@@ -784,6 +956,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que busca las referencias del menu de configuracion.
+    */
     void FindSettingsReferences()
     {
         if (settingsMenuUI == null)
@@ -859,6 +1034,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que recolecta los elementos de la interfaz de usuario de configuracion.
+    */
     void CollectSettingsUiElements()
     {
         settingsUiElements.Clear();
@@ -870,6 +1048,9 @@ public class PauseMenu : MonoBehaviour
         AddSettingsElement(resolutionDropdown);
     }
 
+    /*
+    * Metodo que agrega un elemento al menu de configuracion.
+    */
     void AddSettingsElement(Component component)
     {
         if (component != null)
@@ -878,6 +1059,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que agrega un elemento al menu de configuracion.
+    */
     void AddSettingsElement(GameObject go)
     {
         if (go != null && !settingsUiElements.Contains(go))
@@ -886,6 +1070,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que activa o desactiva los elementos del menu de configuracion.
+    */
     void SetSettingsElementsActive(bool active)
     {
         for (int i = 0; i < settingsUiElements.Count; i++)
@@ -897,6 +1084,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que activa o desactiva un componente.
+    */
     void SetActiveIfAssigned(Component component, bool active)
     {
         if (component != null)
@@ -905,6 +1095,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que activa o desactiva un objeto.
+    */
     void SetActiveIfAssigned(GameObject target, bool active)
     {
         if (target != null)
@@ -913,6 +1106,9 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    /*
+    * Metodo que busca un boton por nombre.
+    */
     Button FindButtonByName(string buttonName, Transform root = null)
     {
         Button[] buttons = FindObjectsByType<Button>(FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -932,6 +1128,9 @@ public class PauseMenu : MonoBehaviour
         return null;
     }
 
+    /*
+    * Metodo que busca un boton por texto.
+    */
     Button FindButtonByText(string buttonTextContains, Transform root = null)
     {
         Button[] buttons = FindObjectsByType<Button>(FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -952,6 +1151,9 @@ public class PauseMenu : MonoBehaviour
         return null;
     }
 
+    /*
+    * Metodo que busca un slider por nombre.
+    */
     Slider FindSliderByName(string sliderName, Transform root = null)
     {
         Slider[] sliders = FindObjectsByType<Slider>(FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -971,6 +1173,9 @@ public class PauseMenu : MonoBehaviour
         return null;
     }
 
+    /*
+    * Metodo que busca un toggle por nombre.
+    */
     Toggle FindToggleByName(string toggleName, Transform root = null)
     {
         Toggle[] toggles = FindObjectsByType<Toggle>(FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -990,6 +1195,9 @@ public class PauseMenu : MonoBehaviour
         return null;
     }
 
+    /*
+    * Metodo que busca un toggle por texto.
+    */
     Toggle FindToggleByLabel(string textContains, Transform root = null)
     {
         Toggle[] toggles = FindObjectsByType<Toggle>(FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -1010,6 +1218,9 @@ public class PauseMenu : MonoBehaviour
         return null;
     }
 
+    /*
+    * Metodo que busca un dropdown por nombre.
+    */
     TMP_Dropdown FindDropdownByName(string dropdownName, Transform root = null)
     {
         TMP_Dropdown[] dropdowns = FindObjectsByType<TMP_Dropdown>(FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -1029,6 +1240,9 @@ public class PauseMenu : MonoBehaviour
         return null;
     }
 
+    /*
+    * Metodo que busca un objeto por nombre.
+    */
     GameObject FindObjectByName(string objectName, Transform root = null)
     {
         Transform[] allTransforms = FindObjectsByType<Transform>(FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -1048,6 +1262,9 @@ public class PauseMenu : MonoBehaviour
         return null;
     }
 
+    /*
+    * Metodo que verifica si un objeto esta bajo un root.
+    */
     bool IsUnderRoot(Transform target, Transform root)
     {
         if (root == null)

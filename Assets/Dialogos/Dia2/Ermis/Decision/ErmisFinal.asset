@@ -16,5 +16,9 @@ MonoBehaviour:
   - characterName: Ermis
     text: Habla de nuevo conmigo si descubres algo.
     expression: {fileID: 21300000, guid: 43640beb0febedd4d8e5e9fe43a2b07a, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []

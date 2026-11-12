@@ -16,12 +16,20 @@ MonoBehaviour:
   - characterName: Ermis
     text: "\xBFEn serio?"
     expression: {fileID: 21300000, guid: 43640beb0febedd4d8e5e9fe43a2b07a, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Ermis
     text: "Dime qui\xE9n fue, porfavor. Le pondr\xE9 un parte y expulsi\xF3n inmediata."
     expression: {fileID: 21300000, guid: 43640beb0febedd4d8e5e9fe43a2b07a, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 0}
     hasOptions: 1
+    isFinalButton: 0
     options:
     - optionText: Fue Boberto
       nextDialogue: {fileID: 11400000, guid: 4fe81019990951043be5c290ea98819c, type: 2}

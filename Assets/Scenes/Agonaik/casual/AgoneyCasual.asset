@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: AgoneyCasual
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Agoney
+    text: Ufff, esta chaqueta que me compre...
+    expression: {fileID: 21300000, guid: 1d1f35a71b7665241b5582f8d851601a, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Agoney
+    text: "Te la recomiendo la mejor que he comprado nunca, \xBFTe interesa?"
+    expression: {fileID: 21300000, guid: 1d1f35a71b7665241b5582f8d851601a, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 1
+    options:
+    - optionText: Quien eres y porque.
+      nextDialogue: {fileID: 11400000, guid: 8ef0b309f7ec07d4db7de39e40a6ad60, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: No me gusta es fea.
+      nextDialogue: {fileID: 11400000, guid: 91dd35f5dde1f784b93ef89e9dd92953, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

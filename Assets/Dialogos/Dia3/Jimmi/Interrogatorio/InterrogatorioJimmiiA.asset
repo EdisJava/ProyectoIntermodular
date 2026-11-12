@@ -16,26 +16,29 @@ MonoBehaviour:
   - characterName: Jimmi
     text: "Dime, \xBFtienes alguna pregunta que hacerme al respecto?"
     expression: {fileID: 21300000, guid: 9b52ce13b33477647aa0a7a535cf20e9, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 1
     options:
-    - optionText: "\xBFCu\xE1l es tu relaci\xF3n con ??? ? \xBFDe qu\xE9 lo conoces?"
+    - optionText: "\xBFCu\xE1l es tu relaci\xF3n con Haydin ? \xBFDe qu\xE9 lo conoces?
+        (-1)"
       nextDialogue: {fileID: 11400000, guid: f3ed144a88329e4448a27720a4a15242, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: "T\xFA, \xBFqui\xE9n crees que podr\xEDa ser?"
+    - optionText: "T\xFA, \xBFqui\xE9n crees que podr\xEDa ser?(-1)"
       nextDialogue: {fileID: 11400000, guid: b5fa5676e7c26ff4db65b46441f1101c, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
     - optionText: "Creo que tus problemas familiares pueden dar alg\xFAn problema
-        aqu\xED."
+        aqu\xED.(-1)"
       nextDialogue: {fileID: 11400000, guid: bb7c113c9e9e31f4b8c494618a11af5b, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
     - optionText: No tengo mas preguntas.
-      nextDialogue: {fileID: 11400000, guid: c59c9b5fbc5bc164190fa50c8596a257, type: 2}
+      nextDialogue: {fileID: 11400000, guid: ae0f40e63c987cb4894aea13d8a40e6e, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0

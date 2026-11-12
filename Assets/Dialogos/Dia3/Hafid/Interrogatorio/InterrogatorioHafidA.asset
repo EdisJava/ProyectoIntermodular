@@ -15,27 +15,31 @@ MonoBehaviour:
   lines:
   - characterName: Hafid
     text: "Dime, \xBFtienes alguna pregunta que hacerme al respecto?"
-    expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
+    expression: {fileID: 21300000, guid: 57c1768104c6f2f42aab364e5f61f789, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 1
+    isFinalButton: 0
     options:
-    - optionText: Cual es tu relacion con ???, de que lo conoces.
+    - optionText: Cual es tu relacion con Haydin, de que lo conoces.(-1)
       nextDialogue: {fileID: 11400000, guid: af7a9b950c244ac4a871480e94b42287, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
-    - optionText: Tu quien crees que podria ser.
+    - optionText: Tu quien crees que podria ser.(-1)
       nextDialogue: {fileID: 11400000, guid: 386ff7c9c46622d409d4df5c27fd454a, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
     - optionText: Creo que tu relacion con Ian puede ser por el caso de bullyng con
-        Goran.
+        Goran.(-1)
       nextDialogue: {fileID: 11400000, guid: a6079f6236170ae469c75bf7699c559a, type: 2}
       isInterrogation: 1
       isFinalDecision: 0
       isCorrectAccusation: 0
     - optionText: No tengo mas preguntas.
       nextDialogue: {fileID: 11400000, guid: c59c9b5fbc5bc164190fa50c8596a257, type: 2}
-      isInterrogation: 1
+      isInterrogation: 0
       isFinalDecision: 0
       isCorrectAccusation: 0

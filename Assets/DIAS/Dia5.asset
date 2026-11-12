@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530b9f764835696469860bff74b39007, type: 3}
+  m_Name: Dia5
+  m_EditorClassIdentifier: Assembly-CSharp::DayScenario
+  victimName: Edgar
+  teacherName: Ermis5
+  backgroundMusic: {fileID: 0}
+  musicVolume: 1
+  characterConfigs:
+  - characterName: Mohi5
+    casualDialogue: {fileID: 11400000, guid: 69387d74df769cc4887099079ab525aa, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 69387d74df769cc4887099079ab525aa, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 69387d74df769cc4887099079ab525aa, type: 2}
+    isLiarToday: 0
+  - characterName: Fernando5
+    casualDialogue: {fileID: 11400000, guid: 591379b49bb49ce45812279f7c6d3143, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 591379b49bb49ce45812279f7c6d3143, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 591379b49bb49ce45812279f7c6d3143, type: 2}
+    isLiarToday: 0
+  - characterName: Goran5
+    casualDialogue: {fileID: 11400000, guid: 0db1532f632b9944d8f73183b3e33d4a, type: 2}
+    truthDialogue: {fileID: 11400000, guid: c8e59ec2822a04046a1027cc0b345ad6, type: 2}
+    lieDialogue: {fileID: 11400000, guid: c8e59ec2822a04046a1027cc0b345ad6, type: 2}
+    isLiarToday: 0
+  - characterName: Jesus5
+    casualDialogue: {fileID: 11400000, guid: 71acb97c445cef2419d1ed2f1a90969e, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 257350959f159c74389619bb6dd5bb7c, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 257350959f159c74389619bb6dd5bb7c, type: 2}
+    isLiarToday: 1
+  - characterName: Alberto5
+    casualDialogue: {fileID: 11400000, guid: f539b43192102624586d674564988356, type: 2}
+    truthDialogue: {fileID: 11400000, guid: f539b43192102624586d674564988356, type: 2}
+    lieDialogue: {fileID: 11400000, guid: f539b43192102624586d674564988356, type: 2}
+    isLiarToday: 0
+  - characterName: Miki
+    casualDialogue: {fileID: 11400000, guid: 311765fff61bbcb45927d1bb53d552ba, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 311765fff61bbcb45927d1bb53d552ba, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 311765fff61bbcb45927d1bb53d552ba, type: 2}
+    isLiarToday: 0
+  - characterName: Zia
+    casualDialogue: {fileID: 11400000, guid: cd93cbc1f6ab24d498fd0be8e00621b5, type: 2}
+    truthDialogue: {fileID: 11400000, guid: cd93cbc1f6ab24d498fd0be8e00621b5, type: 2}
+    lieDialogue: {fileID: 11400000, guid: cd93cbc1f6ab24d498fd0be8e00621b5, type: 2}
+    isLiarToday: 0
+  - characterName: walter-5
+    casualDialogue: {fileID: 11400000, guid: 345b802f5e7cae94d8ab87c538412d96, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 345b802f5e7cae94d8ab87c538412d96, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 345b802f5e7cae94d8ab87c538412d96, type: 2}
+    isLiarToday: 0
+  - characterName: Agoney
+    casualDialogue: {fileID: 11400000, guid: 1f106d94741e91243b8f54f09540e01a, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 5a7454e875822a944879630c30148aaf, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 5a7454e875822a944879630c30148aaf, type: 2}
+    isLiarToday: 0
+  - characterName: Guayre5
+    casualDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
+    truthDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
+    lieDialogue: {fileID: 11400000, guid: bda2eeb04fd10f049b0dadd854fc179e, type: 2}
+    isLiarToday: 0
+  - characterName: Luna
+    casualDialogue: {fileID: 11400000, guid: 83e4a45cfa4b11442b8b6fec0e38aff6, type: 2}
+    truthDialogue: {fileID: 11400000, guid: 83e4a45cfa4b11442b8b6fec0e38aff6, type: 2}
+    lieDialogue: {fileID: 11400000, guid: 83e4a45cfa4b11442b8b6fec0e38aff6, type: 2}
+    isLiarToday: 0
+  goalFindVictim: Encuentra al acosado
+  goalInvestigate: Interroga a los alumnos
+  goalReport: Habla con el profesor
+  teacherCasualDialogue: {fileID: 11400000, guid: e9b1adc80fd80a14c85766af68b67f3c, type: 2}
+  teacherDecisionDialogue: {fileID: 11400000, guid: f0b17bab227bf6747aac3a02ab08f616, type: 2}
+  postDecisionDialogue: {fileID: 11400000, guid: 729f73082ba00d04bb8158b3ce77a93a, type: 2}

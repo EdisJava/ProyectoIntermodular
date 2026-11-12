@@ -15,6 +15,6 @@ MonoBehaviour:
   lines:
   - characterName: Hafid
     text: "Ya te dije todo lo que sab\xEDa."
-    expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
+    expression: {fileID: 21300000, guid: c01d1daeec07c494bb49004a7a5c3760, type: 3}
     hasOptions: 0
     options: []

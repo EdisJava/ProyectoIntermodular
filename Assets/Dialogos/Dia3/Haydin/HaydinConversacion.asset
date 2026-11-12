@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: HaydinConversacion
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Haydin
+    text: "\xA1No, por favor, otra vez no!"
+    expression: {fileID: 21300000, guid: 4ef05bed22f87d44288cf89b5f05d712, type: 3}
+    hasOptions: 0
+    options: []
+  - characterName: Haydin
+    text: "\xA1Que ocurre que quieres otra vez!"
+    expression: {fileID: 21300000, guid: 4ef05bed22f87d44288cf89b5f05d712, type: 3}
+    hasOptions: 1
+    options:
+    - optionText: "Hey, no vengo a hacerte da\xF1o, que te ocurre que te paso."
+      nextDialogue: {fileID: 11400000, guid: d57aed8e1d5e70b44970b231fa12e9c0, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

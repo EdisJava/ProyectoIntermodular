@@ -15,10 +15,12 @@ MonoBehaviour:
   lines:
   - characterName: Hafid
     text: "Dime, a\xFAn estoy dolido por Ian."
-    expression: {fileID: 21300000, guid: 5d842be1aed9b534dbe79c03b935dec7, type: 3}
+    expression: {fileID: 21300000, guid: e578952e7a02bf14ea6c0cfb8e756cfa, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 1
     options:
-    - optionText: Creo que tienes que ver con lo de ???.
+    - optionText: Creo que tienes que ver con lo de Haydin.
       nextDialogue: {fileID: 11400000, guid: 28badae2a97c2984dbd693533906cbda, type: 2}
       isInterrogation: 0
       isFinalDecision: 0

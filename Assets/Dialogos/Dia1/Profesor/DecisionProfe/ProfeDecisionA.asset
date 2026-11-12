@@ -16,12 +16,20 @@ MonoBehaviour:
   - characterName: Jacinto
     text: . . .
     expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 0
+    isFinalButton: 0
     options: []
   - characterName: Jacinto
     text: "Qui\xE9n le hizo eso a Goran. Hablar\xE9 con el director para expulsarle."
     expression: {fileID: 21300000, guid: 4d9c41bb4a3c6b4419015046330a3df1, type: 3}
+    lineSound: {fileID: 0}
+    typingVoice: {fileID: 8300000, guid: 3701868e48889044fa2ffe553589f23b, type: 3}
+    backgroundOverride: {fileID: 0}
     hasOptions: 1
+    isFinalButton: 0
     options:
     - optionText: Fue Ian
       nextDialogue: {fileID: 11400000, guid: 2764a4630741aaf4d99e487f4f88c381, type: 2}

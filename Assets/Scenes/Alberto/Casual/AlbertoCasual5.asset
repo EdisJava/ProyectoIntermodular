@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c258d7aa07a5574b92a767b18b37c32, type: 3}
+  m_Name: AlbertoCasual5
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - characterName: Alberto
+    text: No puede ser...
+    expression: {fileID: 21300000, guid: 2dd85e48578c0b542a0afe19722e812c, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Alberto
+    text: De donde salen tantos perros.
+    expression: {fileID: 21300000, guid: 2dd85e48578c0b542a0afe19722e812c, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 0
+    options: []
+  - characterName: Alberto
+    text: Esto nos pasa por no echar a Walter antes, ahora vinieron sus amigos.
+    expression: {fileID: 21300000, guid: 18dcd9369b77b364cb03ee59523a2953, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
+    hasOptions: 1
+    options:
+    - optionText: Que te parece esta situacion.
+      nextDialogue: {fileID: 11400000, guid: e7f319eda289aa145ab79e3fa750274c, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0
+    - optionText: Que crees que deberiamos hacer.
+      nextDialogue: {fileID: 11400000, guid: 3d5736f69737a1c4a8c61c8808473850, type: 2}
+      isInterrogation: 0
+      isFinalDecision: 0
+      isCorrectAccusation: 0

@@ -16,9 +16,11 @@ MonoBehaviour:
   - characterName: Jimmi
     text: "Dime, \xBFnecesitas algo?"
     expression: {fileID: 21300000, guid: 9b52ce13b33477647aa0a7a535cf20e9, type: 3}
+    lineSound: {fileID: 0}
+    backgroundOverride: {fileID: 0}
     hasOptions: 1
     options:
-    - optionText: Creo que tienes que ver con lo de ???.
+    - optionText: Creo que tienes que ver con lo de Haydin.
       nextDialogue: {fileID: 11400000, guid: acd391ac9ae3c9447b9a9e0ac6b10d6e, type: 2}
       isInterrogation: 0
       isFinalDecision: 0
