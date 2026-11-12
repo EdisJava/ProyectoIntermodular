@@ -378,9 +378,9 @@ pie title Distribución del esfuerzo
 
 Imágenes del proyecto:
 
-![Personaje Jimmi](Assets/Sprites/personajes/Dia3/Jimmi/Jimmi.png "Jimmi")
+![Aday](Assets/Sprites/personajes/Dia4/aday/aday-pose.png "Aday")
 
-![Aday](Assets/Sprites/personajes/Dia4/aday/aday-desesperado.png "Aday desesperado")
+![Edgar](Assets/Sprites/personajes/Dia5/edgar/edgar-pose-SPRITE.png "Edgar")
 
 ![Pablo](Assets/Sprites/personajes/Dia4/pablo/pablo-pose.png "Pablo")
 
