@@ -334,4 +334,3 @@ Consulta la [página del repositorio](https://github.com/EdisJava/ProyectoInterm
 
 Este repositorio se utiliza con fines académicos. No se ha definido todavía una licencia de distribución.
 
-<div align="center"><strong>🎮 Investiga con empatía · Construye con código · Aprende jugando 🎮</strong></div>
