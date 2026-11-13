@@ -344,11 +344,11 @@ gantt
     excludes weekends
 
     section Arte
-    Fondos y escenarios     :done, a1, 03-11-2026, 7d
+    Fondos y escenarios     :done, a1, 03-04-2026, 7d
     Personajes por día      :active, a2, after a1, 8d
 
     section Programación
-    Sistema de días         :done, b1, 03-11-2026, 6d
+    Sistema de días         :done, b1, 03-14-2026, 6d
     Diálogos y decisiones   :b2, after b1, 8d
     Finales                 :b3, after b2, 5d
 
