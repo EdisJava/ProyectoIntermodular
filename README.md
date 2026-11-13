@@ -165,11 +165,11 @@ Revisa [UpgradeLog.htm](UpgradeLog.htm "Registro de actualización") y la [soluc
 
 [Volver al índice](#índice)
 
-### Imagen externa
+### Logo de Unity
 
-![Aula escolar de referencia](https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80 "Aula escolar")
+![Logo de Unity](https://upload.wikimedia.org/wikipedia/commons/c/c4/Unity_2021.svg "Logotipo de Unity")
 
-*Imagen externa de referencia. Fuente: [Unsplash](https://unsplash.com/ "Banco de imágenes").*
+*Logotipo de Unity utilizado como referencia del motor del proyecto. Fuente: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Unity_2021.svg "Fuente de la imagen").*
 
 ### Sprites del juego
 
