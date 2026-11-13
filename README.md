@@ -259,17 +259,48 @@ flowchart TD
 
 ```mermaid
 gitGraph
-    commit id: "Inicio del proyecto"
+    commit id: "Inicio del proyecto · 0fda904"
+    commit id: "Entorno y exteriores · 3d700d6"
     branch Edgar
     checkout Edgar
-    commit id: "Documentación README"
-    commit id: "Sprites del juego"
     checkout main
-    commit id: "Versión final"
+    commit id: "Lógica de diálogos · e468891"
+    commit id: "Menú provisional · aff59d4"
+    branch Aday
+    checkout Aday
+    commit id: "Icono de preguntas · a221f15"
+    checkout main
+    branch Aday2
+    checkout Aday2
+    commit id: "Diálogo de María · b4f0bbb"
+    checkout main
+    branch AdayPS1
+    checkout AdayPS1
+    commit id: "Correcciones de bugs · 3b8f3bd"
+    checkout main
+    branch Pablo
+    checkout Pablo
+    commit id: "Escena de la casa · 0e4ac1b"
+    commit id: "Versión final · 2c7cc32"
+    checkout main
+    branch edgar
+    checkout edgar
+    commit id: "Día 5 y finales · 4050c08"
+    checkout main
+    branch merge-temp
+    checkout merge-temp
+    commit id: "Integración de ramas · 91ab154"
+    checkout main
+    branch Edgar-TestRendimiento
+    checkout Edgar-TestRendimiento
+    commit id: "Pruebas de rendimiento · 379f032"
     checkout Edgar
+    commit id: "README y sprites"
     merge main tag: "v1.0"
-    commit id: "README actualizado"
+    commit id: "Documentación final"
 ```
+
+*El diagrama resume los commits más importantes de todas las ramas; no representa cada commit del repositorio.*
 
 ### Secuencia
 
