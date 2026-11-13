@@ -255,6 +255,22 @@ flowchart TD
     F -- Sí --> G[Informar al profesor]
 ```
 
+### Historial de ramas Git
+
+```mermaid
+gitGraph
+    commit id: "Inicio del proyecto"
+    branch Edgar
+    checkout Edgar
+    commit id: "Documentación README"
+    commit id: "Sprites del juego"
+    checkout main
+    commit id: "Versión final"
+    checkout Edgar
+    merge main tag: "v1.0"
+    commit id: "README actualizado"
+```
+
 ### Secuencia
 
 ```mermaid
