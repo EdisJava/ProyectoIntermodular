@@ -10,6 +10,7 @@ La rama `Edgar` incorpora ahora la versión final jugable procedente de `main`, 
 
 ## Índice
 
+- [Proyecto Intermodular: They Realized](#proyecto-intermodular-they-realized)
 - [Presentación](#presentación)
 - [Objetivos del proyecto](#objetivos-del-proyecto)
 - [Tecnologías y estructura](#tecnologías-y-estructura)
@@ -30,7 +31,7 @@ La rama `Edgar` incorpora ahora la versión final jugable procedente de `main`, 
 
 **They Realized** es una experiencia de investigación ambientada en un centro educativo. El jugador explora el escenario, conversa con personajes y compara respuestas antes de tomar una decisión.
 
-La historia fomenta la *empatía*, la comunicación y la resolución responsable de conflictos.  
+La historia fomenta la ***empatía***, la comunicación y la resolución responsable de conflictos.  
 El objetivo no es acusar sin pruebas, sino construir una conclusión razonada.
 
 ---
