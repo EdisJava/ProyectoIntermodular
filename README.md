@@ -1,4 +1,4 @@
-# Proyecto Intermodular: Aula en Silencio
+# Proyecto Intermodular: They Realized
 
 [Ir al índice](#índice)
 
@@ -28,7 +28,7 @@ La rama `Edgar` incorpora ahora la versión final jugable procedente de `main`, 
 
 [Volver al índice](#índice)
 
-**Aula en Silencio** es una experiencia de investigación ambientada en un centro educativo. El jugador explora el escenario, conversa con personajes y compara respuestas antes de tomar una decisión.
+**They Realized** es una experiencia de investigación ambientada en un centro educativo. El jugador explora el escenario, conversa con personajes y compara respuestas antes de tomar una decisión.
 
 La historia fomenta la *empatía*, la comunicación y la resolución responsable de conflictos.  
 El objetivo no es acusar sin pruebas, sino construir una conclusión razonada.
