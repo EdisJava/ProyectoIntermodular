@@ -261,8 +261,6 @@ flowchart TD
 gitGraph
     commit id: "Inicio del proyecto · 0fda904"
     commit id: "Entorno y exteriores · 3d700d6"
-    branch Edgar
-    checkout Edgar
     checkout main
     commit id: "Lógica de diálogos · e468891"
     commit id: "Menú provisional · aff59d4"
@@ -270,30 +268,39 @@ gitGraph
     checkout Aday
     commit id: "Icono de preguntas · a221f15"
     checkout main
+    merge Aday tag: "Aday integrado"
     branch Aday2
     checkout Aday2
     commit id: "Diálogo de María · b4f0bbb"
     checkout main
+    merge Aday2 tag: "Aday2 integrado"
     branch AdayPS1
     checkout AdayPS1
     commit id: "Correcciones de bugs · 3b8f3bd"
     checkout main
+    merge AdayPS1 tag: "AdayPS1 integrado"
     branch Pablo
     checkout Pablo
     commit id: "Escena de la casa · 0e4ac1b"
     commit id: "Versión final · 2c7cc32"
     checkout main
+    merge Pablo tag: "Pablo integrado"
     branch edgar
     checkout edgar
     commit id: "Día 5 y finales · 4050c08"
     checkout main
+    merge edgar tag: "edgar integrado"
     branch merge-temp
     checkout merge-temp
     commit id: "Integración de ramas · 91ab154"
     checkout main
+    merge merge-temp tag: "merge-temp integrado"
     branch Edgar-TestRendimiento
     checkout Edgar-TestRendimiento
     commit id: "Pruebas de rendimiento · 379f032"
+    checkout main
+    merge Edgar-TestRendimiento tag: "pruebas integradas"
+    branch Edgar
     checkout Edgar
     commit id: "README y sprites"
     merge main tag: "v1.0"
