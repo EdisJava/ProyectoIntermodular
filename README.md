@@ -270,11 +270,11 @@ sequenceDiagram
     participant G as GameManager
     participant P as Personaje
 
-    J->>P: Inicia el diálogo
-    P-->>J: Muestra opciones
-    J->>G: Elige una opción
-    G->>G: Actualiza los puntos
-    G-->>J: Continúa la historia
+    J ->> P: Inicia el diálogo
+    P -->> J: Muestra opciones
+    J ->> G: Elige una opción
+    G ->> G: Actualiza los puntos
+    G -->> J: Continúa la historia
 ```
 
 ---
@@ -398,7 +398,7 @@ Imágenes de Internet:
 
 > *"Un juego retrasado es bueno eventualmente, pero un juego precipitado es malo para siempre."*
 >
-> — Shigeru Miyamoto (atribuida)
+> — Shigeru Miyamoto
 
 > *"La mejor manera de predecir el futuro es inventarlo."*
 >
@@ -420,7 +420,7 @@ Recursos consultados:
 | :--- | :---: | ---: |
 | Pablo | Desarrollo | `Pablo` |
 | Aday | Desarrollo | `AdayPS1` |
-| Edgar | Algo | `Edgar` |
+| Edgar | Aun no sabemos | `Edgar` |
 
 
 ✏️ <strong>Escrito por el equipo de ProyectoIntermodular</strong>
