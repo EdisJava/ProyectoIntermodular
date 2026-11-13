@@ -264,16 +264,6 @@ gitGraph
     checkout main
     commit id: "Lógica de diálogos · e468891"
     commit id: "Menú provisional · aff59d4"
-    branch Aday
-    checkout Aday
-    commit id: "Icono de preguntas · a221f15"
-    checkout main
-    merge Aday tag: "Aday integrado"
-    branch Aday2
-    checkout Aday2
-    commit id: "Diálogo de María · b4f0bbb"
-    checkout main
-    merge Aday2 tag: "Aday2 integrado"
     branch AdayPS1
     checkout AdayPS1
     commit id: "Correcciones de bugs · 3b8f3bd"
@@ -290,16 +280,6 @@ gitGraph
     commit id: "Día 5 y finales · 4050c08"
     checkout main
     merge edgar tag: "edgar integrado"
-    branch merge-temp
-    checkout merge-temp
-    commit id: "Integración de ramas · 91ab154"
-    checkout main
-    merge merge-temp tag: "merge-temp integrado"
-    branch Edgar-TestRendimiento
-    checkout Edgar-TestRendimiento
-    commit id: "Pruebas de rendimiento · 379f032"
-    checkout main
-    merge Edgar-TestRendimiento tag: "pruebas integradas"
     branch Edgar
     checkout Edgar
     commit id: "README y sprites"
@@ -307,7 +287,7 @@ gitGraph
     commit id: "Documentación final"
 ```
 
-*El diagrama resume los commits más importantes de todas las ramas; no representa cada commit del repositorio.*
+*El diagrama resume los commits más importantes de las ramas principales; no representa cada commit del repositorio.*
 
 ### Secuencia
 
